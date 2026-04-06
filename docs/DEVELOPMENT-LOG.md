@@ -201,6 +201,70 @@ Once enabled, `.github/workflows/deploy.yml` will auto-build and deploy on every
 
 ---
 
+### Phase 4 — Bug Fix: Chinese Language Switcher 404 (2026-04-06 ~13:00)
+
+**Reported:** English site works perfectly on GitHub Pages. Clicking 中文 returns a 404 on every Chinese page.
+
+#### Root Cause Analysis
+
+The nav language switcher in `_includes/nav.html` had an asymmetry between the two language buttons:
+
+```liquid
+<!-- EN button — correct -->
+<a href="{{ page.url | relative_url }}">EN</a>
+
+<!-- ZH button — BROKEN -->
+<a href="{{ '/zh' | append: page.url }}">中文</a>
+```
+
+The ZH button was missing Jekyll's `| relative_url` filter. On GitHub Pages with `baseurl: "/gmai-web"`, `relative_url` prepends `/gmai-web` to every internal path. Without it, the ZH button generated bare paths like `/zh/team/` instead of `/gmai-web/zh/team/` — a 404 on every Chinese page.
+
+**Why it worked locally:** The local server is run with `--baseurl ""`, which makes `relative_url` a no-op. The bug was completely invisible in local preview and only surfaced on the deployed site.
+
+**Why the EN side was unaffected:** `{{ page.url | relative_url }}` already correctly used the filter.
+
+#### Additional Fix Applied
+
+`_config.yml` was also updated at the same time to set the correct production values:
+
+```yaml
+# Before
+url:     "https://yourusername.github.io"
+baseurl: "/your-repo-name"
+
+# After
+url:     "https://uni-medical.github.io"
+baseurl: "/gmai-web"
+```
+
+Without the correct `baseurl`, all CSS, JS, and internal links would also break — this was the second contributing factor to the 404s.
+
+#### Fix
+
+One character change in `_includes/nav.html` line 20:
+
+```liquid
+<!-- Before -->
+<a href="{{ '/zh' | append: page.url }}">中文</a>
+
+<!-- After -->
+<a href="{{ '/zh' | append: page.url | relative_url }}">中文</a>
+```
+
+#### Commits & Branch
+
+| Commit | Message |
+|---|---|
+| `b1001de` | `fix: set correct url and baseurl for uni-medical/gmai-web GitHub Pages` |
+| `f082105` | `fix: add relative_url filter to Chinese language switcher link` |
+
+Branch `fix/zh-language-switcher` pushed to GitHub. PR ready at:  
+`github.com/uni-medical/gmai-web/pull/new/fix/zh-language-switcher`
+
+**Lesson learned:** On GitHub Pages subdirectory deployments, every single internal link must use `| relative_url`. Raw string paths like `"/zh/team/"` will always 404 unless `baseurl` is empty.
+
+---
+
 ## Current State Summary
 
 ### Repository
@@ -225,8 +289,11 @@ Once enabled, `.github/workflows/deploy.yml` will auto-build and deploy on every
 | `/zh/news/` | Complete |
 | `/zh/contact/` | Complete |
 
+### Bugs Fixed
+- [x] Chinese language switcher 404 — missing `| relative_url` in `nav.html` (commit `f082105`)
+- [x] `_config.yml` wrong `url`/`baseurl` for GitHub Pages deployment (commit `b1001de`)
+
 ### Content (placeholder — needs replacement before launch)
-- [ ] `_config.yml` — update `url`, `baseurl`, all `lab:` fields
 - [ ] `_data/publications.yml` — replace sample papers with real publications
 - [ ] `_data/team.yml` — replace with real team members and photos
 - [ ] `_data/projects.yml` — replace with real research projects
@@ -245,15 +312,27 @@ Once enabled, `.github/workflows/deploy.yml` will auto-build and deploy on every
 
 ---
 
+## Commit History
+
+| Hash | Message | Date |
+|---|---|---|
+| `18a7db0` | feat: scaffold research group Jekyll website from spec | 2026-04-06 11:38 |
+| `a088c8b` | feat: add landing page, Chinese site, documentation, and gitignore | 2026-04-06 12:11 |
+| `989c4db` | docs: add development log with full session history and pending tasks | 2026-04-06 12:30 |
+| `b1001de` | fix: set correct url and baseurl for uni-medical/gmai-web GitHub Pages | 2026-04-06 12:45 |
+| `f082105` | fix: add relative_url filter to Chinese language switcher link | 2026-04-06 13:00 |
+
+---
+
 ## Pending Tasks
 
 | Priority | Task |
 |---|---|
-| High | Enable GitHub Pages in repo settings |
+| High | Merge `fix/zh-language-switcher` PR into `main` |
+| High | Enable GitHub Pages: Settings → Pages → Source → GitHub Actions |
 | High | Replace all placeholder content in `_data/*.yml` |
-| High | Update `_config.yml` with real lab identity and `baseurl: "/gmai-web"` |
 | Medium | Add real team photos and paper teasers |
-| Medium | Set up Formspree contact form |
-| Low | Add mobile hamburger nav |
+| Medium | Set up Formspree contact form (`YOUR_FORM_ID`) |
+| Low | Add mobile hamburger nav for <820px |
 | Low | Add more keyword filter buttons to publications page |
-| Optional | Add CNAME file for custom domain |
+| Optional | Add `CNAME` file for custom domain |
