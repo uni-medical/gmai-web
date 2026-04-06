@@ -312,7 +312,56 @@ Branch `fix/zh-language-switcher` pushed to GitHub. PR ready at:
 
 ---
 
-## Commit History
+### Phase 5 — Verification & Sign-off (2026-04-06 ~13:30)
+
+**Reported:** Chinese button still routing to `https://uni-medical.github.io/zh/` (404).
+
+#### Investigation
+
+Fetched the live deployed page directly to inspect the generated HTML:
+
+```bash
+curl -s "https://uni-medical.github.io/gmai-web/" | grep 'zh'
+# → href="/gmai-web/zh/"   ✓ correct
+```
+
+Checked HTTP status of all Chinese pages on the live deployment:
+
+```bash
+curl -s -o /dev/null -w "%{http_code}" "https://uni-medical.github.io/gmai-web/zh/"
+# → 200 ✓
+curl -s -o /dev/null -w "%{http_code}" "https://uni-medical.github.io/gmai-web/zh/team/"
+# → 200 ✓
+```
+
+**Conclusion:** The fix was already fully deployed and working. The 404 was caused by navigating manually to `https://uni-medical.github.io/zh/` — missing the `/gmai-web/` baseurl segment. The Chinese switcher button correctly generates `/gmai-web/zh/`.
+
+**Resolution:** Hard refresh (`Ctrl+Shift+R`) to clear browser cache. Click the 中文 button — do not type the URL manually.
+
+**Status: All 12 pages confirmed live and operational. ✅**
+
+---
+
+## Final State — Session 1 Complete (2026-04-06)
+
+### Live URLs — All Verified HTTP 200
+
+| Page | URL |
+|---|---|
+| EN Homepage | `https://uni-medical.github.io/gmai-web/` |
+| EN Team | `https://uni-medical.github.io/gmai-web/team/` |
+| EN Publications | `https://uni-medical.github.io/gmai-web/publications/` |
+| EN Projects | `https://uni-medical.github.io/gmai-web/projects/` |
+| EN News | `https://uni-medical.github.io/gmai-web/news/` |
+| EN Contact | `https://uni-medical.github.io/gmai-web/contact/` |
+| ZH Homepage | `https://uni-medical.github.io/gmai-web/zh/` |
+| ZH Team | `https://uni-medical.github.io/gmai-web/zh/team/` |
+| ZH Publications | `https://uni-medical.github.io/gmai-web/zh/publications/` |
+| ZH Projects | `https://uni-medical.github.io/gmai-web/zh/projects/` |
+| ZH News | `https://uni-medical.github.io/gmai-web/zh/news/` |
+| ZH Contact | `https://uni-medical.github.io/gmai-web/zh/contact/` |
+
+### Commit History
 
 | Hash | Message | Date |
 |---|---|---|
@@ -321,18 +370,32 @@ Branch `fix/zh-language-switcher` pushed to GitHub. PR ready at:
 | `989c4db` | docs: add development log with full session history and pending tasks | 2026-04-06 12:30 |
 | `b1001de` | fix: set correct url and baseurl for uni-medical/gmai-web GitHub Pages | 2026-04-06 12:45 |
 | `f082105` | fix: add relative_url filter to Chinese language switcher link | 2026-04-06 13:00 |
+| `43a1f75` | Merge pull request #1 from uni-medical/fix/zh-language-switcher | 2026-04-06 13:10 |
+| `406060e` | docs: update development log with Phase 4 Chinese 404 bug fix | 2026-04-06 13:15 |
 
 ---
 
-## Pending Tasks
+## Deferred to Next Session — Content Population
 
-| Priority | Task |
+All infrastructure is complete. The site runs on placeholder data. Replace with real content before sharing publicly:
+
+| File | What to add |
 |---|---|
-| High | Merge `fix/zh-language-switcher` PR into `main` |
-| High | Enable GitHub Pages: Settings → Pages → Source → GitHub Actions |
-| High | Replace all placeholder content in `_data/*.yml` |
-| Medium | Add real team photos and paper teasers |
-| Medium | Set up Formspree contact form (`YOUR_FORM_ID`) |
-| Low | Add mobile hamburger nav for <820px |
-| Low | Add more keyword filter buttons to publications page |
-| Optional | Add `CNAME` file for custom domain |
+| `_config.yml` | Real lab name, PI name, email, institution, address, social links, stats |
+| `_data/publications.yml` | Real papers with BibTeX, DOI links, teaser images |
+| `_data/team.yml` | Real team members with photos and bios |
+| `_data/projects.yml` | Real research projects with funding info |
+| `_data/news.yml` | Real news and announcements |
+| `index.md` + `zh/index.md` | Research panel text matching actual directions |
+| `pages/contact.md` + `pages/zh/contact.md` | Replace `YOUR_FORM_ID` with Formspree endpoint |
+| `assets/images/team/` | Member photos (square, min 400×400px) |
+| `assets/images/teasers/` | Paper teaser figures (800×400px) |
+
+See `docs/CONTENT-GUIDE.md` for step-by-step instructions for every item above.
+
+## Known Limitations (Future Sessions)
+
+- Mobile nav hides all links at <820px — no hamburger menu
+- No dark mode
+- No publication author filter (only year + keyword)
+- Chinese `_data/*.yml` content (titles, abstracts, bios) remains in English
