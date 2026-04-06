@@ -1,0 +1,34 @@
+- title:   "Neural Decoding with Transformer Architectures"
+  area:    "Neuroscience × Machine Learning"
+  status:  "active"
+  funding: "NIH R01 · 2022–2027"
+  desc:    >
+    Applying attention-based architectures to decode motor intent from
+    high-density neural recordings in real time, establishing principled
+    approaches under stringent latency constraints.
+
+- title:   "Generative Modeling of Epigenetic Landscapes"
+  area:    "Computational Genomics"
+  status:  "active"
+  funding: "NSF CAREER · 2023–2028"
+  desc:    >
+    Deep generative models that learn the regulatory grammar of chromatin
+    accessibility, enabling in silico perturbation experiments across cell
+    types and disease states.
+
+- title:   "Molecular Interaction Network Learning"
+  area:    "Structural Biology"
+  status:  "ongoing"
+  funding: "Industry partnership"
+  desc:    >
+    Geometric deep learning on protein interaction networks to predict drug
+    targets, off-target effects, and mechanisms of resistance.
+
+- title:   "Multimodal Diagnostic Decision Support"
+  area:    "Clinical AI"
+  status:  "new"
+  funding: "Proposal submitted · 2025"
+  desc:    >
+    Fusing imaging, electronic health records, and genomic data to build
+    uncertainty-aware diagnostic systems with statistically valid coverage
+    guarantees for clinical deployment.

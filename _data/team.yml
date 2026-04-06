@@ -1,0 +1,77 @@
+pi:
+  name:     "Prof. Jane Smith"
+  role:     "Principal Investigator"
+  title:    "Associate Professor, Department of Computer Science"
+  bio:      >
+    Jane leads the group's research in computational neuroscience and machine
+    learning. Her work focuses on developing principled statistical models for
+    large-scale neural data and brain–machine interfaces. She received her PhD
+    from MIT and was a postdoctoral fellow at Stanford.
+  photo:    "assets/images/team/jane_smith.jpg"
+  initials: "JS"
+  links:
+    website: "https://janesmith.university.edu"
+    scholar: "https://scholar.google.com/citations?user=XXX"
+    cv:      "assets/cv/smith_cv.pdf"
+    github:  "https://github.com/jsmith"
+    twitter: ""
+
+members:
+  - name:     "Alex Kim"
+    role:     "Postdoctoral Fellow"
+    focus:    "Deep learning for genomics, single-cell RNA-seq analysis, epigenetics"
+    photo:    "assets/images/team/alex_kim.jpg"
+    initials: "AK"
+    links:
+      scholar: "https://scholar.google.com/citations?user=XXX"
+      github:  "https://github.com/akim"
+      website: ""
+
+  - name:     "Maria Lopez"
+    role:     "PhD Candidate"
+    focus:    "Probabilistic graphical models, Bayesian inference, causal discovery"
+    photo:    ""
+    initials: "ML"
+    links:
+      scholar:  "https://scholar.google.com/citations?user=XXX"
+      website:  "https://marialopez.io"
+      github:   ""
+
+  - name:     "Ryan Chen"
+    role:     "PhD Student"
+    focus:    "Graph neural networks, molecular property prediction"
+    photo:    ""
+    initials: "RC"
+    links:
+      scholar: "https://scholar.google.com/citations?user=XXX"
+      github:  "https://github.com/rchen"
+      website: ""
+
+  - name:     "Sara Patel"
+    role:     "PhD Student"
+    focus:    "Multimodal learning, uncertainty quantification, clinical AI"
+    photo:    ""
+    initials: "SP"
+    links:
+      scholar: "https://scholar.google.com/citations?user=XXX"
+      github:  ""
+      website: ""
+
+  - name:     "Tom Wang"
+    role:     "Research Engineer"
+    focus:    "HPC infrastructure, MLOps, research software engineering"
+    photo:    ""
+    initials: "TW"
+    links:
+      scholar: ""
+      github:  "https://github.com/twang"
+      website: ""
+
+alumni:
+  - name:   "Dr. Lisa Park"
+    period: "2019–2023"
+    now:    "Assistant Professor, University of Toronto"
+
+  - name:   "Dr. James Wu"
+    period: "2018–2022"
+    now:    "Research Scientist, Google DeepMind"

@@ -1,0 +1,65 @@
+en:
+  nav:
+    team:         "Team"
+    publications: "Publications"
+    projects:     "Projects"
+    news:         "News"
+    contact:      "Contact"
+  sections:
+    team:         "Our Team"
+    team_label:   "Group Members"
+    pubs:         "Publications"
+    pubs_label:   "Scholarly Output"
+    projects:     "Active Projects"
+    projects_label: "Research"
+    news:         "News"
+    news_label:   "Updates"
+    contact:      "Get in Touch"
+    contact_label: "Contact"
+  pubs:
+    filter_all:   "All"
+    scholar_link: "Google Scholar →"
+  team:
+    pi_badge:     "Principal Investigator"
+    alumni_link:  "View alumni →"
+  contact:
+    location:     "Location"
+    email:        "Email"
+    online:       "Online"
+    prospective:  "Prospective Students & Postdocs"
+    send:         "Send Message →"
+  footer:
+    updated:      "Last updated"
+
+zh:
+  nav:
+    team:         "团队"
+    publications: "论文"
+    projects:     "项目"
+    news:         "动态"
+    contact:      "联系"
+  sections:
+    team:         "我们的团队"
+    team_label:   "成员"
+    pubs:         "论文成果"
+    pubs_label:   "学术产出"
+    projects:     "在研项目"
+    projects_label: "研究方向"
+    news:         "最新动态"
+    news_label:   "动态"
+    contact:      "联系我们"
+    contact_label: "联系方式"
+  pubs:
+    filter_all:   "全部"
+    scholar_link: "Google Scholar →"
+  team:
+    pi_badge:     "负责人（PI）"
+    alumni_link:  "查看往届成员 →"
+  contact:
+    location:     "地址"
+    email:        "邮件"
+    online:       "主页"
+    prospective:  "申请读博 / 博士后"
+    send:         "发送消息 →"
+  footer:
+    updated:      "最后更新于"

@@ -1,0 +1,81 @@
+# ── How to add a new publication ──────────────────────────────────
+# 1. Copy an existing entry block
+# 2. Fill in title, authors, venue, year
+# 3. Add optional links (omit lines that don't apply — no empty buttons appear)
+# 4. Paste BibTeX from Google Scholar into the bibtex: | field
+# 5. Add teaser image to assets/images/teasers/ and reference it here
+# ──────────────────────────────────────────────────────────────────
+
+- title:    "Scalable Transformer Models for Real-Time Neural Decoding in Non-Human Primates"
+  authors:  "Smith J., Kim A., Lopez M., Chen R., Wang T."
+  venue:    "Nature Neuroscience"
+  year:     2025
+  note:     ""
+  abstract: >
+    We present a scalable transformer architecture that decodes motor intent
+    from high-density neural recordings with sub-20ms latency, achieving
+    state-of-the-art accuracy across five non-human primate subjects.
+  teaser:   "assets/images/teasers/smith2025.png"
+  keywords: "neural decoding, transformer, BCI"
+  links:
+    paper:       "https://doi.org/10.xxxx/xxxx"
+    code:        "https://github.com/labname/neural-decoder"
+    project:     "https://labname.github.io/neural-decoder"
+    demo:        "https://huggingface.co/spaces/labname/demo"
+  bibtex: |
+    @article{smith2025neural,
+      title   = {Scalable Transformer Models for Real-Time Neural Decoding in Non-Human Primates},
+      author  = {Smith, Jane and Kim, Alex and Lopez, Maria and Chen, Ryan and Wang, Tom},
+      journal = {Nature Neuroscience},
+      year    = {2025},
+      doi     = {10.xxxx/xxxx},
+      url     = {https://doi.org/10.xxxx/xxxx}
+    }
+
+- title:    "Causal Disentanglement of Epigenetic Programs via Variational Autoencoders"
+  authors:  "Lopez M., Smith J., Chen R."
+  venue:    "Cell Systems"
+  year:     2024
+  note:     ""
+  abstract: >
+    A variational framework that learns disentangled representations of chromatin
+    accessibility programs, enabling discovery of cell-type-specific regulatory
+    elements across 40 tissue types.
+  teaser:   "assets/images/teasers/lopez2024.png"
+  keywords: "genomics, VAE, epigenetics"
+  links:
+    paper:   "https://doi.org/10.xxxx/xxxx"
+    code:    "https://github.com/labname/epi-vae"
+    dataset: "https://zenodo.org/record/xxxxxx"
+  bibtex: |
+    @article{lopez2024causal,
+      title   = {Causal Disentanglement of Epigenetic Programs via Variational Autoencoders},
+      author  = {Lopez, Maria and Smith, Jane and Chen, Ryan},
+      journal = {Cell Systems},
+      year    = {2024},
+      doi     = {10.xxxx/xxxx}
+    }
+
+- title:    "Equivariant Graph Networks for Protein–Ligand Binding Affinity Prediction"
+  authors:  "Chen R., Patel S., Kim A., Smith J."
+  venue:    "NeurIPS"
+  year:     2024
+  note:     "Spotlight"
+  abstract: >
+    An SE(3)-equivariant message-passing architecture that leverages 3D molecular
+    geometry to predict binding affinities with improved generalisation on
+    out-of-distribution compound series.
+  teaser:   ""
+  keywords: "graph learning, proteins, drug discovery"
+  links:
+    paper:       "https://doi.org/10.xxxx/xxxx"
+    code:        "https://github.com/labname/equivnet"
+    huggingface: "https://huggingface.co/labname/equivnet"
+  bibtex: |
+    @inproceedings{chen2024equivariant,
+      title     = {Equivariant Graph Networks for Protein--Ligand Binding Affinity Prediction},
+      author    = {Chen, Ryan and Patel, Sara and Kim, Alex and Smith, Jane},
+      booktitle = {Advances in Neural Information Processing Systems},
+      year      = {2024},
+      note      = {Spotlight}
+    }

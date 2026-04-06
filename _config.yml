@@ -1,0 +1,53 @@
+# ── Site identity ─────────────────────────────────────────────────
+title:       "Computational Research Group"
+tagline:     "Advancing rigorous science at the frontier of computation"
+description: "We develop principled computational methods at the intersection
+              of machine learning and computational biology."
+url:         "https://yourusername.github.io"
+baseurl:     "/your-repo-name"   # ← set to "" if repo is username.github.io
+
+# ── Build ─────────────────────────────────────────────────────────
+markdown:    kramdown
+highlighter: rouge
+permalink:   pretty
+
+# ── Plugins (all supported natively by GitHub Pages) ──────────────
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# ── Lab metadata (used throughout layouts — edit here only) ───────
+lab:
+  name:        "Computational Research Group"
+  shortname:   "CRG"
+  pi:          "Prof. Jane Smith"
+  pi_last:     "Smith"             # used to bold PI name in author lists
+  institution: "University of Science"
+  department:  "Department of Computer Science"
+  address:     "Building A, Room 302, City 10001"
+  email:       "lab@university.edu"
+  github:      "https://github.com/labname"
+  scholar:     "https://scholar.google.com/citations?user=XXXXX"
+  twitter:     "https://twitter.com/labname"
+  founded:     2016
+
+# ── Hero stats (update when milestones change) ────────────────────
+stats:
+  publications: 48
+  members:      12
+  grants:       6
+  citations:    "1,200+"
+
+# ── Sass ──────────────────────────────────────────────────────────
+sass:
+  sass_dir: _sass
+  style:    compressed
+
+# ── Exclude from build output ─────────────────────────────────────
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .github

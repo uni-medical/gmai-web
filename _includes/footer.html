@@ -1,0 +1,25 @@
+{% assign t = include.t %}
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-name">{{ site.lab.name }}</div>
+      <div class="footer-inst">{{ site.lab.department }} &middot; {{ site.lab.institution }}</div>
+    </div>
+    <div class="footer-links">
+      <a href="{{ '/team/'         | relative_url }}">{{ t.nav.team }}</a>
+      <a href="{{ '/publications/' | relative_url }}">{{ t.nav.publications }}</a>
+      <a href="{{ '/projects/'     | relative_url }}">{{ t.nav.projects }}</a>
+      <a href="{{ '/news/'         | relative_url }}">{{ t.nav.news }}</a>
+      <a href="{{ '/contact/'      | relative_url }}">{{ t.nav.contact }}</a>
+    </div>
+    <div class="footer-links">
+      {% if site.lab.github  %}<a href="{{ site.lab.github  }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+      {% if site.lab.scholar %}<a href="{{ site.lab.scholar }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
+      {% if site.lab.twitter %}<a href="{{ site.lab.twitter }}" target="_blank" rel="noopener">Twitter</a>{% endif %}
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; {{ 'now' | date: '%Y' }} {{ site.lab.name }}. Built with Jekyll &amp; GitHub Pages.</span>
+    <span>{{ t.footer.updated }} {{ 'now' | date: '%B %Y' }}</span>
+  </div>
+</footer>

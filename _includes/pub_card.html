@@ -1,0 +1,49 @@
+{% assign pub = include.pub %}
+<div class="pub-entry"
+     data-year="{{ pub.year }}"
+     data-keywords="{{ pub.keywords | downcase | default: '' }}">
+
+  {% if pub.teaser and pub.teaser != "" %}
+  <div class="pub-visual">
+    <img class="pub-teaser"
+         src="{{ pub.teaser | relative_url }}"
+         alt="{{ pub.title }} — overview figure"
+         loading="lazy" />
+  </div>
+  {% else %}
+  <div class="pub-visual pub-no-teaser"></div>
+  {% endif %}
+
+  <div class="pub-body">
+    <div class="pub-venue">
+      {{ pub.venue }}{% if pub.year %} &middot; {{ pub.year }}{% endif %}
+      {% if pub.note and pub.note != "" %}&nbsp;&middot;&nbsp;<strong>{{ pub.note }}</strong>{% endif %}
+    </div>
+
+    <div class="pub-title">{{ pub.title }}</div>
+
+    <div class="pub-authors">
+      {% assign parts = pub.authors | split: ", " %}
+      {% for part in parts %}
+        {% if part contains site.lab.pi_last %}<strong>{{ part }}</strong>{% else %}{{ part }}{% endif %}{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </div>
+
+    {% if pub.abstract and pub.abstract != "" %}
+    <div class="pub-abstract">{{ pub.abstract }}</div>
+    {% endif %}
+
+    <div class="pub-links">
+      {% if pub.links.paper       %}<a class="pub-btn" href="{{ pub.links.paper       }}" target="_blank" rel="noopener">Paper</a>{% endif %}
+      {% if pub.links.code        %}<a class="pub-btn" href="{{ pub.links.code        }}" target="_blank" rel="noopener">Code</a>{% endif %}
+      {% if pub.links.project     %}<a class="pub-btn" href="{{ pub.links.project     }}" target="_blank" rel="noopener">Project</a>{% endif %}
+      {% if pub.links.demo        %}<a class="pub-btn" href="{{ pub.links.demo        }}" target="_blank" rel="noopener">Demo</a>{% endif %}
+      {% if pub.links.dataset     %}<a class="pub-btn" href="{{ pub.links.dataset     }}" target="_blank" rel="noopener">Dataset</a>{% endif %}
+      {% if pub.links.huggingface %}<a class="pub-btn" href="{{ pub.links.huggingface }}" target="_blank" rel="noopener">HuggingFace</a>{% endif %}
+      {% if pub.bibtex and pub.bibtex != "" %}
+        <button class="pub-btn pub-btn-bib" onclick="openBib({{ pub.bibtex | jsonify }})">BibTeX</button>
+      {% endif %}
+    </div>
+  </div>
+
+</div>

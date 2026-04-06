@@ -1,0 +1,30 @@
+# category values: award | paper | grant | join | event
+- date:     "March 2025"
+  category: "award"
+  label:    "Award"
+  headline: "Prof. Smith receives the Young Investigator Award, Society for Neuroscience"
+  body:     "Recognising outstanding contributions to computational methods in neural circuit analysis."
+
+- date:     "February 2025"
+  category: "paper"
+  label:    "Paper"
+  headline: "New paper accepted at Nature Neuroscience on real-time neural decoding"
+  body:     "Our transformer-based decoder achieves state-of-the-art accuracy in closed-loop BCI systems."
+
+- date:     "January 2025"
+  category: "grant"
+  label:    "Grant"
+  headline: "NIH supplement awarded for clinical AI multimodal project"
+  body:     "Funding supports two additional years of research in uncertainty quantification."
+
+- date:     "January 2025"
+  category: "join"
+  label:    "Join"
+  headline: "Welcoming two new PhD students to the group"
+  body:     "Sara Patel and Tom Wang join, bringing expertise in medical imaging and systems engineering."
+
+- date:     "December 2024"
+  category: "event"
+  label:    "Event"
+  headline: "Group presents three papers at NeurIPS 2024, Vancouver"
+  body:     "Ryan Chen's protein binding paper received a spotlight presentation."
