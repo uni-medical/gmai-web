@@ -4,67 +4,102 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Jekyll 4 static site for a research group, designed to deploy on GitHub Pages with zero custom plugins. The full specification and all file templates live in `plans/plan_ver1.md` — read it before implementing anything.
+Jekyll 4 static site for a computational research group. Designed to deploy on GitHub Pages with zero custom plugins. The original specification lives in `plans/plan_ver1.md`. Full documentation is in `docs/`.
+
+**Current state (as of 2026-04-06):** fully implemented and locally verified. All 37 files created from spec. Awaiting first GitHub push for deployment.
 
 ## Local Development
 
 ```bash
-bundle install                # one-time: install Ruby gems
-bundle exec jekyll serve      # preview at http://localhost:4000
-bundle exec jekyll build      # production build into _site/
+bundle install                              # one-time setup
+bundle exec jekyll serve --baseurl ""       # preview at http://localhost:4000
+bundle exec jekyll build                    # production build to _site/
 ```
 
-No Node/npm required — Jekyll handles SCSS natively.
+The `--baseurl ""` flag is required for local preview (overrides the GitHub Pages URL in `_config.yml`).
 
 ## Deployment
 
-Push to `main` → GitHub Pages auto-builds and deploys. No manual step needed. If a newer Jekyll version is required, enable the optional `.github/workflows/deploy.yml` and change `Gemfile` to `gem "jekyll", "~> 4.3"`.
+Push to `main` → GitHub Actions (`.github/workflows/deploy.yml`) builds and deploys automatically. Enable in **Settings → Pages → Source → GitHub Actions**.
+
+Before first push, update `_config.yml`: set `url`, `baseurl`, and all `lab:` fields.
 
 ## Architecture
 
-### Data-driven content (`_data/`)
+### SCSS layers (import order matters)
 
-All site content lives in YAML files — no touching HTML to add papers, members, or news:
+```
+assets/css/main.scss
+├── _sass/_variables.scss   ← design tokens only; all other partials import this
+├── _sass/_base.scss        ← reset, nav, footer, BibTeX modal, utilities
+├── _sass/_components.scss  ← interior section pages (team, pubs, projects, news, contact)
+└── _sass/_home.scss        ← homepage only: hero, research panels, dark pub strip, join section
+```
 
-| File | Purpose |
+Never add homepage styles to `_components.scss` — keep the separation.
+
+### Data files (the only files editors should touch)
+
+| File | What it controls |
 |---|---|
-| `_data/publications.yml` | All papers; BibTeX stored as raw string field |
-| `_data/team.yml` | PI + all members |
-| `_data/projects.yml` | Active research projects |
-| `_data/news.yml` | News and announcements |
-| `_data/strings.yml` | UI text (English + Chinese bilingual) |
+| `_data/publications.yml` | All papers, BibTeX, links, teasers |
+| `_data/team.yml` | PI, members, alumni |
+| `_data/projects.yml` | Research projects with status + funding |
+| `_data/news.yml` | News items with category badges |
+| `_data/strings.yml` | All UI text for EN and ZH |
+| `_config.yml` | Lab identity, stats counters, site URL |
 
-### Layouts and templates
+### Language system
 
-- `_layouts/default.html` — wraps every page (nav + footer)
-- `_layouts/page.html` — thin wrapper for section pages
-- `_includes/pub_card.html` — reusable publication card (used in loop over `publications.yml`)
-- `_includes/nav.html`, `_includes/footer.html`
+Two parallel URL trees: `/` + `/team/` etc. for English, `/zh/` + `/zh/team/` etc. for Chinese. Language is declared in each page's front matter (`lang: en` or `lang: zh`). `default.html` reads `site.data.strings[lang]` and passes a `t` variable to nav and footer includes. Data files are shared — only UI strings are translated.
 
-### Styling (`_sass/`)
+### Homepage structure (`index.md` and `zh/index.md`)
 
-- `_sass/_variables.scss` — all design tokens (colors, fonts, spacing); change here first
-- `_sass/_base.scss` — reset, typography, nav, footer, BibTeX modal
-- `_sass/_components.scss` — hero, team grid, publications, projects, news, contact sections
-- `assets/css/main.scss` — SCSS entry point that imports all partials
+The homepage is **not** data-driven from `projects.yml` — the four research panels are hardcoded in the page for full design control. Each panel uses:
+- `.rs-section` (+ `.rs-flip` to swap sides)
+- `.rs-visual` with a colour theme class: `vis-neural` | `vis-genomics` | `vis-molecular` | `vis-clinical`
+- `.rs-text` for content
 
-### JavaScript (`assets/js/main.js`)
+To add a 5th panel: copy a panel block in `index.md`, change watermark number, add a new colour class in `_home.scss`.
 
-Handles: publication filtering by year/keyword, BibTeX modal with copy-to-clipboard, scroll-triggered animations. No build step — vanilla JS loaded directly.
+### Publication card (`_includes/pub_card.html`)
 
-### Images
-
-- `assets/images/team/` — member photos, square JPG/PNG, minimum 400×400px
-- `assets/images/teasers/` — paper overview figures, PNG, 800×400px
+Called via `{% include pub_card.html pub=entry %}`. Receives one publication object. PI surname (from `site.lab.pi_last`) is auto-bolded in the author list. BibTeX is passed to the modal via `{{ pub.bibtex | jsonify }}`.
 
 ## Key Design Constraints
 
 - No custom Jekyll plugins (GitHub Pages whitelist only)
-- No Node/npm build step
-- Multilingual support via `_data/strings.yml` only (no polyglot plugin)
-- Contact form via Formspree `action=` attribute (no server required)
-- BibTeX is a raw YAML string field, not parsed — copy button works without a parser
+- No Node/npm — SCSS compiled by Jekyll's built-in Sass
+- `_config.yml` is the single source of truth for all lab identity fields
+- Homepage research panels are intentionally hardcoded — do not auto-generate from `projects.yml`
+- BibTeX is a raw YAML literal block scalar, not parsed — copy button works without a parser
 
-## Configuration
+## File Map
 
-`_config.yml` controls site identity (`title`, `tagline`, `url`, `baseurl`), build settings, and lab metadata. Set `baseurl: ""` when the repo is `username.github.io`; otherwise set it to `/repo-name`.
+```
+index.md                    EN homepage (hero + 4 research panels + pubs + news/join)
+zh/index.md                 ZH homepage (identical structure, Chinese text)
+pages/{team,publications,projects,news,contact}.md    EN section pages
+pages/zh/{team,publications,projects,news,contact}.md ZH section pages
+_layouts/default.html       shared shell (fonts, nav, footer, BibTeX modal, JS)
+_layouts/page.html          two-line wrapper extending default
+_includes/nav.html          top nav + language switcher (EN ↔ 中文)
+_includes/footer.html       footer with lab links
+_includes/pub_card.html     publication card component
+.github/workflows/deploy.yml  GitHub Actions build + deploy pipeline
+docs/ARCHITECTURE.md        technical reference
+docs/CONTENT-GUIDE.md       how to update content day-to-day
+docs/DEPLOYMENT.md          GitHub Pages deployment + custom domain
+```
+
+## Common Tasks
+
+**Add a publication:** edit `_data/publications.yml`, prepend new entry, add teaser image to `assets/images/teasers/`
+
+**Add a team member:** edit `_data/team.yml`, add photo to `assets/images/team/`
+
+**Update hero stats:** edit `stats:` block in `_config.yml`
+
+**Change brand colour:** edit `$accent` in `_sass/_variables.scss`
+
+**Add a keyword filter button:** edit `pages/publications.md` — add `<button class="pf" data-filter="keyword">Label</button>` inside `.pub-filters`

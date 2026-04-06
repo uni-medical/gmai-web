@@ -1,0 +1,74 @@
+---
+layout:    page
+title:     "团队"
+permalink: /zh/team/
+lang:      "zh"
+---
+{% assign t = site.data.strings.zh %}
+<section id="team" class="alt">
+<div class="section-inner fade">
+  <div class="section-head">
+    <div><div class="section-label">{{ t.sections.team_label }}</div>
+         <div class="section-title">{{ t.sections.team }}</div></div>
+    <a href="#alumni" class="section-action">{{ t.team.alumni_link }}</a>
+  </div>
+
+  <div class="team-pi">
+    {% if site.data.team.pi.photo != "" %}
+      <img class="team-photo" src="{{ site.data.team.pi.photo | relative_url }}" alt="{{ site.data.team.pi.name }}" />
+    {% else %}
+      <div class="team-photo-ph">{{ site.data.team.pi.initials }}</div>
+    {% endif %}
+    <div>
+      <div class="pi-role">{{ t.team.pi_badge }}</div>
+      <div class="pi-name">{{ site.data.team.pi.name }}</div>
+      <div class="pi-title">{{ site.data.team.pi.title }}</div>
+      <div class="pi-bio">{{ site.data.team.pi.bio }}</div>
+      <div class="pi-links">
+        {% if site.data.team.pi.links.website != "" %}<a href="{{ site.data.team.pi.links.website }}" target="_blank">个人主页</a>{% endif %}
+        {% if site.data.team.pi.links.scholar != ""  %}<a href="{{ site.data.team.pi.links.scholar }}" target="_blank">Google Scholar</a>{% endif %}
+        {% if site.data.team.pi.links.cv != ""       %}<a href="{{ site.data.team.pi.links.cv | relative_url }}">简历</a>{% endif %}
+        {% if site.data.team.pi.links.github != ""   %}<a href="{{ site.data.team.pi.links.github }}" target="_blank">GitHub</a>{% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="team-grid">
+    {% for m in site.data.team.members %}
+    <div class="member-card">
+      {% if m.photo != "" %}
+        <img class="member-photo" src="{{ m.photo | relative_url }}" alt="{{ m.name }}" />
+      {% else %}
+        <div class="member-photo">{{ m.initials }}</div>
+      {% endif %}
+      <div class="member-name">{{ m.name }}</div>
+      <div class="member-role">{{ m.role }}</div>
+      <div class="member-focus">{{ m.focus }}</div>
+      <div class="member-links">
+        {% if m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
+        {% if m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
+        {% if m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">主页</a>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if site.data.team.alumni %}
+  <h3 id="alumni" style="font-family:'IBM Plex Serif',serif;font-weight:400;margin:3rem 0 1rem;font-size:1.3rem;color:#0f172a;">往届成员</h3>
+  <table style="width:100%;border-collapse:collapse;font-size:.85rem;">
+    <tr style="border-bottom:1px solid #e2e8f0;">
+      <th style="text-align:left;padding:.5rem;font-weight:600;color:#475569;">姓名</th>
+      <th style="text-align:left;padding:.5rem;font-weight:600;color:#475569;">在组时间</th>
+      <th style="text-align:left;padding:.5rem;font-weight:600;color:#475569;">现任职位</th>
+    </tr>
+    {% for a in site.data.team.alumni %}
+    <tr style="border-top:1px solid #e2e8f0;">
+      <td style="padding:.6rem .5rem;font-weight:600;color:#1e293b;">{{ a.name }}</td>
+      <td style="padding:.6rem .5rem;color:#475569;">{{ a.period }}</td>
+      <td style="padding:.6rem .5rem;color:#475569;">{{ a.now }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+</div>
+</section>
