@@ -17,7 +17,7 @@
       <!-- Language switcher: add zh/team.md etc. to enable other languages -->
       <div class="lang-switcher">
         <a href="{{ page.url | relative_url }}"     class="lang-btn {% if lang == 'en' %}active{% endif %}">EN</a>
-        <a href="{{ '/zh' | append: page.url }}"    class="lang-btn {% if lang == 'zh' %}active{% endif %}">中文</a>
+        <a href="{{ '/zh' | append: page.url | relative_url }}"    class="lang-btn {% if lang == 'zh' %}active{% endif %}">中文</a>
       </div>
     </div>
   </div>
