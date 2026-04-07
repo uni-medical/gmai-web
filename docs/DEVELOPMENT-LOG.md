@@ -375,25 +375,190 @@ curl -s -o /dev/null -w "%{http_code}" "https://uni-medical.github.io/gmai-web/z
 
 ---
 
-## Deferred to Next Session — Content Population
+---
 
-All infrastructure is complete. The site runs on placeholder data. Replace with real content before sharing publicly:
+## Session 2 — 2026-04-07
 
-| File | What to add |
-|---|---|
-| `_config.yml` | Real lab name, PI name, email, institution, address, social links, stats |
-| `_data/publications.yml` | Real papers with BibTeX, DOI links, teaser images |
-| `_data/team.yml` | Real team members with photos and bios |
-| `_data/projects.yml` | Real research projects with funding info |
-| `_data/news.yml` | Real news and announcements |
-| `index.md` + `zh/index.md` | Research panel text matching actual directions |
-| `pages/contact.md` + `pages/zh/contact.md` | Replace `YOUR_FORM_ID` with Formspree endpoint |
-| `assets/images/team/` | Member photos (square, min 400×400px) |
-| `assets/images/teasers/` | Paper teaser figures (800×400px) |
+**Objective:** Populate the website with real GMAI lab content from `resources/resource_20260407.zip`
 
-See `docs/CONTENT-GUIDE.md` for step-by-step instructions for every item above.
+**Commit:** `e8aea9d` — `feat: populate website with real GMAI lab content from resources`
 
-## Known Limitations (Future Sessions)
+---
+
+### Source Materials
+
+The zip file contained:
+
+| File | Type | Content |
+|---|---|---|
+| `网站信息_Table_Grid.csv` | CSV | 11 visiting researchers (name, university, focus, start date, homepage link) |
+| `医学前沿-v20250913.pdf` + `full.md` | PDF (extracted) | Research group mission, department responsibilities, current foundation |
+| `医疗大模型.pdf` + `full.md` | PDF (extracted) | 12 key research achievements/papers with descriptions, collaboration model |
+| `研究基础与规划.pdf` + `full.md` | PDF (extracted) | Detailed project descriptions with arXiv/GitHub links, named researchers |
+| `宁光院士项目讨论.pdf` + `full.md` | PDF (extracted) | Most comprehensive; researcher-attributed projects, needs, system plans |
+
+PDFs were pre-processed via MinerU (PDF→markdown), providing `full.md` extracts with all text content.
+
+---
+
+### Phase 1 — Content Extraction & Mapping
+
+Explored all source documents to identify exactly what could be mapped to the website schema:
+
+**Team members identified:**
+- 11 visiting researchers from CSV with universities, research focus, start dates, homepage links
+- 3 core researchers from PDFs: 黄子炎 (STU-Net, DTR-MAS), 叶锦 (SAM-Med series, GMAI-MMBench), 李添斌 (OmniMedVQA, GMAI-VL)
+- PI confirmed by user: **Junjun He** (Google Scholar: `Z4LgebkAAAAJ`)
+
+**Publications identified** (15 papers with verifiable arXiv/GitHub/DOI links):
+SlideChat (CVPR 2025), Ophora (MICCAI 2025 Oral), RetinaLogos (MICCAI 2025), ProgEmu (MICCAI 2025), MRI Translation (MICCAI 2025), MedQ-Bench (arXiv), MedITok (arXiv), OphCLIP (ICCV 2025), GMAI-VL (arXiv 2024), GMAI-MMBench (arXiv 2024), OmniMedVQA (CVPR 2024), SAM-Med3D (arXiv 2023), SAM-Med2D (arXiv 2023), STU-Net (arXiv 2023), Sci-LLM Survey (arXiv 2025)
+
+**Key decisions (user input):**
+- Lab name: **GMAI** (General Medical AI), shortname "GMAI", GitHub: `uni-medical`
+- OphCLIP venue corrected: document said "ICCV 2024" (impossible — ICCV runs odd years only); confirmed as **ICCV 2025**
+- Photos: team member photo filenames set in `team.yml`; actual image files to be added by user later
+- Institution/department/email/address: left as `TODO:` placeholders in `_config.yml`
+- `resources/` directory added to `.gitignore` (59MB PDFs — not appropriate for git)
+
+---
+
+### Phase 2 — Files Updated (8 files, commit `e8aea9d`)
+
+#### `_data/team.yml` — Full replacement
+
+| Section | Before | After |
+|---|---|---|
+| PI | "Prof. Jane Smith" (placeholder) | Junjun He (Scholar link) |
+| Members | 5 sample members | 14 real members (3 core + 11 visiting) |
+| Alumni | 2 sample alumni | Empty (`alumni: []`) |
+
+Member list:
+
+| Name | Affiliation | Research Focus |
+|---|---|---|
+| Ziyan Huang (黄子炎) | — (from PDFs) | Medical image segmentation, multi-agent systems |
+| Jin Ye (叶锦) | — (from PDFs) | Interactive segmentation, multimodal benchmarks |
+| Tianbin Li (李添斌) | — (from PDFs) | Medical VQA, multimodal large models |
+| Ming Hu (胡铭) | Monash University | Video understanding, MLLMs |
+| Ying Chen (陈莹) | Xiamen University | AI for science, computational pathology |
+| Jiyao Liu (刘继垚) | Fudan University | Low-level vision, agents, MLLMs |
+| Wei Li (李威) | Shanghai Jiao Tong University | Continual learning, MLLMs |
+| Chenglong Ma (马成龙) | Fudan University | Multimodal/generative models |
+| Ye Du (杜烨) | Hong Kong Polytechnic University | AI for science, proteomics |
+| Shujian Gao (高书剑) | Fudan University | Visual representation, multi-modal learning |
+| Wenhao Tang (唐文浩) | Nankai University | AI for science, computational pathology |
+| Jiashi Lin (林佳仕) | Northwestern Polytechnical University | Knowledge graphs, LLMs, agentic RAG |
+| Cheng Tang (唐诚) | UCAS | AI for science, computational imaging |
+| Raymond Ning (宁俊智) | Imperial College London | AI4Health, multimodal medical AI |
+
+#### `_data/publications.yml` — Full replacement
+
+Replaced 3 sample papers with 15 real publications. Each entry has: title, authors (from document mentions), venue, year, abstract (from PDF descriptions), keywords, arXiv/GitHub links.
+
+**Author note:** Full author lists were not always available in the documents — entries use named researchers plus "et al." where appropriate. Team should verify and update author lists from arXiv.
+
+#### `_data/projects.yml` — Full replacement
+
+Replaced 4 sample projects with 5 real ones:
+
+| Title | Area | Status |
+|---|---|---|
+| Project Imaging-X | Medical Data Infrastructure | active |
+| GMAI-VL / UniMedVL | Medical Multimodal AI | active |
+| DTR-MAS | Clinical AI Systems | active |
+| Medical Image Segmentation Foundation Models | Medical Image Analysis | active |
+| Autonomous Surgical Robot | Surgical AI & Robotics | new |
+
+#### `_data/news.yml` — Full replacement
+
+Replaced 5 sample news items with 6 real events:
+
+| Date | Category | Event |
+|---|---|---|
+| June 2025 | paper | Ophora — MICCAI 2025 Oral |
+| June 2025 | paper | RetinaLogos, ProgEmu, MRI Translation — MICCAI 2025 |
+| February 2025 | paper | SlideChat — CVPR 2025 |
+| January 2025 | event | GMAI-MMBench release (50 LVLMs evaluated) |
+| October 2024 | paper | OphCLIP — ICCV 2025 |
+| September 2025 | join | New visiting researchers join |
+
+#### `_config.yml` — Partial update
+
+| Field | Before | After |
+|---|---|---|
+| `title` | "Computational Research Group" | "GMAI — General Medical AI" |
+| `tagline` | "Advancing rigorous science at the frontier of computation" | "AI-Empowered Precision Medicine: Diagnosis, Treatment, and Discovery" |
+| `description` | ML/computational biology placeholder | Real GMAI mission statement |
+| `lab.name` | "Computational Research Group" | "GMAI Lab (General Medical AI)" |
+| `lab.shortname` | "CRG" | "GMAI" |
+| `lab.pi` | "Prof. Jane Smith" | "Junjun He" |
+| `lab.pi_last` | "Smith" | "He" |
+| `lab.github` | "github.com/labname" | "github.com/uni-medical" |
+| `lab.scholar` | Placeholder | Real PI Scholar link |
+| `stats.publications` | 48 | 15 |
+| `stats.members` | 12 | 14 |
+| Institution/dept/address/email | Placeholder | `TODO:` placeholder (user must fill) |
+
+#### `index.md` + `zh/index.md` — 4 research panels rewritten
+
+| Panel | Before (placeholder) | After (real) |
+|---|---|---|
+| 01 | Neural Decoding / BCI | Medical Data Infrastructure (Project Imaging-X, 1,800+ datasets, 100B+ tokens) |
+| 02 | Computational Genomics | Medical Multimodal LLMs (GMAI-VL, SlideChat, 5.5M image-text pairs) |
+| 03 | Structural Biology / Drug Discovery | Medical Image Segmentation (STU-Net 1.4B, SAM-Med2D/3D, 361M masks) |
+| 04 | Clinical AI / Conformal Prediction | Clinical AI Systems (DTR-MAS, Autonomous Surgical Robot) |
+
+Hero title: "Science at the Frontier of Computation" → "AI at the Frontier of Medicine" (EN) / "以人工智能赋能精准医学" (ZH)
+
+Chinese panel text copied directly from PDF documents (no translation needed).
+
+#### `.gitignore` — Added `resources/` exclusion
+
+The `resources/` directory containing raw PDFs (59MB total) was added to `.gitignore` to prevent large binary files from being committed.
+
+---
+
+### Build Verification
+
+```bash
+/home/junzhin/.local/share/gem/ruby/3.2.0/bin/bundle exec jekyll build
+# → done in 14.09 seconds. 0 errors.
+```
+
+---
+
+## Current State Summary — Session 2 Complete (2026-04-07)
+
+### What's Now Real (Not Placeholder)
+
+- ✅ Lab identity: GMAI, GitHub uni-medical, PI Junjun He
+- ✅ 15 publications with real arXiv/GitHub links
+- ✅ 14 team members (real names, universities, research focus)
+- ✅ 5 research projects
+- ✅ 6 news items from real paper acceptances
+- ✅ All 4 homepage research panels with real GMAI content
+
+### Still TODO (Team Action Required)
+
+| Item | Where | Action |
+|---|---|---|
+| Institution name | `_config.yml` `lab.institution` | Replace `"TODO: Add institution name"` |
+| Department | `_config.yml` `lab.department` | Replace `"TODO: Add department name"` |
+| Lab address | `_config.yml` `lab.address` | Replace `"TODO: Add lab address"` |
+| Lab email | `_config.yml` `lab.email` | Replace `"TODO: Add lab email"` |
+| Citation count | `_config.yml` `stats.citations` | Replace `"TODO: Add citation count"` |
+| Founding year | `_config.yml` `lab.founded` | Confirm year (currently `2020`) |
+| Team photos | `assets/images/team/` | Add image files matching filenames in `team.yml` |
+| PI bio & title | `_data/team.yml` `pi.title` / `pi.bio` | Add PI's full title and bio |
+| PI website | `_data/team.yml` `pi.links.website` | Add personal/lab website URL |
+| Core researcher details | `_data/team.yml` (黄子炎, 叶锦, 李添斌) | Add universities, Scholar links |
+| Author lists | `_data/publications.yml` | Verify/complete all co-author lists |
+| BibTeX entries | `_data/publications.yml` | Add full BibTeX from Google Scholar |
+| Formspree form ID | `pages/contact.md` + `pages/zh/contact.md` | Replace `YOUR_FORM_ID` |
+| Publication teasers | `assets/images/teasers/` | Add teaser images for papers |
+| Twitter/social | `_config.yml` `lab.twitter` | Add if applicable |
+
+### Known Limitations (Unchanged from Session 1)
 
 - Mobile nav hides all links at <820px — no hamburger menu
 - No dark mode
