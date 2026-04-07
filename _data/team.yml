@@ -1,77 +1,163 @@
 pi:
-  name:     "Prof. Jane Smith"
+  name:     "Junjun He"
   role:     "Principal Investigator"
-  title:    "Associate Professor, Department of Computer Science"
+  title:    "Principal Investigator, GMAI Lab"
   bio:      >
-    Jane leads the group's research in computational neuroscience and machine
-    learning. Her work focuses on developing principled statistical models for
-    large-scale neural data and brain–machine interfaces. She received her PhD
-    from MIT and was a postdoctoral fellow at Stanford.
-  photo:    "assets/images/team/jane_smith.jpg"
-  initials: "JS"
+    Junjun He leads the GMAI (General Medical AI) research group. The group focuses on
+    building world-leading medical AI models, tools, and multi-agent systems to enable
+    precision diagnosis, treatment, and biomedical discovery. Research spans medical
+    multimodal large language models, medical image segmentation foundation models,
+    clinical AI systems, and medical data infrastructure.
+  photo:    ""
+  initials: "JH"
   links:
-    website: "https://janesmith.university.edu"
-    scholar: "https://scholar.google.com/citations?user=XXX"
-    cv:      "assets/cv/smith_cv.pdf"
-    github:  "https://github.com/jsmith"
+    website: ""
+    scholar: "https://scholar.google.com/citations?user=Z4LgebkAAAAJ&hl=zh-CN"
+    cv:      ""
+    github:  ""
     twitter: ""
 
 members:
-  - name:     "Alex Kim"
-    role:     "Postdoctoral Fellow"
-    focus:    "Deep learning for genomics, single-cell RNA-seq analysis, epigenetics"
-    photo:    "assets/images/team/alex_kim.jpg"
-    initials: "AK"
+  # ── Core researchers (from research documents) ─────────────────
+  - name:     "Ziyan Huang (黄子炎)"
+    role:     "Researcher"
+    focus:    "Medical image segmentation, scalable foundation models, multi-agent systems for medical discovery"
+    photo:    ""
+    initials: "ZH"
     links:
-      scholar: "https://scholar.google.com/citations?user=XXX"
-      github:  "https://github.com/akim"
+      scholar: ""
+      github:  "https://github.com/uni-medical"
       website: ""
 
-  - name:     "Maria Lopez"
-    role:     "PhD Candidate"
-    focus:    "Probabilistic graphical models, Bayesian inference, causal discovery"
+  - name:     "Jin Ye (叶锦)"
+    role:     "Researcher"
+    focus:    "Interactive medical image segmentation, multimodal medical benchmarks, SAM-Med series"
     photo:    ""
-    initials: "ML"
+    initials: "JY"
     links:
-      scholar:  "https://scholar.google.com/citations?user=XXX"
-      website:  "https://marialopez.io"
-      github:   ""
-
-  - name:     "Ryan Chen"
-    role:     "PhD Student"
-    focus:    "Graph neural networks, molecular property prediction"
-    photo:    ""
-    initials: "RC"
-    links:
-      scholar: "https://scholar.google.com/citations?user=XXX"
-      github:  "https://github.com/rchen"
+      scholar: ""
+      github:  "https://github.com/uni-medical"
       website: ""
 
-  - name:     "Sara Patel"
-    role:     "PhD Student"
-    focus:    "Multimodal learning, uncertainty quantification, clinical AI"
+  - name:     "Tianbin Li (李添斌)"
+    role:     "Researcher"
+    focus:    "Medical visual question answering, general medical multimodal large models, GMAI-VL"
     photo:    ""
-    initials: "SP"
+    initials: "TL"
     links:
-      scholar: "https://scholar.google.com/citations?user=XXX"
+      scholar: ""
+      github:  "https://github.com/uni-medical"
+      website: ""
+
+  # ── Visiting researchers (from CSV) ────────────────────────────
+  - name:     "Ming Hu (胡铭)"
+    role:     "Visiting Researcher, Monash University"
+    focus:    "Video understanding, multimodal large language models, ophthalmic surgical video analysis"
+    photo:    "assets/images/team/images.jpeg"
+    initials: "MH"
+    links:
+      scholar: ""
+      github:  ""
+      website: "https://openreview.net/profile?id=%7EMing_Hu4"
+
+  - name:     "Ying Chen (陈莹)"
+    role:     "Visiting Researcher, Xiamen University"
+    focus:    "AI for science, computational pathology, whole-slide image understanding"
+    photo:    "assets/images/team/cy-new.jpg"
+    initials: "YC"
+    links:
+      scholar: ""
+      github:  ""
+      website: "https://cying18.github.io/"
+
+  - name:     "Jiyao Liu (刘继垚)"
+    role:     "Visiting Researcher, Fudan University"
+    focus:    "Low-level vision, agent systems, multimodal large language models, MRI translation"
+    photo:    "assets/images/team/avatar.png"
+    initials: "JL"
+    links:
+      scholar: ""
+      github:  "https://github.com/liujiyaoFDU"
+      website: "https://liujiyaofdu.github.io/"
+
+  - name:     "Wei Li (李威)"
+    role:     "Visiting Researcher, Shanghai Jiao Tong University"
+    focus:    "Continual learning, multimodal large language models, surgical video understanding"
+    photo:    "assets/images/team/微信图片_20250921184016_8_301.jpg"
+    initials: "WL"
+    links:
+      scholar: "https://scholar.google.com/citations?user=TGIvczYAAAAJ&hl=zh-CN"
       github:  ""
       website: ""
 
-  - name:     "Tom Wang"
-    role:     "Research Engineer"
-    focus:    "HPC infrastructure, MLOps, research software engineering"
-    photo:    ""
-    initials: "TW"
+  - name:     "Chenglong Ma (马成龙)"
+    role:     "Visiting Researcher, Fudan University"
+    focus:    "Multimodal models, generative models, medical visual tokenization, counterfactual generation"
+    photo:    "assets/images/team/fa78a94e379aa2e5b56d7cff91b81aba.jpeg"
+    initials: "CM"
     links:
-      scholar: ""
-      github:  "https://github.com/twang"
+      scholar: "https://scholar.google.com/citations?user=rUhyCvMAAAAJ"
+      github:  "https://github.com/Masaaki-75"
       website: ""
 
-alumni:
-  - name:   "Dr. Lisa Park"
-    period: "2019–2023"
-    now:    "Assistant Professor, University of Toronto"
+  - name:     "Ye Du (杜烨)"
+    role:     "Visiting Researcher, The Hong Kong Polytechnic University"
+    focus:    "AI for science, proteomics, biomedical data analysis"
+    photo:    "assets/images/team/du.jpeg"
+    initials: "YD"
+    links:
+      scholar: ""
+      github:  ""
+      website: "https://openreview.net/profile?id=%7EYe_Du4"
 
-  - name:   "Dr. James Wu"
-    period: "2018–2022"
-    now:    "Research Scientist, Google DeepMind"
+  - name:     "Shujian Gao (高书剑)"
+    role:     "Visiting Researcher, Fudan University"
+    focus:    "Visual representation learning, multi-modal learning, large language models"
+    photo:    "assets/images/team/d11337160d932c3c75dd1c5eebcae31a.JPG"
+    initials: "SG"
+    links:
+      scholar: ""
+      github:  ""
+      website: "https://openreview.net/profile?id=%7EShujian_Gao1"
+
+  - name:     "Wenhao Tang (唐文浩)"
+    role:     "Visiting Researcher, Nankai University"
+    focus:    "AI for science, computational pathology, medical image analysis"
+    photo:    "assets/images/team/微信图片_20250922100827.jpg"
+    initials: "WT"
+    links:
+      scholar: ""
+      github:  ""
+      website: "https://www.whtang.cn/"
+
+  - name:     "Jiashi Lin (林佳仕)"
+    role:     "Visiting Researcher, Northwestern Polytechnical University"
+    focus:    "Knowledge graphs, large language models, agentic retrieval-augmented generation"
+    photo:    "assets/images/team/IMG_20250923_001305.jpg"
+    initials: "JL"
+    links:
+      scholar: ""
+      github:  ""
+      website: "https://openreview.net/profile?id=%7EJiashi_Lin1"
+
+  - name:     "Cheng Tang (唐诚)"
+    role:     "Visiting Researcher, University of Chinese Academy of Sciences"
+    focus:    "AI for science, computational imaging"
+    photo:    ""
+    initials: "CT"
+    links:
+      scholar: ""
+      github:  ""
+      website: "https://openreview.net/profile?id=%7ECheng_Tang8"
+
+  - name:     "Raymond Ning (宁俊智)"
+    role:     "Visiting Researcher, Imperial College London"
+    focus:    "AI for health, multimodal medical AI, generative models for retinal image synthesis"
+    photo:    "assets/images/team/image.png"
+    initials: "RN"
+    links:
+      scholar: ""
+      github:  "https://github.com/uni-medical"
+      website: "https://openreview.net/profile?id=~Junzhi_Ning1"
+
+alumni: []

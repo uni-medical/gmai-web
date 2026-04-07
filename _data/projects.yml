@@ -1,34 +1,54 @@
-- title:   "Neural Decoding with Transformer Architectures"
-  area:    "Neuroscience × Machine Learning"
+- title:   "Project Imaging-X: Open Medical Imaging Data Ecosystem"
+  area:    "Medical Data Infrastructure"
   status:  "active"
-  funding: "NIH R01 · 2022–2027"
+  funding: "Open-source initiative"
   desc:    >
-    Applying attention-based architectures to decode motor intent from
-    high-density neural recordings in real time, establishing principled
-    approaches under stringent latency constraints.
+    A comprehensive survey and open-source platform integrating 1,000+ open-access medical
+    imaging datasets. We propose a Metadata-Driven Fusion Paradigm (MDFP) to consolidate
+    fragmented small datasets into large, coherent data resources, and build an interactive
+    discovery portal for end-to-end automated dataset integration. Received collaboration
+    interest from top institutions including Stanford University.
 
-- title:   "Generative Modeling of Epigenetic Landscapes"
-  area:    "Computational Genomics"
+- title:   "GMAI-VL / UniMedVL: General Medical Multimodal Vision-Language Model"
+  area:    "Medical Multimodal AI"
   status:  "active"
-  funding: "NSF CAREER · 2023–2028"
+  funding: "Ongoing research"
   desc:    >
-    Deep generative models that learn the regulatory grammar of chromatin
-    accessibility, enabling in silico perturbation experiments across cell
-    types and disease states.
+    Development of world-leading medical multimodal generation-understanding unified models.
+    GMAI-VL is trained on GMAI-VL-5.5M (5.5M image-text pairs across 18 clinical specialties),
+    while GMAI-VL-R1 introduces reinforcement learning to achieve ~30% average accuracy
+    improvement across eight imaging modalities. UniMedVL targets state-of-the-art performance
+    on complex medical tasks including CURE-Bench and MedXpertQA.
 
-- title:   "Molecular Interaction Network Learning"
-  area:    "Structural Biology"
-  status:  "ongoing"
-  funding: "Industry partnership"
+- title:   "DTR-MAS: Diagnosis-Treatment-Research Multi-Agent System"
+  area:    "Clinical AI Systems"
+  status:  "active"
+  funding: "Ongoing research"
   desc:    >
-    Geometric deep learning on protein interaction networks to predict drug
-    targets, off-target effects, and mechanisms of resistance.
+    A unified medical scientific discovery platform integrating the full clinical and research
+    pipeline: question → evidence retrieval → hypothesis → experiment → validation → knowledge
+    distillation. Built on a general-specialist fusion reasoning model, DTR-MAS integrates
+    1,000+ medical imaging datasets and 1,000+ tools. Validated on ovarian cancer HRD
+    prediction, glaucoma GS3K-Beta gene pathway analysis, and multi-hospital pilot deployments.
 
-- title:   "Multimodal Diagnostic Decision Support"
-  area:    "Clinical AI"
+- title:   "Medical Image Segmentation Foundation Models"
+  area:    "Medical Image Analysis"
+  status:  "active"
+  funding: "Ongoing research"
+  desc:    >
+    A family of large-scale medical image segmentation foundation models: STU-Net (scalable
+    U-Net from 14M to 1.4B parameters — the largest medical segmentation model), SAM-Med2D
+    (adapting SAM to 2D medical images on SA-Med2D-20M benchmark), and SAM-Med3D (voxel-level
+    3D context modelling on 21K volumes / 131K 3D masks). Together these models provide
+    universally promptable segmentation for clinical and research applications.
+
+- title:   "Autonomous Surgical Robot for Gynecological Surgery"
+  area:    "Surgical AI & Robotics"
   status:  "new"
-  funding: "Proposal submitted · 2025"
+  funding: "Ongoing research"
   desc:    >
-    Fusing imaging, electronic health records, and genomic data to build
-    uncertainty-aware diagnostic systems with statistically valid coverage
-    guarantees for clinical deployment.
+    Targeting the world's first fully autonomous robot for gynecological adnexectomy surgery.
+    Building on OphCLIP (ophthalmic surgical workflow understanding) and Ophora (text-guided
+    surgical video generation), this project integrates reinforcement-learning-based intraoperative
+    decision engines and algorithm-hardware co-optimisation for pre-operative planning,
+    intraoperative navigation, and post-operative follow-up in a unified pipeline.

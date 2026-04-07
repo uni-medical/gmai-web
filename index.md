@@ -14,8 +14,8 @@ lang:   "en"
     <div class="lh-eyebrow">{{ site.lab.institution }} &middot; Est. {{ site.lab.founded }}</div>
 
     <h1 class="lh-title">
-      Science at the<br>
-      <strong>Frontier</strong> of <em>Computation</em>
+      AI at the<br>
+      <strong>Frontier</strong> of <em>Medicine</em>
     </h1>
 
     <p class="lh-tagline">{{ site.description }}</p>
@@ -60,7 +60,7 @@ lang:   "en"
 
 
 <!-- ══════════════════════════════════════════════════════════════
-     RESEARCH SECTION 1 — Neural Decoding × BCI
+     RESEARCH SECTION 1 — Medical Data Infrastructure
      Image LEFT · Text RIGHT
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section fade">
@@ -68,42 +68,43 @@ lang:   "en"
     <div class="rs-watermark">01</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
-        <span class="rs-tag">Neuroscience</span>
-        <span class="rs-tag">Machine Learning</span>
-        <span class="rs-tag">BCI</span>
+        <span class="rs-tag">Medical Imaging</span>
+        <span class="rs-tag">Data Infrastructure</span>
+        <span class="rs-tag">Open Science</span>
       </div>
       <div class="rs-vis-stats">
         <div>
-          <span class="rs-vis-stat-n">5</span>
-          <span class="rs-vis-stat-l">NHP subjects</span>
+          <span class="rs-vis-stat-n">1,800+</span>
+          <span class="rs-vis-stat-l">datasets archived</span>
         </div>
         <div>
-          <span class="rs-vis-stat-n">&lt;20ms</span>
-          <span class="rs-vis-stat-l">decode latency</span>
+          <span class="rs-vis-stat-n">100B+</span>
+          <span class="rs-vis-stat-l">tokens</span>
         </div>
         <div>
-          <span class="rs-vis-stat-n">SOTA</span>
-          <span class="rs-vis-stat-l">accuracy</span>
+          <span class="rs-vis-stat-n">361M</span>
+          <span class="rs-vis-stat-l">segmentation masks</span>
         </div>
       </div>
     </div>
   </div>
 
   <div class="rs-text">
-    <div class="rs-area">Neuroscience × Machine Learning</div>
-    <div class="rs-title">Neural Decoding with Transformer Architectures</div>
+    <div class="rs-area">Medical Data Infrastructure</div>
+    <div class="rs-title">Building the Foundation: Large-Scale Medical Data Platforms</div>
     <div class="rs-body">
-      We apply attention-based architectures to decode motor intent from high-density
-      neural recordings in real time. Our systems achieve sub-20ms latency across five
-      non-human primate subjects, establishing principled computational approaches
-      under stringent clinical latency constraints.
+      We build the data infrastructure that powers world-leading medical AI. Project
+      Imaging-X surveys and integrates 1,000+ open medical imaging datasets via a
+      Metadata-Driven Fusion Paradigm. Our private corpus exceeds 100B tokens of
+      biomedical text, 100M+ medical images, and 361M segmentation masks — enabling
+      foundation models that are truly general across modalities, tasks, and diseases.
     </div>
     <div class="rs-topics">
-      <span class="rs-topic">Attention mechanisms</span>
-      <span class="rs-topic">Motor cortex decoding</span>
-      <span class="rs-topic">Real-time inference</span>
-      <span class="rs-topic">Brain–machine interfaces</span>
-      <span class="rs-topic">NIH R01 · 2022–2027</span>
+      <span class="rs-topic">Project Imaging-X</span>
+      <span class="rs-topic">IMed-361M</span>
+      <span class="rs-topic">GMAI-VL-5.5M</span>
+      <span class="rs-topic">Metadata-driven fusion</span>
+      <span class="rs-topic">SlideInstruction</span>
     </div>
     <a href="{{ '/projects/' | relative_url }}" class="rs-link">Explore this project →</a>
   </div>
@@ -111,7 +112,7 @@ lang:   "en"
 
 
 <!-- ══════════════════════════════════════════════════════════════
-     RESEARCH SECTION 2 — Computational Genomics
+     RESEARCH SECTION 2 — Medical Multimodal Large Models
      Text LEFT · Image RIGHT  (flipped)
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section rs-flip fade">
@@ -119,46 +120,52 @@ lang:   "en"
     <div class="rs-watermark">02</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
-        <span class="rs-tag">Genomics</span>
-        <span class="rs-tag">Generative Models</span>
-        <span class="rs-tag">Epigenetics</span>
+        <span class="rs-tag">Multimodal LLM</span>
+        <span class="rs-tag">Medical VQA</span>
+        <span class="rs-tag">Pathology AI</span>
       </div>
       <div class="rs-vis-stats">
         <div>
-          <span class="rs-vis-stat-n">40+</span>
-          <span class="rs-vis-stat-l">tissue types</span>
+          <span class="rs-vis-stat-n">5.5M</span>
+          <span class="rs-vis-stat-l">image-text pairs</span>
         </div>
         <div>
-          <span class="rs-vis-stat-n">VAE</span>
-          <span class="rs-vis-stat-l">framework</span>
+          <span class="rs-vis-stat-n">18</span>
+          <span class="rs-vis-stat-l">clinical specialties</span>
+        </div>
+        <div>
+          <span class="rs-vis-stat-n">38</span>
+          <span class="rs-vis-stat-l">imaging modalities</span>
         </div>
       </div>
     </div>
   </div>
 
   <div class="rs-text">
-    <div class="rs-area">Computational Genomics</div>
-    <div class="rs-title">Generative Modeling of Epigenetic Landscapes</div>
+    <div class="rs-area">Medical Multimodal Large Models</div>
+    <div class="rs-title">General Medical Vision-Language Models: GMAI-VL and Beyond</div>
     <div class="rs-body">
-      Our deep generative models learn the regulatory grammar of chromatin accessibility,
-      enabling <em>in silico</em> perturbation experiments across cell types and disease
-      states. We disentangle epigenetic programs to discover cell-type-specific regulatory
-      elements across 40 tissue types.
+      We build world-leading medical multimodal large models. GMAI-VL, trained on
+      5.5M image-text pairs across 18 clinical specialties, achieves SOTA on medical
+      VQA and diagnostic reasoning tasks. SlideChat is the first vision-language assistant
+      to directly understand gigapixel whole-slide pathology images. GMAI-VL-R1 introduces
+      reinforcement learning, improving average accuracy by ~30% across eight imaging
+      modalities and surpassing models 36× larger.
     </div>
     <div class="rs-topics">
-      <span class="rs-topic">Variational autoencoders</span>
-      <span class="rs-topic">Chromatin accessibility</span>
-      <span class="rs-topic">Causal disentanglement</span>
-      <span class="rs-topic">Single-cell ATAC-seq</span>
-      <span class="rs-topic">NSF CAREER · 2023–2028</span>
+      <span class="rs-topic">GMAI-VL</span>
+      <span class="rs-topic">SlideChat (CVPR 2025)</span>
+      <span class="rs-topic">GMAI-VL-R1</span>
+      <span class="rs-topic">GMAI-MMBench</span>
+      <span class="rs-topic">OmniMedVQA (CVPR 2024)</span>
     </div>
-    <a href="{{ '/projects/' | relative_url }}" class="rs-link">Explore this project →</a>
+    <a href="{{ '/publications/' | relative_url }}" class="rs-link">View publications →</a>
   </div>
 </div>
 
 
 <!-- ══════════════════════════════════════════════════════════════
-     RESEARCH SECTION 3 — Structural Biology / Drug Discovery
+     RESEARCH SECTION 3 — Medical Image Segmentation Foundation Models
      Image LEFT · Text RIGHT
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section fade">
@@ -166,45 +173,52 @@ lang:   "en"
     <div class="rs-watermark">03</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
-        <span class="rs-tag">Structural Biology</span>
-        <span class="rs-tag">Graph Learning</span>
-        <span class="rs-tag">Drug Discovery</span>
+        <span class="rs-tag">Image Segmentation</span>
+        <span class="rs-tag">Foundation Models</span>
+        <span class="rs-tag">3D Medical Imaging</span>
       </div>
       <div class="rs-vis-stats">
         <div>
-          <span class="rs-vis-stat-n">SE(3)</span>
-          <span class="rs-vis-stat-l">equivariant</span>
+          <span class="rs-vis-stat-n">1.4B</span>
+          <span class="rs-vis-stat-l">parameters (STU-Net)</span>
         </div>
         <div>
-          <span class="rs-vis-stat-n">GNN</span>
-          <span class="rs-vis-stat-l">architecture</span>
+          <span class="rs-vis-stat-n">247</span>
+          <span class="rs-vis-stat-l">anatomy classes</span>
+        </div>
+        <div>
+          <span class="rs-vis-stat-n">SOTA</span>
+          <span class="rs-vis-stat-l">3D segmentation</span>
         </div>
       </div>
     </div>
   </div>
 
   <div class="rs-text">
-    <div class="rs-area">Structural Biology</div>
-    <div class="rs-title">Molecular Interaction Network Learning</div>
+    <div class="rs-area">Medical Image Segmentation</div>
+    <div class="rs-title">Segment Anything in Medicine: STU-Net and SAM-Med Series</div>
     <div class="rs-body">
-      We develop geometric deep learning models on protein interaction networks to predict
-      drug targets, off-target effects, and mechanisms of resistance. Our SE(3)-equivariant
-      message-passing architecture leverages 3D molecular geometry for improved
-      generalisation on out-of-distribution compound series.
+      We develop the largest-scale medical image segmentation foundation models.
+      STU-Net scales from 14M to 1.4B parameters — the largest medical segmentation
+      model — achieving excellent results in both direct inference and fine-tuning.
+      SAM-Med2D and SAM-Med3D adapt the Segment Anything Model to medical imaging,
+      enabling universal promptable segmentation across 14 imaging modalities and
+      204 anatomical and lesion categories.
     </div>
     <div class="rs-topics">
-      <span class="rs-topic">Equivariant networks</span>
-      <span class="rs-topic">Protein–ligand binding</span>
-      <span class="rs-topic">3D molecular geometry</span>
-      <span class="rs-topic">NeurIPS Spotlight 2024</span>
+      <span class="rs-topic">STU-Net (1.4B params)</span>
+      <span class="rs-topic">SAM-Med2D</span>
+      <span class="rs-topic">SAM-Med3D</span>
+      <span class="rs-topic">IMed-361M (361M masks)</span>
+      <span class="rs-topic">Interactive segmentation</span>
     </div>
-    <a href="{{ '/publications/' | relative_url }}" class="rs-link">Read the paper →</a>
+    <a href="{{ '/publications/' | relative_url }}" class="rs-link">View publications →</a>
   </div>
 </div>
 
 
 <!-- ══════════════════════════════════════════════════════════════
-     RESEARCH SECTION 4 — Clinical AI
+     RESEARCH SECTION 4 — Clinical AI Systems & Surgical Robotics
      Text LEFT · Image RIGHT  (flipped)
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section rs-flip fade">
@@ -212,37 +226,40 @@ lang:   "en"
     <div class="rs-watermark">04</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
-        <span class="rs-tag">Clinical AI</span>
-        <span class="rs-tag">Multimodal</span>
-        <span class="rs-tag">Uncertainty</span>
+        <span class="rs-tag">Multi-Agent Systems</span>
+        <span class="rs-tag">Surgical AI</span>
+        <span class="rs-tag">Clinical Deployment</span>
       </div>
       <div class="rs-vis-stats">
         <div>
-          <span class="rs-vis-stat-n">3×</span>
-          <span class="rs-vis-stat-l">data modalities</span>
+          <span class="rs-vis-stat-n">1,000+</span>
+          <span class="rs-vis-stat-l">integrated tools</span>
         </div>
         <div>
-          <span class="rs-vis-stat-n">UQ</span>
-          <span class="rs-vis-stat-l">coverage guarantees</span>
+          <span class="rs-vis-stat-n">DTR</span>
+          <span class="rs-vis-stat-l">diagnosis-treatment-research</span>
         </div>
       </div>
     </div>
   </div>
 
   <div class="rs-text">
-    <div class="rs-area">Clinical AI</div>
-    <div class="rs-title">Multimodal Diagnostic Decision Support</div>
+    <div class="rs-area">Clinical AI Systems</div>
+    <div class="rs-title">From Models to Action: Multi-Agent Systems and Autonomous Surgery</div>
     <div class="rs-body">
-      We fuse imaging, electronic health records, and genomic data to build
-      uncertainty-aware diagnostic systems. Statistically valid conformal coverage
-      guarantees make these systems clinically deployable — not just accurate,
-      but provably reliable.
+      We build end-to-end intelligent systems that bring AI to the clinic. DTR-MAS is a
+      Diagnosis-Treatment-Research multi-agent platform that converts complex clinical
+      and research workflows into traceable, auditable multi-agent collaboration. We are
+      also building the world's first autonomous robot for gynecological adnexectomy surgery,
+      integrating pre-operative planning, intraoperative navigation, and post-operative
+      follow-up in a single autonomous pipeline.
     </div>
     <div class="rs-topics">
-      <span class="rs-topic">Conformal prediction</span>
-      <span class="rs-topic">EHR + imaging fusion</span>
-      <span class="rs-topic">Uncertainty quantification</span>
-      <span class="rs-topic">Clinical deployment</span>
+      <span class="rs-topic">DTR-MAS</span>
+      <span class="rs-topic">Autonomous surgical robot</span>
+      <span class="rs-topic">OphCLIP (ICCV 2025)</span>
+      <span class="rs-topic">Ophora (MICCAI 2025 Oral)</span>
+      <span class="rs-topic">Hospital pilot deployments</span>
     </div>
     <a href="{{ '/projects/' | relative_url }}" class="rs-link">Explore this project →</a>
   </div>

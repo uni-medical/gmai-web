@@ -1,30 +1,55 @@
 # category values: award | paper | grant | join | event
-- date:     "March 2025"
-  category: "award"
-  label:    "Award"
-  headline: "Prof. Smith receives the Young Investigator Award, Society for Neuroscience"
-  body:     "Recognising outstanding contributions to computational methods in neural circuit analysis."
+
+- date:     "June 2025"
+  category: "paper"
+  label:    "Paper"
+  headline: "Ophora accepted at MICCAI 2025 as Oral Presentation"
+  body:     >
+    Our text-guided ophthalmic surgical video generation model Ophora was accepted at
+    MICCAI 2025 as an oral presentation. Ophora is trained on 160K video-text pairs and
+    outperforms existing methods on FID, FVD, and CLIPScore metrics.
+
+- date:     "June 2025"
+  category: "paper"
+  label:    "Paper"
+  headline: "RetinaLogos, ProgEmu, and MRI Translation papers accepted at MICCAI 2025"
+  body:     >
+    Three papers accepted at MICCAI 2025: RetinaLogos (language-driven high-resolution
+    fundus image generation), ProgEmu (interpretable counterfactual medical image generation),
+    and Multi-modal MRI Translation via Evidential Regression and Distribution Calibration.
 
 - date:     "February 2025"
   category: "paper"
   label:    "Paper"
-  headline: "New paper accepted at Nature Neuroscience on real-time neural decoding"
-  body:     "Our transformer-based decoder achieves state-of-the-art accuracy in closed-loop BCI systems."
+  headline: "SlideChat accepted at CVPR 2025"
+  body:     >
+    Our whole-slide pathology image understanding assistant SlideChat was accepted at
+    CVPR 2025. SlideChat achieves 81.17% accuracy on SlideBench-VQA and surpasses
+    state-of-the-art on 18 of 22 benchmark tasks.
 
 - date:     "January 2025"
-  category: "grant"
-  label:    "Grant"
-  headline: "NIH supplement awarded for clinical AI multimodal project"
-  body:     "Funding supports two additional years of research in uncertainty quantification."
-
-- date:     "January 2025"
-  category: "join"
-  label:    "Join"
-  headline: "Welcoming two new PhD students to the group"
-  body:     "Sara Patel and Tom Wang join, bringing expertise in medical imaging and systems engineering."
-
-- date:     "December 2024"
   category: "event"
   label:    "Event"
-  headline: "Group presents three papers at NeurIPS 2024, Vancouver"
-  body:     "Ryan Chen's protein binding paper received a spotlight presentation."
+  headline: "GMAI-MMBench: Comprehensive evaluation of 50 large vision-language models"
+  body:     >
+    We released GMAI-MMBench — the most comprehensive medical AI evaluation platform
+    covering 284 datasets, 38 imaging modalities, and 18 clinical tasks. Even GPT-4o
+    achieves only 53.96% accuracy, highlighting challenges in medical multimodal AI.
+
+- date:     "October 2024"
+  category: "paper"
+  label:    "Paper"
+  headline: "OphCLIP accepted at ICCV 2025 — surgical video-language pre-training"
+  body:     >
+    OphCLIP, our hierarchical retrieval-augmented framework for ophthalmic surgical
+    video understanding, was accepted at ICCV. Built on OphVL (375K+ video-text pairs),
+    OphCLIP sets new records on phase recognition and multi-instrument detection tasks.
+
+- date:     "September 2025"
+  category: "join"
+  label:    "Join"
+  headline: "Welcoming new visiting researchers to GMAI Lab"
+  body:     >
+    We welcome Wenhao Tang (Nankai University), Shujian Gao (Fudan University), and
+    Jiashi Lin (Northwestern Polytechnical University) as new visiting researchers,
+    bringing expertise in computational pathology, multimodal learning, and LLM-based agents.

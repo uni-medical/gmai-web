@@ -14,11 +14,11 @@ lang:   "zh"
     <div class="lh-eyebrow">{{ site.lab.institution }} &middot; 成立于 {{ site.lab.founded }}</div>
 
     <h1 class="lh-title">
-      在<strong>计算前沿</strong><br>
-      推动<em>严谨科学</em>
+      以<strong>人工智能</strong><br>
+      赋能<em>精准医学</em>
     </h1>
 
-    <p class="lh-tagline">我们在机器学习与计算生物学的交汇处，开发有原则的计算方法。</p>
+    <p class="lh-tagline">打造世界领先的医学 AI 模型、工具与多智能体系统，实现高水平、普惠的精准诊断、治疗与基础研究。</p>
 
     <div class="lh-cta">
       <a class="lh-btn primary" href="{{ '/zh/publications/' | relative_url }}">查看论文</a>
@@ -65,30 +65,32 @@ lang:   "zh"
     <div class="rs-watermark">01</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
-        <span class="rs-tag">神经科学</span>
-        <span class="rs-tag">机器学习</span>
-        <span class="rs-tag">脑机接口</span>
+        <span class="rs-tag">医学影像</span>
+        <span class="rs-tag">数据基础设施</span>
+        <span class="rs-tag">开放科学</span>
       </div>
       <div class="rs-vis-stats">
-        <div><span class="rs-vis-stat-n">5</span><span class="rs-vis-stat-l">实验对象</span></div>
-        <div><span class="rs-vis-stat-n">&lt;20ms</span><span class="rs-vis-stat-l">解码延迟</span></div>
+        <div><span class="rs-vis-stat-n">1,800+</span><span class="rs-vis-stat-l">已归档数据集</span></div>
+        <div><span class="rs-vis-stat-n">100B+</span><span class="rs-vis-stat-l">tokens 语料</span></div>
+        <div><span class="rs-vis-stat-n">3.61亿</span><span class="rs-vis-stat-l">分割掩码</span></div>
       </div>
     </div>
   </div>
   <div class="rs-text">
-    <div class="rs-area">神经科学 × 机器学习</div>
-    <div class="rs-title">基于 Transformer 的实时神经解码</div>
+    <div class="rs-area">医学数据基础设施</div>
+    <div class="rs-title">夯实基础：大规模医学数据平台建设</div>
     <div class="rs-body">
-      我们将注意力机制架构应用于高密度神经信号记录的运动意图实时解码，
-      在五只非人灵长类动物上实现了低于 20 毫秒延迟的最先进精度，
-      为脑机接口系统提供了有原则的计算方案。
+      我们构建了驱动世界领先医学 AI 的数据基础设施。Project Imaging-X 通过元数据驱动融合范式（MDFP），
+      系统整合 1,000+ 个开放医学影像数据集，并搭建交互式发现门户。
+      我们的私有语料库涵盖超 100B tokens 生物医学文本、过亿医学图像及 3.61 亿分割掩码，
+      为跨模态、跨任务、跨疾病的通用基础模型训练提供坚实支撑。
     </div>
     <div class="rs-topics">
-      <span class="rs-topic">注意力机制</span>
-      <span class="rs-topic">运动皮层解码</span>
-      <span class="rs-topic">实时推断</span>
-      <span class="rs-topic">脑机接口</span>
-      <span class="rs-topic">NIH R01 · 2022–2027</span>
+      <span class="rs-topic">Project Imaging-X</span>
+      <span class="rs-topic">IMed-361M</span>
+      <span class="rs-topic">GMAI-VL-5.5M</span>
+      <span class="rs-topic">元数据驱动融合</span>
+      <span class="rs-topic">SlideInstruction</span>
     </div>
     <a href="{{ '/zh/projects/' | relative_url }}" class="rs-link">了解此项目 →</a>
   </div>
@@ -100,32 +102,34 @@ lang:   "zh"
     <div class="rs-watermark">02</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
-        <span class="rs-tag">基因组学</span>
-        <span class="rs-tag">生成模型</span>
-        <span class="rs-tag">表观遗传</span>
+        <span class="rs-tag">多模态大模型</span>
+        <span class="rs-tag">医学 VQA</span>
+        <span class="rs-tag">病理 AI</span>
       </div>
       <div class="rs-vis-stats">
-        <div><span class="rs-vis-stat-n">40+</span><span class="rs-vis-stat-l">组织类型</span></div>
-        <div><span class="rs-vis-stat-n">VAE</span><span class="rs-vis-stat-l">框架</span></div>
+        <div><span class="rs-vis-stat-n">550万</span><span class="rs-vis-stat-l">图文对</span></div>
+        <div><span class="rs-vis-stat-n">18</span><span class="rs-vis-stat-l">临床科室</span></div>
+        <div><span class="rs-vis-stat-n">38</span><span class="rs-vis-stat-l">影像模态</span></div>
       </div>
     </div>
   </div>
   <div class="rs-text">
-    <div class="rs-area">计算基因组学</div>
-    <div class="rs-title">表观遗传景观的生成建模</div>
+    <div class="rs-area">医学多模态大模型</div>
+    <div class="rs-title">通用医学视觉语言模型：GMAI-VL 与垂类突破</div>
     <div class="rs-body">
-      我们的深度生成模型学习染色质可及性的调控语法，支持跨细胞类型和疾病状态的
-      计算机体外扰动实验。通过因果解耦，我们发现了 40 余种组织类型中
-      细胞类型特异性调控元件。
+      我们打造世界领先的医学多模态大模型。GMAI-VL 基于涵盖 18 个临床科室的 550 万图文对训练，
+      在医学 VQA 和诊断推理任务上达到并刷新 SOTA 水平。SlideChat 是首个能直接理解千兆像素
+      全切片病理图像的视觉-语言助手（CVPR 2025）。GMAI-VL-R1 引入强化学习，
+      在八种影像模态上平均准确率提升近 30%，超越参数量大 36 倍的基线模型。
     </div>
     <div class="rs-topics">
-      <span class="rs-topic">变分自编码器</span>
-      <span class="rs-topic">染色质可及性</span>
-      <span class="rs-topic">因果解耦</span>
-      <span class="rs-topic">单细胞 ATAC-seq</span>
-      <span class="rs-topic">NSF CAREER · 2023–2028</span>
+      <span class="rs-topic">GMAI-VL</span>
+      <span class="rs-topic">SlideChat（CVPR 2025）</span>
+      <span class="rs-topic">GMAI-VL-R1</span>
+      <span class="rs-topic">GMAI-MMBench</span>
+      <span class="rs-topic">OmniMedVQA（CVPR 2024）</span>
     </div>
-    <a href="{{ '/zh/projects/' | relative_url }}" class="rs-link">了解此项目 →</a>
+    <a href="{{ '/zh/publications/' | relative_url }}" class="rs-link">查看论文 →</a>
   </div>
 </div>
 
@@ -135,31 +139,34 @@ lang:   "zh"
     <div class="rs-watermark">03</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
-        <span class="rs-tag">结构生物学</span>
-        <span class="rs-tag">图神经网络</span>
-        <span class="rs-tag">药物发现</span>
+        <span class="rs-tag">图像分割</span>
+        <span class="rs-tag">基础模型</span>
+        <span class="rs-tag">三维医学影像</span>
       </div>
       <div class="rs-vis-stats">
-        <div><span class="rs-vis-stat-n">SE(3)</span><span class="rs-vis-stat-l">等变网络</span></div>
-        <div><span class="rs-vis-stat-n">GNN</span><span class="rs-vis-stat-l">架构</span></div>
+        <div><span class="rs-vis-stat-n">14亿</span><span class="rs-vis-stat-l">参数（STU-Net）</span></div>
+        <div><span class="rs-vis-stat-n">247</span><span class="rs-vis-stat-l">解剖类别</span></div>
+        <div><span class="rs-vis-stat-n">SOTA</span><span class="rs-vis-stat-l">三维分割</span></div>
       </div>
     </div>
   </div>
   <div class="rs-text">
-    <div class="rs-area">结构生物学</div>
-    <div class="rs-title">分子相互作用网络学习</div>
+    <div class="rs-area">医学图像分割</div>
+    <div class="rs-title">分割一切：STU-Net 与 SAM-Med 系列基础模型</div>
     <div class="rs-body">
-      我们在蛋白质相互作用网络上开发几何深度学习模型，预测药物靶点、脱靶效应
-      及耐药机制。SE(3) 等变消息传递架构利用三维分子几何，
-      在分布外化合物系列上显著提升泛化能力。
+      我们打造最大规模的医学图像分割基础模型系列。STU-Net 参数规模从 1400 万扩展至 14 亿，
+      是目前最大的医学图像分割模型，在直接推理与微调上均表现卓越。
+      SAM-Med2D 和 SAM-Med3D 将 SAM 适配至医学场景，支持 14 种影像模态、
+      204 类解剖与病灶目标的通用可提示分割，实现真正意义上的"分割一切"。
     </div>
     <div class="rs-topics">
-      <span class="rs-topic">等变网络</span>
-      <span class="rs-topic">蛋白质–配体结合</span>
-      <span class="rs-topic">三维分子几何</span>
-      <span class="rs-topic">NeurIPS Spotlight 2024</span>
+      <span class="rs-topic">STU-Net（14亿参数）</span>
+      <span class="rs-topic">SAM-Med2D</span>
+      <span class="rs-topic">SAM-Med3D</span>
+      <span class="rs-topic">IMed-361M（3.61亿掩码）</span>
+      <span class="rs-topic">交互式分割</span>
     </div>
-    <a href="{{ '/zh/publications/' | relative_url }}" class="rs-link">阅读论文 →</a>
+    <a href="{{ '/zh/publications/' | relative_url }}" class="rs-link">查看论文 →</a>
   </div>
 </div>
 
@@ -169,29 +176,31 @@ lang:   "zh"
     <div class="rs-watermark">04</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
-        <span class="rs-tag">临床 AI</span>
-        <span class="rs-tag">多模态</span>
-        <span class="rs-tag">不确定性量化</span>
+        <span class="rs-tag">多智能体系统</span>
+        <span class="rs-tag">手术 AI</span>
+        <span class="rs-tag">临床落地</span>
       </div>
       <div class="rs-vis-stats">
-        <div><span class="rs-vis-stat-n">3×</span><span class="rs-vis-stat-l">数据模态</span></div>
-        <div><span class="rs-vis-stat-n">UQ</span><span class="rs-vis-stat-l">覆盖保证</span></div>
+        <div><span class="rs-vis-stat-n">1,000+</span><span class="rs-vis-stat-l">集成工具</span></div>
+        <div><span class="rs-vis-stat-n">DTR</span><span class="rs-vis-stat-l">诊断-治疗-研究</span></div>
       </div>
     </div>
   </div>
   <div class="rs-text">
-    <div class="rs-area">临床 AI</div>
-    <div class="rs-title">多模态诊断决策支持系统</div>
+    <div class="rs-area">临床 AI 系统</div>
+    <div class="rs-title">从模型到行动：多智能体系统与自主手术机器人</div>
     <div class="rs-body">
-      我们融合影像、电子健康记录与基因组数据，构建具有不确定性感知的诊断系统。
-      符合性预测提供了统计上有效的覆盖保证，使系统不仅精准，
-      更在临床部署中具备可证明的可靠性。
+      我们构建端到端的智能系统，将 AI 真正引入临床。DTR-MAS 是贯通"诊断-治疗-研究"
+      的一体化多智能体平台，将临床与科研的常规流程转化为可追踪、可审计的多代理协作，
+      集成 1,000+ 医学影像数据集与工具。我们还致力于打造世界首例妇科附件切除
+      自主手术机器人，实现术前规划-术中导航-术后随访一体化自主闭环。
     </div>
     <div class="rs-topics">
-      <span class="rs-topic">符合性预测</span>
-      <span class="rs-topic">EHR 与影像融合</span>
-      <span class="rs-topic">不确定性量化</span>
-      <span class="rs-topic">临床部署</span>
+      <span class="rs-topic">DTR-MAS</span>
+      <span class="rs-topic">自主手术机器人</span>
+      <span class="rs-topic">OphCLIP（ICCV 2025）</span>
+      <span class="rs-topic">Ophora（MICCAI 2025 Oral）</span>
+      <span class="rs-topic">多院试点部署</span>
     </div>
     <a href="{{ '/zh/projects/' | relative_url }}" class="rs-link">了解此项目 →</a>
   </div>

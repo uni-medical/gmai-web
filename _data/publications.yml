@@ -6,76 +6,264 @@
 # 5. Add teaser image to assets/images/teasers/ and reference it here
 # ──────────────────────────────────────────────────────────────────
 
-- title:    "Scalable Transformer Models for Real-Time Neural Decoding in Non-Human Primates"
-  authors:  "Smith J., Kim A., Lopez M., Chen R., Wang T."
-  venue:    "Nature Neuroscience"
+- title:    "SlideChat: A Large Vision-Language Assistant for Whole-Slide Pathology Image Understanding"
+  authors:  "Ying Chen, Junbo Peng, Guoan Wang, Tianbin Li, Bin Zhang, Dandan Zheng, Zhixiao Zhao, Jianfeng Zhang, Junjun He"
+  venue:    "CVPR"
   year:     2025
   note:     ""
   abstract: >
-    We present a scalable transformer architecture that decodes motor intent
-    from high-density neural recordings with sub-20ms latency, achieving
-    state-of-the-art accuracy across five non-human primate subjects.
-  teaser:   "assets/images/teasers/smith2025.png"
-  keywords: "neural decoding, transformer, BCI"
+    We present SlideChat, the first vision-language assistant capable of understanding
+    gigapixel whole-slide images (WSIs). We construct SlideInstruction — a dataset of
+    4,181 slide-report pairs and 175,753 QA pairs across 13 pathology categories, 20×
+    larger than prior datasets. SlideChat achieves 81.17% accuracy on SlideBench-VQA (TCGA)
+    and surpasses state-of-the-art results on 18 of 22 tasks, establishing a data–model–
+    benchmark framework for next-generation medical vision-language models.
+  teaser:   ""
+  keywords: "computational pathology, whole-slide images, vision-language model, multimodal AI"
   links:
-    paper:       "https://doi.org/10.xxxx/xxxx"
-    code:        "https://github.com/labname/neural-decoder"
-    project:     "https://labname.github.io/neural-decoder"
-    demo:        "https://huggingface.co/spaces/labname/demo"
-  bibtex: |
-    @article{smith2025neural,
-      title   = {Scalable Transformer Models for Real-Time Neural Decoding in Non-Human Primates},
-      author  = {Smith, Jane and Kim, Alex and Lopez, Maria and Chen, Ryan and Wang, Tom},
-      journal = {Nature Neuroscience},
-      year    = {2025},
-      doi     = {10.xxxx/xxxx},
-      url     = {https://doi.org/10.xxxx/xxxx}
-    }
+    paper:  "https://arxiv.org/abs/2410.11761"
+    code:   "https://github.com/uni-medical/SlideChat"
 
-- title:    "Causal Disentanglement of Epigenetic Programs via Variational Autoencoders"
-  authors:  "Lopez M., Smith J., Chen R."
-  venue:    "Cell Systems"
+- title:    "Ophora: A Large-Scale Data-Driven Text-Guided Ophthalmic Surgical Video Generation Model"
+  authors:  "Ming Hu, Tianbin Li, Zhixuan Li, Lihao Liu, Matías Valdenegro-Toro, Junjun He"
+  venue:    "MICCAI"
+  year:     2025
+  note:     "Oral"
+  abstract: >
+    We propose Ophora, a text-guided surgical video generation model trained on Ophora-160K
+    (160K video-text pairs). A privacy-preserving fine-tuning pipeline using LVLM-based
+    frame filtering produces Ophora-28K. Ophora outperforms existing methods on FID, FVD,
+    and CLIPScore metrics, and synthesized videos significantly improve downstream surgical
+    workflow understanding (e.g., MViTv2 Top-1: 37.92% → 42.24%).
+  teaser:   ""
+  keywords: "surgical video generation, ophthalmic AI, text-to-video, privacy-preserving"
+  links:
+    paper:  "https://arxiv.org/abs/2505.07449"
+    code:   "https://github.com/uni-medical/Ophora"
+
+- title:    "RetinaLogos: Language-Driven High-Resolution Fundus Image Generation with Fine-Grained Anatomical Control"
+  authors:  "Raymond Ning, Junjun He"
+  venue:    "MICCAI"
+  year:     2025
+  note:     ""
+  abstract: >
+    RetinaLogos addresses the chronic shortage of annotated retinal images by generating
+    high-resolution fundus photographs conditioned on free-form natural language. We build
+    RetinaLogos-1400k (14M image-text pairs) and train a three-stage progressive pipeline
+    at 1024×1024 resolution. Expert blind evaluation shows 62.07% of synthetic images are
+    judged as real. DR grading accuracy improves 5–10%, glaucoma detection F1 reaches 0.93.
+  teaser:   ""
+  keywords: "retinal imaging, fundus image synthesis, text-to-image generation, ophthalmology AI"
+  links:
+    paper:  "https://papers.miccai.org/miccai-2025/paper/0673_paper.pdf"
+    code:   "https://github.com/uni-medical/retina-text2cfp"
+
+- title:    "ProgEmu: Interpretable Counterfactual Generation for Medical Image Progression Emulation"
+  authors:  "Chenglong Ma, Junjun He"
+  venue:    "MICCAI"
+  year:     2025
+  note:     ""
+  abstract: >
+    ProgEmu introduces the Interpretable Counterfactual Generation (ICG) task for medical
+    imaging, requiring a model to jointly predict future images and textual radiological
+    explanations given disease progression hypotheses. We build ICG-CXR (11,439 high-quality
+    samples) and propose a multimodal autoregressive model that achieves FID 29.21 and
+    ROUGE-L 0.2606, surpassing all existing SOTA methods.
+  teaser:   ""
+  keywords: "counterfactual generation, explainable AI, medical imaging, multimodal autoregression"
+  links:
+    paper:  "https://doi.org/10.1007/978-3-032-04937-7_58"
+    code:   "https://progemiu.github.io/"
+
+- title:    "Multi-modal MRI Translation via Evidential Regression and Distribution Calibration"
+  authors:  "Jiyao Liu, Junjun He"
+  venue:    "MICCAI"
+  year:     2025
+  note:     ""
+  abstract: >
+    We propose a novel MRI cross-modal translation framework combining Evidential Regression
+    and Distribution Calibration to address missing modality sequences in clinical settings.
+    Each source modality predicts a Normal-Inverse Gamma distribution, fused via MoNIG for
+    uncertainty-aware synthesis. Validated on BraTS2023 and low-field African MRI datasets,
+    achieving PSNR 28.48 dB and UCE 0.089 on cross-center generalization.
+  teaser:   ""
+  keywords: "MRI synthesis, uncertainty quantification, domain adaptation, cross-modal translation"
+  links:
+    paper:  "https://link.springer.com/chapter/10.1007/978-3-032-04984-1_35"
+    code:   ""
+
+- title:    "MedQ-Bench: A Perception-Reasoning Benchmark for Medical Image Quality Assessment"
+  authors:  "Jiyao Liu, Junjun He"
+  venue:    "arXiv"
+  year:     2025
+  note:     ""
+  abstract: >
+    MedQ-Bench introduces a novel perception-reasoning paradigm for medical image quality
+    assessment covering 5 modalities and 40+ quality attributes (3,308 samples). It
+    integrates real clinical images, physical degradation simulations, and AI-synthesized
+    data across three evaluation tracks. Zero-shot evaluation of 14 leading MLLMs shows
+    GPT-4 achieves 68.97% perception accuracy, still 13.5% below expert performance.
+  teaser:   ""
+  keywords: "image quality assessment, medical imaging, multimodal LLM, benchmark"
+  links:
+    paper:  "https://arxiv.org/abs/2510.01691"
+    code:   "https://github.com/liujiyaoFDU/MedQBench"
+
+- title:    "MedITok: A Unified Medical Visual Tokenizer for Image Synthesis and Understanding"
+  authors:  "Chenglong Ma, Junjun He"
+  venue:    "arXiv"
+  year:     2025
+  note:     ""
+  abstract: >
+    MedITok is the first unified visual tokenizer designed for medical images, addressing
+    the conflict between structural fidelity and semantic richness in joint synthesis and
+    understanding tasks. A two-stage training framework first pre-trains on 30M+ unlabelled
+    images for visual alignment, then fine-tunes on 2M image-text pairs for semantic
+    alignment. MedITok achieves SOTA across reconstruction, classification, generation,
+    and VQA tasks spanning 9 imaging modalities and 30+ datasets.
+  teaser:   ""
+  keywords: "visual tokenizer, medical imaging, image generation, vision-language model"
+  links:
+    paper:  ""
+    code:   "https://github.com/Masaaki-75/meditok"
+
+- title:    "OphCLIP: Hierarchical Retrieval-Augmented Learning for Ophthalmic Surgical Video-Language Pre-training"
+  authors:  "Ming Hu, Wei Li, Junjun He"
+  venue:    "ICCV"
+  year:     2025
+  note:     ""
+  abstract: >
+    OphCLIP is a hierarchical retrieval-augmented vision-language pre-training framework
+    designed for understanding ophthalmic surgical workflows. Built on OphVL — a large-scale
+    dataset of 375,000+ hierarchically structured video-text pairs covering surgical phases,
+    instruments, and clinical outcomes — OphCLIP simultaneously learns fine-grained and
+    long-horizon visual representations. Evaluated on 11 datasets for phase recognition and
+    multi-instrument detection, demonstrating robust generalisation and superior performance.
+  teaser:   ""
+  keywords: "ophthalmic surgery, video-language pre-training, retrieval augmentation, surgical AI"
+  links:
+    paper:  "https://arxiv.org/abs/2411.15421"
+    code:   "https://github.com/minghu0830/OphCLIP"
+
+- title:    "GMAI-VL: A General Medical AI Vision-Language Model Trained on 5.5M Image-Text Pairs"
+  authors:  "Tianbin Li, Yanzhou Su, Junjun He"
+  venue:    "arXiv"
   year:     2024
   note:     ""
   abstract: >
-    A variational framework that learns disentangled representations of chromatin
-    accessibility programs, enabling discovery of cell-type-specific regulatory
-    elements across 40 tissue types.
-  teaser:   "assets/images/teasers/lopez2024.png"
-  keywords: "genomics, VAE, epigenetics"
-  links:
-    paper:   "https://doi.org/10.xxxx/xxxx"
-    code:    "https://github.com/labname/epi-vae"
-    dataset: "https://zenodo.org/record/xxxxxx"
-  bibtex: |
-    @article{lopez2024causal,
-      title   = {Causal Disentanglement of Epigenetic Programs via Variational Autoencoders},
-      author  = {Lopez, Maria and Smith, Jane and Chen, Ryan},
-      journal = {Cell Systems},
-      year    = {2024},
-      doi     = {10.xxxx/xxxx}
-    }
-
-- title:    "Equivariant Graph Networks for Protein–Ligand Binding Affinity Prediction"
-  authors:  "Chen R., Patel S., Kim A., Smith J."
-  venue:    "NeurIPS"
-  year:     2024
-  note:     "Spotlight"
-  abstract: >
-    An SE(3)-equivariant message-passing architecture that leverages 3D molecular
-    geometry to predict binding affinities with improved generalisation on
-    out-of-distribution compound series.
+    GMAI-VL is a general-purpose medical vision-language model trained on GMAI-VL-5.5M —
+    a dataset aggregating hundreds of specialist medical sub-datasets unified into 5.5M
+    high-quality image-text pairs spanning 18 clinical specialties and 10+ imaging modalities.
+    A three-stage training strategy progressively strengthens visual-language alignment and
+    fusion. GMAI-VL achieves or surpasses SOTA on multiple medical multimodal VQA and
+    diagnostic reasoning benchmarks.
   teaser:   ""
-  keywords: "graph learning, proteins, drug discovery"
+  keywords: "medical VQA, vision-language model, multimodal AI, clinical AI"
   links:
-    paper:       "https://doi.org/10.xxxx/xxxx"
-    code:        "https://github.com/labname/equivnet"
-    huggingface: "https://huggingface.co/labname/equivnet"
-  bibtex: |
-    @inproceedings{chen2024equivariant,
-      title     = {Equivariant Graph Networks for Protein--Ligand Binding Affinity Prediction},
-      author    = {Chen, Ryan and Patel, Sara and Kim, Alex and Smith, Jane},
-      booktitle = {Advances in Neural Information Processing Systems},
-      year      = {2024},
-      note      = {Spotlight}
-    }
+    paper:  "https://arxiv.org/abs/2411.14522"
+    code:   "https://github.com/uni-medical/GMAI-VL"
+
+- title:    "GMAI-MMBench: A Comprehensive Multimodal Evaluation Benchmark Towards General Medical AI"
+  authors:  "Jin Ye, Tianbin Li, Junjun He"
+  venue:    "arXiv"
+  year:     2024
+  note:     ""
+  abstract: >
+    GMAI-MMBench is the most comprehensive general medical AI evaluation platform, covering
+    284 datasets, 38 imaging modalities, 18 clinical tasks, 18 clinical departments, and
+    4-level perception granularity with a hierarchical task taxonomy. Evaluation of 50 LVLMs
+    reveals that even top-performing models (e.g., GPT-4o) achieve only 53.96% accuracy,
+    quantifying the challenge of medical multimodal understanding and identifying five
+    common failure modes of current frontier models.
+  teaser:   ""
+  keywords: "medical AI benchmark, multimodal evaluation, vision-language model, clinical AI"
+  links:
+    paper:  "https://arxiv.org/abs/2408.03361"
+    code:   "https://github.com/uni-medical/GMAI-MMBench"
+
+- title:    "OmniMedVQA: A New Large-Scale Comprehensive Evaluation Benchmark for Medical LVLM"
+  authors:  "Yutao Hu, Tianbin Li, Quanfeng Lu, Wenqi Shao, Junjun He, Ping Luo, Yu Qiao"
+  venue:    "CVPR"
+  year:     2024
+  note:     ""
+  abstract: >
+    OmniMedVQA is a large-scale medical multimodal VQA benchmark integrating 73 datasets
+    across 12 imaging modalities and 20+ anatomical regions, built from real clinical scenarios.
+    Large-scale experiments reveal two key findings: current LVLMs generally underperform on
+    medical VQA, and surprisingly many medical-specific models lag behind general-purpose
+    models — exposing systematic weaknesses in cross-modal alignment, knowledge generalisation,
+    and robustness.
+  teaser:   ""
+  keywords: "medical VQA, benchmark, large vision-language model, clinical evaluation"
+  links:
+    paper:  "https://arxiv.org/abs/2402.09181"
+    code:   "https://github.com/OpenGVLab/Multi-Modality-Arena"
+
+- title:    "SAM-Med3D: Towards General-Purpose Segmentation Models for Volumetric Medical Images"
+  authors:  "Jin Ye, Junlong Cheng, Jianpin Chen, Zhongying Deng, Tianbin Li, Haoyu Wang, Yanzhou Su, Ziyan Huang, Jilong Chen, Lei Jiang, Hui Sun, Min Zhu, Shaoting Zhang, Junjun He, Yu Qiao"
+  venue:    "arXiv"
+  year:     2023
+  note:     ""
+  abstract: >
+    SAM-Med3D adapts the Segment Anything Model (SAM) to 3D volumetric medical images.
+    We construct a large-scale 3D dataset with 21K medical volumes and 131K 3D masks covering
+    247 categories, then train SAM-Med3D to model three-dimensional context at the voxel level.
+    SAM-Med3D significantly improves segmentation accuracy and robustness over 2D slice-based
+    approaches, providing a universally promptable segmentation backbone for clinical and
+    research applications.
+  teaser:   ""
+  keywords: "3D medical image segmentation, SAM, foundation model, volumetric imaging"
+  links:
+    paper:  "https://arxiv.org/abs/2310.15161"
+    code:   "https://github.com/uni-medical/SAM-Med3D"
+
+- title:    "SAM-Med2D: Medical Image Segmentation Using the Segment Anything Model"
+  authors:  "Junlong Cheng, Jin Ye, Zhongying Deng, Jianpin Chen, Tianbin Li, Haoyu Wang, Yanzhou Su, Ziyan Huang, Jilong Chen, Lei Jiang, Hui Sun, Junjun He, Shaoting Zhang, Min Zhu, Yu Qiao"
+  venue:    "arXiv"
+  year:     2023
+  note:     ""
+  abstract: >
+    SAM-Med2D adapts the Segment Anything Model (SAM) to 2D medical image segmentation.
+    We construct SA-Med2D-20M — a large-scale benchmark — and train a reliable baseline
+    model that better adapts to medical image structures and distribution shifts. SAM-Med2D
+    significantly improves segmentation accuracy and stability, bridging the gap between
+    natural image segmentation models and clinical medical image analysis.
+  teaser:   ""
+  keywords: "medical image segmentation, SAM, foundation model, 2D segmentation"
+  links:
+    paper:  "https://arxiv.org/abs/2308.16184"
+    code:   "https://github.com/OpenGVLab/SAM-Med2D"
+
+- title:    "STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training"
+  authors:  "Ziyan Huang, Haoyu Wang, Zhongying Deng, Jin Ye, Yanzhou Su, Hui Sun, Junjun He, Yimin Chen, Tianbin Li, Shaoting Zhang, Yu Qiao"
+  venue:    "arXiv"
+  year:     2023
+  note:     ""
+  abstract: >
+    STU-Net is a family of scalable and transferable U-Net models pre-trained on large-scale
+    annotated medical image segmentation datasets. With parameter scales ranging from 14M to
+    1.4B, STU-Net-H (1.4B parameters) is the largest medical image segmentation model to date.
+    After large-scale supervised pre-training, the models achieve excellent performance on both
+    direct inference and fine-tuning, demonstrating strong scalability and transfer capability.
+  teaser:   ""
+  keywords: "medical image segmentation, U-Net, large-scale pre-training, scalable models"
+  links:
+    paper:  "https://arxiv.org/abs/2304.06716"
+    code:   "https://github.com/uni-medical/STU-Net"
+
+- title:    "A Survey of Scientific Large Language Models: From Data Foundations to Agent Frontiers"
+  authors:  "Junjun He, et al."
+  venue:    "arXiv"
+  year:     2025
+  note:     ""
+  abstract: >
+    A comprehensive survey of Scientific Large Language Models (Sci-LLMs) produced in
+    collaboration with 20+ leading global institutions, covering 1000+ papers, 600+ key
+    datasets, and SOTA models. The survey systematically reviews the development history,
+    data foundations, model evolution, evaluation frameworks, and agent frontiers of Sci-LLMs,
+    and proposes a roadmap for AI-assisted scientific discovery ecosystems.
+  teaser:   ""
+  keywords: "scientific LLM, survey, AI for science, large language models"
+  links:
+    paper:  "https://arxiv.org/abs/2508.21148"
+    code:   "https://github.com/open-sciencelab/Awesome-Scientific-Datasets-and-LLMs"

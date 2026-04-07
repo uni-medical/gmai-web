@@ -1,8 +1,9 @@
 # ── Site identity ─────────────────────────────────────────────────
-title:       "Computational Research Group"
-tagline:     "Advancing rigorous science at the frontier of computation"
-description: "We develop principled computational methods at the intersection
-              of machine learning and computational biology."
+title:       "GMAI — General Medical AI"
+tagline:     "AI-Empowered Precision Medicine: Diagnosis, Treatment, and Discovery"
+description: "We develop world-leading medical AI models, tools, and multi-agent systems
+              to enable precision diagnosis, optimal treatment, and accelerated biomedical
+              research — making high-quality healthcare universally accessible."
 url:         "https://uni-medical.github.io"
 baseurl:     "/gmai-web"
 
@@ -19,25 +20,25 @@ plugins:
 
 # ── Lab metadata (used throughout layouts — edit here only) ───────
 lab:
-  name:        "Computational Research Group"
-  shortname:   "CRG"
-  pi:          "Prof. Jane Smith"
-  pi_last:     "Smith"             # used to bold PI name in author lists
-  institution: "University of Science"
-  department:  "Department of Computer Science"
-  address:     "Building A, Room 302, City 10001"
-  email:       "lab@university.edu"
-  github:      "https://github.com/labname"
-  scholar:     "https://scholar.google.com/citations?user=XXXXX"
-  twitter:     "https://twitter.com/labname"
-  founded:     2016
+  name:        "GMAI Lab (General Medical AI)"
+  shortname:   "GMAI"
+  pi:          "Junjun He"
+  pi_last:     "He"               # used to bold PI name in author lists
+  institution: "TODO: Add institution name"
+  department:  "TODO: Add department name"
+  address:     "TODO: Add lab address"
+  email:       "TODO: Add lab email"
+  github:      "https://github.com/uni-medical"
+  scholar:     "https://scholar.google.com/citations?user=Z4LgebkAAAAJ&hl=zh-CN"
+  twitter:     ""
+  founded:     2020               # TODO: confirm founding year
 
 # ── Hero stats (update when milestones change) ────────────────────
 stats:
-  publications: 48
-  members:      12
-  grants:       6
-  citations:    "1,200+"
+  publications: 15
+  members:      14
+  grants:       3
+  citations:    "TODO: Add citation count"
 
 # ── Sass ──────────────────────────────────────────────────────────
 sass:
