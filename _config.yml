@@ -52,3 +52,6 @@ exclude:
   - README.md
   - vendor
   - .github
+  - docs
+  - plans
+  - resources

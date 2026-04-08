@@ -8,6 +8,7 @@ lang:   "en"
      HERO — full-viewport, cinematic dark
      ══════════════════════════════════════════════════════════════ -->
 <div class="landing-hero">
+  <div class="landing-hero-bg"></div>
   <div class="landing-hero-grid"></div>
 
   <div class="landing-hero-inner">

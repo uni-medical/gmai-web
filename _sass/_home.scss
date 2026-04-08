@@ -16,6 +16,17 @@
   padding-bottom: 5rem; // room for stats strip
 }
 
+// Hero background image — separate layer so we can blur without affecting text
+.landing-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('../images/hero-bg.png') center center / cover no-repeat;
+  filter: blur(4px);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
 // Ambient gradient orbs
 .landing-hero::before {
   content: '';

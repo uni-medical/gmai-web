@@ -2,7 +2,8 @@
 {% assign lang = include.lang | default: 'en' %}
 <nav role="navigation">
   <div class="nav-inner">
-    <a class="logo" href="{{ '/' | relative_url }}">
+    <a class="logo" href="{% if lang == 'zh' %}{{ '/zh/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
+      <img class="logo-icon" src="{{ '/assets/images/gmai-logo.png' | relative_url }}" alt="GMAI" />
       <span class="logo-main">{{ site.lab.shortname }}</span>
       <span class="logo-sub">{{ site.lab.institution }}</span>
     </a>
