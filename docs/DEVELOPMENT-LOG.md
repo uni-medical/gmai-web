@@ -666,10 +666,86 @@ The `resources/` directory containing raw PDFs (59MB total) was added to `.gitig
 | LOW | Chinese homepage hero | `zh/index.md` research panel body text still in English |
 | LOW | Mobile hamburger nav | No mobile menu at <820px breakpoint |
 
+### Phase 5 — Landing Page Visual Enhancement
+
+**Hero background:**
+- Source: `resources/landing_page.png` → `assets/images/hero-bg.png` (4.5MB, purple neural-cross pattern)
+- Implementation: separate `<div class="landing-hero-bg">` with `filter: blur(4px)` + `opacity: 0.3` — text stays sharp on independent z-layer
+- Why not CSS `background` + `filter`? Filter on parent blurs all children including text; must use a dedicated element
+
+**Navigation logo:**
+- Source: `resources/gmai_icon.png` → `assets/images/gmai-logo.png` (153KB, purple robot mascot)
+- `_includes/nav.html`: added `<img class="logo-icon">` before "GMAI" text; logo click routes to `/zh/` for Chinese pages
+- `_sass/_base.scss`: `.logo` changed `align-items: baseline` → `center`; new `.logo-icon` (32×32px, 6px border-radius)
+
+**Build fix:**
+- `_config.yml` exclude: added `docs/`, `plans/`, `resources/` — prevents Jekyll from parsing Liquid syntax in `DEVELOPMENT-LOG.md` code examples
+
+**Git:** `df6306a` — 8 files, pushed to `origin/main`
+
+---
+
 ### Architecture Decisions (Session 3)
 
-- **Bilingual data pattern**: Use `field_zh` suffix in YAML + `{% if field_zh %}` Liquid fallback — English data untouched, Chinese layers on top
+- **Bilingual data pattern**: Use `field_zh` suffix in YAML + Liquid fallback — English data untouched, Chinese layers on top
 - **Project subpage pattern**: `pages/projects/{slug}.md` (EN) + `pages/zh/projects/{slug}.md` (ZH) both with `layout: page` + inline HTML — no new layout needed
 - **Image overlay pattern**: `.rs-panel-img` with `opacity:0.22` + `mix-blend-mode:luminosity` keeps dark aesthetic while showing real research imagery
-- **Parallel agent pattern**: Use 3+ agents for independent translation tasks (cuts wall-clock time ~3x)
+- **Background blur pattern**: Separate `<div>` with `filter: blur()` + low opacity — never blur a parent if children need to stay sharp
+- **Parallel agent pattern**: Use 3+ subagents for independent translation tasks (cuts wall-clock time ~3x)
+- **Build exclude pattern**: Any directory with Liquid-like syntax in markdown (docs, plans) must be excluded from Jekyll build
+
+### Session 3 — Git Summary
+
+| Commit | Description |
+|--------|-------------|
+| `df6306a` | Hero background, nav logo, build config fix |
+| `646c862` | Full Chinese translation, Imaging-X subpages, institution metadata |
+| `2958ae7` | Correct team member roles (Session 2 tail) |
+
+### Remaining TODO (Carry Forward to Session 4)
+
+| Priority | Item | Action needed |
+|----------|------|---------------|
+| **HIGH** | Next Starship projects | GMAI-VL, SAM-Med, DTR-MAS subpages — copy `imaging-x.md` template, swap content + images, update homepage Section 2-4 links |
+| **HIGH** | Team photos (7 missing) | Ziyan Huang, Jin Ye, Tianbin Li, Ming Hu, Ye Du, Cheng Tang, Raymond Ning — user must provide images |
+| **HIGH** | Lab contact info | `_config.yml`: `lab.address`, `lab.email` — user must provide |
+| **MEDIUM** | ZH homepage panel text | `zh/index.md` 4× `.rs-body` content still in English |
+| **MEDIUM** | Contact form ID | Replace `YOUR_FORM_ID` in both contact pages with Formspree ID |
+| **MEDIUM** | Citation count | `_config.yml` `stats.citations` — user must provide |
+| **MEDIUM** | Profile page enrichment | 30 profile pages have intro text but no publications/project links |
+| **LOW** | Publication teasers | `assets/images/teasers/` — add paper teaser images |
+| **LOW** | Mobile hamburger nav | No menu at <820px |
+| **LOW** | BibTeX completeness | Verify/complete all entries in `publications.yml` |
+
+### Quick Start for Session 4
+
+```bash
+# 1. Start Jekyll server
+export GEM_HOME="$HOME/.local/share/gem/ruby/3.2.0"
+export PATH="$GEM_HOME/bin:$PATH"
+bundle exec jekyll serve --baseurl "" --port 4001
+
+# 2. Key files to know
+#    Landing page:     index.md / zh/index.md
+#    Project subpages: pages/projects/{slug}.md / pages/zh/projects/{slug}.md
+#    Team data:        _data/team.yml (add _zh fields for Chinese)
+#    Project data:     _data/projects.yml (add _zh fields for Chinese)
+#    Styles:           _sass/_home.scss (homepage), _sass/_components.scss (interior pages)
+
+# 3. Starship project template (copy & modify):
+#    EN: pages/projects/imaging-x.md (219 lines — 4 highlights + 5 figures)
+#    ZH: pages/zh/projects/imaging-x.md (218 lines)
+#    Images: assets/images/projects/{slug}/ (hero, overview, etc.)
+#    Homepage link: update .rs-link href in the corresponding rs-section
+
+# 4. After ANY file change: kill Jekyll + restart (WSL NTFS limitation)
+```
+
+### Known Limitations (Updated)
+
+- Jekyll auto-regeneration broken on WSL2 + NTFS — must manually restart
+- Mobile nav hides all links at <820px — no hamburger menu
+- No dark mode toggle
+- No publication author filter (only year + keyword)
+- Hero background `hero-bg.png` is 4.5MB — consider WebP conversion for production
 
