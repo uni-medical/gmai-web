@@ -3,22 +3,26 @@ pi:
   role:     "Principal Investigator"
   title:    "Principal Investigator, GMAI Lab"
   bio:      >
-    Junjun He leads the GMAI (General Medical AI) research group. The group focuses on
-    building world-leading medical AI models, tools, and multi-agent systems to enable
-    precision diagnosis, treatment, and biomedical discovery. Research spans medical
-    multimodal large language models, medical image segmentation foundation models,
-    clinical AI systems, and medical data infrastructure.
-  photo:    ""
+    Junjun He leads the GMAI (General Medical AI) research group. He received his PhD from
+    Shanghai Jiao Tong University (SJTU), advised by Prof. Lixu Gu, and conducted research
+    at the Multimedia Lab (MMLAB) of Shenzhen Institute of Advanced Technology (SIAT), CAS,
+    with Prof. Yu Qiao. His research interests span dense prediction (medical image
+    segmentation, object detection, instance segmentation), efficient deep learning
+    (model compression, NAS, quantization), and general medical AI — including multimodal
+    large language models, segmentation foundation models, clinical AI systems, and
+    biomedical data infrastructure.
+  photo:    "assets/images/team/junjun_he.jpeg"
   initials: "JH"
   links:
     website: ""
     scholar: "https://scholar.google.com/citations?user=Z4LgebkAAAAJ&hl=zh-CN"
+    email:   "hejunjun@sjtu.edu.cn"
     cv:      ""
     github:  ""
     twitter: ""
 
 members:
-  # ── Core researchers (from research documents) ─────────────────
+  # ── Core researchers ─────────────────────────────────────────────
   - name:     "Ziyan Huang (黄子炎)"
     role:     "Researcher"
     focus:    "Medical image segmentation, scalable foundation models, multi-agent systems for medical discovery"
@@ -49,11 +53,11 @@ members:
       github:  "https://github.com/uni-medical"
       website: ""
 
-  # ── Visiting researchers (from CSV) ────────────────────────────
+  # ── Visiting researchers ─────────────────────────────────────────
   - name:     "Ming Hu (胡铭)"
     role:     "Visiting Researcher, Monash University"
     focus:    "Video understanding, multimodal large language models, ophthalmic surgical video analysis"
-    photo:    "assets/images/team/images.jpeg"
+    photo:    ""
     initials: "MH"
     links:
       scholar: ""
@@ -63,17 +67,17 @@ members:
   - name:     "Ying Chen (陈莹)"
     role:     "Visiting Researcher, Xiamen University"
     focus:    "AI for science, computational pathology, whole-slide image understanding"
-    photo:    "assets/images/team/cy-new.jpg"
+    photo:    "assets/images/team/ying_chen.jpg"
     initials: "YC"
     links:
       scholar: ""
-      github:  ""
+      github:  "https://github.com/cying18"
       website: "https://cying18.github.io/"
 
   - name:     "Jiyao Liu (刘继垚)"
     role:     "Visiting Researcher, Fudan University"
     focus:    "Low-level vision, agent systems, multimodal large language models, MRI translation"
-    photo:    "assets/images/team/avatar.png"
+    photo:    "assets/images/team/jiyao_liu.png"
     initials: "JL"
     links:
       scholar: ""
@@ -83,7 +87,7 @@ members:
   - name:     "Wei Li (李威)"
     role:     "Visiting Researcher, Shanghai Jiao Tong University"
     focus:    "Continual learning, multimodal large language models, surgical video understanding"
-    photo:    "assets/images/team/微信图片_20250921184016_8_301.jpg"
+    photo:    "assets/images/team/wei_li.jpg"
     initials: "WL"
     links:
       scholar: "https://scholar.google.com/citations?user=TGIvczYAAAAJ&hl=zh-CN"
@@ -93,7 +97,7 @@ members:
   - name:     "Chenglong Ma (马成龙)"
     role:     "Visiting Researcher, Fudan University"
     focus:    "Multimodal models, generative models, medical visual tokenization, counterfactual generation"
-    photo:    "assets/images/team/fa78a94e379aa2e5b56d7cff91b81aba.jpeg"
+    photo:    "assets/images/team/chenglong_ma.jpeg"
     initials: "CM"
     links:
       scholar: "https://scholar.google.com/citations?user=rUhyCvMAAAAJ"
@@ -103,7 +107,7 @@ members:
   - name:     "Ye Du (杜烨)"
     role:     "Visiting Researcher, The Hong Kong Polytechnic University"
     focus:    "AI for science, proteomics, biomedical data analysis"
-    photo:    "assets/images/team/du.jpeg"
+    photo:    ""
     initials: "YD"
     links:
       scholar: ""
@@ -113,7 +117,7 @@ members:
   - name:     "Shujian Gao (高书剑)"
     role:     "Visiting Researcher, Fudan University"
     focus:    "Visual representation learning, multi-modal learning, large language models"
-    photo:    "assets/images/team/d11337160d932c3c75dd1c5eebcae31a.JPG"
+    photo:    "assets/images/team/shujian_gao.jpg"
     initials: "SG"
     links:
       scholar: ""
@@ -123,7 +127,7 @@ members:
   - name:     "Wenhao Tang (唐文浩)"
     role:     "Visiting Researcher, Nankai University"
     focus:    "AI for science, computational pathology, medical image analysis"
-    photo:    "assets/images/team/微信图片_20250922100827.jpg"
+    photo:    "assets/images/team/wenhao_tang.jpg"
     initials: "WT"
     links:
       scholar: ""
@@ -133,7 +137,7 @@ members:
   - name:     "Jiashi Lin (林佳仕)"
     role:     "Visiting Researcher, Northwestern Polytechnical University"
     focus:    "Knowledge graphs, large language models, agentic retrieval-augmented generation"
-    photo:    "assets/images/team/IMG_20250923_001305.jpg"
+    photo:    "assets/images/team/jiashi_lin.jpg"
     initials: "JL"
     links:
       scholar: ""
@@ -153,7 +157,7 @@ members:
   - name:     "Raymond Ning (宁俊智)"
     role:     "Visiting Researcher, Imperial College London"
     focus:    "AI for health, multimodal medical AI, generative models for retinal image synthesis"
-    photo:    "assets/images/team/image.png"
+    photo:    ""
     initials: "RN"
     links:
       scholar: ""

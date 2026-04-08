@@ -27,6 +27,7 @@ lang:      "en"
       <div class="pi-links">
         {% if site.data.team.pi.links.website != "" %}<a href="{{ site.data.team.pi.links.website }}" target="_blank">Website</a>{% endif %}
         {% if site.data.team.pi.links.scholar != ""  %}<a href="{{ site.data.team.pi.links.scholar }}" target="_blank">Google Scholar</a>{% endif %}
+        {% if site.data.team.pi.links.email != ""    %}<a href="mailto:{{ site.data.team.pi.links.email }}">Email</a>{% endif %}
         {% if site.data.team.pi.links.cv != ""       %}<a href="{{ site.data.team.pi.links.cv | relative_url }}">CV</a>{% endif %}
         {% if site.data.team.pi.links.github != ""   %}<a href="{{ site.data.team.pi.links.github }}" target="_blank">GitHub</a>{% endif %}
         {% if site.data.team.pi.links.twitter != ""  %}<a href="{{ site.data.team.pi.links.twitter }}" target="_blank">Twitter</a>{% endif %}
