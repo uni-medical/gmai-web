@@ -23,7 +23,7 @@ pi:
     twitter: ""
 
 members:
-  # ── Core researchers ─────────────────────────────────────────────
+  # ── Researchers ──────────────────────────────────────────────────
   - name:     "Ziyan Huang (黄子炎)"
     slug:     "ziyan-huang"
     role:     "Researcher"
@@ -57,10 +57,9 @@ members:
       github:  "https://github.com/uni-medical"
       website: ""
 
-  # ── Visiting researchers ─────────────────────────────────────────
   - name:     "Ming Hu (胡铭)"
     slug:     "ming-hu"
-    role:     "Visiting Researcher, Monash University"
+    role:     "Researcher"
     focus:    "Video understanding, multimodal large language models, ophthalmic surgical video analysis"
     photo:    ""
     initials: "MH"
@@ -69,9 +68,11 @@ members:
       github:  ""
       website: "https://openreview.net/profile?id=%7EMing_Hu4"
 
+  # ── Research Interns ─────────────────────────────────────────────
+
   - name:     "Ying Chen (陈莹)"
     slug:     "ying-chen"
-    role:     "Visiting Researcher, Xiamen University"
+    role:     "Research Intern, Xiamen University"
     focus:    "AI for science, computational pathology, whole-slide image understanding"
     photo:    "assets/images/team/ying_chen.jpg"
     initials: "YC"
@@ -82,7 +83,7 @@ members:
 
   - name:     "Jiyao Liu (刘继垚)"
     slug:     "jiyao-liu"
-    role:     "Visiting Researcher, Fudan University"
+    role:     "Research Intern, Fudan University"
     focus:    "Low-level vision, agent systems, multimodal large language models, MRI translation"
     photo:    "assets/images/team/jiyao_liu.png"
     initials: "JL"
@@ -93,7 +94,7 @@ members:
 
   - name:     "Wei Li (李威)"
     slug:     "wei-li"
-    role:     "Visiting Researcher, Shanghai Jiao Tong University"
+    role:     "Research Intern, Shanghai Jiao Tong University"
     focus:    "Continual learning, multimodal large language models, surgical video understanding"
     photo:    "assets/images/team/wei_li.jpg"
     initials: "WL"
@@ -104,7 +105,7 @@ members:
 
   - name:     "Chenglong Ma (马成龙)"
     slug:     "chenglong-ma"
-    role:     "Visiting Researcher, Fudan University"
+    role:     "Research Intern, Fudan University"
     focus:    "Multimodal models, generative models, medical visual tokenization, counterfactual generation"
     photo:    "assets/images/team/chenglong_ma.jpeg"
     initials: "CM"
@@ -115,7 +116,7 @@ members:
 
   - name:     "Ye Du (杜烨)"
     slug:     "ye-du"
-    role:     "Visiting Researcher, The Hong Kong Polytechnic University"
+    role:     "Research Intern, The Hong Kong Polytechnic University"
     focus:    "AI for science, proteomics, biomedical data analysis"
     photo:    ""
     initials: "YD"
@@ -126,7 +127,7 @@ members:
 
   - name:     "Shujian Gao (高书剑)"
     slug:     "shujian-gao"
-    role:     "Visiting Researcher, Fudan University"
+    role:     "Research Intern, Fudan University"
     focus:    "Visual representation learning, multi-modal learning, large language models"
     photo:    "assets/images/team/shujian_gao.jpg"
     initials: "SG"
@@ -137,7 +138,7 @@ members:
 
   - name:     "Wenhao Tang (唐文浩)"
     slug:     "wenhao-tang"
-    role:     "Visiting Researcher, Nankai University"
+    role:     "Research Intern, Nankai University"
     focus:    "AI for science, computational pathology, medical image analysis"
     photo:    "assets/images/team/wenhao_tang.jpg"
     initials: "WT"
@@ -148,7 +149,7 @@ members:
 
   - name:     "Jiashi Lin (林佳仕)"
     slug:     "jiashi-lin"
-    role:     "Visiting Researcher, Northwestern Polytechnical University"
+    role:     "Research Intern, Northwestern Polytechnical University"
     focus:    "Knowledge graphs, large language models, agentic retrieval-augmented generation"
     photo:    "assets/images/team/jiashi_lin.jpg"
     initials: "JL"
@@ -159,7 +160,7 @@ members:
 
   - name:     "Cheng Tang (唐诚)"
     slug:     "cheng-tang"
-    role:     "Visiting Researcher, University of Chinese Academy of Sciences"
+    role:     "Research Intern, University of Chinese Academy of Sciences"
     focus:    "AI for science, computational imaging"
     photo:    ""
     initials: "CT"
@@ -170,7 +171,7 @@ members:
 
   - name:     "Raymond Ning (宁俊智)"
     slug:     "raymond-ning"
-    role:     "Visiting Researcher, Imperial College London"
+    role:     "Research Intern, Imperial College London"
     focus:    "AI for health, multimodal medical AI, generative models for retinal image synthesis"
     photo:    ""
     initials: "RN"
