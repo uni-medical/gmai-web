@@ -27,7 +27,7 @@ lang:   "zh"
     </div>
 
     <div class="lh-affil">
-      {{ site.lab.department }} &middot; {{ site.lab.address }}
+      {{ site.lab.address }}
     </div>
   </div>
 
@@ -62,6 +62,7 @@ lang:   "zh"
 <!-- 研究方向 1 -->
 <div class="rs-section fade">
   <div class="rs-visual vis-neural">
+    <img class="rs-panel-img" src="{{ '/assets/images/projects/imaging-x/overview.png' | relative_url }}" alt="Imaging-X 项目概览" loading="lazy" />
     <div class="rs-watermark">01</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -92,7 +93,7 @@ lang:   "zh"
       <span class="rs-topic">元数据驱动融合</span>
       <span class="rs-topic">SlideInstruction</span>
     </div>
-    <a href="{{ '/zh/projects/' | relative_url }}" class="rs-link">了解此项目 →</a>
+    <a href="{{ '/zh/projects/imaging-x/' | relative_url }}" class="rs-link">探索 Imaging-X 项目 →</a>
   </div>
 </div>
 

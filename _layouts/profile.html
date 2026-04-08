@@ -34,20 +34,30 @@ layout: default
     <div class="profile-meta">
       {% if is_pi %}<div class="pi-role">{{ t.team.pi_badge }}</div>{% endif %}
       <h1 class="profile-name">{{ member.name }}</h1>
-      <div class="profile-role">{{ member.role }}</div>
-      {% if member.focus %}<div class="profile-focus">{{ member.focus }}</div>{% endif %}
+      {% if lang == "zh" and member.role_zh %}
+        <div class="profile-role">{{ member.role_zh }}</div>
+      {% else %}
+        <div class="profile-role">{{ member.role }}</div>
+      {% endif %}
+      {% if lang == "zh" and member.focus_zh %}
+        <div class="profile-focus">{{ member.focus_zh }}</div>
+      {% elsif member.focus %}
+        <div class="profile-focus">{{ member.focus }}</div>
+      {% endif %}
       <div class="profile-links">
         {% if member.links.scholar != "" and member.links.scholar %}<a href="{{ member.links.scholar }}" target="_blank">Google Scholar</a>{% endif %}
         {% if member.links.github  != "" and member.links.github  %}<a href="{{ member.links.github  }}" target="_blank">GitHub</a>{% endif %}
-        {% if member.links.website != "" and member.links.website %}<a href="{{ member.links.website }}" target="_blank">Website</a>{% endif %}
-        {% if member.links.email   != "" and member.links.email   %}<a href="mailto:{{ member.links.email }}">Email</a>{% endif %}
+        {% if member.links.website != "" and member.links.website %}<a href="{{ member.links.website }}" target="_blank">{% if lang == "zh" %}个人主页{% else %}Website{% endif %}</a>{% endif %}
+        {% if member.links.email   != "" and member.links.email   %}<a href="mailto:{{ member.links.email }}">{% if lang == "zh" %}邮箱{% else %}Email{% endif %}</a>{% endif %}
         {% if member.links.cv      != "" and member.links.cv      %}<a href="{{ member.links.cv | relative_url }}">CV</a>{% endif %}
         {% if member.links.twitter != "" and member.links.twitter %}<a href="{{ member.links.twitter }}" target="_blank">Twitter</a>{% endif %}
       </div>
     </div>
   </div>
 
-  {% if member.bio %}
+  {% if lang == "zh" and member.bio_zh %}
+  <div class="profile-bio">{{ member.bio_zh }}</div>
+  {% elsif member.bio %}
   <div class="profile-bio">{{ member.bio }}</div>
   {% endif %}
 

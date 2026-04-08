@@ -2,7 +2,9 @@ pi:
   name:     "Junjun He"
   slug:     "junjun-he"
   role:     "Principal Investigator"
+  role_zh:  "实验室负责人（PI）"
   title:    "Principal Investigator, GMAI Lab"
+  title_zh: "GMAI 实验室负责人（PI）"
   bio:      >
     Junjun He leads the GMAI (General Medical AI) research group. He received his PhD from
     Shanghai Jiao Tong University (SJTU), advised by Prof. Lixu Gu, and conducted research
@@ -12,6 +14,11 @@ pi:
     (model compression, NAS, quantization), and general medical AI — including multimodal
     large language models, segmentation foundation models, clinical AI systems, and
     biomedical data infrastructure.
+  bio_zh:   >
+    何俊俊领导GMAI（通用医学AI）研究组。他在上海交通大学（SJTU）师从顾力栩教授获得博士学位，
+    并在中国科学院深圳先进技术研究院（SIAT）多媒体实验室（MMLAB）与乔宇教授合作开展研究。
+    研究兴趣涵盖密集预测（医学图像分割、目标检测、实例分割）、高效深度学习（模型压缩、神经架构搜索、量化），
+    以及通用医学AI——包括多模态大型语言模型、分割基础模型、临床AI系统和生物医学数据基础设施。
   photo:    "assets/images/team/junjun_he.jpeg"
   initials: "JH"
   links:
@@ -27,7 +34,9 @@ members:
   - name:     "Ziyan Huang (黄子炎)"
     slug:     "ziyan-huang"
     role:     "Researcher"
+    role_zh:  "研究员"
     focus:    "Medical image segmentation, scalable foundation models, multi-agent systems for medical discovery"
+    focus_zh: "医学图像分割、可扩展基础模型、医学发现多智能体系统"
     photo:    ""
     initials: "ZH"
     links:
@@ -38,7 +47,9 @@ members:
   - name:     "Jin Ye (叶锦)"
     slug:     "jin-ye"
     role:     "Researcher"
+    role_zh:  "研究员"
     focus:    "Interactive medical image segmentation, multimodal medical benchmarks, SAM-Med series"
+    focus_zh: "交互式医学图像分割、多模态医学基准测试、SAM-Med系列"
     photo:    ""
     initials: "JY"
     links:
@@ -49,7 +60,9 @@ members:
   - name:     "Tianbin Li (李添斌)"
     slug:     "tianbin-li"
     role:     "Researcher"
+    role_zh:  "研究员"
     focus:    "Medical visual question answering, general medical multimodal large models, GMAI-VL"
+    focus_zh: "医学视觉问答、通用医学多模态大模型、GMAI-VL"
     photo:    ""
     initials: "TL"
     links:
@@ -60,7 +73,9 @@ members:
   - name:     "Ming Hu (胡铭)"
     slug:     "ming-hu"
     role:     "Researcher"
+    role_zh:  "研究员"
     focus:    "Video understanding, multimodal large language models, ophthalmic surgical video analysis"
+    focus_zh: "视频理解、多模态大语言模型、眼科手术视频分析"
     photo:    ""
     initials: "MH"
     links:
@@ -73,7 +88,9 @@ members:
   - name:     "Ying Chen (陈莹)"
     slug:     "ying-chen"
     role:     "Research Intern, Xiamen University"
+    role_zh:  "科研实习生，厦门大学"
     focus:    "AI for science, computational pathology, whole-slide image understanding"
+    focus_zh: "科学AI、计算病理学、全切片图像理解"
     photo:    "assets/images/team/ying_chen.jpg"
     initials: "YC"
     links:
@@ -84,7 +101,9 @@ members:
   - name:     "Jiyao Liu (刘继垚)"
     slug:     "jiyao-liu"
     role:     "Research Intern, Fudan University"
+    role_zh:  "科研实习生，复旦大学"
     focus:    "Low-level vision, agent systems, multimodal large language models, MRI translation"
+    focus_zh: "底层视觉、智能体系统、多模态大语言模型、MRI转换"
     photo:    "assets/images/team/jiyao_liu.png"
     initials: "JL"
     links:
@@ -95,7 +114,9 @@ members:
   - name:     "Wei Li (李威)"
     slug:     "wei-li"
     role:     "Research Intern, Shanghai Jiao Tong University"
+    role_zh:  "科研实习生，上海交通大学"
     focus:    "Continual learning, multimodal large language models, surgical video understanding"
+    focus_zh: "持续学习、多模态大语言模型、手术视频理解"
     photo:    "assets/images/team/wei_li.jpg"
     initials: "WL"
     links:
@@ -106,7 +127,9 @@ members:
   - name:     "Chenglong Ma (马成龙)"
     slug:     "chenglong-ma"
     role:     "Research Intern, Fudan University"
+    role_zh:  "科研实习生，复旦大学"
     focus:    "Multimodal models, generative models, medical visual tokenization, counterfactual generation"
+    focus_zh: "多模态模型、生成模型、医学视觉标记化、反事实生成"
     photo:    "assets/images/team/chenglong_ma.jpeg"
     initials: "CM"
     links:
@@ -117,7 +140,9 @@ members:
   - name:     "Ye Du (杜烨)"
     slug:     "ye-du"
     role:     "Research Intern, The Hong Kong Polytechnic University"
+    role_zh:  "科研实习生，香港理工大学"
     focus:    "AI for science, proteomics, biomedical data analysis"
+    focus_zh: "科学AI、蛋白质组学、生物医学数据分析"
     photo:    ""
     initials: "YD"
     links:
@@ -128,7 +153,9 @@ members:
   - name:     "Shujian Gao (高书剑)"
     slug:     "shujian-gao"
     role:     "Research Intern, Fudan University"
+    role_zh:  "科研实习生，复旦大学"
     focus:    "Visual representation learning, multi-modal learning, large language models"
+    focus_zh: "视觉表示学习、多模态学习、大型语言模型"
     photo:    "assets/images/team/shujian_gao.jpg"
     initials: "SG"
     links:
@@ -139,7 +166,9 @@ members:
   - name:     "Wenhao Tang (唐文浩)"
     slug:     "wenhao-tang"
     role:     "Research Intern, Nankai University"
+    role_zh:  "科研实习生，南开大学"
     focus:    "AI for science, computational pathology, medical image analysis"
+    focus_zh: "科学AI、计算病理学、医学图像分析"
     photo:    "assets/images/team/wenhao_tang.jpg"
     initials: "WT"
     links:
@@ -150,7 +179,9 @@ members:
   - name:     "Jiashi Lin (林佳仕)"
     slug:     "jiashi-lin"
     role:     "Research Intern, Northwestern Polytechnical University"
+    role_zh:  "科研实习生，西北工业大学"
     focus:    "Knowledge graphs, large language models, agentic retrieval-augmented generation"
+    focus_zh: "知识图谱、大型语言模型、智能检索增强生成"
     photo:    "assets/images/team/jiashi_lin.jpg"
     initials: "JL"
     links:
@@ -161,7 +192,9 @@ members:
   - name:     "Cheng Tang (唐诚)"
     slug:     "cheng-tang"
     role:     "Research Intern, University of Chinese Academy of Sciences"
+    role_zh:  "科研实习生，中国科学院大学"
     focus:    "AI for science, computational imaging"
+    focus_zh: "科学AI、计算成像"
     photo:    ""
     initials: "CT"
     links:
@@ -172,7 +205,9 @@ members:
   - name:     "Raymond Ning (宁俊智)"
     slug:     "raymond-ning"
     role:     "Research Intern, Imperial College London"
+    role_zh:  "科研实习生，伦敦帝国理工学院"
     focus:    "AI for health, multimodal medical AI, generative models for retinal image synthesis"
+    focus_zh: "健康AI、多模态医学AI、视网膜图像合成生成模型"
     photo:    ""
     initials: "RN"
     links:

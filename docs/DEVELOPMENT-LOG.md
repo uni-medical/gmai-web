@@ -564,3 +564,112 @@ The `resources/` directory containing raw PDFs (59MB total) was added to `.gitig
 - No dark mode
 - No publication author filter (only year + keyword)
 - Chinese `_data/*.yml` content (titles, abstracts, bios) remains in English
+
+---
+
+## Session 3 — 2026-04-08 (Part 2)
+
+**Date:** 2026-04-08  
+**Focus:** Full bilingual translation, Chinese profile pages, institution metadata fix, Project Imaging-X subpages
+
+---
+
+### Phase 1 — Chinese Profile Pages (Team)
+
+**Problem:** All 15 `/zh/team/{slug}/` profile pages were empty front matter only; `pages/zh/team.md` used English fields directly from `team.yml` for role/focus/bio.
+
+**Solution:**
+- Added `role_zh`, `focus_zh` to all 15 members in `_data/team.yml`
+- Added `bio_zh` (Chinese biography) and `title_zh` to PI Junjun He
+- Updated `_layouts/profile.html` to render `role_zh`/`focus_zh`/`bio_zh` when `lang == "zh"` (with English fallback)
+- Updated `pages/zh/team.md` PI block and member cards to use `_zh` fields
+- Used 3 parallel subagents to write Chinese intro content for all 15 ZH profile pages
+
+**Files changed:**
+- `_data/team.yml` — added `role_zh`, `focus_zh`, `bio_zh`, `title_zh`
+- `_layouts/profile.html` — language-aware field rendering
+- `pages/zh/team.md` — zh field priority for PI title/bio and member role/focus
+- `pages/zh/team/*.md` (15 files) — Chinese titles + intro paragraphs
+
+---
+
+### Phase 2 — Full Site Chinese Translation
+
+**Translated data files** (added `_zh` suffix fields):
+- `_data/news.yml` — added `label_zh`, `headline_zh`, `body_zh` to all 6 entries
+- `_data/projects.yml` — added `area_zh`, `title_zh`, `desc_zh`, `funding_zh` to all 5 projects
+
+**Updated zh page templates:**
+- `pages/zh/news.md` — uses `item.label_zh`, `item.headline_zh`, `item.body_zh` with fallback
+- `pages/zh/projects.md` — uses `p.area_zh`, `p.title_zh`, `p.desc_zh`, `p.funding_zh` with fallback; `{% case p.status %}` block renders status in Chinese (进行中 / 新项目 / 已完成)
+
+**WSL note:** Jekyll auto-regeneration does NOT work on NTFS (`/mnt/d/`) — always manually restart server after file changes.
+
+---
+
+### Phase 3 — Institution Metadata & Template Cleanup
+
+**`_config.yml` changes:**
+- `institution`: `"TODO: Add institution name"` → `"Shanghai Artificial Intelligence Laboratory, China"`
+- `department`: `""` (cleared — department display removed from all templates)
+
+**Template fixes (department removal):**
+- `_includes/footer.html` — removed `{{ site.lab.department }} &middot;` prefix
+- `index.md` line ~30 — same removal from hero affil block
+- `zh/index.md` line ~30 — same
+
+---
+
+### Phase 4 — Project Imaging-X Subpages
+
+**Concept:** "Starship projects" — flagship research project blog pages, linked from landing page Research Section 1.
+
+**Images extracted** from `resources/resource_20260407/projects/Project_Imaging_X.zip` → `assets/images/projects/imaging-x/`:
+| File | Content | Used in |
+|------|---------|---------|
+| `hero.png` | Conceptual flow: data silos → foundation models | Subpage hero (eager load) |
+| `overview.png` | Human body anatomy + circular distribution chart | Landing page panel overlay + subpage |
+| `taxonomy.png` | Circular taxonomy wheel (Task/Organ/Modality) | After Highlight 1 |
+| `samples.png` | Medical image grid: classification/segmentation/detection | After MDFP section |
+| `anatomy.png` | Body diagram with dataset/sample counts per structure | After Highlight 4 |
+
+**Landing page changes (`index.md` + `zh/index.md`):**
+- Added `<img class="rs-panel-img">` overlay inside Research Section 1 `.rs-visual.vis-neural`
+- Changed Section 1 link to `/projects/imaging-x/` and `/zh/projects/imaging-x/`
+- Added `.rs-panel-img` CSS class to `_sass/_home.scss` (absolute position, 22% opacity, luminosity blend)
+
+**New subpages created:**
+- `pages/projects/imaging-x.md` (EN) — full blog with institution strip, 4 highlights, MDFP 4-stage grid, gap analysis, 57-dataset case study, full author list, resource links (GitHub / arXiv:2603.27460 / HuggingFace)
+- `pages/zh/projects/imaging-x.md` (ZH) — full Chinese translation with same structure
+- `pages/zh/projects/` directory created
+
+**Key project info:**
+- Led by Shanghai Artificial Intelligence Laboratory
+- 40+ institutions: Cambridge, Stanford, Tsinghua, Fudan, SJTU, HKU, Johns Hopkins, Toronto, UCL, Zhejiang, Monash, CUHK, HKUST
+- arXiv: http://arxiv.org/abs/2603.27460
+- HuggingFace dataset: https://huggingface.co/datasets/General-Medical-AI/Project-Imaging-X
+- GitHub: https://github.com/uni-medical/Project-Imaging-X
+
+---
+
+### Current TODO (Carry Forward)
+
+| Priority | Item | Action needed |
+|----------|------|---------------|
+| HIGH | Raymond Ning photo | User to provide image file path |
+| HIGH | Remaining team photos | Ziyan Huang, Jin Ye, Tianbin Li, Ming Hu, Ye Du, Cheng Tang still use initials |
+| HIGH | Lab email & address | Fill in `_config.yml` `lab.email` and `lab.address` |
+| HIGH | Next "Starship" project | Add GMAI-VL / DTR-MAS / SAM-Med project subpages following same pattern |
+| MEDIUM | Profile page content | All 30 profile pages have intro text but no publications/project links yet |
+| MEDIUM | Contact form | Replace `YOUR_FORM_ID` in contact pages with real Formspree ID |
+| MEDIUM | Citation count | Update `_config.yml` `stats.citations` |
+| LOW | Chinese homepage hero | `zh/index.md` research panel body text still in English |
+| LOW | Mobile hamburger nav | No mobile menu at <820px breakpoint |
+
+### Architecture Decisions (Session 3)
+
+- **Bilingual data pattern**: Use `field_zh` suffix in YAML + `{% if field_zh %}` Liquid fallback — English data untouched, Chinese layers on top
+- **Project subpage pattern**: `pages/projects/{slug}.md` (EN) + `pages/zh/projects/{slug}.md` (ZH) both with `layout: page` + inline HTML — no new layout needed
+- **Image overlay pattern**: `.rs-panel-img` with `opacity:0.22` + `mix-blend-mode:luminosity` keeps dark aesthetic while showing real research imagery
+- **Parallel agent pattern**: Use 3+ agents for independent translation tasks (cuts wall-clock time ~3x)
+

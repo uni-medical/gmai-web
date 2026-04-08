@@ -1,54 +1,90 @@
-- title:   "Project Imaging-X: Open Medical Imaging Data Ecosystem"
-  area:    "Medical Data Infrastructure"
-  status:  "active"
-  funding: "Open-source initiative"
-  desc:    >
+- title:      "Project Imaging-X: Open Medical Imaging Data Ecosystem"
+  title_zh:   "Imaging-X 项目：开放医学影像数据生态系统"
+  area:       "Medical Data Infrastructure"
+  area_zh:    "医学数据基础设施"
+  status:     "active"
+  funding:    "Open-source initiative"
+  funding_zh: "开源项目"
+  desc:       >
     A comprehensive survey and open-source platform integrating 1,000+ open-access medical
     imaging datasets. We propose a Metadata-Driven Fusion Paradigm (MDFP) to consolidate
     fragmented small datasets into large, coherent data resources, and build an interactive
     discovery portal for end-to-end automated dataset integration. Received collaboration
     interest from top institutions including Stanford University.
+  desc_zh:    >
+    整合 1000+ 开放医学影像数据集的综合调研与开源平台。我们提出元数据驱动融合范式（MDFP），
+    将碎片化小数据集整合为大规模、连贯的数据资源，并构建交互式发现门户实现端到端自动化数据集整合。
+    已获斯坦福大学等顶级机构的合作意向。
 
-- title:   "GMAI-VL / UniMedVL: General Medical Multimodal Vision-Language Model"
-  area:    "Medical Multimodal AI"
-  status:  "active"
-  funding: "Ongoing research"
-  desc:    >
+- title:      "GMAI-VL / UniMedVL: General Medical Multimodal Vision-Language Model"
+  title_zh:   "GMAI-VL / UniMedVL：通用医学多模态视觉语言模型"
+  area:       "Medical Multimodal AI"
+  area_zh:    "医学多模态 AI"
+  status:     "active"
+  funding:    "Ongoing research"
+  funding_zh: "持续研究"
+  desc:       >
     Development of world-leading medical multimodal generation-understanding unified models.
     GMAI-VL is trained on GMAI-VL-5.5M (5.5M image-text pairs across 18 clinical specialties),
     while GMAI-VL-R1 introduces reinforcement learning to achieve ~30% average accuracy
     improvement across eight imaging modalities. UniMedVL targets state-of-the-art performance
     on complex medical tasks including CURE-Bench and MedXpertQA.
+  desc_zh:    >
+    世界领先的医学多模态生成-理解统一模型研究。GMAI-VL 在 GMAI-VL-5.5M（涵盖 18 个临床专科的
+    550 万图像-文本对）上训练，GMAI-VL-R1 引入强化学习在 8 种影像模态上实现约 30% 的平均准确率提升。
+    UniMedVL 致力于在 CURE-Bench 和 MedXpertQA 等复杂医学任务上达到最新水平。
 
-- title:   "DTR-MAS: Diagnosis-Treatment-Research Multi-Agent System"
-  area:    "Clinical AI Systems"
-  status:  "active"
-  funding: "Ongoing research"
-  desc:    >
+- title:      "DTR-MAS: Diagnosis-Treatment-Research Multi-Agent System"
+  title_zh:   "DTR-MAS：诊断-治疗-科研多智能体系统"
+  area:       "Clinical AI Systems"
+  area_zh:    "临床 AI 系统"
+  status:     "active"
+  funding:    "Ongoing research"
+  funding_zh: "持续研究"
+  desc:       >
     A unified medical scientific discovery platform integrating the full clinical and research
     pipeline: question → evidence retrieval → hypothesis → experiment → validation → knowledge
     distillation. Built on a general-specialist fusion reasoning model, DTR-MAS integrates
     1,000+ medical imaging datasets and 1,000+ tools. Validated on ovarian cancer HRD
     prediction, glaucoma GS3K-Beta gene pathway analysis, and multi-hospital pilot deployments.
+  desc_zh:    >
+    整合完整临床与科研流程的统一医学科学发现平台：问题→证据检索→假设→实验→验证→知识蒸馏。
+    基于通才-专才融合推理模型，DTR-MAS 集成 1000+ 医学影像数据集和 1000+ 工具，已在卵巢癌
+    HRD 预测、青光眼 GS3K-Beta 基因通路分析及多医院试点部署中得到验证。
 
-- title:   "Medical Image Segmentation Foundation Models"
-  area:    "Medical Image Analysis"
-  status:  "active"
-  funding: "Ongoing research"
-  desc:    >
+- title:      "Medical Image Segmentation Foundation Models"
+  title_zh:   "医学图像分割基础模型"
+  area:       "Medical Image Analysis"
+  area_zh:    "医学图像分析"
+  status:     "active"
+  funding:    "Ongoing research"
+  funding_zh: "持续研究"
+  desc:       >
     A family of large-scale medical image segmentation foundation models: STU-Net (scalable
     U-Net from 14M to 1.4B parameters — the largest medical segmentation model), SAM-Med2D
     (adapting SAM to 2D medical images on SA-Med2D-20M benchmark), and SAM-Med3D (voxel-level
     3D context modelling on 21K volumes / 131K 3D masks). Together these models provide
     universally promptable segmentation for clinical and research applications.
+  desc_zh:    >
+    系列大规模医学图像分割基础模型：STU-Net（可扩展 U-Net，参数量从 1400 万至 14 亿，
+    是最大的医学分割模型）、SAM-Med2D（在 SA-Med2D-20M 基准上将 SAM 适配至 2D 医学图像），
+    以及 SAM-Med3D（在 2.1 万体积 / 13.1 万 3D 掩码上进行体素级 3D 上下文建模）。
+    这些模型为临床和科研应用提供通用可提示分割能力。
 
-- title:   "Autonomous Surgical Robot for Gynecological Surgery"
-  area:    "Surgical AI & Robotics"
-  status:  "new"
-  funding: "Ongoing research"
-  desc:    >
+- title:      "Autonomous Surgical Robot for Gynecological Surgery"
+  title_zh:   "妇科手术自主机器人"
+  area:       "Surgical AI & Robotics"
+  area_zh:    "手术 AI 与机器人"
+  status:     "new"
+  funding:    "Ongoing research"
+  funding_zh: "持续研究"
+  desc:       >
     Targeting the world's first fully autonomous robot for gynecological adnexectomy surgery.
     Building on OphCLIP (ophthalmic surgical workflow understanding) and Ophora (text-guided
     surgical video generation), this project integrates reinforcement-learning-based intraoperative
     decision engines and algorithm-hardware co-optimisation for pre-operative planning,
     intraoperative navigation, and post-operative follow-up in a unified pipeline.
+  desc_zh:    >
+    致力于实现世界首台全自主妇科附件切除手术机器人。基于 OphCLIP（眼科手术流程理解）和
+    Ophora（文本驱动手术视频生成），本项目集成基于强化学习的术中决策引擎与算法-硬件协同优化，
+    构建覆盖术前规划、术中导航和术后随访的一体化流程。

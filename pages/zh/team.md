@@ -22,8 +22,8 @@ lang:      "zh"
     <div>
       <div class="pi-role">{{ t.team.pi_badge }}</div>
       <div class="pi-name">{{ site.data.team.pi.name }}</div>
-      <div class="pi-title">{{ site.data.team.pi.title }}</div>
-      <div class="pi-bio">{{ site.data.team.pi.bio }}</div>
+      <div class="pi-title">{% if site.data.team.pi.title_zh %}{{ site.data.team.pi.title_zh }}{% else %}{{ site.data.team.pi.title }}{% endif %}</div>
+      <div class="pi-bio">{% if site.data.team.pi.bio_zh %}{{ site.data.team.pi.bio_zh }}{% else %}{{ site.data.team.pi.bio }}{% endif %}</div>
       <div class="pi-links">
         {% if site.data.team.pi.links.website != "" %}<a href="{{ site.data.team.pi.links.website }}" target="_blank">个人主页</a>{% endif %}
         {% if site.data.team.pi.links.scholar != ""  %}<a href="{{ site.data.team.pi.links.scholar }}" target="_blank">Google Scholar</a>{% endif %}
@@ -44,8 +44,8 @@ lang:      "zh"
         <div class="member-photo">{{ m.initials }}</div>
       {% endif %}
       <div class="member-name">{{ m.name }}</div>
-      <div class="member-role">{{ m.role }}</div>
-      <div class="member-focus">{{ m.focus }}</div>
+      <div class="member-role">{% if m.role_zh %}{{ m.role_zh }}{% else %}{{ m.role }}{% endif %}</div>
+      <div class="member-focus">{% if m.focus_zh %}{{ m.focus_zh }}{% else %}{{ m.focus }}{% endif %}</div>
       <div class="member-links">
         {% if m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
         {% if m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}

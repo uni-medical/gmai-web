@@ -24,8 +24,8 @@ lab:
   shortname:   "GMAI"
   pi:          "Junjun He"
   pi_last:     "He"               # used to bold PI name in author lists
-  institution: "TODO: Add institution name"
-  department:  "TODO: Add department name"
+  institution: "Shanghai Artificial Intelligence Laboratory, China"
+  department:  ""
   address:     "TODO: Add lab address"
   email:       "TODO: Add lab email"
   github:      "https://github.com/uni-medical"

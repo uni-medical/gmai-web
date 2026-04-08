@@ -1,55 +1,86 @@
 # category values: award | paper | grant | join | event
 
-- date:     "June 2025"
-  category: "paper"
-  label:    "Paper"
-  headline: "Ophora accepted at MICCAI 2025 as Oral Presentation"
-  body:     >
+- date:        "June 2025"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "Ophora accepted at MICCAI 2025 as Oral Presentation"
+  headline_zh: "Ophora 被 MICCAI 2025 收录为口头报告"
+  body:        >
     Our text-guided ophthalmic surgical video generation model Ophora was accepted at
     MICCAI 2025 as an oral presentation. Ophora is trained on 160K video-text pairs and
     outperforms existing methods on FID, FVD, and CLIPScore metrics.
+  body_zh:     >
+    我们的文本驱动眼科手术视频生成模型 Ophora 被 MICCAI 2025 收录为口头报告。Ophora 在
+    16 万视频-文本对上训练，在 FID、FVD 和 CLIPScore 指标上超越现有方法。
 
-- date:     "June 2025"
-  category: "paper"
-  label:    "Paper"
-  headline: "RetinaLogos, ProgEmu, and MRI Translation papers accepted at MICCAI 2025"
-  body:     >
+- date:        "June 2025"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "RetinaLogos, ProgEmu, and MRI Translation papers accepted at MICCAI 2025"
+  headline_zh: "RetinaLogos、ProgEmu 和 MRI 转换三篇论文被 MICCAI 2025 收录"
+  body:        >
     Three papers accepted at MICCAI 2025: RetinaLogos (language-driven high-resolution
     fundus image generation), ProgEmu (interpretable counterfactual medical image generation),
     and Multi-modal MRI Translation via Evidential Regression and Distribution Calibration.
+  body_zh:     >
+    三篇论文被 MICCAI 2025 收录：RetinaLogos（语言驱动的高分辨率眼底图像生成）、
+    ProgEmu（可解释反事实医学图像生成），以及基于证据回归与分布校准的多模态 MRI 转换。
 
-- date:     "February 2025"
-  category: "paper"
-  label:    "Paper"
-  headline: "SlideChat accepted at CVPR 2025"
-  body:     >
+- date:        "February 2025"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "SlideChat accepted at CVPR 2025"
+  headline_zh: "SlideChat 被 CVPR 2025 收录"
+  body:        >
     Our whole-slide pathology image understanding assistant SlideChat was accepted at
     CVPR 2025. SlideChat achieves 81.17% accuracy on SlideBench-VQA and surpasses
     state-of-the-art on 18 of 22 benchmark tasks.
+  body_zh:     >
+    我们的全切片病理图像理解助手 SlideChat 被 CVPR 2025 收录。SlideChat 在
+    SlideBench-VQA 上取得 81.17% 的准确率，在 22 个基准任务中的 18 个上超越最新方法。
 
-- date:     "January 2025"
-  category: "event"
-  label:    "Event"
-  headline: "GMAI-MMBench: Comprehensive evaluation of 50 large vision-language models"
-  body:     >
+- date:        "January 2025"
+  category:    "event"
+  label:       "Event"
+  label_zh:    "动态"
+  headline:    "GMAI-MMBench: Comprehensive evaluation of 50 large vision-language models"
+  headline_zh: "GMAI-MMBench：全面评估 50 个大视觉语言模型"
+  body:        >
     We released GMAI-MMBench — the most comprehensive medical AI evaluation platform
     covering 284 datasets, 38 imaging modalities, and 18 clinical tasks. Even GPT-4o
     achieves only 53.96% accuracy, highlighting challenges in medical multimodal AI.
+  body_zh:     >
+    我们发布了 GMAI-MMBench——迄今最全面的医学 AI 评测平台，覆盖 284 个数据集、
+    38 种影像模态和 18 项临床任务。即使 GPT-4o 也仅能达到 53.96% 的准确率，
+    凸显了医学多模态 AI 面临的挑战。
 
-- date:     "October 2024"
-  category: "paper"
-  label:    "Paper"
-  headline: "OphCLIP accepted at ICCV 2025 — surgical video-language pre-training"
-  body:     >
+- date:        "October 2024"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "OphCLIP accepted at ICCV 2025 — surgical video-language pre-training"
+  headline_zh: "OphCLIP 被 ICCV 2025 收录——手术视频语言预训练"
+  body:        >
     OphCLIP, our hierarchical retrieval-augmented framework for ophthalmic surgical
     video understanding, was accepted at ICCV. Built on OphVL (375K+ video-text pairs),
     OphCLIP sets new records on phase recognition and multi-instrument detection tasks.
+  body_zh:     >
+    我们面向眼科手术视频理解的层次化检索增强框架 OphCLIP 被 ICCV 收录。基于
+    OphVL（375K+ 视频-文本对），OphCLIP 在阶段识别和多器械检测任务上创下新纪录。
 
-- date:     "September 2025"
-  category: "join"
-  label:    "Join"
-  headline: "Welcoming new visiting researchers to GMAI Lab"
-  body:     >
+- date:        "September 2025"
+  category:    "join"
+  label:       "Join"
+  label_zh:    "加入"
+  headline:    "Welcoming new visiting researchers to GMAI Lab"
+  headline_zh: "欢迎新科研实习生加入 GMAI 实验室"
+  body:        >
     We welcome Wenhao Tang (Nankai University), Shujian Gao (Fudan University), and
     Jiashi Lin (Northwestern Polytechnical University) as new visiting researchers,
     bringing expertise in computational pathology, multimodal learning, and LLM-based agents.
+  body_zh:     >
+    欢迎唐文浩（南开大学）、高书剑（复旦大学）和林佳仕（西北工业大学）作为新科研实习生加入
+    GMAI 实验室，带来计算病理学、多模态学习和大语言模型智能体方面的专业知识。

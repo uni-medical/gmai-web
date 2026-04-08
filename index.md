@@ -27,7 +27,7 @@ lang:   "en"
     </div>
 
     <div class="lh-affil">
-      {{ site.lab.department }} &middot; {{ site.lab.address }}
+      {{ site.lab.address }}
     </div>
   </div>
 
@@ -65,6 +65,7 @@ lang:   "en"
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section fade">
   <div class="rs-visual vis-neural">
+    <img class="rs-panel-img" src="{{ '/assets/images/projects/imaging-x/overview.png' | relative_url }}" alt="Project Imaging-X overview" loading="lazy" />
     <div class="rs-watermark">01</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -106,7 +107,7 @@ lang:   "en"
       <span class="rs-topic">Metadata-driven fusion</span>
       <span class="rs-topic">SlideInstruction</span>
     </div>
-    <a href="{{ '/projects/' | relative_url }}" class="rs-link">Explore this project →</a>
+    <a href="{{ '/projects/imaging-x/' | relative_url }}" class="rs-link">Explore Project Imaging-X →</a>
   </div>
 </div>
 
