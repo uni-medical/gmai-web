@@ -1,0 +1,59 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data.strings[lang] %}
+
+{% if page.member_slug == "junjun-he" %}
+  {% assign member = site.data.team.pi %}
+  {% assign is_pi = true %}
+{% else %}
+  {% assign member = site.data.team.members | where: "slug", page.member_slug | first %}
+  {% assign is_pi = false %}
+{% endif %}
+
+<section class="alt">
+<div class="section-inner fade">
+
+  <nav class="profile-breadcrumb">
+    {% if lang == "zh" %}
+      <a href="{{ '/zh/team/' | relative_url }}">← 团队</a>
+    {% else %}
+      <a href="{{ '/team/' | relative_url }}">← Team</a>
+    {% endif %}
+  </nav>
+
+  <div class="profile-hero">
+    <div class="profile-photo-wrap">
+      {% if member.photo != "" and member.photo %}
+        <img class="profile-photo" src="{{ member.photo | relative_url }}" alt="{{ member.name }}" />
+      {% else %}
+        <div class="profile-photo-ph">{{ member.initials }}</div>
+      {% endif %}
+    </div>
+    <div class="profile-meta">
+      {% if is_pi %}<div class="pi-role">{{ t.team.pi_badge }}</div>{% endif %}
+      <h1 class="profile-name">{{ member.name }}</h1>
+      <div class="profile-role">{{ member.role }}</div>
+      {% if member.focus %}<div class="profile-focus">{{ member.focus }}</div>{% endif %}
+      <div class="profile-links">
+        {% if member.links.scholar != "" and member.links.scholar %}<a href="{{ member.links.scholar }}" target="_blank">Google Scholar</a>{% endif %}
+        {% if member.links.github  != "" and member.links.github  %}<a href="{{ member.links.github  }}" target="_blank">GitHub</a>{% endif %}
+        {% if member.links.website != "" and member.links.website %}<a href="{{ member.links.website }}" target="_blank">Website</a>{% endif %}
+        {% if member.links.email   != "" and member.links.email   %}<a href="mailto:{{ member.links.email }}">Email</a>{% endif %}
+        {% if member.links.cv      != "" and member.links.cv      %}<a href="{{ member.links.cv | relative_url }}">CV</a>{% endif %}
+        {% if member.links.twitter != "" and member.links.twitter %}<a href="{{ member.links.twitter }}" target="_blank">Twitter</a>{% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% if member.bio %}
+  <div class="profile-bio">{{ member.bio }}</div>
+  {% endif %}
+
+  <div class="profile-content">
+    {{ content }}
+  </div>
+
+</div>
+</section>

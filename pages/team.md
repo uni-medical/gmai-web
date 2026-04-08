@@ -31,6 +31,7 @@ lang:      "en"
         {% if site.data.team.pi.links.cv != ""       %}<a href="{{ site.data.team.pi.links.cv | relative_url }}">CV</a>{% endif %}
         {% if site.data.team.pi.links.github != ""   %}<a href="{{ site.data.team.pi.links.github }}" target="_blank">GitHub</a>{% endif %}
         {% if site.data.team.pi.links.twitter != ""  %}<a href="{{ site.data.team.pi.links.twitter }}" target="_blank">Twitter</a>{% endif %}
+        <a href="{{ '/team/junjun-he/' | relative_url }}" class="profile-link">Profile →</a>
       </div>
     </div>
   </div>
@@ -50,6 +51,7 @@ lang:      "en"
         {% if m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
         {% if m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
         {% if m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">Website</a>{% endif %}
+        {% if m.slug != "" %}<a href="{{ '/team/' | append: m.slug | append: '/' | relative_url }}" class="profile-link">Profile →</a>{% endif %}
       </div>
     </div>
     {% endfor %}

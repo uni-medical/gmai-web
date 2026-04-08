@@ -21,8 +21,9 @@
 .pi-name  { font-family: $serif; font-size: 1.5rem; font-weight: 400; color: $ink; margin-bottom: .25rem; }
 .pi-title { font-size: .85rem; color: $ink3; margin-bottom: .75rem; }
 .pi-bio   { font-size: .88rem; color: $ink2; line-height: 1.75; font-family: $serif; margin-bottom: 1rem; }
-.pi-links { display: flex; gap: .5rem; flex-wrap: wrap;
-  a { font-size: .75rem; font-weight: 500; color: $accent; text-decoration: none; border-bottom: 1px solid $border2; &:hover { border-color: $accent; } } }
+.pi-links { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center;
+  a { font-size: .75rem; font-weight: 500; color: $accent; text-decoration: none; border-bottom: 1px solid $border2; &:hover { border-color: $accent; } }
+  a.profile-link { background: $accent; color: #fff; padding: .25rem .7rem; border-radius: $radius; border-bottom: none; &:hover { opacity: .85; } } }
 .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1px; background: $border; border: 1px solid $border; }
 .member-card { background: $bg; padding: 1.5rem; transition: background .15s; &:hover { background: $bg2; } }
 .member-photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 1px solid $border;
@@ -31,9 +32,33 @@
 .member-name  { font-weight: 600; font-size: .9rem; color: $ink; margin-bottom: .15rem; }
 .member-role  { font-size: .73rem; text-transform: uppercase; letter-spacing: .06em; color: $accent; font-weight: 500; margin-bottom: .4rem; }
 .member-focus { font-size: .8rem; color: $ink3; line-height: 1.55; }
-.member-links { margin-top: .75rem; display: flex; gap: .75rem;
+.member-links { margin-top: .75rem; display: flex; gap: .75rem; flex-wrap: wrap;
   a { font-size: .75rem; color: $ink3; text-decoration: none; border-bottom: 1px solid $border2;
-      &:hover { color: $accent; border-color: $accent; } } }
+      &:hover { color: $accent; border-color: $accent; } }
+  a.profile-link { color: $accent; font-weight: 500; margin-left: auto; border-bottom-color: transparent;
+    &:hover { border-bottom-color: $accent; } } }
+
+// PROFILE PAGES
+.profile-breadcrumb { margin-bottom: 2rem;
+  a { font-size: .82rem; color: $ink3; text-decoration: none; &:hover { color: $accent; } } }
+.profile-hero { display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 2rem;
+  @media (max-width: 640px) { flex-direction: column; gap: 1.5rem; } }
+.profile-photo-wrap { flex-shrink: 0; }
+.profile-photo { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; display: block;
+  border: 3px solid $border; }
+.profile-photo-ph { width: 160px; height: 160px; border-radius: 50%; background: $border2;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem; font-weight: 600; color: $ink3; font-family: $serif; }
+.profile-name  { font-family: $serif; font-size: 2rem; font-weight: 400; color: $ink; margin: .25rem 0 .4rem; }
+.profile-role  { font-size: .82rem; text-transform: uppercase; letter-spacing: .07em; color: $accent;
+  font-weight: 500; margin-bottom: .6rem; }
+.profile-focus { font-size: .88rem; color: $ink2; line-height: 1.65; margin-bottom: .9rem; }
+.profile-links { display: flex; gap: .6rem; flex-wrap: wrap;
+  a { font-size: .78rem; font-weight: 500; color: $accent; text-decoration: none;
+      border-bottom: 1px solid $border2; &:hover { border-color: $accent; } } }
+.profile-bio { font-size: .9rem; color: $ink2; line-height: 1.8; font-family: $serif;
+  border-top: 1px solid $border; padding-top: 1.5rem; margin-bottom: 1.5rem; }
+.profile-content { font-size: .9rem; color: $ink2; line-height: 1.8; }
 
 // PUBLICATIONS
 .pub-filters { display: flex; gap: .4rem; margin-bottom: 2rem; flex-wrap: wrap; }

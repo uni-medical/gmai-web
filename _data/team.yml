@@ -1,5 +1,6 @@
 pi:
   name:     "Junjun He"
+  slug:     "junjun-he"
   role:     "Principal Investigator"
   title:    "Principal Investigator, GMAI Lab"
   bio:      >
@@ -24,6 +25,7 @@ pi:
 members:
   # ── Core researchers ─────────────────────────────────────────────
   - name:     "Ziyan Huang (黄子炎)"
+    slug:     "ziyan-huang"
     role:     "Researcher"
     focus:    "Medical image segmentation, scalable foundation models, multi-agent systems for medical discovery"
     photo:    ""
@@ -34,6 +36,7 @@ members:
       website: ""
 
   - name:     "Jin Ye (叶锦)"
+    slug:     "jin-ye"
     role:     "Researcher"
     focus:    "Interactive medical image segmentation, multimodal medical benchmarks, SAM-Med series"
     photo:    ""
@@ -44,6 +47,7 @@ members:
       website: ""
 
   - name:     "Tianbin Li (李添斌)"
+    slug:     "tianbin-li"
     role:     "Researcher"
     focus:    "Medical visual question answering, general medical multimodal large models, GMAI-VL"
     photo:    ""
@@ -55,6 +59,7 @@ members:
 
   # ── Visiting researchers ─────────────────────────────────────────
   - name:     "Ming Hu (胡铭)"
+    slug:     "ming-hu"
     role:     "Visiting Researcher, Monash University"
     focus:    "Video understanding, multimodal large language models, ophthalmic surgical video analysis"
     photo:    ""
@@ -65,6 +70,7 @@ members:
       website: "https://openreview.net/profile?id=%7EMing_Hu4"
 
   - name:     "Ying Chen (陈莹)"
+    slug:     "ying-chen"
     role:     "Visiting Researcher, Xiamen University"
     focus:    "AI for science, computational pathology, whole-slide image understanding"
     photo:    "assets/images/team/ying_chen.jpg"
@@ -75,6 +81,7 @@ members:
       website: "https://cying18.github.io/"
 
   - name:     "Jiyao Liu (刘继垚)"
+    slug:     "jiyao-liu"
     role:     "Visiting Researcher, Fudan University"
     focus:    "Low-level vision, agent systems, multimodal large language models, MRI translation"
     photo:    "assets/images/team/jiyao_liu.png"
@@ -85,6 +92,7 @@ members:
       website: "https://liujiyaofdu.github.io/"
 
   - name:     "Wei Li (李威)"
+    slug:     "wei-li"
     role:     "Visiting Researcher, Shanghai Jiao Tong University"
     focus:    "Continual learning, multimodal large language models, surgical video understanding"
     photo:    "assets/images/team/wei_li.jpg"
@@ -95,6 +103,7 @@ members:
       website: ""
 
   - name:     "Chenglong Ma (马成龙)"
+    slug:     "chenglong-ma"
     role:     "Visiting Researcher, Fudan University"
     focus:    "Multimodal models, generative models, medical visual tokenization, counterfactual generation"
     photo:    "assets/images/team/chenglong_ma.jpeg"
@@ -105,6 +114,7 @@ members:
       website: ""
 
   - name:     "Ye Du (杜烨)"
+    slug:     "ye-du"
     role:     "Visiting Researcher, The Hong Kong Polytechnic University"
     focus:    "AI for science, proteomics, biomedical data analysis"
     photo:    ""
@@ -115,6 +125,7 @@ members:
       website: "https://openreview.net/profile?id=%7EYe_Du4"
 
   - name:     "Shujian Gao (高书剑)"
+    slug:     "shujian-gao"
     role:     "Visiting Researcher, Fudan University"
     focus:    "Visual representation learning, multi-modal learning, large language models"
     photo:    "assets/images/team/shujian_gao.jpg"
@@ -125,6 +136,7 @@ members:
       website: "https://openreview.net/profile?id=%7EShujian_Gao1"
 
   - name:     "Wenhao Tang (唐文浩)"
+    slug:     "wenhao-tang"
     role:     "Visiting Researcher, Nankai University"
     focus:    "AI for science, computational pathology, medical image analysis"
     photo:    "assets/images/team/wenhao_tang.jpg"
@@ -135,6 +147,7 @@ members:
       website: "https://www.whtang.cn/"
 
   - name:     "Jiashi Lin (林佳仕)"
+    slug:     "jiashi-lin"
     role:     "Visiting Researcher, Northwestern Polytechnical University"
     focus:    "Knowledge graphs, large language models, agentic retrieval-augmented generation"
     photo:    "assets/images/team/jiashi_lin.jpg"
@@ -145,6 +158,7 @@ members:
       website: "https://openreview.net/profile?id=%7EJiashi_Lin1"
 
   - name:     "Cheng Tang (唐诚)"
+    slug:     "cheng-tang"
     role:     "Visiting Researcher, University of Chinese Academy of Sciences"
     focus:    "AI for science, computational imaging"
     photo:    ""
@@ -155,6 +169,7 @@ members:
       website: "https://openreview.net/profile?id=%7ECheng_Tang8"
 
   - name:     "Raymond Ning (宁俊智)"
+    slug:     "raymond-ning"
     role:     "Visiting Researcher, Imperial College London"
     focus:    "AI for health, multimodal medical AI, generative models for retinal image synthesis"
     photo:    ""

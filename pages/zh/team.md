@@ -30,6 +30,7 @@ lang:      "zh"
         {% if site.data.team.pi.links.email != ""    %}<a href="mailto:{{ site.data.team.pi.links.email }}">邮箱</a>{% endif %}
         {% if site.data.team.pi.links.cv != ""       %}<a href="{{ site.data.team.pi.links.cv | relative_url }}">简历</a>{% endif %}
         {% if site.data.team.pi.links.github != ""   %}<a href="{{ site.data.team.pi.links.github }}" target="_blank">GitHub</a>{% endif %}
+        <a href="{{ '/zh/team/junjun-he/' | relative_url }}" class="profile-link">主页 →</a>
       </div>
     </div>
   </div>
@@ -49,6 +50,7 @@ lang:      "zh"
         {% if m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
         {% if m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
         {% if m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">主页</a>{% endif %}
+        {% if m.slug != "" %}<a href="{{ '/zh/team/' | append: m.slug | append: '/' | relative_url }}" class="profile-link">主页 →</a>{% endif %}
       </div>
     </div>
     {% endfor %}
