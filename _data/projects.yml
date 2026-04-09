@@ -70,6 +70,25 @@
     STU-Net-H 是迄今最大的医学分割模型，达到 90.06% 平均 DSC。荣获 MICCAI 2023 ATLAS 和 SPPIN
     挑战赛冠军，AutoPET II 亚军。
 
+- title:      "MedSegAgent: Universal Multi-Agent System for Medical Image Segmentation"
+  title_zh:   "MedSegAgent：通用可扩展多智能体医学图像分割系统"
+  area:       "Medical Image Segmentation"
+  area_zh:    "医学图像分割"
+  status:     "active"
+  funding:    "IEEE JBHI 2026"
+  funding_zh: "IEEE JBHI 2026"
+  slug:       "medsegagent"
+  desc:       >
+    A multi-agent system that orchestrates specialized dataset-specific segmentation models
+    through natural language instructions. Instead of training a single universal model,
+    MedSegAgent parses free-form requests, performs coarse-to-fine dataset matching, and
+    integrates results from the best-matched models. Supports 23 datasets and 343 segmentation
+    targets across CT, MRI, PET/CT, and ultrasound. Published in IEEE JBHI 2026.
+  desc_zh:    >
+    一种通过自然语言指令调度专用数据集分割模型的多智能体系统。不同于训练单一通用模型，
+    MedSegAgent 解析自由文本请求，执行从粗到精的数据集匹配，并对最佳匹配模型的结果进行集成。
+    支持 23 个数据集和 343 个分割目标，覆盖 CT、MRI、PET/CT 和超声等模态。发表于 IEEE JBHI 2026。
+
 - title:      "DTR-MAS: Diagnosis-Treatment-Research Multi-Agent System"
   title_zh:   "DTR-MAS：诊断-治疗-科研多智能体系统"
   area:       "Clinical AI Systems"
@@ -106,6 +125,25 @@
     是最大的医学分割模型）、SAM-Med2D（在 SA-Med2D-20M 基准上将 SAM 适配至 2D 医学图像），
     以及 SAM-Med3D（在 2.1 万体积 / 13.1 万 3D 掩码上进行体素级 3D 上下文建模）。
     这些模型为临床和科研应用提供通用可提示分割能力。
+
+- title:      "OphCLIP: Hierarchical Retrieval-Augmented Ophthalmic Surgical VLP"
+  title_zh:   "OphCLIP：眼科手术分层检索增强视觉-语言预训练"
+  area:       "Surgical AI & Robotics"
+  area_zh:    "手术 AI 与机器人"
+  status:     "active"
+  funding:    "ICCV 2025"
+  funding_zh: "ICCV 2025"
+  slug:       "ophclip"
+  desc:       >
+    A hierarchical retrieval-augmented vision-language pretraining framework for ophthalmic
+    surgical workflow understanding. Trained on OphVL (375K video-text pairs, 7.5K hours,
+    15× larger than existing surgical VLP datasets), OphCLIP achieves state-of-the-art
+    zero-shot performance on 11 benchmarks for phase recognition and multi-instrument
+    identification. Published at ICCV 2025.
+  desc_zh:    >
+    面向眼科手术工作流理解的分层检索增强视觉-语言预训练框架。在 OphVL（37.5万视频-文本对、
+    7500小时视频，规模为现有手术VLP数据集15倍）上训练，OphCLIP在11个基准上取得了阶段识别
+    和多器械识别的最优零样本性能。发表于 ICCV 2025。
 
 - title:      "Autonomous Surgical Robot for Gynecological Surgery"
   title_zh:   "妇科手术自主机器人"
