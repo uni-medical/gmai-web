@@ -18,7 +18,7 @@
     larger than prior datasets. SlideChat achieves 81.17% accuracy on SlideBench-VQA (TCGA)
     and surpasses state-of-the-art results on 18 of 22 tasks, establishing a data–model–
     benchmark framework for next-generation medical vision-language models.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/slidechat.png"
   keywords: "computational pathology, whole-slide images, vision-language model, multimodal AI"
   links:
     paper:  "https://arxiv.org/abs/2410.11761"
@@ -139,7 +139,7 @@
     instruments, and clinical outcomes — OphCLIP simultaneously learns fine-grained and
     long-horizon visual representations. Evaluated on 11 datasets for phase recognition and
     multi-instrument detection, demonstrating robust generalisation and superior performance.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/ophclip.png"
   keywords: "ophthalmic surgery, video-language pre-training, retrieval augmentation, surgical AI"
   links:
     paper:  "https://arxiv.org/abs/2411.15421"
@@ -157,7 +157,7 @@
     A three-stage training strategy progressively strengthens visual-language alignment and
     fusion. GMAI-VL achieves or surpasses SOTA on multiple medical multimodal VQA and
     diagnostic reasoning benchmarks.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/gmai_vl.png"
   keywords: "medical VQA, vision-language model, multimodal AI, clinical AI"
   links:
     paper:  "https://arxiv.org/abs/2411.14522"
@@ -211,7 +211,7 @@
     SAM-Med3D significantly improves segmentation accuracy and robustness over 2D slice-based
     approaches, providing a universally promptable segmentation backbone for clinical and
     research applications.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/sam_med3d.png"
   keywords: "3D medical image segmentation, SAM, foundation model, volumetric imaging"
   links:
     paper:  "https://arxiv.org/abs/2310.15161"
@@ -245,7 +245,7 @@
     1.4B, STU-Net-H (1.4B parameters) is the largest medical image segmentation model to date.
     After large-scale supervised pre-training, the models achieve excellent performance on both
     direct inference and fine-tuning, demonstrating strong scalability and transfer capability.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/stu_net.png"
   keywords: "medical image segmentation, U-Net, large-scale pre-training, scalable models"
   links:
     paper:  "https://arxiv.org/abs/2304.06716"
