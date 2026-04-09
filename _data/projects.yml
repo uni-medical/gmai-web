@@ -34,6 +34,42 @@
     550 万图像-文本对）上训练，GMAI-VL-R1 引入强化学习在 8 种影像模态上实现约 30% 的平均准确率提升。
     UniMedVL 致力于在 CURE-Bench 和 MedXpertQA 等复杂医学任务上达到最新水平。
 
+- title:      "SlideChat: Vision-Language Assistant for Whole-Slide Pathology"
+  title_zh:   "SlideChat：全切片病理图像视觉语言助手"
+  area:       "Clinical AI Systems"
+  area_zh:    "临床 AI 系统"
+  status:     "active"
+  funding:    "CVPR 2025"
+  funding_zh: "CVPR 2025"
+  slug:       "slide-chat"
+  desc:       >
+    The first vision-language assistant capable of understanding gigapixel whole-slide pathology
+    images in their entirety. Trained on SlideInstruction (4.2K WSI captions, 176K VQA pairs)
+    and evaluated on SlideBench, SlideChat achieves state-of-the-art on 18 of 22 tasks,
+    including 81.17% accuracy on SlideBench-VQA (TCGA). Accepted at CVPR 2025.
+  desc_zh:    >
+    首个能够理解千亿像素全切片病理图像的视觉语言助手。在 SlideInstruction（4200 张 WSI 标注、
+    17.6 万 VQA 问答对）上训练，在 SlideBench 评测中 22 项任务中 18 项达到最优，
+    SlideBench-VQA（TCGA）准确率 81.17%。发表于 CVPR 2025。
+
+- title:      "STU-Net: Scalable and Transferable Medical Image Segmentation Models"
+  title_zh:   "STU-Net：可扩展可迁移医学图像分割模型"
+  area:       "Medical Image Segmentation"
+  area_zh:    "医学图像分割"
+  status:     "active"
+  funding:    "arXiv 2023"
+  funding_zh: "arXiv 2023"
+  slug:       "stu-net"
+  desc:       >
+    A family of scalable U-Net models (14M to 1.4B parameters) pre-trained on TotalSegmentator
+    for universal medical image segmentation. STU-Net-H is the largest medical segmentation
+    model to date, achieving 90.06% mean DSC. Won championship at MICCAI 2023 ATLAS and SPPIN
+    challenges; runner-up at AutoPET II.
+  desc_zh:    >
+    参数量从 1400 万到 14 亿的可扩展 U-Net 系列，在 TotalSegmentator 上预训练，用于通用医学图像分割。
+    STU-Net-H 是迄今最大的医学分割模型，达到 90.06% 平均 DSC。荣获 MICCAI 2023 ATLAS 和 SPPIN
+    挑战赛冠军，AutoPET II 亚军。
+
 - title:      "DTR-MAS: Diagnosis-Treatment-Research Multi-Agent System"
   title_zh:   "DTR-MAS：诊断-治疗-科研多智能体系统"
   area:       "Clinical AI Systems"

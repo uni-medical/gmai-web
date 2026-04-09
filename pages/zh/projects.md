@@ -18,6 +18,7 @@ lang:      "zh"
         <div class="proj-label">{% if p.area_zh %}{{ p.area_zh }}{% else %}{{ p.area }}{% endif %}</div>
         <div class="proj-title">{% if p.title_zh %}{{ p.title_zh }}{% else %}{{ p.title }}{% endif %}</div>
         <div class="proj-desc">{% if p.desc_zh %}{{ p.desc_zh }}{% else %}{{ p.desc }}{% endif %}</div>
+        {% if p.slug %}<a href="{{ '/zh/projects/' | append: p.slug | append: '/' | relative_url }}" class="pub-btn" style="margin-top:.5rem;display:inline-block;">探索项目 →</a>{% endif %}
       </div>
       <div class="proj-meta">
         <span class="proj-status {{ p.status }}">{% case p.status %}{% when "active" %}进行中{% when "ongoing" %}进行中{% when "new" %}新项目{% when "completed" %}已完成{% else %}{{ p.status | capitalize }}{% endcase %}</span>

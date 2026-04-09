@@ -18,6 +18,7 @@ lang:      "en"
         <div class="proj-label">{{ p.area }}</div>
         <div class="proj-title">{{ p.title }}</div>
         <div class="proj-desc">{{ p.desc }}</div>
+        {% if p.slug %}<a href="{{ '/projects/' | append: p.slug | append: '/' | relative_url }}" class="pub-btn" style="margin-top:.5rem;display:inline-block;">Explore Project →</a>{% endif %}
       </div>
       <div class="proj-meta">
         <span class="proj-status {{ p.status }}">{{ p.status | capitalize }}</span>

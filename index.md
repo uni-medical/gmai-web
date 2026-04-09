@@ -181,8 +181,8 @@ lang:   "en"
       </div>
       <div class="rs-vis-stats">
         <div>
-          <span class="rs-vis-stat-n">1.4B</span>
-          <span class="rs-vis-stat-l">parameters (STU-Net)</span>
+          <span class="rs-vis-stat-n">143K</span>
+          <span class="rs-vis-stat-l">3D masks (SA-Med3D)</span>
         </div>
         <div>
           <span class="rs-vis-stat-n">247</span>
@@ -198,20 +198,20 @@ lang:   "en"
 
   <div class="rs-text">
     <div class="rs-area">Medical Image Segmentation</div>
-    <div class="rs-title">Segment Anything in Medicine: STU-Net and SAM-Med Series</div>
+    <div class="rs-title">Segment Anything in Medicine: SAM-Med2D and SAM-Med3D</div>
     <div class="rs-body">
-      We develop the largest-scale medical image segmentation foundation models.
-      STU-Net scales from 14M to 1.4B parameters — the largest medical segmentation
-      model — achieving excellent results in both direct inference and fine-tuning.
-      SAM-Med2D and SAM-Med3D adapt the Segment Anything Model to medical imaging,
-      enabling universal promptable segmentation across 14 imaging modalities and
-      204 anatomical and lesion categories.
+      We adapt the Segment Anything Model to the medical domain, delivering universal
+      promptable segmentation across 14 imaging modalities and 247 anatomical and lesion
+      categories. SAM-Med2D leverages SA-Med2D-20M for 2D slice segmentation, while
+      SAM-Med3D introduces a fully native 3D architecture trained on SA-Med3D-140K
+      (22K volumes, 143K masks) — achieving 60% Dice improvement over SAM with just
+      a single 3D point prompt.
     </div>
     <div class="rs-topics">
       <span class="rs-topic">SAM-Med3D</span>
       <span class="rs-topic">SAM-Med2D</span>
       <span class="rs-topic">SA-Med3D-140K</span>
-      <span class="rs-topic">Interactive segmentation</span>
+      <span class="rs-topic">Interactive Segmentation</span>
     </div>
     <a href="{{ '/projects/sam-med3d/' | relative_url }}" class="rs-link">Explore SAM-Med3D →</a>
   </div>

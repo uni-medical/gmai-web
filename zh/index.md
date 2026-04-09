@@ -146,7 +146,7 @@ lang:   "zh"
         <span class="rs-tag">三维医学影像</span>
       </div>
       <div class="rs-vis-stats">
-        <div><span class="rs-vis-stat-n">14亿</span><span class="rs-vis-stat-l">参数（STU-Net）</span></div>
+        <div><span class="rs-vis-stat-n">14.3万</span><span class="rs-vis-stat-l">三维掩码（SA-Med3D）</span></div>
         <div><span class="rs-vis-stat-n">247</span><span class="rs-vis-stat-l">解剖类别</span></div>
         <div><span class="rs-vis-stat-n">SOTA</span><span class="rs-vis-stat-l">三维分割</span></div>
       </div>
@@ -154,12 +154,12 @@ lang:   "zh"
   </div>
   <div class="rs-text">
     <div class="rs-area">医学图像分割</div>
-    <div class="rs-title">分割一切：STU-Net 与 SAM-Med 系列基础模型</div>
+    <div class="rs-title">分割一切：SAM-Med2D 与 SAM-Med3D 医学通用分割</div>
     <div class="rs-body">
-      我们打造最大规模的医学图像分割基础模型系列。STU-Net 参数规模从 1400 万扩展至 14 亿，
-      是目前最大的医学图像分割模型，在直接推理与微调上均表现卓越。
-      SAM-Med2D 和 SAM-Med3D 将 SAM 适配至医学场景，支持 14 种影像模态、
-      204 类解剖与病灶目标的通用可提示分割，实现真正意义上的"分割一切"。
+      我们将 Segment Anything Model 深度适配至医学领域，在 14 种影像模态、247 类解剖与病灶
+      目标上实现通用可提示分割。SAM-Med2D 基于 SA-Med2D-20M 覆盖二维切片场景；SAM-Med3D
+      采用全原生三维架构，在 SA-Med3D-140K（2.2 万体积、14.3 万掩码）上训练，仅需单个三维
+      点提示即可实现超过 SAM 60% 的 Dice 提升，真正实现"分割一切"。
     </div>
     <div class="rs-topics">
       <span class="rs-topic">SAM-Med3D</span>
