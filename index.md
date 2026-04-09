@@ -161,7 +161,7 @@ lang:   "en"
       <span class="rs-topic">GMAI-MMBench</span>
       <span class="rs-topic">OmniMedVQA (CVPR 2024)</span>
     </div>
-    <a href="{{ '/publications/' | relative_url }}" class="rs-link">View publications →</a>
+    <a href="{{ '/projects/gmai-vl/' | relative_url }}" class="rs-link">Explore GMAI-VL →</a>
   </div>
 </div>
 

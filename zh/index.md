@@ -131,7 +131,7 @@ lang:   "zh"
       <span class="rs-topic">GMAI-MMBench</span>
       <span class="rs-topic">OmniMedVQA（CVPR 2024）</span>
     </div>
-    <a href="{{ '/zh/publications/' | relative_url }}" class="rs-link">查看论文 →</a>
+    <a href="{{ '/zh/projects/gmai-vl/' | relative_url }}" class="rs-link">探索 GMAI-VL →</a>
   </div>
 </div>
 
