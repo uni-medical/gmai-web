@@ -92,7 +92,6 @@ lang:   "zh"
       <span class="rs-topic">IMed-361M</span>
       <span class="rs-topic">GMAI-VL-5.5M</span>
       <span class="rs-topic">元数据驱动融合</span>
-      <span class="rs-topic">SlideInstruction</span>
     </div>
     <a href="{{ '/zh/projects/imaging-x/' | relative_url }}" class="rs-link">探索 Imaging-X 项目 →</a>
   </div>
@@ -101,6 +100,7 @@ lang:   "zh"
 <!-- 研究方向 2 -->
 <div class="rs-section rs-flip fade">
   <div class="rs-visual vis-genomics">
+    <img class="rs-panel-img" src="{{ '/assets/images/projects/gmai-vl/gmai_vl0.png' | relative_url }}" alt="GMAI-VL 数据流水线与模型架构" loading="lazy" />
     <div class="rs-watermark">02</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -126,10 +126,9 @@ lang:   "zh"
     </div>
     <div class="rs-topics">
       <span class="rs-topic">GMAI-VL</span>
-      <span class="rs-topic">SlideChat（CVPR 2025）</span>
+      <span class="rs-topic">GMAI-VL-5.5M</span>
       <span class="rs-topic">GMAI-VL-R1</span>
       <span class="rs-topic">GMAI-MMBench</span>
-      <span class="rs-topic">OmniMedVQA（CVPR 2024）</span>
     </div>
     <a href="{{ '/zh/projects/gmai-vl/' | relative_url }}" class="rs-link">探索 GMAI-VL →</a>
   </div>
@@ -138,6 +137,7 @@ lang:   "zh"
 <!-- 研究方向 3 -->
 <div class="rs-section fade">
   <div class="rs-visual vis-molecular">
+    <img class="rs-panel-img" src="{{ '/assets/images/projects/sam-med3d/sam_med3d4.png' | relative_url }}" alt="SAM-Med3D 全三维架构" loading="lazy" />
     <div class="rs-watermark">03</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -162,10 +162,9 @@ lang:   "zh"
       204 类解剖与病灶目标的通用可提示分割，实现真正意义上的"分割一切"。
     </div>
     <div class="rs-topics">
-      <span class="rs-topic">STU-Net（14亿参数）</span>
-      <span class="rs-topic">SAM-Med2D</span>
       <span class="rs-topic">SAM-Med3D</span>
-      <span class="rs-topic">IMed-361M（3.61亿掩码）</span>
+      <span class="rs-topic">SAM-Med2D</span>
+      <span class="rs-topic">SA-Med3D-140K</span>
       <span class="rs-topic">交互式分割</span>
     </div>
     <a href="{{ '/zh/projects/sam-med3d/' | relative_url }}" class="rs-link">探索 SAM-Med3D →</a>

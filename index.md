@@ -106,7 +106,6 @@ lang:   "en"
       <span class="rs-topic">IMed-361M</span>
       <span class="rs-topic">GMAI-VL-5.5M</span>
       <span class="rs-topic">Metadata-driven fusion</span>
-      <span class="rs-topic">SlideInstruction</span>
     </div>
     <a href="{{ '/projects/imaging-x/' | relative_url }}" class="rs-link">Explore Project Imaging-X →</a>
   </div>
@@ -119,6 +118,7 @@ lang:   "en"
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section rs-flip fade">
   <div class="rs-visual vis-genomics">
+    <img class="rs-panel-img" src="{{ '/assets/images/projects/gmai-vl/gmai_vl0.png' | relative_url }}" alt="GMAI-VL data pipeline and model architecture" loading="lazy" />
     <div class="rs-watermark">02</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -156,10 +156,9 @@ lang:   "en"
     </div>
     <div class="rs-topics">
       <span class="rs-topic">GMAI-VL</span>
-      <span class="rs-topic">SlideChat (CVPR 2025)</span>
+      <span class="rs-topic">GMAI-VL-5.5M</span>
       <span class="rs-topic">GMAI-VL-R1</span>
       <span class="rs-topic">GMAI-MMBench</span>
-      <span class="rs-topic">OmniMedVQA (CVPR 2024)</span>
     </div>
     <a href="{{ '/projects/gmai-vl/' | relative_url }}" class="rs-link">Explore GMAI-VL →</a>
   </div>
@@ -172,6 +171,7 @@ lang:   "en"
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section fade">
   <div class="rs-visual vis-molecular">
+    <img class="rs-panel-img" src="{{ '/assets/images/projects/sam-med3d/sam_med3d4.png' | relative_url }}" alt="SAM-Med3D fully 3D architecture" loading="lazy" />
     <div class="rs-watermark">03</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -208,10 +208,9 @@ lang:   "en"
       204 anatomical and lesion categories.
     </div>
     <div class="rs-topics">
-      <span class="rs-topic">STU-Net (1.4B params)</span>
-      <span class="rs-topic">SAM-Med2D</span>
       <span class="rs-topic">SAM-Med3D</span>
-      <span class="rs-topic">IMed-361M (361M masks)</span>
+      <span class="rs-topic">SAM-Med2D</span>
+      <span class="rs-topic">SA-Med3D-140K</span>
       <span class="rs-topic">Interactive segmentation</span>
     </div>
     <a href="{{ '/projects/sam-med3d/' | relative_url }}" class="rs-link">Explore SAM-Med3D →</a>
