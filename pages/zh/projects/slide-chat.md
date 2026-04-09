@@ -40,11 +40,11 @@ lang:      "zh"
 
 <!-- Hero image -->
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/slide-chat/SlideChat1.png' | relative_url }}"
-       alt="SlideChat 概览 — 首个面向全切片病理图像理解的视觉语言助手"
+  <img src="{{ '/assets/images/projects/slide-chat/SlideChat2.png' | relative_url }}"
+       alt="SlideChat 架构 — WSI 切块、CONCH 块级编码器、LongNet 切片编码器、多模态投影器、LLM 与两阶段训练"
        style="width:100%;display:block;" loading="eager" />
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
-    SlideChat：首个能够理解 Gigapixel 全切片病理图像的视觉语言助手，支持全面的病理描述生成和多场景对话问答。
+    SlideChat 总览：Gigapixel WSI 被切割为 224×224 图像块，经 CONCH（块级）和 LongNet（切片级）编码后投影至 LLM，支持病理对话推理。训练分两阶段：4.2K WSI 描述对齐域，176K 视觉问答对指令微调。
   </figcaption>
 </figure>
 
@@ -98,36 +98,36 @@ lang:      "zh"
 <!-- Highlight 03 -->
 <div style="margin-bottom:2.5rem;">
   <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
-    03 — SlideBench：严格的多模态临床评测基准
+    03 — 基准测试：准确率 81.17%，22 任务中 18 个达 SOTA
   </h3>
   <p style="font-size:.9rem;color:#334155;line-height:1.8;margin-bottom:1rem;">
-    SlideBench 是首个针对 WSI 理解的综合评测基准，涵盖描述生成（SlideBench-Caption：TCGA、CPTAC、HISTAI）和封闭式问答任务（SlideBench-VQA：TCGA、BCNB、CPTAC、HISTAI）。TCGA VQA 子集经病理专家审核，后从 10 种癌症（1,494 个样本）扩展至 31 种（3,176 个样本）。独立的 BCNB 泛化测试集（7,247 条问答、1,058 名患者、7 项分类任务）专门用于评估模型在真实临床场景中的零样本泛化能力——这是实际部署的关键要求。
+    SlideChat 在 SlideBench-VQA（TCGA）上以 81.17% 综合准确率排名第一，超越第二名 13.47 个百分点；零样本泛化测试 SlideBench-VQA（BCNB）达 54.14%。对比通用 MLLMs（GPT-4o patch 57.91%；缩略图 34.07%）和专用模型（MedDr 67.70%），SlideChat 的全切片整体理解能力带来了图像块方法无法企及的性能。三大临床领域全面领先：显微形态（87.64%）、病理诊断（73.27%）、临床应用（84.26%）。
   </p>
 </div>
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/slide-chat/SlideChat4.png' | relative_url }}"
-       alt="SlideBench 评测结果：SlideChat 在描述生成与问答任务中均达到最优性能"
+  <img src="{{ '/assets/images/projects/slide-chat/SlideChat6.png' | relative_url }}"
+       alt="SlideBench 雷达图对比：SlideChat vs GPT-4o、MedDr、LLaVA-Med、Quilt-LLaVA（TCGA 和 BCNB 基准）"
        style="width:100%;display:block;" loading="lazy" />
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
-    SlideBench 综合性能对比。SlideChat 在 22 个任务中的 18 个达到最优，显著优于通用 MLLMs（GPT-4o、LLaVA）和专用计算病理学模型。
+    SlideBench-VQA 雷达图对比（左：TCGA，右：BCNB）。SlideChat（紫色）在所有任务类别全面领先——细胞形态特征、疾病检测、分期分级和零样本乳腺癌分类均大幅超越所有基线模型。
   </figcaption>
 </figure>
 
 <!-- Highlight 04 -->
 <div style="margin-bottom:2.5rem;">
   <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
-    04 — CVPR 2025：18/22 任务 SOTA 与临床可解释性
+    04 — 临床对话式 AI：多轮诊断推理
   </h3>
   <p style="font-size:.9rem;color:#334155;line-height:1.8;margin-bottom:1rem;">
-    SlideChat 在 SlideBench-VQA（TCGA）上以 81.17% 的综合准确率排名第一，超越第二名 13.47 个百分点；在零样本泛化测试 SlideBench-VQA（BCNB）上达到 54.15%。三大临床领域表现均衡：显微形态（87.64%）、病理诊断（73.27%）、临床应用（84.26%）。模型还提供通过注意力分数可视化实现的可解释性，注意力图能准确定位核质比异常增大、致密胶原沉积等具有病理意义的组织区域，使临床医生能够追溯模型推理依据。
+    SlideChat 支持对完整全切片图像进行多轮对话推理，使病理医生能够针对具体发现追问后续问题。临床示例包括：膀胱肿瘤分析（识别淋巴血管侵犯、细胞分化程度、肿瘤类型、解剖侵犯层次）和乳腺癌评估（淋巴结转移状态、预后预测、最大径 pT 分期、治疗方案选择）。模型结合局部细胞学细节与全局组织结构，给出临床上站得住脚、情境准确的回答——这是纯图像块系统从根本上无法做到的。
   </p>
 </div>
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/slide-chat/SlideChat5.png' | relative_url }}"
-       alt="SlideChat 临床演示：综合病理报告生成与注意力可解释性示例"
+  <img src="{{ '/assets/images/projects/slide-chat/SlideChat7.png' | relative_url }}"
+       alt="SlideChat 临床对话：膀胱肿瘤与乳腺癌多轮诊断问答示例"
        style="width:100%;display:block;" loading="lazy" />
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
-    SlideChat 能力展示：模型可生成包含肿瘤特征、浸润模式、分期信息和治疗建议的完整病理报告，并通过注意力图高亮标注诊断相关的关键组织区域。
+    SlideChat 实战演示：（C）膀胱肿瘤 WSI——准确识别淋巴血管侵犯、细胞分化等级、肿瘤分类及解剖侵犯层次；（D）乳腺癌 WSI——淋巴结转移状态、预后评估、pT 分期及治疗方案选择。
   </figcaption>
 </figure>
 

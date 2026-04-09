@@ -26,19 +26,17 @@ lab:
   pi_last:     "He"               # used to bold PI name in author lists
   institution: "Shanghai Artificial Intelligence Laboratory, China"
   department:  ""
-  address:     "TODO: Add lab address"
-  email:       "TODO: Add lab email"
+  address:     ""
+  email:       "hejunjun@pjlab.org.cn"
   github:      "https://github.com/uni-medical"
   scholar:     "https://scholar.google.com/citations?user=Z4LgebkAAAAJ&hl=zh-CN"
-  twitter:     ""
   founded:     2020               # TODO: confirm founding year
 
 # ── Hero stats (update when milestones change) ────────────────────
 stats:
-  publications: 15
-  members:      14
-  grants:       3
-  citations:    "TODO: Add citation count"
+  publications: "30+"
+  members:      "20+"
+  citations:    "10,000+"
 
 # ── Sass ──────────────────────────────────────────────────────────
 sass:

@@ -28,7 +28,7 @@ lang:   "zh"
     </div>
 
     <div class="lh-affil">
-      {{ site.lab.address }}
+      {{ site.lab.institution }}
     </div>
   </div>
 
@@ -46,10 +46,6 @@ lang:   "zh"
       <div class="lh-stat">
         <span class="lh-stat-n">{{ site.stats.members }}</span>
         <div class="lh-stat-l">在组成员</div>
-      </div>
-      <div class="lh-stat">
-        <span class="lh-stat-n">{{ site.stats.grants }}</span>
-        <div class="lh-stat-l">资助项目</div>
       </div>
       <div class="lh-stat">
         <span class="lh-stat-n">{{ site.stats.citations }}</span>
@@ -89,8 +85,6 @@ lang:   "zh"
     </div>
     <div class="rs-topics">
       <span class="rs-topic">Project Imaging-X</span>
-      <span class="rs-topic">IMed-361M</span>
-      <span class="rs-topic">GMAI-VL-5.5M</span>
       <span class="rs-topic">元数据驱动融合</span>
     </div>
     <a href="{{ '/zh/projects/imaging-x/' | relative_url }}" class="rs-link">探索 Imaging-X 项目 →</a>
@@ -174,36 +168,76 @@ lang:   "zh"
 <!-- 研究方向 4 -->
 <div class="rs-section rs-flip fade">
   <div class="rs-visual vis-clinical">
+    <img class="rs-panel-img" src="{{ '/assets/images/projects/slide-chat/SlideChat2.png' | relative_url }}" alt="SlideChat 架构 — WSI 理解流程" loading="lazy" />
     <div class="rs-watermark">04</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
-        <span class="rs-tag">多智能体系统</span>
-        <span class="rs-tag">手术 AI</span>
-        <span class="rs-tag">临床落地</span>
+        <span class="rs-tag">计算病理学</span>
+        <span class="rs-tag">视觉语言模型</span>
+        <span class="rs-tag">CVPR 2025</span>
       </div>
       <div class="rs-vis-stats">
-        <div><span class="rs-vis-stat-n">1,000+</span><span class="rs-vis-stat-l">集成工具</span></div>
-        <div><span class="rs-vis-stat-n">DTR</span><span class="rs-vis-stat-l">诊断-治疗-研究</span></div>
+        <div><span class="rs-vis-stat-n">81.17%</span><span class="rs-vis-stat-l">VQA 准确率（TCGA）</span></div>
+        <div><span class="rs-vis-stat-n">18/22</span><span class="rs-vis-stat-l">最优评测任务数</span></div>
+        <div><span class="rs-vis-stat-n">176K</span><span class="rs-vis-stat-l">VQA 训练样本</span></div>
       </div>
     </div>
   </div>
   <div class="rs-text">
     <div class="rs-area">临床 AI 系统</div>
-    <div class="rs-title">从模型到行动：多智能体系统与自主手术机器人</div>
+    <div class="rs-title">全切片病理智能：SlideChat 与临床 AI 的未来</div>
     <div class="rs-body">
-      我们构建端到端的智能系统，将 AI 真正引入临床。DTR-MAS 是贯通"诊断-治疗-研究"
-      的一体化多智能体平台，将临床与科研的常规流程转化为可追踪、可审计的多代理协作，
-      集成 1,000+ 医学影像数据集与工具。我们还致力于打造世界首例妇科附件切除
-      自主手术机器人，实现术前规划-术中导航-术后随访一体化自主闭环。
+      SlideChat 是首个能够理解 Gigapixel 全切片病理图像的视觉语言助手。在 SlideInstruction
+      （4.2K WSI 描述 + 176K 视觉问答对）上训练，在 SlideBench 22 个任务中 18 个达到最优，
+      SlideBench-VQA（TCGA）准确率 81.17%，超越第二名 13.47 个百分点。论文已被 CVPR 2025 接收。
     </div>
     <div class="rs-topics">
-      <span class="rs-topic">DTR-MAS</span>
-      <span class="rs-topic">自主手术机器人</span>
-      <span class="rs-topic">OphCLIP（ICCV 2025）</span>
-      <span class="rs-topic">Ophora（MICCAI 2025 Oral）</span>
-      <span class="rs-topic">多院试点部署</span>
+      <span class="rs-topic">SlideChat（CVPR 2025）</span>
+      <span class="rs-topic">SlideInstruction</span>
+      <span class="rs-topic">SlideBench</span>
+      <span class="rs-topic">全切片图像理解</span>
     </div>
     <a href="{{ '/zh/projects/slide-chat/' | relative_url }}" class="rs-link">探索 SlideChat →</a>
+  </div>
+</div>
+
+
+<!-- 研究方向 5 — 可扩展医学图像分割 -->
+<div class="rs-section fade">
+  <div class="rs-visual vis-stunet">
+    <img class="rs-panel-img" src="{{ '/assets/images/projects/stu-net/stu_net7.png' | relative_url }}" alt="STU-Net CT 分割定性结果" loading="lazy" />
+    <div class="rs-watermark">05</div>
+    <div class="rs-visual-content">
+      <div class="rs-tags">
+        <span class="rs-tag">医学图像分割</span>
+        <span class="rs-tag">可扩展模型</span>
+        <span class="rs-tag">MICCAI 2023</span>
+      </div>
+      <div class="rs-vis-stats">
+        <div><span class="rs-vis-stat-n">14亿</span><span class="rs-vis-stat-l">参数（STU-Net-H）</span></div>
+        <div><span class="rs-vis-stat-n">90.06%</span><span class="rs-vis-stat-l">平均 DSC</span></div>
+        <div><span class="rs-vis-stat-n">104</span><span class="rs-vis-stat-l">解剖类别</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rs-text">
+    <div class="rs-area">医学图像分割</div>
+    <div class="rs-title">医学影像中的规模扩展定律：STU-Net 从 1400 万到 14 亿参数</div>
+    <div class="rs-body">
+      STU-Net 在三维医学图像分割领域验证了规模扩展定律。S（1400万）、B（5800万）、
+      L（4.4亿）、H（14亿）四档模型均基于 TotalSegmentator（1,204 个 CT 体积、104 个
+      解剖类别）预训练。STU-Net-H 以 90.06% 平均 DSC 刷新基准纪录，超越 nnU-Net 3.3
+      个百分点及所有 Transformer 方法。最关键的发现：14 亿参数的单一通用模型性能超越
+      五个专科模型集成——迈出了迈向医学分割基础模型的决定性一步。
+    </div>
+    <div class="rs-topics">
+      <span class="rs-topic">STU-Net-H（14亿）</span>
+      <span class="rs-topic">TotalSegmentator</span>
+      <span class="rs-topic">MICCAI 2023 冠军</span>
+      <span class="rs-topic">迁移学习</span>
+    </div>
+    <a href="{{ '/zh/projects/stu-net/' | relative_url }}" class="rs-link">探索 STU-Net →</a>
   </div>
 </div>
 
@@ -265,16 +299,15 @@ lang:   "zh"
   </div>
 
   <div class="join-panel">
-    <div class="join-label">招募信息</div>
-    <div class="join-title">我们正在积极招募</div>
+    <div class="join-label">加入我们</div>
+    <div class="join-title">共建通用医学智能</div>
     <div class="join-desc">
-      我们欢迎有志于严谨思考、乐于合作、热爱有意义科学的博士生、
-      博士后和访问研究员加入团队。
+      我们是上海人工智能实验室的研究团队，致力于实现通用医学智能（General Medical
+      Intelligence）——能够理解、推理并服务于全谱系临床与生物医学任务的 AI。我们与全球顶尖高校和
+      医院深度合作。如果你认同这一愿景，我们有开放岗位，欢迎联系。
     </div>
     <div class="join-btns">
-      <a href="{{ '/zh/contact/' | relative_url }}" class="join-btn solid">博士申请</a>
-      <a href="{{ '/zh/contact/' | relative_url }}" class="join-btn solid">博士后职位</a>
-      <a href="{{ '/zh/contact/' | relative_url }}" class="join-btn ghost">联系我们 →</a>
+      <a href="{{ '/zh/contact/' | relative_url }}" class="join-btn solid">开放岗位</a>
     </div>
   </div>
 </div>

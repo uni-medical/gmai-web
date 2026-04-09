@@ -1,6 +1,6 @@
 ---
 layout:    page
-title:     "项目"
+title:     "重点研究"
 permalink: /zh/projects/
 lang:      "zh"
 ---
@@ -18,11 +18,14 @@ lang:      "zh"
         <div class="proj-label">{% if p.area_zh %}{{ p.area_zh }}{% else %}{{ p.area }}{% endif %}</div>
         <div class="proj-title">{% if p.title_zh %}{{ p.title_zh }}{% else %}{{ p.title }}{% endif %}</div>
         <div class="proj-desc">{% if p.desc_zh %}{{ p.desc_zh }}{% else %}{{ p.desc }}{% endif %}</div>
-        {% if p.slug %}<a href="{{ '/zh/projects/' | append: p.slug | append: '/' | relative_url }}" class="pub-btn" style="margin-top:.5rem;display:inline-block;">探索项目 →</a>{% endif %}
-      </div>
-      <div class="proj-meta">
-        <span class="proj-status {{ p.status }}">{% case p.status %}{% when "active" %}进行中{% when "ongoing" %}进行中{% when "new" %}新项目{% when "completed" %}已完成{% else %}{{ p.status | capitalize }}{% endcase %}</span>
-        {% if p.funding %}<div class="proj-fund">{% if p.funding_zh %}{{ p.funding_zh }}{% else %}{{ p.funding }}{% endif %}</div>{% endif %}
+        <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.6rem;">
+          {% if p.slug %}<a href="{{ '/zh/projects/' | append: p.slug | append: '/' | relative_url }}" class="pub-btn">项目详情 →</a>{% endif %}
+          {% if p.links.github %}<a href="{{ p.links.github }}" target="_blank" rel="noopener" class="pub-btn">GitHub</a>{% endif %}
+          {% if p.links.paper %}<a href="{{ p.links.paper }}" target="_blank" rel="noopener" class="pub-btn">论文</a>{% endif %}
+          {% if p.links.huggingface %}<a href="{{ p.links.huggingface }}" target="_blank" rel="noopener" class="pub-btn">🤗 HuggingFace</a>{% endif %}
+          {% if p.links.dataset %}<a href="{{ p.links.dataset }}" target="_blank" rel="noopener" class="pub-btn">🤗 数据集</a>{% endif %}
+          {% if p.links.homepage %}<a href="{{ p.links.homepage }}" target="_blank" rel="noopener" class="pub-btn">主页</a>{% endif %}
+        </div>
       </div>
     </div>
     {% endfor %}

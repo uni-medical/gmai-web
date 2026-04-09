@@ -2,7 +2,7 @@ en:
   nav:
     team:         "Team"
     publications: "Publications"
-    projects:     "Projects"
+    projects:     "Featured Research"
     news:         "News"
     contact:      "Contact"
   sections:
@@ -10,7 +10,7 @@ en:
     team_label:   "Group Members"
     pubs:         "Publications"
     pubs_label:   "Scholarly Output"
-    projects:     "Active Projects"
+    projects:     "Featured Research"
     projects_label: "Research"
     news:         "News"
     news_label:   "Updates"
@@ -35,7 +35,7 @@ zh:
   nav:
     team:         "团队"
     publications: "论文"
-    projects:     "项目"
+    projects:     "重点研究"
     news:         "动态"
     contact:      "联系"
   sections:
@@ -43,7 +43,7 @@ zh:
     team_label:   "成员"
     pubs:         "论文成果"
     pubs_label:   "学术产出"
-    projects:     "在研项目"
+    projects:     "重点研究"
     projects_label: "研究方向"
     news:         "最新动态"
     news_label:   "动态"

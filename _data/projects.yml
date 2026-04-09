@@ -2,9 +2,7 @@
   title_zh:   "Imaging-X 项目：开放医学影像数据生态系统"
   area:       "Medical Data Infrastructure"
   area_zh:    "医学数据基础设施"
-  status:     "active"
-  funding:    "Open-source initiative"
-  funding_zh: "开源项目"
+  slug:       "imaging-x"
   desc:       >
     A comprehensive survey and open-source platform integrating 1,000+ open-access medical
     imaging datasets. We propose a Metadata-Driven Fusion Paradigm (MDFP) to consolidate
@@ -15,14 +13,17 @@
     整合 1000+ 开放医学影像数据集的综合调研与开源平台。我们提出元数据驱动融合范式（MDFP），
     将碎片化小数据集整合为大规模、连贯的数据资源，并构建交互式发现门户实现端到端自动化数据集整合。
     已获斯坦福大学等顶级机构的合作意向。
+  links:
+    github:    "https://github.com/uni-medical/Project-Imaging-X"
+    paper:     "http://arxiv.org/abs/2603.27460"
+    huggingface: "https://huggingface.co/papers/2603.27460"
+    dataset:   "https://huggingface.co/datasets/General-Medical-AI/Project-Imaging-X"
 
 - title:      "GMAI-VL / UniMedVL: General Medical Multimodal Vision-Language Model"
   title_zh:   "GMAI-VL / UniMedVL：通用医学多模态视觉语言模型"
   area:       "Medical Multimodal AI"
   area_zh:    "医学多模态 AI"
-  status:     "active"
-  funding:    "Ongoing research"
-  funding_zh: "持续研究"
+  slug:       "gmai-vl"
   desc:       >
     Development of world-leading medical multimodal generation-understanding unified models.
     GMAI-VL is trained on GMAI-VL-5.5M (5.5M image-text pairs across 18 clinical specialties),
@@ -33,14 +34,15 @@
     世界领先的医学多模态生成-理解统一模型研究。GMAI-VL 在 GMAI-VL-5.5M（涵盖 18 个临床专科的
     550 万图像-文本对）上训练，GMAI-VL-R1 引入强化学习在 8 种影像模态上实现约 30% 的平均准确率提升。
     UniMedVL 致力于在 CURE-Bench 和 MedXpertQA 等复杂医学任务上达到最新水平。
+  links:
+    github:    "https://github.com/uni-medical/GMAI-VL"
+    paper:     "https://arxiv.org/abs/2411.14522"
+    huggingface: "https://huggingface.co/papers/2411.14522"
 
 - title:      "SlideChat: Vision-Language Assistant for Whole-Slide Pathology"
   title_zh:   "SlideChat：全切片病理图像视觉语言助手"
   area:       "Clinical AI Systems"
   area_zh:    "临床 AI 系统"
-  status:     "active"
-  funding:    "CVPR 2025"
-  funding_zh: "CVPR 2025"
   slug:       "slide-chat"
   desc:       >
     The first vision-language assistant capable of understanding gigapixel whole-slide pathology
@@ -51,14 +53,17 @@
     首个能够理解千亿像素全切片病理图像的视觉语言助手。在 SlideInstruction（4200 张 WSI 标注、
     17.6 万 VQA 问答对）上训练，在 SlideBench 评测中 22 项任务中 18 项达到最优，
     SlideBench-VQA（TCGA）准确率 81.17%。发表于 CVPR 2025。
+  links:
+    github:    "https://github.com/uni-medical/SlideChat"
+    paper:     "https://arxiv.org/abs/2410.11761"
+    huggingface: "https://huggingface.co/General-Medical-AI/SlideChat_Weight"
+    dataset:   "https://huggingface.co/datasets/General-Medical-AI/SlideChat"
+    homepage:  "https://uni-medical.github.io/SlideChat.github.io/"
 
 - title:      "STU-Net: Scalable and Transferable Medical Image Segmentation Models"
   title_zh:   "STU-Net：可扩展可迁移医学图像分割模型"
   area:       "Medical Image Segmentation"
   area_zh:    "医学图像分割"
-  status:     "active"
-  funding:    "arXiv 2023"
-  funding_zh: "arXiv 2023"
   slug:       "stu-net"
   desc:       >
     A family of scalable U-Net models (14M to 1.4B parameters) pre-trained on TotalSegmentator
@@ -69,14 +74,14 @@
     参数量从 1400 万到 14 亿的可扩展 U-Net 系列，在 TotalSegmentator 上预训练，用于通用医学图像分割。
     STU-Net-H 是迄今最大的医学分割模型，达到 90.06% 平均 DSC。荣获 MICCAI 2023 ATLAS 和 SPPIN
     挑战赛冠军，AutoPET II 亚军。
+  links:
+    github:    "https://github.com/uni-medical/STU-Net"
+    paper:     "https://arxiv.org/abs/2304.06716"
 
 - title:      "MedSegAgent: Universal Multi-Agent System for Medical Image Segmentation"
   title_zh:   "MedSegAgent：通用可扩展多智能体医学图像分割系统"
   area:       "Medical Image Segmentation"
   area_zh:    "医学图像分割"
-  status:     "active"
-  funding:    "IEEE JBHI 2026"
-  funding_zh: "IEEE JBHI 2026"
   slug:       "medsegagent"
   desc:       >
     A multi-agent system that orchestrates specialized dataset-specific segmentation models
@@ -88,51 +93,14 @@
     一种通过自然语言指令调度专用数据集分割模型的多智能体系统。不同于训练单一通用模型，
     MedSegAgent 解析自由文本请求，执行从粗到精的数据集匹配，并对最佳匹配模型的结果进行集成。
     支持 23 个数据集和 343 个分割目标，覆盖 CT、MRI、PET/CT 和超声等模态。发表于 IEEE JBHI 2026。
-
-- title:      "DTR-MAS: Diagnosis-Treatment-Research Multi-Agent System"
-  title_zh:   "DTR-MAS：诊断-治疗-科研多智能体系统"
-  area:       "Clinical AI Systems"
-  area_zh:    "临床 AI 系统"
-  status:     "active"
-  funding:    "Ongoing research"
-  funding_zh: "持续研究"
-  desc:       >
-    A unified medical scientific discovery platform integrating the full clinical and research
-    pipeline: question → evidence retrieval → hypothesis → experiment → validation → knowledge
-    distillation. Built on a general-specialist fusion reasoning model, DTR-MAS integrates
-    1,000+ medical imaging datasets and 1,000+ tools. Validated on ovarian cancer HRD
-    prediction, glaucoma GS3K-Beta gene pathway analysis, and multi-hospital pilot deployments.
-  desc_zh:    >
-    整合完整临床与科研流程的统一医学科学发现平台：问题→证据检索→假设→实验→验证→知识蒸馏。
-    基于通才-专才融合推理模型，DTR-MAS 集成 1000+ 医学影像数据集和 1000+ 工具，已在卵巢癌
-    HRD 预测、青光眼 GS3K-Beta 基因通路分析及多医院试点部署中得到验证。
-
-- title:      "Medical Image Segmentation Foundation Models"
-  title_zh:   "医学图像分割基础模型"
-  area:       "Medical Image Analysis"
-  area_zh:    "医学图像分析"
-  status:     "active"
-  funding:    "Ongoing research"
-  funding_zh: "持续研究"
-  desc:       >
-    A family of large-scale medical image segmentation foundation models: STU-Net (scalable
-    U-Net from 14M to 1.4B parameters — the largest medical segmentation model), SAM-Med2D
-    (adapting SAM to 2D medical images on SA-Med2D-20M benchmark), and SAM-Med3D (voxel-level
-    3D context modelling on 21K volumes / 131K 3D masks). Together these models provide
-    universally promptable segmentation for clinical and research applications.
-  desc_zh:    >
-    系列大规模医学图像分割基础模型：STU-Net（可扩展 U-Net，参数量从 1400 万至 14 亿，
-    是最大的医学分割模型）、SAM-Med2D（在 SA-Med2D-20M 基准上将 SAM 适配至 2D 医学图像），
-    以及 SAM-Med3D（在 2.1 万体积 / 13.1 万 3D 掩码上进行体素级 3D 上下文建模）。
-    这些模型为临床和科研应用提供通用可提示分割能力。
+  links:
+    github:    "https://github.com/uni-medical/MedSegAgent"
+    paper:     "https://ieeexplore.ieee.org/document/11455620"
 
 - title:      "OphCLIP: Hierarchical Retrieval-Augmented Ophthalmic Surgical VLP"
   title_zh:   "OphCLIP：眼科手术分层检索增强视觉-语言预训练"
   area:       "Surgical AI & Robotics"
   area_zh:    "手术 AI 与机器人"
-  status:     "active"
-  funding:    "ICCV 2025"
-  funding_zh: "ICCV 2025"
   slug:       "ophclip"
   desc:       >
     A hierarchical retrieval-augmented vision-language pretraining framework for ophthalmic
@@ -144,21 +112,7 @@
     面向眼科手术工作流理解的分层检索增强视觉-语言预训练框架。在 OphVL（37.5万视频-文本对、
     7500小时视频，规模为现有手术VLP数据集15倍）上训练，OphCLIP在11个基准上取得了阶段识别
     和多器械识别的最优零样本性能。发表于 ICCV 2025。
+  links:
+    github:    "https://github.com/minghu0830/OphCLIP"
+    paper:     "https://arxiv.org/abs/2411.15421"
 
-- title:      "Autonomous Surgical Robot for Gynecological Surgery"
-  title_zh:   "妇科手术自主机器人"
-  area:       "Surgical AI & Robotics"
-  area_zh:    "手术 AI 与机器人"
-  status:     "new"
-  funding:    "Ongoing research"
-  funding_zh: "持续研究"
-  desc:       >
-    Targeting the world's first fully autonomous robot for gynecological adnexectomy surgery.
-    Building on OphCLIP (ophthalmic surgical workflow understanding) and Ophora (text-guided
-    surgical video generation), this project integrates reinforcement-learning-based intraoperative
-    decision engines and algorithm-hardware co-optimisation for pre-operative planning,
-    intraoperative navigation, and post-operative follow-up in a unified pipeline.
-  desc_zh:    >
-    致力于实现世界首台全自主妇科附件切除手术机器人。基于 OphCLIP（眼科手术流程理解）和
-    Ophora（文本驱动手术视频生成），本项目集成基于强化学习的术中决策引擎与算法-硬件协同优化，
-    构建覆盖术前规划、术中导航和术后随访的一体化流程。

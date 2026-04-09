@@ -1,6 +1,6 @@
 ---
 layout:    page
-title:     "Projects"
+title:     "Featured Research"
 permalink: /projects/
 lang:      "en"
 ---
@@ -18,11 +18,14 @@ lang:      "en"
         <div class="proj-label">{{ p.area }}</div>
         <div class="proj-title">{{ p.title }}</div>
         <div class="proj-desc">{{ p.desc }}</div>
-        {% if p.slug %}<a href="{{ '/projects/' | append: p.slug | append: '/' | relative_url }}" class="pub-btn" style="margin-top:.5rem;display:inline-block;">Explore Project →</a>{% endif %}
-      </div>
-      <div class="proj-meta">
-        <span class="proj-status {{ p.status }}">{{ p.status | capitalize }}</span>
-        {% if p.funding %}<div class="proj-fund">{{ p.funding }}</div>{% endif %}
+        <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.6rem;">
+          {% if p.slug %}<a href="{{ '/projects/' | append: p.slug | append: '/' | relative_url }}" class="pub-btn">Project Page →</a>{% endif %}
+          {% if p.links.github %}<a href="{{ p.links.github }}" target="_blank" rel="noopener" class="pub-btn">GitHub</a>{% endif %}
+          {% if p.links.paper %}<a href="{{ p.links.paper }}" target="_blank" rel="noopener" class="pub-btn">Paper</a>{% endif %}
+          {% if p.links.huggingface %}<a href="{{ p.links.huggingface }}" target="_blank" rel="noopener" class="pub-btn">🤗 HuggingFace</a>{% endif %}
+          {% if p.links.dataset %}<a href="{{ p.links.dataset }}" target="_blank" rel="noopener" class="pub-btn">🤗 Dataset</a>{% endif %}
+          {% if p.links.homepage %}<a href="{{ p.links.homepage }}" target="_blank" rel="noopener" class="pub-btn">Homepage</a>{% endif %}
+        </div>
       </div>
     </div>
     {% endfor %}

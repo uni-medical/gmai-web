@@ -157,6 +157,42 @@ lang:      "zh"
   </figure>
 </div>
 
+<!-- 亮点 05 -->
+<div style="margin-bottom:2.5rem;">
+  <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
+    05 — 模型规格：联合扩展深度与宽度
+  </h3>
+  <p style="font-size:.9rem;color:#334155;line-height:1.8;margin-bottom:1rem;">
+    四种 STU-Net 变体通过系统性地联合扩展编码器深度与通道宽度来定义：S（1460 万参数，12.8B FLOPs）、B（5826 万，60.9B）、L（4.40 亿，416B）和 H（14.57 亿，1,623B）。消融实验表明仅扩展深度或宽度的收益均不如两者均衡扩展。尽管 S 与 H 之间存在百倍参数差距，所有变体均共享完全相同的 6 阶段编解码拓扑和各向同性卷积核配置——正是这一设计约束实现了真正的权重可迁移性，无需任何形状适配器。
+  </p>
+</div>
+<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
+  <img src="{{ '/assets/images/projects/stu-net/stu_net4.png' | relative_url }}"
+       alt="STU-Net 各规格模型参数量、FLOPs 与 DSC 对比"
+       style="width:100%;display:block;" loading="lazy" />
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    STU-Net 各规格（S / B / L / H）的参数量、FLOPs 及在 TotalSegmentator 上的平均 DSC 对比。联合扩展深度与宽度的策略优于单独扩展任一维度。
+  </figcaption>
+</figure>
+
+<!-- 亮点 06 -->
+<div style="margin-bottom:2.5rem;">
+  <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
+    06 — 跨模态迁移：下游数据集微调结果
+  </h3>
+  <p style="font-size:.9rem;color:#334155;line-height:1.8;margin-bottom:1rem;">
+    在三个挑战性微调基准——FLARE22（13 个腹部器官）、AMOS22（CT + MRI，15 个器官）和 AutoPET22（CT + PET 病灶分割）——上，从预训练权重微调的 STU-Net-H 在所有数据集上均超越从随机初始化微调的 nnU-Net。跨模态迁移结果尤为引人注目：仅在 CT 上预训练的 STU-Net-H，在 AMOS-MRI 和 AutoPET-PET 上微调后仍优于从头训练的 nnU-Net——表明预训练权重编码了超越模态特异性的基础解剖先验知识。
+  </p>
+</div>
+<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
+  <img src="{{ '/assets/images/projects/stu-net/stu_net5.png' | relative_url }}"
+       alt="FLARE22、AMOS22 和 AutoPET22 上的微调结果"
+       style="width:100%;display:block;" loading="lazy" />
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    FLARE22、AMOS22（CT + MRI）和 AutoPET22（CT + PET）上的微调结果。STU-Net-H-ft 在三个数据集（含非 CT 模态）上均超越 nnU-Net，验证了跨模态可迁移性。
+  </figcaption>
+</figure>
+
 <!-- 结论 -->
 <div style="border-left:3px solid #1d4ed8;padding:1.25rem 1.5rem;background:#f8fafc;margin-bottom:3rem;">
   <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1d4ed8;margin-bottom:.6rem;">结论</div>

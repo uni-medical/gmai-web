@@ -157,6 +157,42 @@ lang:      "en"
   </figure>
 </div>
 
+<!-- Highlight 05 -->
+<div style="margin-bottom:2.5rem;">
+  <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
+    05 — Model Variants: Jointly Scaling Depth and Width
+  </h3>
+  <p style="font-size:.9rem;color:#334155;line-height:1.8;margin-bottom:1rem;">
+    The four STU-Net variants are defined by systematic joint scaling of encoder depth and channel width: S (14.6M params, 12.8B FLOPs), B (58.3M, 60.9B), L (440M, 416B), and H (1.46B, 1,623B). Empirical ablations show that depth-only or width-only scaling yields diminishing returns compared to balanced joint scaling. Despite the 100× parameter gap between S and H, all variants share an identical 6-stage encoder-decoder topology and isotropic kernel configuration — this design constraint enables true weight transferability without shape-mismatch adapters.
+  </p>
+</div>
+<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
+  <img src="{{ '/assets/images/projects/stu-net/stu_net4.png' | relative_url }}"
+       alt="STU-Net model variants: S/B/L/H parameters, FLOPs, and DSC comparison"
+       style="width:100%;display:block;" loading="lazy" />
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    STU-Net model variants (S / B / L / H) with parameter counts, FLOPs, and mean DSC on TotalSegmentator. Jointly scaling depth and width outperforms scaling either dimension alone.
+  </figcaption>
+</figure>
+
+<!-- Highlight 06 -->
+<div style="margin-bottom:2.5rem;">
+  <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
+    06 — Cross-Modality Transfer: Fine-Tuning on Downstream Datasets
+  </h3>
+  <p style="font-size:.9rem;color:#334155;line-height:1.8;margin-bottom:1rem;">
+    On three challenging fine-tuning benchmarks — FLARE22 (13 abdominal organs), AMOS22 (CT + MRI, 15 organs), and AutoPET22 (CT + PET lesion segmentation) — STU-Net-H fine-tuned from pre-trained weights consistently outperforms nnU-Net fine-tuned from random initialization. The cross-modality transfer result is particularly notable: STU-Net-H pre-trained on CT only, when fine-tuned on AMOS-MRI and AutoPET-PET, achieves higher DSC than nnU-Net trained from scratch on those modalities — suggesting the pre-trained weights encode modality-agnostic anatomical priors.
+  </p>
+</div>
+<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
+  <img src="{{ '/assets/images/projects/stu-net/stu_net5.png' | relative_url }}"
+       alt="Fine-tuning results on FLARE22, AMOS22, and AutoPET22"
+       style="width:100%;display:block;" loading="lazy" />
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    Fine-tuning results on FLARE22, AMOS22 (CT + MRI), and AutoPET22 (CT + PET). STU-Net-H-ft surpasses nnU-Net on all three datasets, including non-CT modalities, demonstrating cross-modality transferability.
+  </figcaption>
+</figure>
+
 <!-- Conclusion -->
 <div style="border-left:3px solid #1d4ed8;padding:1.25rem 1.5rem;background:#f8fafc;margin-bottom:3rem;">
   <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1d4ed8;margin-bottom:.6rem;">Conclusion</div>

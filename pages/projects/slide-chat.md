@@ -41,11 +41,11 @@ lang:      "en"
 
 <!-- Hero image -->
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/slide-chat/SlideChat1.png' | relative_url }}"
-       alt="SlideChat overview — the first vision-language assistant for whole-slide pathology image understanding"
+  <img src="{{ '/assets/images/projects/slide-chat/SlideChat2.png' | relative_url }}"
+       alt="SlideChat architecture — WSI patching, CONCH patch encoder, LongNet slide encoder, multimodal projector, LLM, two-stage training"
        style="width:100%;display:block;" loading="eager" />
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
-    SlideChat: the first vision-language assistant capable of understanding gigapixel whole-slide pathology images, enabling comprehensive descriptions and conversational Q&amp;A across diverse clinical scenarios.
+    SlideChat overview: gigapixel WSIs are divided into 224×224 patches, encoded by CONCH (patch-level) and LongNet (slide-level), then projected into a LLM for conversational pathology understanding. Training uses two stages — domain alignment on 4.2K WSI captions, then visual instruction learning on 176K VQA pairs.
   </figcaption>
 </figure>
 
@@ -99,36 +99,36 @@ lang:      "en"
 <!-- Highlight 03 -->
 <div style="margin-bottom:2.5rem;">
   <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
-    03 — SlideBench: Rigorous Multi-Modal Clinical Evaluation
+    03 — Benchmark Results: 81.17% Accuracy, SOTA on 18 of 22 Tasks
   </h3>
   <p style="font-size:.9rem;color:#334155;line-height:1.8;margin-bottom:1rem;">
-    SlideBench provides the first comprehensive benchmark for WSI understanding, incorporating both captioning (SlideBench-Caption: TCGA, CPTAC, HISTAI) and closed-set VQA tasks (SlideBench-VQA: TCGA, BCNB, CPTAC, HISTAI). The TCGA VQA set underwent expert pathologist review and was later expanded from 10 cancer types (1,494 samples) to 31 additional cancer types (3,176 samples), rigorously validated for clinical accuracy. An independent in-the-wild BCNB subset (7,247 pairs, 1,058 patients, 7 classification tasks) tests zero-shot generalization capability — a critical requirement for real-world deployment.
+    SlideChat achieves 81.17% overall accuracy on SlideBench-VQA (TCGA) — a 13.47% improvement over the second-best model — and 54.14% on the out-of-distribution SlideBench-VQA (BCNB) in zero-shot settings. Compared to general MLLMs (GPT-4o patch: 57.91%; thumbnail: 34.07%) and specialized models (MedDr: 67.70%), SlideChat's holistic WSI understanding enables performance that patch-based approaches cannot match. Results hold across all three clinical domains: microscopy (87.64%), diagnosis (73.27%), and clinical tasks (84.26%).
   </p>
 </div>
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/slide-chat/SlideChat4.png' | relative_url }}"
-       alt="SlideBench evaluation results: SlideChat achieves state-of-the-art across captioning and VQA tasks"
+  <img src="{{ '/assets/images/projects/slide-chat/SlideChat6.png' | relative_url }}"
+       alt="SlideBench performance radar charts: SlideChat vs GPT-4o, MedDr, LLaVA-Med, Quilt-LLaVA on TCGA and BCNB benchmarks"
        style="width:100%;display:block;" loading="lazy" />
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
-    SlideBench performance comparison. SlideChat achieves SOTA on 18 of 22 tasks, significantly outperforming both general MLLMs (GPT-4o, LLaVA) and specialized computational pathology models.
+    Performance radar on SlideBench-VQA (TCGA, left) and (BCNB, right). SlideChat dominates across all categories — cytomorphological characteristics, disease detection, staging/grading, and zero-shot breast cancer classification — with consistent margins over all baselines.
   </figcaption>
 </figure>
 
 <!-- Highlight 04 -->
 <div style="margin-bottom:2.5rem;">
   <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
-    04 — CVPR 2025: SOTA Performance and Clinical Interpretability
+    04 — Clinical Conversational AI: Multi-Turn Diagnostic Reasoning
   </h3>
   <p style="font-size:.9rem;color:#334155;line-height:1.8;margin-bottom:1rem;">
-    SlideChat achieves 81.17% overall accuracy on SlideBench-VQA (TCGA) — a 13.47% improvement over the second-best model — and 54.15% on the out-of-distribution SlideBench-VQA (BCNB) in zero-shot settings. Performance is strong across all three clinical domains: microscopy (87.64%), diagnosis (73.27%), and clinical tasks (84.26%). Beyond accuracy, SlideChat provides interpretability through attention score visualization, with attention maps consistently highlighting pathologically relevant features such as increased nuclear-to-cytoplasmic ratios and dense collagen deposition, enabling clinicians to trace the model's reasoning.
+    SlideChat supports multi-turn conversational reasoning over complete whole-slide images, enabling pathologists to ask follow-up questions about specific findings. Clinical examples include bladder tumor analysis (identifying lymphovascular invasion, cell differentiation grade, tumor type, anatomical invasion) and breast carcinoma assessment (lymph node metastasis status, prognosis prediction, staging by greatest dimension, treatment recommendation). The model provides clinically grounded, contextually accurate answers drawing on both local cellular detail and global tissue architecture — capabilities fundamentally unavailable to patch-only systems.
   </p>
 </div>
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/slide-chat/SlideChat5.png' | relative_url }}"
-       alt="SlideChat clinical demonstration: comprehensive pathological report generation and interpretability examples"
+  <img src="{{ '/assets/images/projects/slide-chat/SlideChat7.png' | relative_url }}"
+       alt="SlideChat clinical conversations: bladder tumor and breast carcinoma multi-turn diagnostic Q&A"
        style="width:100%;display:block;" loading="lazy" />
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
-    SlideChat capability demonstrations: the model generates comprehensive pathological reports including tumor characteristics, invasion patterns, staging, and treatment recommendations, with attention maps highlighting diagnostically relevant tissue regions.
+    SlideChat in action: (C) bladder tumor WSI — accurate identification of lymphovascular invasion, differentiation grade, tumor classification, and anatomical invasion layer; (D) breast carcinoma WSI — lymph node metastasis status, prognosis assessment, pT staging, and treatment selection.
   </figcaption>
 </figure>
 

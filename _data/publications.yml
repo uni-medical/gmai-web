@@ -7,7 +7,7 @@
 # ──────────────────────────────────────────────────────────────────
 
 - title:    "SlideChat: A Large Vision-Language Assistant for Whole-Slide Pathology Image Understanding"
-  authors:  "Ying Chen, Junbo Peng, Guoan Wang, Tianbin Li, Bin Zhang, Dandan Zheng, Zhixiao Zhao, Jianfeng Zhang, Junjun He"
+  authors:  "Ying Chen, Guoan Wang, Yuanfeng Ji, Yanjun Li, Jin Ye, Tianbin Li, Ming Hu, Rongshan Yu, Yu Qiao, Junjun He"
   venue:    "CVPR"
   year:     2025
   note:     ""
@@ -21,11 +21,12 @@
   teaser:   "/assets/images/teasers/slidechat.png"
   keywords: "computational pathology, whole-slide images, vision-language model, multimodal AI"
   links:
-    paper:  "https://arxiv.org/abs/2410.11761"
-    code:   "https://github.com/uni-medical/SlideChat"
+    paper:   "https://arxiv.org/abs/2410.11761"
+    code:    "https://github.com/uni-medical/SlideChat"
+    dataset: "https://huggingface.co/datasets/General-Medical-AI/SlideChat"
 
 - title:    "Ophora: A Large-Scale Data-Driven Text-Guided Ophthalmic Surgical Video Generation Model"
-  authors:  "Ming Hu, Tianbin Li, Zhixuan Li, Lihao Liu, Matías Valdenegro-Toro, Junjun He"
+  authors:  "Wei Li, Ming Hu, Guoan Wang, Lihao Liu, Kaijing Zhou, Junzhi Ning, Xin Guo, Zongyuan Ge, Lixu Gu, Junjun He"
   venue:    "MICCAI"
   year:     2025
   note:     "Oral"
@@ -35,14 +36,15 @@
     frame filtering produces Ophora-28K. Ophora outperforms existing methods on FID, FVD,
     and CLIPScore metrics, and synthesized videos significantly improve downstream surgical
     workflow understanding (e.g., MViTv2 Top-1: 37.92% → 42.24%).
-  teaser:   ""
+  teaser:   "/assets/images/teasers/ophora.png"
   keywords: "surgical video generation, ophthalmic AI, text-to-video, privacy-preserving"
   links:
-    paper:  "https://arxiv.org/abs/2505.07449"
-    code:   "https://github.com/uni-medical/Ophora"
+    paper:       "https://arxiv.org/abs/2505.07449"
+    code:        "https://github.com/uni-medical/Ophora"
+    huggingface: "https://huggingface.co/papers/2505.07449"
 
-- title:    "RetinaLogos: Language-Driven High-Resolution Fundus Image Generation with Fine-Grained Anatomical Control"
-  authors:  "Junzhi Ning, Junjun He"
+- title:    "RetinaLogos: Fine-Grained Synthesis of High-Resolution Retinal Images Through Captions"
+  authors:  "Junzhi Ning, Cheng Tang, Kaijing Zhou, Diping Song, Lihao Liu, Ming Hu, Wei Li, Huihui Xu, Yanzhou Su, Tianbin Li, Jiyao Liu, Jin Ye, Sheng Zhang, Yuanfeng Ji, Junjun He"
   venue:    "MICCAI"
   year:     2025
   note:     ""
@@ -52,31 +54,31 @@
     RetinaLogos-1400k (14M image-text pairs) and train a three-stage progressive pipeline
     at 1024×1024 resolution. Expert blind evaluation shows 62.07% of synthetic images are
     judged as real. DR grading accuracy improves 5–10%, glaucoma detection F1 reaches 0.93.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/retinalogos.png"
   keywords: "retinal imaging, fundus image synthesis, text-to-image generation, ophthalmology AI"
   links:
-    paper:  "https://papers.miccai.org/miccai-2025/paper/0673_paper.pdf"
+    paper:  "https://arxiv.org/abs/2505.12887"
     code:   "https://github.com/uni-medical/retina-text2cfp"
 
-- title:    "ProgEmu: Interpretable Counterfactual Generation for Medical Image Progression Emulation"
-  authors:  "Chenglong Ma, Junjun He"
+- title:    "Towards Interpretable Counterfactual Generation via Multimodal Autoregression"
+  authors:  "Chenglong Ma, Yuanfeng Ji, Jin Ye, Lu Zhang, Ying Chen, Tianbin Li, Mingjie Li, Junjun He, Hongming Shan"
   venue:    "MICCAI"
   year:     2025
   note:     ""
   abstract: >
-    ProgEmu introduces the Interpretable Counterfactual Generation (ICG) task for medical
+    We introduce the Interpretable Counterfactual Generation (ICG) task for medical
     imaging, requiring a model to jointly predict future images and textual radiological
     explanations given disease progression hypotheses. We build ICG-CXR (11,439 high-quality
-    samples) and propose a multimodal autoregressive model that achieves FID 29.21 and
-    ROUGE-L 0.2606, surpassing all existing SOTA methods.
-  teaser:   ""
+    samples) and propose a multimodal autoregressive model (ProgEmu) that achieves FID 29.21
+    and ROUGE-L 0.2606, surpassing all existing SOTA methods.
+  teaser:   "/assets/images/teasers/progemu.png"
   keywords: "counterfactual generation, explainable AI, medical imaging, multimodal autoregression"
   links:
-    paper:  "https://doi.org/10.1007/978-3-032-04937-7_58"
-    code:   "https://progemiu.github.io/"
+    paper:  "https://arxiv.org/abs/2503.23149"
+    code:   "https://progemu.github.io/"
 
 - title:    "Multi-modal MRI Translation via Evidential Regression and Distribution Calibration"
-  authors:  "Jiyao Liu, Junjun He"
+  authors:  "Jiyao Liu, Shangqi Gao, Yuxin Li, Lihao Liu, Xin Gao, Zhaohu Xing, Junzhi Ning, Yanzhou Su, Xiao-Yong Zhang, Junjun He, Ningsheng Xu, Xiahai Zhuang"
   venue:    "MICCAI"
   year:     2025
   note:     ""
@@ -86,14 +88,14 @@
     Each source modality predicts a Normal-Inverse Gamma distribution, fused via MoNIG for
     uncertainty-aware synthesis. Validated on BraTS2023 and low-field African MRI datasets,
     achieving PSNR 28.48 dB and UCE 0.089 on cross-center generalization.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/mri_translation.png"
   keywords: "MRI synthesis, uncertainty quantification, domain adaptation, cross-modal translation"
   links:
-    paper:  "https://link.springer.com/chapter/10.1007/978-3-032-04984-1_35"
+    paper:  "https://arxiv.org/abs/2407.07372"
     code:   ""
 
-- title:    "MedQ-Bench: A Perception-Reasoning Benchmark for Medical Image Quality Assessment"
-  authors:  "Jiyao Liu, Junjun He"
+- title:    "MedQ-Bench: Evaluating and Exploring Medical Image Quality Assessment Abilities in MLLMs"
+  authors:  "Jiyao Liu, Jinjie Wei, Wanying Qu, Chenglong Ma, Junzhi Ning, Yunheng Li, Ying Chen, Xinzhe Luo, Pengcheng Chen, Xin Gao, Ming Hu, Huihui Xu, Xin Wang, Shujian Gao, Dingkang Yang, Zhongying Deng, Jin Ye, Lihao Liu, Junjun He, Ningsheng Xu"
   venue:    "arXiv"
   year:     2025
   note:     ""
@@ -103,14 +105,15 @@
     integrates real clinical images, physical degradation simulations, and AI-synthesized
     data across three evaluation tracks. Zero-shot evaluation of 14 leading MLLMs shows
     GPT-4 achieves 68.97% perception accuracy, still 13.5% below expert performance.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/medqbench.png"
   keywords: "image quality assessment, medical imaging, multimodal LLM, benchmark"
   links:
-    paper:  "https://arxiv.org/abs/2510.01691"
-    code:   "https://github.com/liujiyaoFDU/MedQBench"
+    paper:   "https://arxiv.org/abs/2510.01691"
+    code:    "https://github.com/liujiyaoFDU/MedQ-Bench"
+    dataset: "https://huggingface.co/datasets/jiyaoliufd/MedQ-Bench"
 
-- title:    "MedITok: A Unified Medical Visual Tokenizer for Image Synthesis and Understanding"
-  authors:  "Chenglong Ma, Junjun He"
+- title:    "MedITok: A Unified Tokenizer for Medical Image Synthesis and Interpretation"
+  authors:  "Chenglong Ma, Yuanfeng Ji, Jin Ye, Zilong Li, Chenhui Wang, Junzhi Ning, Wei Li, Lihao Liu, Qiushan Guo, Tianbin Li, Junjun He, Hongming Shan"
   venue:    "arXiv"
   year:     2025
   note:     ""
@@ -121,14 +124,15 @@
     images for visual alignment, then fine-tunes on 2M image-text pairs for semantic
     alignment. MedITok achieves SOTA across reconstruction, classification, generation,
     and VQA tasks spanning 9 imaging modalities and 30+ datasets.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/meditok.png"
   keywords: "visual tokenizer, medical imaging, image generation, vision-language model"
   links:
-    paper:  ""
-    code:   "https://github.com/Masaaki-75/meditok"
+    paper:       "https://arxiv.org/abs/2505.19225"
+    code:        "https://github.com/Masaaki-75/meditok"
+    huggingface: "https://huggingface.co/massaki75/meditok"
 
-- title:    "OphCLIP: Hierarchical Retrieval-Augmented Learning for Ophthalmic Surgical Video-Language Pre-training"
-  authors:  "Ming Hu, Wei Li, Junjun He"
+- title:    "OphCLIP: Hierarchical Retrieval-Augmented Learning for Ophthalmic Surgical Video-Language Pretraining"
+  authors:  "Ming Hu, Kun Yuan, Yaling Shen, Feilong Tang, Xiaohao Xu, Lin Zhou, Wei Li, Ying Chen, Zhongxing Xu, Zelin Peng, Siyuan Yan, Vinkle Srivastav, Diping Song, Tianbin Li, Danli Shi, Jin Ye, Nicolas Padoy, Nassir Navab, Junjun He, Zongyuan Ge"
   venue:    "ICCV"
   year:     2025
   note:     ""
@@ -142,11 +146,29 @@
   teaser:   "/assets/images/teasers/ophclip.png"
   keywords: "ophthalmic surgery, video-language pre-training, retrieval augmentation, surgical AI"
   links:
-    paper:  "https://arxiv.org/abs/2411.15421"
-    code:   "https://github.com/minghu0830/OphCLIP"
+    paper:       "https://arxiv.org/abs/2411.15421"
+    code:        "https://github.com/minghu0830/OphCLIP"
+    huggingface: "https://huggingface.co/papers/2411.15421"
 
-- title:    "GMAI-VL: A General Medical AI Vision-Language Model Trained on 5.5M Image-Text Pairs"
-  authors:  "Tianbin Li, Yanzhou Su, Junjun He"
+- title:    "MedSegAgent: A Universal and Scalable Multi-Agent System for Instructive Medical Image Segmentation"
+  authors:  "Ziyan Huang, Haoyu Wang, Jin Ye, Yuanfeng Ji, Xiaowei Hu, Lihao Liu, Zhikai Yang, Wei Li, Ming Hu, Yanzhou Su, Tianbin Li, Yun Gu, Shaoting Zhang, Yu Qiao, Lixu Gu, Junjun He"
+  venue:    "IEEE JBHI"
+  year:     2026
+  note:     ""
+  abstract: >
+    MedSegAgent is a multi-agent system for instructive medical image segmentation. Instead
+    of training one universal segmentation model, it orchestrates specialized dataset-specific
+    models through natural language understanding, coarse-to-fine dataset matching, and
+    execution-time result integration. The system integrates 23 datasets and supports 343
+    segmentation targets across CT, MRI, PET/CT, and ultrasound-related scenarios.
+  teaser:   "/assets/images/teasers/medsegagent.png"
+  keywords: "medical image segmentation, multi-agent system, natural language instruction, agentic workflow"
+  links:
+    paper:  "https://ieeexplore.ieee.org/document/11455620"
+    code:   "https://github.com/uni-medical/MedSegAgent"
+
+- title:    "GMAI-VL & GMAI-VL-5.5M: A Large Vision-Language Model and A Comprehensive Multimodal Dataset Towards General Medical AI"
+  authors:  "Tianbin Li, Yanzhou Su, Wei Li, Bin Fu, Zhe Chen, Ziyan Huang, Guoan Wang, Chenglong Ma, Ying Chen, Ming Hu, Yanjun Li, Pengcheng Chen, Xiaowei Hu, Zhongying Deng, Yuanfeng Ji, Jin Ye, Yu Qiao, Junjun He"
   venue:    "arXiv"
   year:     2024
   note:     ""
@@ -160,12 +182,13 @@
   teaser:   "/assets/images/teasers/gmai_vl.png"
   keywords: "medical VQA, vision-language model, multimodal AI, clinical AI"
   links:
-    paper:  "https://arxiv.org/abs/2411.14522"
-    code:   "https://github.com/uni-medical/GMAI-VL"
+    paper:       "https://arxiv.org/abs/2411.14522"
+    code:        "https://github.com/uni-medical/GMAI-VL"
+    huggingface: "https://huggingface.co/papers/2411.14522"
 
 - title:    "GMAI-MMBench: A Comprehensive Multimodal Evaluation Benchmark Towards General Medical AI"
-  authors:  "Jin Ye, Tianbin Li, Junjun He"
-  venue:    "arXiv"
+  authors:  "Pengcheng Chen, Jin Ye, Guoan Wang, Yanjun Li, Zhongying Deng, Wei Li, Tianbin Li, Haodong Duan, Ziyan Huang, Yanzhou Su, Benyou Wang, Shaoting Zhang, Bin Fu, Jianfei Cai, Bohan Zhuang, Eric J Seibel, Junjun He, Yu Qiao"
+  venue:    "NeurIPS"
   year:     2024
   note:     ""
   abstract: >
@@ -175,14 +198,15 @@
     reveals that even top-performing models (e.g., GPT-4o) achieve only 53.96% accuracy,
     quantifying the challenge of medical multimodal understanding and identifying five
     common failure modes of current frontier models.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/gmaimmbench.png"
   keywords: "medical AI benchmark, multimodal evaluation, vision-language model, clinical AI"
   links:
-    paper:  "https://arxiv.org/abs/2408.03361"
-    code:   "https://github.com/uni-medical/GMAI-MMBench"
+    paper:   "https://arxiv.org/abs/2408.03361"
+    code:    "https://github.com/uni-medical/GMAI-MMBench"
+    dataset: "https://huggingface.co/datasets/OpenGVLab/GMAI-MMBench"
 
 - title:    "OmniMedVQA: A New Large-Scale Comprehensive Evaluation Benchmark for Medical LVLM"
-  authors:  "Yutao Hu, Tianbin Li, Quanfeng Lu, Wenqi Shao, Junjun He, Ping Luo, Yu Qiao"
+  authors:  "Yutao Hu, Tianbin Li, Quanfeng Lu, Wenqi Shao, Junjun He, Yu Qiao, Ping Luo"
   venue:    "CVPR"
   year:     2024
   note:     ""
@@ -193,14 +217,14 @@
     medical VQA, and surprisingly many medical-specific models lag behind general-purpose
     models — exposing systematic weaknesses in cross-modal alignment, knowledge generalisation,
     and robustness.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/omnimedvqa.png"
   keywords: "medical VQA, benchmark, large vision-language model, clinical evaluation"
   links:
     paper:  "https://arxiv.org/abs/2402.09181"
     code:   "https://github.com/OpenGVLab/Multi-Modality-Arena"
 
-- title:    "SAM-Med3D: Towards General-Purpose Segmentation Models for Volumetric Medical Images"
-  authors:  "Jin Ye, Junlong Cheng, Jianpin Chen, Zhongying Deng, Tianbin Li, Haoyu Wang, Yanzhou Su, Ziyan Huang, Jilong Chen, Lei Jiang, Hui Sun, Min Zhu, Shaoting Zhang, Junjun He, Yu Qiao"
+- title:    "SAM-Med3D: Towards General-purpose Segmentation Models for Volumetric Medical Images"
+  authors:  "Haoyu Wang, Sizheng Guo, Jin Ye, Zhongying Deng, Junlong Cheng, Tianbin Li, Jianpin Chen, Yanzhou Su, Ziyan Huang, Yiqing Shen, Bin Fu, Shaoting Zhang, Junjun He, Yu Qiao"
   venue:    "arXiv"
   year:     2023
   note:     ""
@@ -214,10 +238,11 @@
   teaser:   "/assets/images/teasers/sam_med3d.png"
   keywords: "3D medical image segmentation, SAM, foundation model, volumetric imaging"
   links:
-    paper:  "https://arxiv.org/abs/2310.15161"
-    code:   "https://github.com/uni-medical/SAM-Med3D"
+    paper:       "https://arxiv.org/abs/2310.15161"
+    code:        "https://github.com/uni-medical/SAM-Med3D"
+    huggingface: "https://huggingface.co/blueyo0/SAM-Med3D"
 
-- title:    "SAM-Med2D: Medical Image Segmentation Using the Segment Anything Model"
+- title:    "SAM-Med2D"
   authors:  "Junlong Cheng, Jin Ye, Zhongying Deng, Jianpin Chen, Tianbin Li, Haoyu Wang, Yanzhou Su, Ziyan Huang, Jilong Chen, Lei Jiang, Hui Sun, Junjun He, Shaoting Zhang, Min Zhu, Yu Qiao"
   venue:    "arXiv"
   year:     2023
@@ -228,14 +253,15 @@
     model that better adapts to medical image structures and distribution shifts. SAM-Med2D
     significantly improves segmentation accuracy and stability, bridging the gap between
     natural image segmentation models and clinical medical image analysis.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/sammed2d.png"
   keywords: "medical image segmentation, SAM, foundation model, 2D segmentation"
   links:
-    paper:  "https://arxiv.org/abs/2308.16184"
-    code:   "https://github.com/OpenGVLab/SAM-Med2D"
+    paper:   "https://arxiv.org/abs/2308.16184"
+    code:    "https://github.com/OpenGVLab/SAM-Med2D"
+    dataset: "https://huggingface.co/datasets/OpenGVLab/SA-Med2D-20M"
 
 - title:    "STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training"
-  authors:  "Ziyan Huang, Haoyu Wang, Zhongying Deng, Jin Ye, Yanzhou Su, Hui Sun, Junjun He, Yimin Chen, Tianbin Li, Shaoting Zhang, Yu Qiao"
+  authors:  "Ziyan Huang, Haoyu Wang, Zhongying Deng, Jin Ye, Yanzhou Su, Hui Sun, Junjun He, Yun Gu, Lixu Gu, Shaoting Zhang, Yu Qiao"
   venue:    "arXiv"
   year:     2023
   note:     ""
@@ -248,11 +274,12 @@
   teaser:   "/assets/images/teasers/stu_net.png"
   keywords: "medical image segmentation, U-Net, large-scale pre-training, scalable models"
   links:
-    paper:  "https://arxiv.org/abs/2304.06716"
-    code:   "https://github.com/uni-medical/STU-Net"
+    paper:       "https://arxiv.org/abs/2304.06716"
+    code:        "https://github.com/uni-medical/STU-Net"
+    huggingface: "https://huggingface.co/papers/2304.06716"
 
 - title:    "A Survey of Scientific Large Language Models: From Data Foundations to Agent Frontiers"
-  authors:  "Junjun He, et al."
+  authors:  "Ming Hu, Chenglong Ma, Wei Li, Wanghan Xu, Jiamin Wu, Jucheng Hu, Tianbin Li, Guohang Zhuang, Jiaqi Liu, Yingzhou Lu, Junjun He, et al."
   venue:    "arXiv"
   year:     2025
   note:     ""
@@ -262,7 +289,7 @@
     datasets, and SOTA models. The survey systematically reviews the development history,
     data foundations, model evolution, evaluation frameworks, and agent frontiers of Sci-LLMs,
     and proposes a roadmap for AI-assisted scientific discovery ecosystems.
-  teaser:   ""
+  teaser:   "/assets/images/teasers/survey_llm.png"
   keywords: "scientific LLM, survey, AI for science, large language models"
   links:
     paper:  "https://arxiv.org/abs/2508.21148"

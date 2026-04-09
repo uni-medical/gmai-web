@@ -28,7 +28,7 @@ lang:   "en"
     </div>
 
     <div class="lh-affil">
-      {{ site.lab.address }}
+      {{ site.lab.institution }}
     </div>
   </div>
 
@@ -46,10 +46,6 @@ lang:   "en"
       <div class="lh-stat">
         <span class="lh-stat-n">{{ site.stats.members }}</span>
         <div class="lh-stat-l">Group Members</div>
-      </div>
-      <div class="lh-stat">
-        <span class="lh-stat-n">{{ site.stats.grants }}</span>
-        <div class="lh-stat-l">Funded Projects</div>
       </div>
       <div class="lh-stat">
         <span class="lh-stat-n">{{ site.stats.citations }}</span>
@@ -103,8 +99,6 @@ lang:   "en"
     </div>
     <div class="rs-topics">
       <span class="rs-topic">Project Imaging-X</span>
-      <span class="rs-topic">IMed-361M</span>
-      <span class="rs-topic">GMAI-VL-5.5M</span>
       <span class="rs-topic">Metadata-driven fusion</span>
     </div>
     <a href="{{ '/projects/imaging-x/' | relative_url }}" class="rs-link">Explore Project Imaging-X →</a>
@@ -219,26 +213,31 @@ lang:   "en"
 
 
 <!-- ══════════════════════════════════════════════════════════════
-     RESEARCH SECTION 4 — Clinical AI Systems & Surgical Robotics
+     RESEARCH SECTION 4 — Clinical AI Systems / Computational Pathology
      Text LEFT · Image RIGHT  (flipped)
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section rs-flip fade">
   <div class="rs-visual vis-clinical">
+    <img class="rs-panel-img" src="{{ '/assets/images/projects/slide-chat/SlideChat2.png' | relative_url }}" alt="SlideChat architecture — WSI understanding pipeline" loading="lazy" />
     <div class="rs-watermark">04</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
-        <span class="rs-tag">Multi-Agent Systems</span>
-        <span class="rs-tag">Surgical AI</span>
-        <span class="rs-tag">Clinical Deployment</span>
+        <span class="rs-tag">Computational Pathology</span>
+        <span class="rs-tag">Vision-Language Model</span>
+        <span class="rs-tag">CVPR 2025</span>
       </div>
       <div class="rs-vis-stats">
         <div>
-          <span class="rs-vis-stat-n">1,000+</span>
-          <span class="rs-vis-stat-l">integrated tools</span>
+          <span class="rs-vis-stat-n">81.17%</span>
+          <span class="rs-vis-stat-l">VQA accuracy (TCGA)</span>
         </div>
         <div>
-          <span class="rs-vis-stat-n">DTR</span>
-          <span class="rs-vis-stat-l">diagnosis-treatment-research</span>
+          <span class="rs-vis-stat-n">18/22</span>
+          <span class="rs-vis-stat-l">SOTA tasks</span>
+        </div>
+        <div>
+          <span class="rs-vis-stat-n">176K</span>
+          <span class="rs-vis-stat-l">VQA training pairs</span>
         </div>
       </div>
     </div>
@@ -246,23 +245,74 @@ lang:   "en"
 
   <div class="rs-text">
     <div class="rs-area">Clinical AI Systems</div>
-    <div class="rs-title">From Models to Action: Multi-Agent Systems and Autonomous Surgery</div>
+    <div class="rs-title">Whole-Slide Pathology Intelligence: SlideChat and the Future of Clinical AI</div>
     <div class="rs-body">
-      We build end-to-end intelligent systems that bring AI to the clinic. DTR-MAS is a
-      Diagnosis-Treatment-Research multi-agent platform that converts complex clinical
-      and research workflows into traceable, auditable multi-agent collaboration. We are
-      also building the world's first autonomous robot for gynecological adnexectomy surgery,
-      integrating pre-operative planning, intraoperative navigation, and post-operative
-      follow-up in a single autonomous pipeline.
+      SlideChat is the first vision-language assistant capable of understanding gigapixel
+      whole-slide pathology images in their entirety. Trained on SlideInstruction (4.2K WSI
+      captions + 176K VQA pairs from TCGA), SlideChat achieves SOTA on 18 of 22 tasks on
+      SlideBench, reaching 81.17% accuracy on SlideBench-VQA (TCGA) — a 13.47% improvement
+      over the next best model. Accepted at CVPR 2025.
     </div>
     <div class="rs-topics">
-      <span class="rs-topic">DTR-MAS</span>
-      <span class="rs-topic">Autonomous surgical robot</span>
-      <span class="rs-topic">OphCLIP (ICCV 2025)</span>
-      <span class="rs-topic">Ophora (MICCAI 2025 Oral)</span>
-      <span class="rs-topic">Hospital pilot deployments</span>
+      <span class="rs-topic">SlideChat (CVPR 2025)</span>
+      <span class="rs-topic">SlideInstruction</span>
+      <span class="rs-topic">SlideBench</span>
+      <span class="rs-topic">WSI understanding</span>
     </div>
     <a href="{{ '/projects/slide-chat/' | relative_url }}" class="rs-link">Explore SlideChat →</a>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     RESEARCH SECTION 5 — Scalable Medical Image Segmentation
+     Image LEFT · Text RIGHT
+     ══════════════════════════════════════════════════════════════ -->
+<div class="rs-section fade">
+  <div class="rs-visual vis-stunet">
+    <img class="rs-panel-img" src="{{ '/assets/images/projects/stu-net/stu_net7.png' | relative_url }}" alt="STU-Net qualitative CT segmentation results" loading="lazy" />
+    <div class="rs-watermark">05</div>
+    <div class="rs-visual-content">
+      <div class="rs-tags">
+        <span class="rs-tag">Medical Image Segmentation</span>
+        <span class="rs-tag">Scalable Models</span>
+        <span class="rs-tag">MICCAI 2023</span>
+      </div>
+      <div class="rs-vis-stats">
+        <div>
+          <span class="rs-vis-stat-n">1.4B</span>
+          <span class="rs-vis-stat-l">parameters (STU-Net-H)</span>
+        </div>
+        <div>
+          <span class="rs-vis-stat-n">90.06%</span>
+          <span class="rs-vis-stat-l">mean DSC</span>
+        </div>
+        <div>
+          <span class="rs-vis-stat-n">104</span>
+          <span class="rs-vis-stat-l">anatomy classes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rs-text">
+    <div class="rs-area">Medical Image Segmentation</div>
+    <div class="rs-title">Scaling Laws in Medicine: STU-Net from 14M to 1.4B Parameters</div>
+    <div class="rs-body">
+      STU-Net establishes scaling laws for 3D medical image segmentation. A family of
+      four models — S (14M), B (58M), L (440M), and H (1.4B) — are pre-trained on
+      TotalSegmentator (1,204 CT volumes, 104 anatomy classes). STU-Net-H achieves
+      90.06% mean DSC, surpassing nnU-Net by 3.3 points and all Transformer competitors.
+      At 1.4B parameters, a single universal model outperforms five category-specific
+      specialist models — a decisive step toward a medical segmentation foundation model.
+    </div>
+    <div class="rs-topics">
+      <span class="rs-topic">STU-Net-H (1.4B)</span>
+      <span class="rs-topic">TotalSegmentator</span>
+      <span class="rs-topic">MICCAI 2023 Champion</span>
+      <span class="rs-topic">Transfer Learning</span>
+    </div>
+    <a href="{{ '/projects/stu-net/' | relative_url }}" class="rs-link">Explore STU-Net →</a>
   </div>
 </div>
 
@@ -332,16 +382,16 @@ lang:   "en"
 
   <!-- Join Us -->
   <div class="join-panel">
-    <div class="join-label">Opportunities</div>
-    <div class="join-title">We Are Actively Recruiting</div>
+    <div class="join-label">Join Us</div>
+    <div class="join-title">Building General Medical Intelligence</div>
     <div class="join-desc">
-      We welcome motivated PhD students, postdoctoral fellows, and visiting researchers
-      who value rigorous thinking, collaborative spirit, and science that matters.
+      We are a research team at Shanghai AI Laboratory working toward General Medical
+      Intelligence — AI that understands, reasons, and acts across the full spectrum of
+      clinical and biomedical tasks. We collaborate with leading universities and hospitals
+      worldwide. If you share this vision, we have open positions and welcome your inquiry.
     </div>
     <div class="join-btns">
-      <a href="{{ '/contact/' | relative_url }}" class="join-btn solid">PhD Applications</a>
-      <a href="{{ '/contact/' | relative_url }}" class="join-btn solid">Postdoctoral Positions</a>
-      <a href="{{ '/contact/' | relative_url }}" class="join-btn ghost">General Enquiry →</a>
+      <a href="{{ '/contact/' | relative_url }}" class="join-btn solid">Open Positions</a>
     </div>
   </div>
 

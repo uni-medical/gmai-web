@@ -14,47 +14,27 @@ lang:      "en"
   <div class="contact-grid">
     <div>
       <div class="contact-block">
-        <div class="contact-block-label">{{ t.contact.location }}</div>
-        <div class="contact-block-val">{{ site.lab.address }}</div>
-      </div>
-      <div class="contact-block">
-        <div class="contact-block-label">{{ t.contact.email }}</div>
+        <div class="contact-block-label">Email</div>
         <div class="contact-block-val"><a href="mailto:{{ site.lab.email }}">{{ site.lab.email }}</a></div>
       </div>
       <div class="contact-block">
-        <div class="contact-block-label">{{ t.contact.online }}</div>
+        <div class="contact-block-label">Connect with Us</div>
         <div class="contact-block-val">
-          {% if site.lab.github  %}<a href="{{ site.lab.github  }}" target="_blank">GitHub</a>&nbsp;&middot;&nbsp;{% endif %}
-          {% if site.lab.scholar %}<a href="{{ site.lab.scholar }}" target="_blank">Google Scholar</a>&nbsp;&middot;&nbsp;{% endif %}
-          {% if site.lab.twitter %}<a href="{{ site.lab.twitter }}" target="_blank">Twitter</a>{% endif %}
+          <a href="https://github.com/uni-medical" target="_blank" rel="noopener">GitHub Organization</a>&nbsp;&middot;&nbsp;
+          <a href="https://www.zhihu.com/people/gmai-team" target="_blank" rel="noopener">Zhihu Blog</a>&nbsp;&middot;&nbsp;
+          {% if site.lab.scholar %}<a href="{{ site.lab.scholar }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
         </div>
       </div>
       <div class="contact-block">
-        <div class="contact-block-label">{{ t.contact.prospective }}</div>
+        <div class="contact-block-label">Interested in Joining?</div>
         <div class="contact-block-val">
-          We welcome enquiries from motivated candidates. Please email a CV,
-          a brief statement of research interests, and representative
-          publications or writing samples.
+          We welcome collaboration across academia, healthcare, and industry. If you are
+          interested in open positions or research collaboration, please send your CV,
+          a brief description of your research interests, and representative work to
+          <a href="mailto:{{ site.lab.email }}">{{ site.lab.email }}</a>.
         </div>
       </div>
     </div>
-    <!-- Form via Formspree: replace YOUR_FORM_ID with your Formspree endpoint -->
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="form-field"><label>Full Name</label><input type="text" name="name" required /></div>
-      <div class="form-field"><label>Email Address</label><input type="email" name="email" required /></div>
-      <div class="form-field">
-        <label>Nature of Enquiry</label>
-        <select name="subject">
-          <option>General Inquiry</option>
-          <option>Research Collaboration</option>
-          <option>PhD Application</option>
-          <option>Postdoctoral Application</option>
-          <option>Media / Press</option>
-        </select>
-      </div>
-      <div class="form-field"><label>Message</label><textarea name="message" required></textarea></div>
-      <button class="submit-btn" type="submit">{{ t.contact.send }}</button>
-    </form>
   </div>
 </div>
 </section>
