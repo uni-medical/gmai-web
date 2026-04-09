@@ -1,3 +1,9 @@
 {
+  "permissions": {
+    "allow": [
+      "mcp__plugin_ecc_playwright__browser_navigate",
+      "mcp__plugin_ecc_exa__web_fetch_exa"
+    ]
+  },
   "outputStyle": "Explanatory"
 }
