@@ -202,8 +202,8 @@ members:
       github:  ""
       website: "https://openreview.net/profile?id=%7ECheng_Tang8"
 
-  - name:     "Raymond Ning (宁俊智)"
-    slug:     "raymond-ning"
+  - name:     "Junzhi Ning (宁俊智)"
+    slug:     "junzhi-ning"
     role:     "Research Intern, Imperial College London"
     role_zh:  "科研实习生，伦敦帝国理工学院"
     focus:    "AI for health, multimodal medical AI, generative models for retinal image synthesis"

@@ -168,7 +168,7 @@ lang:   "zh"
       <span class="rs-topic">IMed-361M（3.61亿掩码）</span>
       <span class="rs-topic">交互式分割</span>
     </div>
-    <a href="{{ '/zh/publications/' | relative_url }}" class="rs-link">查看论文 →</a>
+    <a href="{{ '/zh/projects/sam-med3d/' | relative_url }}" class="rs-link">探索 SAM-Med3D →</a>
   </div>
 </div>
 

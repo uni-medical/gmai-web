@@ -214,7 +214,7 @@ lang:   "en"
       <span class="rs-topic">IMed-361M (361M masks)</span>
       <span class="rs-topic">Interactive segmentation</span>
     </div>
-    <a href="{{ '/publications/' | relative_url }}" class="rs-link">View publications →</a>
+    <a href="{{ '/projects/sam-med3d/' | relative_url }}" class="rs-link">Explore SAM-Med3D →</a>
   </div>
 </div>
 
