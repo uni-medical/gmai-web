@@ -262,7 +262,7 @@ lang:   "en"
       <span class="rs-topic">Ophora (MICCAI 2025 Oral)</span>
       <span class="rs-topic">Hospital pilot deployments</span>
     </div>
-    <a href="{{ '/projects/' | relative_url }}" class="rs-link">Explore this project →</a>
+    <a href="{{ '/projects/slide-chat/' | relative_url }}" class="rs-link">Explore SlideChat →</a>
   </div>
 </div>
 

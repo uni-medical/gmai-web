@@ -203,7 +203,7 @@ lang:   "zh"
       <span class="rs-topic">Ophora（MICCAI 2025 Oral）</span>
       <span class="rs-topic">多院试点部署</span>
     </div>
-    <a href="{{ '/zh/projects/' | relative_url }}" class="rs-link">了解此项目 →</a>
+    <a href="{{ '/zh/projects/slide-chat/' | relative_url }}" class="rs-link">探索 SlideChat →</a>
   </div>
 </div>
 
