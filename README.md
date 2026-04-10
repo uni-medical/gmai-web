@@ -1,5 +1,7 @@
 # Research Group Website
 
+**English** | [中文](README.zh.md)
+
 A production-ready static website for a computational research group, built with **Jekyll 4** and deployed on **GitHub Pages**. No Node.js, no custom plugins, no build servers — just push to `main` and the site is live in 60 seconds.
 
 ## Live Preview

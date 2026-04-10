@@ -5,10 +5,7 @@
 
   {% if pub.teaser and pub.teaser != "" %}
   <div class="pub-visual">
-    <img class="pub-teaser"
-         src="{{ pub.teaser | relative_url }}"
-         alt="{{ pub.title }} — overview figure"
-         loading="lazy" />
+    {% include picture.html src=pub.teaser alt=pub.title class="pub-teaser" loading="lazy" width="260" height="195" %}
   </div>
   {% else %}
   <div class="pub-visual pub-no-teaser"></div>

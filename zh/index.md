@@ -86,7 +86,7 @@ lang:   "zh"
 <!-- 研究方向 1 -->
 <div class="rs-section fade">
   <div class="rs-visual vis-neural">
-    <img class="rs-panel-img" src="{{ '/assets/images/projects/imaging-x/overview.png' | relative_url }}" alt="Imaging-X 项目概览" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/imaging-x/overview.png" alt="Imaging-X 项目概览" class="rs-panel-img" loading="lazy" %}
     <div class="rs-watermark">01</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -104,7 +104,7 @@ lang:   "zh"
   <div class="rs-text">
     <div class="rs-area">医学数据基础设施</div>
     <div class="rs-title">夯实基础：大规模医学数据平台建设</div>
-    <img class="rs-thumb" src="{{ '/assets/images/projects/imaging-x/overview.png' | relative_url }}" alt="Imaging-X 概览" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/imaging-x/overview.png" alt="Imaging-X 概览" class="rs-thumb" loading="lazy" %}
     <div class="rs-body">
       我们构建了驱动世界领先医学 AI 的数据基础设施。Project Imaging-X 通过元数据驱动融合范式（MDFP），
       系统整合 1,000+ 个开放医学影像数据集，并搭建交互式发现门户。
@@ -122,7 +122,7 @@ lang:   "zh"
 <!-- 研究方向 2 -->
 <div class="rs-section rs-flip fade">
   <div class="rs-visual vis-genomics">
-    <img class="rs-panel-img" src="{{ '/assets/images/projects/gmai-vl/gmai_vl0.png' | relative_url }}" alt="GMAI-VL 数据流水线与模型架构" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/gmai-vl/gmai_vl0.png" alt="GMAI-VL 数据流水线与模型架构" class="rs-panel-img" loading="lazy" %}
     <div class="rs-watermark">02</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -140,7 +140,7 @@ lang:   "zh"
   <div class="rs-text">
     <div class="rs-area">医学多模态大模型</div>
     <div class="rs-title">通用医学视觉语言模型：GMAI-VL 与垂类突破</div>
-    <img class="rs-thumb" src="{{ '/assets/images/projects/gmai-vl/gmai_vl1.png' | relative_url }}" alt="GMAI-VL 架构" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/gmai-vl/gmai_vl1.png" alt="GMAI-VL 架构" class="rs-thumb" loading="lazy" %}
     <div class="rs-body">
       我们打造世界领先的医学多模态大模型。GMAI-VL 基于涵盖 18 个临床科室的 550 万图文对训练，
       在医学 VQA 和诊断推理任务上达到并刷新 SOTA 水平。SlideChat 是首个能直接理解千兆像素
@@ -160,7 +160,7 @@ lang:   "zh"
 <!-- 研究方向 3 -->
 <div class="rs-section fade">
   <div class="rs-visual vis-molecular">
-    <img class="rs-panel-img" src="{{ '/assets/images/projects/sam-med3d/sam_med3d4.png' | relative_url }}" alt="SAM-Med3D 全三维架构" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/sam-med3d/sam_med3d4.png" alt="SAM-Med3D 全三维架构" class="rs-panel-img" loading="lazy" %}
     <div class="rs-watermark">03</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -178,7 +178,7 @@ lang:   "zh"
   <div class="rs-text">
     <div class="rs-area">医学图像分割</div>
     <div class="rs-title">分割一切：SAM-Med2D 与 SAM-Med3D 医学通用分割</div>
-    <img class="rs-thumb" src="{{ '/assets/images/projects/sam-med3d/sam_med3d1.png' | relative_url }}" alt="SAM-Med3D 可视化" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/sam-med3d/sam_med3d1.png" alt="SAM-Med3D 可视化" class="rs-thumb" loading="lazy" %}
     <div class="rs-body">
       我们将 Segment Anything Model 深度适配至医学领域，在 14 种影像模态、247 类解剖与病灶
       目标上实现通用可提示分割。SAM-Med2D 基于 SA-Med2D-20M 覆盖二维切片场景；SAM-Med3D
@@ -198,7 +198,7 @@ lang:   "zh"
 <!-- 研究方向 4 -->
 <div class="rs-section rs-flip fade">
   <div class="rs-visual vis-clinical">
-    <img class="rs-panel-img" src="{{ '/assets/images/projects/slide-chat/SlideChat2.png' | relative_url }}" alt="SlideChat 架构 — WSI 理解流程" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/slide-chat/SlideChat2.png" alt="SlideChat 架构 — WSI 理解流程" class="rs-panel-img" loading="lazy" %}
     <div class="rs-watermark">04</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -216,7 +216,7 @@ lang:   "zh"
   <div class="rs-text">
     <div class="rs-area">临床 AI 系统</div>
     <div class="rs-title">全切片病理智能：SlideChat 与临床 AI 的未来</div>
-    <img class="rs-thumb" src="{{ '/assets/images/projects/slide-chat/SlideChat3.png' | relative_url }}" alt="SlideChat 界面" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/slide-chat/SlideChat3.png" alt="SlideChat 界面" class="rs-thumb" loading="lazy" %}
     <div class="rs-body">
       SlideChat 是首个能够理解 Gigapixel 全切片病理图像的视觉语言助手。在 SlideInstruction
       （4.2K WSI 描述 + 176K 视觉问答对）上训练，在 SlideBench 22 个任务中 18 个达到最优，
@@ -236,7 +236,7 @@ lang:   "zh"
 <!-- 研究方向 5 — 可扩展医学图像分割 -->
 <div class="rs-section fade">
   <div class="rs-visual vis-stunet">
-    <img class="rs-panel-img" src="{{ '/assets/images/projects/stu-net/stu_net7.png' | relative_url }}" alt="STU-Net CT 分割定性结果" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/stu-net/stu_net7.png" alt="STU-Net CT 分割定性结果" class="rs-panel-img" loading="lazy" %}
     <div class="rs-watermark">05</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -255,7 +255,7 @@ lang:   "zh"
   <div class="rs-text">
     <div class="rs-area">医学图像分割</div>
     <div class="rs-title">医学影像中的规模扩展定律：STU-Net 从 1400 万到 14 亿参数</div>
-    <img class="rs-thumb" src="{{ '/assets/images/projects/stu-net/stu_net7.png' | relative_url }}" alt="STU-Net 分割结果" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/stu-net/stu_net7.png" alt="STU-Net 分割结果" class="rs-thumb" loading="lazy" %}
     <div class="rs-body">
       STU-Net 在三维医学图像分割领域验证了规模扩展定律。S（1400万）、B（5800万）、
       L（4.4亿）、H（14亿）四档模型均基于 TotalSegmentator（1,204 个 CT 体积、104 个

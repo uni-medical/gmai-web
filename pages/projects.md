@@ -27,7 +27,7 @@ lang:      "en"
           {% if p.links.homepage %}<a href="{{ p.links.homepage }}" target="_blank" rel="noopener" class="pub-btn">Homepage</a>{% endif %}
         </div>
       </div>
-      {% if p.thumbnail %}<img src="{{ p.thumbnail | relative_url }}" alt="{{ p.title }}" style="width:220px;border:1px solid #e2e8f0;border-radius:2px;object-fit:cover;flex-shrink:0;" loading="lazy" />{% endif %}
+      {% if p.thumbnail %}{% include picture.html src=p.thumbnail alt=p.title loading="lazy" width="220" style="width:220px;border:1px solid #e2e8f0;border-radius:2px;object-fit:cover;flex-shrink:0;" %}{% endif %}
     </div>
     {% endfor %}
   </div>

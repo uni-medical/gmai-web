@@ -89,7 +89,7 @@ lang:   "en"
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section fade">
   <div class="rs-visual vis-neural">
-    <img class="rs-panel-img" src="{{ '/assets/images/projects/imaging-x/overview.png' | relative_url }}" alt="Project Imaging-X overview" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/imaging-x/overview.png" alt="Project Imaging-X overview" class="rs-panel-img" loading="lazy" %}
     <div class="rs-watermark">01</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -117,7 +117,7 @@ lang:   "en"
   <div class="rs-text">
     <div class="rs-area">Medical Data Infrastructure</div>
     <div class="rs-title">Building the Foundation: Large-Scale Medical Data Platforms</div>
-    <img class="rs-thumb" src="{{ '/assets/images/projects/imaging-x/overview.png' | relative_url }}" alt="Imaging-X overview" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/imaging-x/overview.png" alt="Imaging-X overview" class="rs-thumb" loading="lazy" %}
     <div class="rs-body">
       We build the data infrastructure that powers world-leading medical AI. Project
       Imaging-X surveys and integrates 1,000+ open medical imaging datasets via a
@@ -140,7 +140,7 @@ lang:   "en"
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section rs-flip fade">
   <div class="rs-visual vis-genomics">
-    <img class="rs-panel-img" src="{{ '/assets/images/projects/gmai-vl/gmai_vl0.png' | relative_url }}" alt="GMAI-VL data pipeline and model architecture" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/gmai-vl/gmai_vl0.png" alt="GMAI-VL data pipeline and model architecture" class="rs-panel-img" loading="lazy" %}
     <div class="rs-watermark">02</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -168,7 +168,7 @@ lang:   "en"
   <div class="rs-text">
     <div class="rs-area">Medical Multimodal Large Models</div>
     <div class="rs-title">General Medical Vision-Language Models: GMAI-VL and Beyond</div>
-    <img class="rs-thumb" src="{{ '/assets/images/projects/gmai-vl/gmai_vl1.png' | relative_url }}" alt="GMAI-VL architecture" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/gmai-vl/gmai_vl1.png" alt="GMAI-VL architecture" class="rs-thumb" loading="lazy" %}
     <div class="rs-body">
       We build world-leading medical multimodal large models. GMAI-VL, trained on
       5.5M image-text pairs across 18 clinical specialties, achieves SOTA on medical
@@ -194,7 +194,7 @@ lang:   "en"
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section fade">
   <div class="rs-visual vis-molecular">
-    <img class="rs-panel-img" src="{{ '/assets/images/projects/sam-med3d/sam_med3d4.png' | relative_url }}" alt="SAM-Med3D fully 3D architecture" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/sam-med3d/sam_med3d4.png" alt="SAM-Med3D fully 3D architecture" class="rs-panel-img" loading="lazy" %}
     <div class="rs-watermark">03</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -222,7 +222,7 @@ lang:   "en"
   <div class="rs-text">
     <div class="rs-area">Medical Image Segmentation</div>
     <div class="rs-title">Segment Anything in Medicine: SAM-Med2D and SAM-Med3D</div>
-    <img class="rs-thumb" src="{{ '/assets/images/projects/sam-med3d/sam_med3d1.png' | relative_url }}" alt="SAM-Med3D visualization" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/sam-med3d/sam_med3d1.png" alt="SAM-Med3D visualization" class="rs-thumb" loading="lazy" %}
     <div class="rs-body">
       We adapt the Segment Anything Model to the medical domain, delivering universal
       promptable segmentation across 14 imaging modalities and 247 anatomical and lesion
@@ -248,7 +248,7 @@ lang:   "en"
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section rs-flip fade">
   <div class="rs-visual vis-clinical">
-    <img class="rs-panel-img" src="{{ '/assets/images/projects/slide-chat/SlideChat2.png' | relative_url }}" alt="SlideChat architecture — WSI understanding pipeline" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/slide-chat/SlideChat2.png" alt="SlideChat architecture — WSI understanding pipeline" class="rs-panel-img" loading="lazy" %}
     <div class="rs-watermark">04</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -276,7 +276,7 @@ lang:   "en"
   <div class="rs-text">
     <div class="rs-area">Clinical AI Systems</div>
     <div class="rs-title">Whole-Slide Pathology Intelligence: SlideChat and the Future of Clinical AI</div>
-    <img class="rs-thumb" src="{{ '/assets/images/projects/slide-chat/SlideChat3.png' | relative_url }}" alt="SlideChat interface" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/slide-chat/SlideChat3.png" alt="SlideChat interface" class="rs-thumb" loading="lazy" %}
     <div class="rs-body">
       SlideChat is the first vision-language assistant capable of understanding gigapixel
       whole-slide pathology images in their entirety. Trained on SlideInstruction (4.2K WSI
@@ -301,7 +301,7 @@ lang:   "en"
      ══════════════════════════════════════════════════════════════ -->
 <div class="rs-section fade">
   <div class="rs-visual vis-stunet">
-    <img class="rs-panel-img" src="{{ '/assets/images/projects/stu-net/stu_net7.png' | relative_url }}" alt="STU-Net qualitative CT segmentation results" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/stu-net/stu_net7.png" alt="STU-Net qualitative CT segmentation results" class="rs-panel-img" loading="lazy" %}
     <div class="rs-watermark">05</div>
     <div class="rs-visual-content">
       <div class="rs-tags">
@@ -329,7 +329,7 @@ lang:   "en"
   <div class="rs-text">
     <div class="rs-area">Medical Image Segmentation</div>
     <div class="rs-title">Scaling Laws in Medicine: STU-Net from 14M to 1.4B Parameters</div>
-    <img class="rs-thumb" src="{{ '/assets/images/projects/stu-net/stu_net7.png' | relative_url }}" alt="STU-Net segmentation results" loading="lazy" />
+    {% include picture.html src="/assets/images/projects/stu-net/stu_net7.png" alt="STU-Net segmentation results" class="rs-thumb" loading="lazy" %}
     <div class="rs-body">
       STU-Net establishes scaling laws for 3D medical image segmentation. A family of
       four models — S (14M), B (58M), L (440M), and H (1.4B) — are pre-trained on

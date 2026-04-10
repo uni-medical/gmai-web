@@ -1,0 +1,26 @@
+{% comment %}
+  Responsive <picture> element with WebP + original format fallback.
+  Usage:
+    {% include picture.html src="/assets/images/team/photo.jpg" alt="Name" class="team-photo" loading="lazy" width="180" height="180" %}
+
+  Parameters:
+    src      — path to original image (relative to site root)
+    alt      — alt text (required)
+    class    — CSS class(es) for the <img> element
+    loading  — "lazy" or "eager" (default: none)
+    width    — explicit width for CLS prevention
+    height   — explicit height for CLS prevention
+    style    — inline style for the <img> element
+{% endcomment %}
+{% assign _src = include.src %}
+{% assign _webp = _src | replace: '.png', '.webp' | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.PNG', '.webp' | replace: '.JPG', '.webp' | replace: '.JPEG', '.webp' %}
+<picture>
+  <source srcset="{{ _webp | relative_url }}" type="image/webp">
+  <img src="{{ _src | relative_url }}"
+       alt="{{ include.alt }}"{% if include.class %}
+       class="{{ include.class }}"{% endif %}{% if include.loading %}
+       loading="{{ include.loading }}"{% endif %}{% if include.width %}
+       width="{{ include.width }}"{% endif %}{% if include.height %}
+       height="{{ include.height }}"{% endif %}{% if include.style %}
+       style="{{ include.style }}"{% endif %} />
+</picture>

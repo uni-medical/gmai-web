@@ -86,17 +86,60 @@ _layouts/page.html          two-line wrapper extending default
 _includes/nav.html          top nav + language switcher (EN ↔ 中文)
 _includes/footer.html       footer with lab links
 _includes/pub_card.html     publication card component
+_includes/picture.html      responsive <picture> with WebP + fallback
+scripts/optimize-images.sh  batch image resize + compress + WebP generation
 .github/workflows/deploy.yml  GitHub Actions build + deploy pipeline
 docs/ARCHITECTURE.md        technical reference
 docs/CONTENT-GUIDE.md       how to update content day-to-day
 docs/DEPLOYMENT.md          GitHub Pages deployment + custom domain
 ```
 
+## Image Optimization
+
+All images must be optimized before committing. A script handles resizing, compression, and WebP generation.
+
+### Running the optimizer
+
+```bash
+bash scripts/optimize-images.sh
+```
+
+This script:
+1. Resizes images to appropriate max dimensions (team: 400px, teasers: 520px, projects: 1200px, hero: 1920px)
+2. Compresses quality (85% JPEG, optimized PNG)
+3. Generates `.webp` alongside every original image
+
+### WebP delivery
+
+All templates use `_includes/picture.html` to serve WebP with original format fallback:
+
+```liquid
+{% include picture.html src="/assets/images/team/photo.jpg" alt="Name" class="team-photo" loading="lazy" width="180" height="180" %}
+```
+
+The hero background uses CSS `image-set()` in `_sass/_home.scss` for WebP priority.
+
+### When adding new images
+
+1. Place the original image in the correct directory (`assets/images/team/`, `teasers/`, `projects/<slug>/`)
+2. Run `bash scripts/optimize-images.sh` — it will resize, compress, and create the `.webp` version
+3. Reference images via `{% include picture.html %}` in templates, or `<picture>` elements in inline HTML
+4. Use `loading="lazy"` for all images except hero/logo
+
+### Target dimensions (2× Retina)
+
+| Category | Display size | Max source dimension |
+|----------|-------------|---------------------|
+| Team photos | 96–180px | 400×400px |
+| Teaser images | 260px wide | 520px wide |
+| Project images | ~600px panels | 1200px wide |
+| Hero background | full viewport | 1920px wide |
+
 ## Common Tasks
 
-**Add a publication:** edit `_data/publications.yml`, prepend new entry, add teaser image to `assets/images/teasers/`
+**Add a publication:** edit `_data/publications.yml`, prepend new entry, add teaser image to `assets/images/teasers/`, then run `bash scripts/optimize-images.sh`
 
-**Add a team member:** edit `_data/team.yml`, add photo to `assets/images/team/`
+**Add a team member:** edit `_data/team.yml`, add photo to `assets/images/team/`, then run `bash scripts/optimize-images.sh`
 
 **Update hero stats:** edit `stats:` block in `_config.yml`
 

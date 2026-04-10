@@ -15,7 +15,7 @@ lang:      "zh"
 
   <div class="team-pi">
     {% if site.data.team.pi.photo != "" %}
-      <img class="team-photo" src="{{ site.data.team.pi.photo | relative_url }}" alt="{{ site.data.team.pi.name }}" />
+      {% include picture.html src=site.data.team.pi.photo alt=site.data.team.pi.name class="team-photo" width="180" height="180" %}
     {% else %}
       <div class="team-photo-ph">{{ site.data.team.pi.initials }}</div>
     {% endif %}
@@ -39,7 +39,7 @@ lang:      "zh"
     {% for m in site.data.team.members %}
     <div class="member-card">
       {% if m.photo != "" %}
-        <img class="member-photo" src="{{ m.photo | relative_url }}" alt="{{ m.name }}" />
+        {% include picture.html src=m.photo alt=m.name class="member-photo" loading="lazy" width="96" height="96" %}
       {% else %}
         <div class="member-photo">{{ m.initials }}</div>
       {% endif %}
@@ -63,12 +63,16 @@ lang:      "zh"
       <th style="text-align:left;padding:.5rem;font-weight:600;color:#475569;">姓名</th>
       <th style="text-align:left;padding:.5rem;font-weight:600;color:#475569;">在组时间</th>
       <th style="text-align:left;padding:.5rem;font-weight:600;color:#475569;">现任职位</th>
+      <th style="text-align:left;padding:.5rem;font-weight:600;color:#475569;">研究方向</th>
+      <th style="text-align:left;padding:.5rem;font-weight:600;color:#475569;"></th>
     </tr>
     {% for a in site.data.team.alumni %}
     <tr style="border-top:1px solid #e2e8f0;">
       <td style="padding:.6rem .5rem;font-weight:600;color:#1e293b;">{{ a.name }}</td>
       <td style="padding:.6rem .5rem;color:#475569;">{{ a.period }}</td>
-      <td style="padding:.6rem .5rem;color:#475569;">{{ a.now }}</td>
+      <td style="padding:.6rem .5rem;color:#475569;">{{ a.position }}</td>
+      <td style="padding:.6rem .5rem;color:#475569;">{{ a.focus }}</td>
+      <td style="padding:.6rem .5rem;">{% if a.slug %}<a href="{{ '/zh/team/' | append: a.slug | append: '/' | relative_url }}" style="font-size:.75rem;color:#1e3a5f;font-weight:500;text-decoration:none;border-bottom:1px solid transparent;" onmouseover="this.style.borderColor='#1e3a5f'" onmouseout="this.style.borderColor='transparent'">主页 →</a>{% endif %}</td>
     </tr>
     {% endfor %}
   </table>

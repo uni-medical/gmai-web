@@ -108,6 +108,7 @@ members:
       scholar: ""
       github:  ""
       website: ""
+      openreview: "https://openreview.net/profile?id=~Diping_Song1"
 
   # ── Research Interns ─────────────────────────────────────────────
 
@@ -216,7 +217,7 @@ members:
     role_zh:  "科研实习生，中国科学院大学"
     focus:    "AI for science, computational imaging"
     focus_zh: "科学AI、计算成像"
-    photo:    ""
+    photo:    "assets/images/team/cheng_tang.png"
     initials: "CT"
     links:
       scholar: ""
@@ -309,6 +310,8 @@ members:
       website: ""
 
 alumni:
-  - name:    "Ye Du (杜烨)"
-    period:  "2024.01 – 2025"
-    now:     "The Hong Kong Polytechnic University — AI for Science, Proteomics, Virtual Cell"
+  - name:     "Ye Du (杜烨)"
+    slug:     "ye-du"
+    period:   "2024.01 – 2025"
+    position: "PhD Candidate, The Hong Kong Polytechnic University"
+    focus:    "AI for Science, Proteomics, Virtual Cell"
