@@ -30,6 +30,10 @@ lab:
   email:       "hejunjun@pjlab.org.cn"
   github:      "https://github.com/uni-medical"
   scholar:     "https://scholar.google.com/citations?user=Z4LgebkAAAAJ&hl=zh-CN"
+  huggingface: "https://huggingface.co/General-Medical-AI"
+  linkedin:    "https://www.linkedin.com/company/shhailab-gmai/"
+  xiaohongshu: "https://xhslink.com/m/50fKRQolEHI"
+  zhihu:       "https://www.zhihu.com/people/gmai-38/"
   founded:     2020               # TODO: confirm founding year
 
 # ── Hero stats (update when milestones change) ────────────────────

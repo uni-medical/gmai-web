@@ -20,22 +20,20 @@
     huggingface: "https://huggingface.co/papers/2603.27460"
     dataset:   "https://huggingface.co/datasets/General-Medical-AI/Project-Imaging-X"
 
-- title:      "GMAI-VL / UniMedVL: General Medical Multimodal Vision-Language Model"
-  title_zh:   "GMAI-VL / UniMedVL：通用医学多模态视觉语言模型"
+- title:      "GMAI-VL: General Medical Multimodal Vision-Language Model"
+  title_zh:   "GMAI-VL：通用医学多模态视觉语言模型"
   area:       "Medical Multimodal AI"
   area_zh:    "医学多模态 AI"
   slug:       "gmai-vl"
   thumbnail:  "/assets/images/projects/gmai-vl/gmai_vl1.png"
   desc:       >
-    Development of world-leading medical multimodal generation-understanding unified models.
+    Development of world-leading medical multimodal vision-language models.
     GMAI-VL is trained on GMAI-VL-5.5M (5.5M image-text pairs across 18 clinical specialties),
     while GMAI-VL-R1 introduces reinforcement learning to achieve ~30% average accuracy
-    improvement across eight imaging modalities. UniMedVL targets state-of-the-art performance
-    on complex medical tasks including CURE-Bench and MedXpertQA.
+    improvement across eight imaging modalities.
   desc_zh:    >
-    世界领先的医学多模态生成-理解统一模型研究。GMAI-VL 在 GMAI-VL-5.5M（涵盖 18 个临床专科的
+    世界领先的医学多模态视觉语言模型研究。GMAI-VL 在 GMAI-VL-5.5M（涵盖 18 个临床专科的
     550 万图像-文本对）上训练，GMAI-VL-R1 引入强化学习在 8 种影像模态上实现约 30% 的平均准确率提升。
-    UniMedVL 致力于在 CURE-Bench 和 MedXpertQA 等复杂医学任务上达到最新水平。
   links:
     github:    "https://github.com/uni-medical/GMAI-VL"
     paper:     "https://arxiv.org/abs/2411.14522"

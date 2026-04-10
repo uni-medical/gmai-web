@@ -55,16 +55,19 @@ The included `.github/workflows/deploy.yml` builds and deploys automatically on 
 
 All content lives in `_data/`. You never need to touch HTML to update the site.
 
-| What you want to update | File to edit |
-|---|---|
-| Add / edit a publication | `_data/publications.yml` |
-| Add / edit a team member | `_data/team.yml` |
-| Add a news item | `_data/news.yml` |
-| Add / edit a research project | `_data/projects.yml` |
-| Change UI text (EN or ZH) | `_data/strings.yml` |
-| Change lab name, email, stats | `_config.yml` |
+| What you want to update | File to edit | Detailed guide |
+|---|---|---|
+| Add / edit a team member | `_data/team.yml` + profile pages | [MAINTENANCE.md #1](MAINTENANCE.md#1-adding-a-team-member) |
+| Add / edit a publication | `_data/publications.yml` | [MAINTENANCE.md #3](MAINTENANCE.md#3-adding-a-publication) |
+| Add a news item | `_data/news.yml` | [MAINTENANCE.md #5](MAINTENANCE.md#5-adding-a-news-item) |
+| Add / edit a research project | `_data/projects.yml` | [MAINTENANCE.md #4](MAINTENANCE.md#4-addingupdating-a-project) |
+| Update landing page sections | `index.md` + `zh/index.md` | [MAINTENANCE.md #6](MAINTENANCE.md#4-addingupdating-a-project) |
+| Change UI text (EN or ZH) | `_data/strings.yml` | — |
+| Change lab name, email, stats | `_config.yml` | — |
 
-See [`docs/CONTENT-GUIDE.md`](docs/CONTENT-GUIDE.md) for step-by-step instructions.
+**For complete step-by-step maintenance workflows, see [`MAINTENANCE.md`](MAINTENANCE.md)** — covers file dependencies, image guidelines, bilingual checklist, and all cross-linking requirements.
+
+See also [`docs/CONTENT-GUIDE.md`](docs/CONTENT-GUIDE.md) for the original content guide.
 
 ---
 

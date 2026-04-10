@@ -146,6 +146,45 @@
   }
 }
 
+// Social platform links row
+.lh-social {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.lh-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .4rem .85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  color: rgba(255,255,255,.45);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .03em;
+  text-decoration: none;
+  transition: all .25s ease;
+  backdrop-filter: blur(6px);
+
+  svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    color: #fff;
+    border-color: rgba(255,255,255,.35);
+    background: rgba(255,255,255,.1);
+    transform: translateY(-1px);
+  }
+}
+
 .lh-affil {
   font-size: .72rem;
   color: rgba(255,255,255,.2);
