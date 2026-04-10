@@ -121,7 +121,6 @@
   keywords: "MRI synthesis, uncertainty quantification, domain adaptation, cross-modal translation"
   links:
     paper:  "https://arxiv.org/abs/2407.07372"
-    code:   ""
 
 - title:    "MedQ-Bench: Evaluating and Exploring Medical Image Quality Assessment Abilities in MLLMs"
   authors:  "Jiyao Liu, Jinjie Wei, Wanying Qu, Chenglong Ma, Junzhi Ning, Yunheng Li, Ying Chen, Xinzhe Luo, Pengcheng Chen, Xin Gao, Ming Hu, Huihui Xu, Xin Wang, Shujian Gao, Dingkang Yang, Zhongying Deng, Jin Ye, Lihao Liu, Junjun He, Ningsheng Xu"

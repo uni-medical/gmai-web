@@ -21,7 +21,7 @@ en:
     scholar_link: "Google Scholar →"
   team:
     pi_badge:     "Principal Investigator"
-    alumni_link:  "View alumni →"
+    alumni_link:  "View past members →"
   contact:
     location:     "Location"
     email:        "Email"
@@ -54,7 +54,7 @@ zh:
     scholar_link: "Google Scholar →"
   team:
     pi_badge:     "负责人（PI）"
-    alumni_link:  "查看往届成员 →"
+    alumni_link:  "查看过往成员 →"
   contact:
     location:     "地址"
     email:        "邮件"

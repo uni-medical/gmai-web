@@ -57,7 +57,7 @@ lang:      "zh"
   </div>
 
   {% if site.data.team.alumni %}
-  <h3 id="alumni" style="font-family:'IBM Plex Serif',serif;font-weight:400;margin:3rem 0 1rem;font-size:1.3rem;color:#0f172a;">往届成员</h3>
+  <h3 id="alumni" style="font-family:'IBM Plex Serif',serif;font-weight:400;margin:3rem 0 1rem;font-size:1.3rem;color:#0f172a;">过往成员</h3>
   <table style="width:100%;border-collapse:collapse;font-size:.85rem;">
     <tr style="border-bottom:1px solid #e2e8f0;">
       <th style="text-align:left;padding:.5rem;font-weight:600;color:#475569;">姓名</th>

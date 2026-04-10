@@ -347,11 +347,23 @@
   font-family: $serif;
 }
 
+// Thumbnail inside text panel
+.rs-thumb {
+  float: right;
+  width: 280px;
+  margin: 0 0 1rem 1.5rem;
+  border: 1px solid $border;
+  border-radius: $radius;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  object-fit: cover;
+}
+
 .rs-topics {
   display: flex;
   flex-wrap: wrap;
   gap: .4rem;
   margin-bottom: 2rem;
+  clear: both;
 }
 .rs-topic {
   font-size: .7rem;

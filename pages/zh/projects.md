@@ -13,8 +13,8 @@ lang:      "zh"
   </div>
   <div class="proj-list">
     {% for p in site.data.projects %}
-    <div class="proj-entry">
-      <div>
+    <div class="proj-entry" style="display:flex;gap:1.5rem;align-items:flex-start;">
+      <div style="flex:1;">
         <div class="proj-label">{% if p.area_zh %}{{ p.area_zh }}{% else %}{{ p.area }}{% endif %}</div>
         <div class="proj-title">{% if p.title_zh %}{{ p.title_zh }}{% else %}{{ p.title }}{% endif %}</div>
         <div class="proj-desc">{% if p.desc_zh %}{{ p.desc_zh }}{% else %}{{ p.desc }}{% endif %}</div>
@@ -27,6 +27,7 @@ lang:      "zh"
           {% if p.links.homepage %}<a href="{{ p.links.homepage }}" target="_blank" rel="noopener" class="pub-btn">主页</a>{% endif %}
         </div>
       </div>
+      {% if p.thumbnail %}<img src="{{ p.thumbnail | relative_url }}" alt="{{ p.title }}" style="width:220px;border:1px solid #e2e8f0;border-radius:2px;object-fit:cover;flex-shrink:0;" loading="lazy" />{% endif %}
     </div>
     {% endfor %}
   </div>

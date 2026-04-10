@@ -90,6 +90,7 @@ lang:   "en"
   <div class="rs-text">
     <div class="rs-area">Medical Data Infrastructure</div>
     <div class="rs-title">Building the Foundation: Large-Scale Medical Data Platforms</div>
+    <img class="rs-thumb" src="{{ '/assets/images/projects/imaging-x/overview.png' | relative_url }}" alt="Imaging-X overview" loading="lazy" />
     <div class="rs-body">
       We build the data infrastructure that powers world-leading medical AI. Project
       Imaging-X surveys and integrates 1,000+ open medical imaging datasets via a
@@ -140,6 +141,7 @@ lang:   "en"
   <div class="rs-text">
     <div class="rs-area">Medical Multimodal Large Models</div>
     <div class="rs-title">General Medical Vision-Language Models: GMAI-VL and Beyond</div>
+    <img class="rs-thumb" src="{{ '/assets/images/projects/gmai-vl/gmai_vl1.png' | relative_url }}" alt="GMAI-VL architecture" loading="lazy" />
     <div class="rs-body">
       We build world-leading medical multimodal large models. GMAI-VL, trained on
       5.5M image-text pairs across 18 clinical specialties, achieves SOTA on medical
@@ -193,6 +195,7 @@ lang:   "en"
   <div class="rs-text">
     <div class="rs-area">Medical Image Segmentation</div>
     <div class="rs-title">Segment Anything in Medicine: SAM-Med2D and SAM-Med3D</div>
+    <img class="rs-thumb" src="{{ '/assets/images/projects/sam-med3d/sam_med3d1.png' | relative_url }}" alt="SAM-Med3D visualization" loading="lazy" />
     <div class="rs-body">
       We adapt the Segment Anything Model to the medical domain, delivering universal
       promptable segmentation across 14 imaging modalities and 247 anatomical and lesion
@@ -246,6 +249,7 @@ lang:   "en"
   <div class="rs-text">
     <div class="rs-area">Clinical AI Systems</div>
     <div class="rs-title">Whole-Slide Pathology Intelligence: SlideChat and the Future of Clinical AI</div>
+    <img class="rs-thumb" src="{{ '/assets/images/projects/slide-chat/SlideChat3.png' | relative_url }}" alt="SlideChat interface" loading="lazy" />
     <div class="rs-body">
       SlideChat is the first vision-language assistant capable of understanding gigapixel
       whole-slide pathology images in their entirety. Trained on SlideInstruction (4.2K WSI
@@ -298,6 +302,7 @@ lang:   "en"
   <div class="rs-text">
     <div class="rs-area">Medical Image Segmentation</div>
     <div class="rs-title">Scaling Laws in Medicine: STU-Net from 14M to 1.4B Parameters</div>
+    <img class="rs-thumb" src="{{ '/assets/images/projects/stu-net/stu_net7.png' | relative_url }}" alt="STU-Net segmentation results" loading="lazy" />
     <div class="rs-body">
       STU-Net establishes scaling laws for 3D medical image segmentation. A family of
       four models — S (14M), B (58M), L (440M), and H (1.4B) — are pre-trained on

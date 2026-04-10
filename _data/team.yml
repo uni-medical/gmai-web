@@ -15,7 +15,7 @@ pi:
     large language models, segmentation foundation models, clinical AI systems, and
     biomedical data infrastructure.
   bio_zh:   >
-    何俊俊领导GMAI（通用医学AI）研究组。他在上海交通大学（SJTU）师从顾力栩教授获得博士学位，
+    何军军领导GMAI（通用医学AI）研究组。他在上海交通大学（SJTU）师从顾力栩教授获得博士学位，
     并在中国科学院深圳先进技术研究院（SIAT）多媒体实验室（MMLAB）与乔宇教授合作开展研究。
     研究兴趣涵盖密集预测（医学图像分割、目标检测、实例分割）、高效深度学习（模型压缩、神经架构搜索、量化），
     以及通用医学AI——包括多模态大型语言模型、分割基础模型、临床AI系统和生物医学数据基础设施。
@@ -37,12 +37,12 @@ members:
     role_zh:  "研究员"
     focus:    "Medical image segmentation, scalable foundation models, multi-agent systems for medical discovery"
     focus_zh: "医学图像分割、可扩展基础模型、医学发现多智能体系统"
-    photo:    ""
+    photo:    "assets/images/team/ziyan_huang.jpg"
     initials: "ZH"
     links:
       scholar: "https://scholar.google.com/citations?user=BshL3fUAAAAJ"
       github:  "https://github.com/Ziyan-Huang"
-      website: ""
+      website: "https://ziyan-huang.github.io"
       openreview: "https://openreview.net/profile?id=~Ziyan_Huang1"
       semantic_scholar: "https://www.semanticscholar.org/author/Ziyan-Huang/2109595386"
       dblp: "https://dblp.org/pid/198/5744.html"
@@ -71,7 +71,7 @@ members:
     role_zh:  "研究员"
     focus:    "Medical visual question answering, general medical multimodal large models, GMAI-VL"
     focus_zh: "医学视觉问答、通用医学多模态大模型、GMAI-VL"
-    photo:    ""
+    photo:    "assets/images/team/tianbin_li.jpg"
     initials: "TL"
     links:
       scholar: "https://scholar.google.com/citations?user=IKGlzkQAAAAJ"
@@ -85,9 +85,9 @@ members:
     slug:     "ming-hu"
     role:     "Researcher"
     role_zh:  "研究员"
-    focus:    "Video understanding, multimodal large language models, ophthalmic surgical video analysis"
-    focus_zh: "视频理解、多模态大语言模型、眼科手术视频分析"
-    photo:    ""
+    focus:    "Large multimodal model, world model, medical image analysis"
+    focus_zh: "大型多模态模型、世界模型、医学图像分析"
+    photo:    "assets/images/team/ming_hu.jpg"
     initials: "MH"
     links:
       scholar: "https://scholar.google.com/citations?user=a3EydJMAAAAJ"
@@ -95,6 +95,19 @@ members:
       website: ""
       openreview: "https://openreview.net/profile?id=~Ming_Hu4"
       semantic_scholar: "https://www.semanticscholar.org/author/Ming-Hu/2217945968"
+
+  - name:     "Diping Song (宋迪屏)"
+    slug:     "diping-song"
+    role:     "Researcher"
+    role_zh:  "研究员"
+    focus:    "Medical MLLM, ophthalmic image analysis"
+    focus_zh: "医学多模态大模型、眼科图像分析"
+    photo:    ""
+    initials: "DS"
+    links:
+      scholar: ""
+      github:  ""
+      website: ""
 
   # ── Research Interns ─────────────────────────────────────────────
 
@@ -116,8 +129,8 @@ members:
     slug:     "jiyao-liu"
     role:     "Research Intern, Fudan University"
     role_zh:  "科研实习生，复旦大学"
-    focus:    "Low-level vision, agent systems, multimodal large language models, MRI translation"
-    focus_zh: "底层视觉、智能体系统、多模态大语言模型、MRI转换"
+    focus:    "Medical low-level vision, MLLMs and AI Agent for healthcare"
+    focus_zh: "医学底层视觉、医学大语言模型与医疗AI智能体"
     photo:    "assets/images/team/jiyao_liu.png"
     initials: "JL"
     links:
@@ -143,8 +156,8 @@ members:
     slug:     "chenglong-ma"
     role:     "Research Intern, Fudan University"
     role_zh:  "科研实习生，复旦大学"
-    focus:    "Multimodal models, generative models, medical visual tokenization, counterfactual generation"
-    focus_zh: "多模态模型、生成模型、医学视觉标记化、反事实生成"
+    focus:    "Multimodal models, generative models, visual tokenization"
+    focus_zh: "多模态模型、生成模型、视觉标记化"
     photo:    "assets/images/team/chenglong_ma.jpeg"
     initials: "CM"
     links:
@@ -154,20 +167,6 @@ members:
       openreview: "https://openreview.net/profile?id=~Chenglong_Ma2"
       dblp: "https://dblp.org/pid/164/4606.html"
       researchgate: "https://www.researchgate.net/scientific-contributions/Chenglong-Ma-2256046202"
-
-  - name:     "Ye Du (杜烨)"
-    slug:     "ye-du"
-    role:     "Research Intern, The Hong Kong Polytechnic University"
-    role_zh:  "科研实习生，香港理工大学"
-    focus:    "AI for science, proteomics, biomedical data analysis"
-    focus_zh: "科学AI、蛋白质组学、生物医学数据分析"
-    photo:    ""
-    initials: "YD"
-    links:
-      scholar: ""
-      github:  ""
-      website: ""
-      openreview: "https://openreview.net/profile?id=~Ye_Du4"
 
   - name:     "Shujian Gao (高书剑)"
     slug:     "shujian-gao"
@@ -229,9 +228,9 @@ members:
     slug:     "junzhi-ning"
     role:     "Research Intern, Imperial College London"
     role_zh:  "科研实习生，伦敦帝国理工学院"
-    focus:    "AI for health, multimodal medical AI, generative models for retinal image synthesis"
-    focus_zh: "健康AI、多模态医学AI、视网膜图像合成生成模型"
-    photo:    ""
+    focus:    "MLLMs, AI4Health, GenMedV, MedAgent"
+    focus_zh: "医学大语言模型、AI健康、生成式医学视觉、医学智能体"
+    photo:    "assets/images/team/junzhi_ning.jpg"
     initials: "RN"
     links:
       scholar: ""
@@ -242,4 +241,74 @@ members:
       linkedin: "https://uk.linkedin.com/in/junzhin"
       researchgate: "https://www.researchgate.net/scientific-contributions/Junzhi-Ning-2295268715"
 
-alumni: []
+  - name:     "Yuxing Chen (陈昱行)"
+    slug:     "yuxing-chen"
+    role:     "Research Intern, The University of Sydney"
+    role_zh:  "科研实习生，悉尼大学"
+    focus:    "Multimodal inference, embodied intelligence"
+    focus_zh: "多模态推理、具身智能"
+    photo:    "assets/images/team/yuxing_chen.jpg"
+    initials: "YX"
+    links:
+      scholar: ""
+      github:  "https://github.com/chen7086"
+      website: ""
+
+  - name:     "Jianghan Shen (申江涵)"
+    slug:     "jianghan-shen"
+    role:     "Research Intern, Nanjing University"
+    role_zh:  "科研实习生，南京大学"
+    focus:    "LLM, agentic RAG, AI Agent"
+    focus_zh: "大语言模型、智能检索增强生成、AI 智能体"
+    photo:    "assets/images/team/jianghan_shen.jpg"
+    initials: "JS"
+    links:
+      scholar: "https://scholar.google.com.hk/citations?user=XVb5B4UAAAAJ"
+      github:  ""
+      website: ""
+
+  - name:     "Rongbin Li (李荣彬)"
+    slug:     "rongbin-li"
+    role:     "Research Intern, Shenzhen University"
+    role_zh:  "科研实习生，深圳大学"
+    focus:    "Medical AI, retrieval augmented generation, large language models"
+    focus_zh: "医学AI、检索增强生成、大语言模型"
+    photo:    "assets/images/team/rongbin_li.jpg"
+    initials: "RL"
+    links:
+      scholar: ""
+      github:  ""
+      website: ""
+      openreview: "https://openreview.net/profile?id=~Rongbin_Li2"
+
+  - name:     "Changkai Ji (嵇长凯)"
+    slug:     "changkai-ji"
+    role:     "Research Intern, Fudan University"
+    role_zh:  "科研实习生，复旦大学"
+    focus:    "Medical question answering, large language models, agent systems"
+    focus_zh: "医学问答、大语言模型、智能体系统"
+    photo:    "assets/images/team/changkai_ji.jpg"
+    initials: "CJ"
+    links:
+      scholar: "https://scholar.google.com/citations?hl=zh-CN&user=EdD7yicAAAAJ"
+      github:  ""
+      website: ""
+      openreview: "https://openreview.net/profile?id=~Changkai_Ji1"
+
+  - name:     "Wentao Li (李文涛)"
+    slug:     "wentao-li"
+    role:     "Research Intern, Xi'an Jiaotong University"
+    role_zh:  "科研实习生，西安交通大学"
+    focus:    "Computational pathology, agent systems, generative models"
+    focus_zh: "计算病理学、智能体系统、生成模型"
+    photo:    "assets/images/team/wentao_li.jpg"
+    initials: "WL"
+    links:
+      scholar: ""
+      github:  ""
+      website: ""
+
+alumni:
+  - name:    "Ye Du (杜烨)"
+    period:  "2024.01 – 2025"
+    now:     "The Hong Kong Polytechnic University — AI for Science, Proteomics, Virtual Cell"

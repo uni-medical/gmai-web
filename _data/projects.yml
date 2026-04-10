@@ -3,6 +3,7 @@
   area:       "Medical Data Infrastructure"
   area_zh:    "医学数据基础设施"
   slug:       "imaging-x"
+  thumbnail:  "/assets/images/projects/imaging-x/overview.png"
   desc:       >
     A comprehensive survey and open-source platform integrating 1,000+ open-access medical
     imaging datasets. We propose a Metadata-Driven Fusion Paradigm (MDFP) to consolidate
@@ -24,6 +25,7 @@
   area:       "Medical Multimodal AI"
   area_zh:    "医学多模态 AI"
   slug:       "gmai-vl"
+  thumbnail:  "/assets/images/projects/gmai-vl/gmai_vl1.png"
   desc:       >
     Development of world-leading medical multimodal generation-understanding unified models.
     GMAI-VL is trained on GMAI-VL-5.5M (5.5M image-text pairs across 18 clinical specialties),
@@ -44,6 +46,7 @@
   area:       "Clinical AI Systems"
   area_zh:    "临床 AI 系统"
   slug:       "slide-chat"
+  thumbnail:  "/assets/images/projects/slide-chat/SlideChat3.png"
   desc:       >
     The first vision-language assistant capable of understanding gigapixel whole-slide pathology
     images in their entirety. Trained on SlideInstruction (4.2K WSI captions, 176K VQA pairs)
@@ -65,6 +68,7 @@
   area:       "Medical Image Segmentation"
   area_zh:    "医学图像分割"
   slug:       "stu-net"
+  thumbnail:  "/assets/images/projects/stu-net/stu_net7.png"
   desc:       >
     A family of scalable U-Net models (14M to 1.4B parameters) pre-trained on TotalSegmentator
     for universal medical image segmentation. STU-Net-H is the largest medical segmentation
@@ -83,6 +87,7 @@
   area:       "Medical Image Segmentation"
   area_zh:    "医学图像分割"
   slug:       "medsegagent"
+  thumbnail:  "/assets/images/projects/medsegagent/medsegagent1.png"
   desc:       >
     A multi-agent system that orchestrates specialized dataset-specific segmentation models
     through natural language instructions. Instead of training a single universal model,
@@ -102,6 +107,7 @@
   area:       "Surgical AI & Robotics"
   area_zh:    "手术 AI 与机器人"
   slug:       "ophclip"
+  thumbnail:  "/assets/images/projects/ophclip/ophclip1.png"
   desc:       >
     A hierarchical retrieval-augmented vision-language pretraining framework for ophthalmic
     surgical workflow understanding. Trained on OphVL (375K video-text pairs, 7.5K hours,
