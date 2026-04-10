@@ -18,6 +18,12 @@
     larger than prior datasets. SlideChat achieves 81.17% accuracy on SlideBench-VQA (TCGA)
     and surpasses state-of-the-art results on 18 of 22 tasks, establishing a data–model–
     benchmark framework for next-generation medical vision-language models.
+  abstract_zh: >
+    我们提出SlideChat，这是首个能够理解吉像素全切片图像（WSI）的视觉语言助手。
+    我们构建了SlideInstruction——一个包含4,181对切片-报告对及175,753个问答对的数据集，
+    涵盖13个病理类别，规模比现有数据集大20倍。SlideChat在SlideBench-VQA（TCGA）上
+    达到81.17%的准确率，并在22项任务中的18项上超越了最先进的结果，为下一代医学
+    视觉语言模型建立了数据-模型-基准框架。
   teaser:   "/assets/images/teasers/slidechat.png"
   keywords: "computational pathology, whole-slide images, vision-language model, multimodal AI"
   links:
@@ -36,6 +42,12 @@
     frame filtering produces Ophora-28K. Ophora outperforms existing methods on FID, FVD,
     and CLIPScore metrics, and synthesized videos significantly improve downstream surgical
     workflow understanding (e.g., MViTv2 Top-1: 37.92% → 42.24%).
+  abstract_zh: >
+    我们提出Ophora，一种基于文本引导的手术视频生成模型，该模型在Ophora-160K
+    （16万个视频-文本对）上进行训练。通过利用基于LVLM的帧过滤的隐私保护微调流程，
+    生成了Ophora-28K子集。Ophora在FID、FVD和CLIPScore等指标上均优于现有方法，
+    且合成视频显著提升了下游手术工作流理解性能（例如，MViTv2 Top-1准确率从
+    37.92%提升至42.24%）。
   teaser:   "/assets/images/teasers/ophora.png"
   keywords: "surgical video generation, ophthalmic AI, text-to-video, privacy-preserving"
   links:
@@ -54,6 +66,12 @@
     RetinaLogos-1400k (14M image-text pairs) and train a three-stage progressive pipeline
     at 1024×1024 resolution. Expert blind evaluation shows 62.07% of synthetic images are
     judged as real. DR grading accuracy improves 5–10%, glaucoma detection F1 reaches 0.93.
+  abstract_zh: >
+    RetinaLogos针对标注视网膜图像长期短缺的问题，通过以自由形式自然语言为条件
+    生成高分辨率眼底照片来解决这一挑战。我们构建了RetinaLogos-1400k（包含1400万
+    张图像-文本对），并训练了一个在1024×1024分辨率下运行的三阶段渐进式生成流程。
+    专家盲评结果显示，62.07%的合成图像被判断为真实图像。糖尿病视网膜病变（DR）
+    分级准确率提升5–10%，青光眼检测F1值达到0.93。
   teaser:   "/assets/images/teasers/retinalogos.png"
   keywords: "retinal imaging, fundus image synthesis, text-to-image generation, ophthalmology AI"
   links:
@@ -71,6 +89,11 @@
     explanations given disease progression hypotheses. We build ICG-CXR (11,439 high-quality
     samples) and propose a multimodal autoregressive model (ProgEmu) that achieves FID 29.21
     and ROUGE-L 0.2606, surpassing all existing SOTA methods.
+  abstract_zh: >
+    我们提出面向医学影像的可解释反事实生成（ICG）任务，要求模型在给定疾病进展
+    假设的条件下，联合预测未来图像与文本放射学解释。我们构建了ICG-CXR（包含
+    11,439个高质量样本），并提出了一种多模态自回归模型ProgEmu，该模型实现了
+    FID 29.21和ROUGE-L 0.2606，超越了所有现有最先进方法。
   teaser:   "/assets/images/teasers/progemu.png"
   keywords: "counterfactual generation, explainable AI, medical imaging, multimodal autoregression"
   links:
@@ -88,6 +111,12 @@
     Each source modality predicts a Normal-Inverse Gamma distribution, fused via MoNIG for
     uncertainty-aware synthesis. Validated on BraTS2023 and low-field African MRI datasets,
     achieving PSNR 28.48 dB and UCE 0.089 on cross-center generalization.
+  abstract_zh: >
+    我们提出一种新颖的磁共振成像跨模态转换框架，将证据回归（Evidential Regression）
+    与分布校准（Distribution Calibration）相结合，以解决临床场景中缺失模态序列的问题。
+    每种源模态预测一个Normal-Inverse Gamma分布，并通过MoNIG进行融合，实现不确定性
+    感知的图像合成。在BraTS2023及低磁场非洲磁共振成像数据集上的验证结果表明，
+    该框架在跨中心泛化任务中达到PSNR 28.48 dB、UCE 0.089的性能水平。
   teaser:   "/assets/images/teasers/mri_translation.png"
   keywords: "MRI synthesis, uncertainty quantification, domain adaptation, cross-modal translation"
   links:
@@ -105,6 +134,11 @@
     integrates real clinical images, physical degradation simulations, and AI-synthesized
     data across three evaluation tracks. Zero-shot evaluation of 14 leading MLLMs shows
     GPT-4 achieves 68.97% perception accuracy, still 13.5% below expert performance.
+  abstract_zh: >
+    MedQ-Bench提出了一种用于医学图像质量评估的新型感知-推理范式，涵盖5种模态
+    及40余种质量属性，共包含3,308个样本。该基准整合了真实临床图像、物理退化
+    模拟以及人工智能合成数据，设置三条评估赛道。对14个主流多模态大语言模型的
+    零样本评估结果显示，GPT-4的感知准确率为68.97%，仍低于专家水平13.5个百分点。
   teaser:   "/assets/images/teasers/medqbench.png"
   keywords: "image quality assessment, medical imaging, multimodal LLM, benchmark"
   links:
@@ -124,6 +158,12 @@
     images for visual alignment, then fine-tunes on 2M image-text pairs for semantic
     alignment. MedITok achieves SOTA across reconstruction, classification, generation,
     and VQA tasks spanning 9 imaging modalities and 30+ datasets.
+  abstract_zh: >
+    MedITok是首个面向医学图像设计的统一视觉标记器，旨在解决联合合成与理解任务
+    中结构保真度与语义丰富性之间的矛盾。其采用两阶段训练框架：第一阶段在30M+
+    无标注图像上进行预训练以实现视觉对齐，第二阶段在200万图文对上进行微调以
+    实现语义对齐。MedITok在涵盖9种成像模态、30余个数据集的重建、分类、生成
+    及视觉问答任务中均达到当前最优水平。
   teaser:   "/assets/images/teasers/meditok.png"
   keywords: "visual tokenizer, medical imaging, image generation, vision-language model"
   links:
@@ -143,6 +183,12 @@
     instruments, and clinical outcomes — OphCLIP simultaneously learns fine-grained and
     long-horizon visual representations. Evaluated on 11 datasets for phase recognition and
     multi-instrument detection, demonstrating robust generalisation and superior performance.
+  abstract_zh: >
+    OphCLIP是一种层次化检索增强的视觉-语言预训练框架，专为眼科手术工作流程
+    理解而设计。该框架基于OphVL构建——OphVL是一个大规模数据集，包含375,000余个
+    层次化结构的视频-文本对，涵盖手术阶段、手术器械及临床结局等信息——OphCLIP
+    可同时学习细粒度与长时序的视觉表征。在11个数据集上针对手术阶段识别与多器械
+    检测任务的评估结果表明，该框架具备强健的泛化能力与优越的综合性能。
   teaser:   "/assets/images/teasers/ophclip.png"
   keywords: "ophthalmic surgery, video-language pre-training, retrieval augmentation, surgical AI"
   links:
@@ -161,6 +207,11 @@
     models through natural language understanding, coarse-to-fine dataset matching, and
     execution-time result integration. The system integrates 23 datasets and supports 343
     segmentation targets across CT, MRI, PET/CT, and ultrasound-related scenarios.
+  abstract_zh: >
+    MedSegAgent是一个用于指令驱动医学图像分割的多智能体系统。该系统并非训练
+    单一的通用分割模型，而是通过自然语言理解、由粗到细的数据集匹配以及执行时
+    结果整合，协调调度多个专门化的数据集特定模型。该系统整合了23个数据集，
+    支持跨CT、MRI、PET/CT及超声相关场景的343个分割目标。
   teaser:   "/assets/images/teasers/medsegagent.png"
   keywords: "medical image segmentation, multi-agent system, natural language instruction, agentic workflow"
   links:
@@ -179,6 +230,12 @@
     A three-stage training strategy progressively strengthens visual-language alignment and
     fusion. GMAI-VL achieves or surpasses SOTA on multiple medical multimodal VQA and
     diagnostic reasoning benchmarks.
+  abstract_zh: >
+    GMAI-VL是一个通用医学视觉语言模型，基于GMAI-VL-5.5M进行训练——该数据集
+    汇聚了数百个专科医学子数据集，统一构建为550万高质量图文对，涵盖18个临床
+    专科和10余种影像模态。模型采用三阶段训练策略，逐步强化视觉与语言的对齐
+    与融合能力。GMAI-VL在多个医学多模态视觉问答与诊断推理基准测试上达到或
+    超越了当前最优水平。
   teaser:   "/assets/images/teasers/gmai_vl.png"
   keywords: "medical VQA, vision-language model, multimodal AI, clinical AI"
   links:
@@ -198,6 +255,12 @@
     reveals that even top-performing models (e.g., GPT-4o) achieve only 53.96% accuracy,
     quantifying the challenge of medical multimodal understanding and identifying five
     common failure modes of current frontier models.
+  abstract_zh: >
+    GMAI-MMBench是目前最全面的通用医学人工智能评测平台，覆盖284个数据集、
+    38种影像模态、18项临床任务、18个临床科室以及4级感知粒度，并配备层次化
+    任务分类体系。对50个大型视觉语言模型的评测结果表明，即便是表现最优的
+    模型（如GPT-4o）准确率也仅达53.96%，这一结果量化了医学多模态理解的
+    挑战难度，并揭示了当前前沿模型存在的五类常见失效模式。
   teaser:   "/assets/images/teasers/gmaimmbench.png"
   keywords: "medical AI benchmark, multimodal evaluation, vision-language model, clinical AI"
   links:
@@ -217,6 +280,12 @@
     medical VQA, and surprisingly many medical-specific models lag behind general-purpose
     models — exposing systematic weaknesses in cross-modal alignment, knowledge generalisation,
     and robustness.
+  abstract_zh: >
+    OmniMedVQA是一个大规模医学多模态视觉问答基准测试，整合了来自真实临床场景
+    的73个数据集，涵盖12种影像模态和20余个解剖区域。大规模实验揭示了两项关键
+    发现：当前大型视觉语言模型在医学视觉问答任务上普遍表现欠佳，且令人意外的
+    是，许多医学专用模型的性能反而落后于通用模型——由此暴露出现有模型在跨模态
+    对齐、知识泛化与鲁棒性方面存在的系统性缺陷。
   teaser:   "/assets/images/teasers/omnimedvqa.png"
   keywords: "medical VQA, benchmark, large vision-language model, clinical evaluation"
   links:
@@ -235,6 +304,12 @@
     SAM-Med3D significantly improves segmentation accuracy and robustness over 2D slice-based
     approaches, providing a universally promptable segmentation backbone for clinical and
     research applications.
+  abstract_zh: >
+    SAM-Med3D将Segment Anything Model（SAM）适配至三维体积医学图像领域。我们
+    构建了一个包含21K个医学体积数据和131K个三维掩码的大规模三维数据集，涵盖
+    247个类别，并在此基础上训练SAM-Med3D以在体素级别建模三维上下文信息。
+    SAM-Med3D相较于基于二维切片的方法，在分割精度与鲁棒性方面取得了显著提升，
+    为临床应用与科学研究提供了一个支持通用提示的分割骨干网络。
   teaser:   "/assets/images/teasers/sam_med3d.png"
   keywords: "3D medical image segmentation, SAM, foundation model, volumetric imaging"
   links:
@@ -253,6 +328,12 @@
     model that better adapts to medical image structures and distribution shifts. SAM-Med2D
     significantly improves segmentation accuracy and stability, bridging the gap between
     natural image segmentation models and clinical medical image analysis.
+  abstract_zh: >
+    SAM-Med2D将Segment Anything Model（SAM）适配至二维医学图像分割任务。我们
+    构建了大规模基准数据集SA-Med2D-20M，并在此基础上训练了一个可靠的基线模型，
+    使其能够更好地适应医学图像的结构特征与分布偏移。SAM-Med2D在分割精度与
+    稳定性方面均取得了显著提升，有效弥合了自然图像分割模型与临床医学图像
+    分析之间的鸿沟。
   teaser:   "/assets/images/teasers/sammed2d.png"
   keywords: "medical image segmentation, SAM, foundation model, 2D segmentation"
   links:
@@ -271,6 +352,12 @@
     1.4B, STU-Net-H (1.4B parameters) is the largest medical image segmentation model to date.
     After large-scale supervised pre-training, the models achieve excellent performance on both
     direct inference and fine-tuning, demonstrating strong scalability and transfer capability.
+  abstract_zh: >
+    STU-Net是一系列可扩展、可迁移的U-Net模型，经大规模标注医学图像分割数据集
+    预训练而成。其参数规模从14M延伸至1.4B，其中STU-Net-H（参数量达1.4B）是
+    迄今为止规模最大的医学图像分割模型。经过大规模有监督预训练后，各规模模型
+    在直接推理与微调两种设置下均取得了优异性能，充分验证了其强大的可扩展性
+    与迁移能力。
   teaser:   "/assets/images/teasers/stu_net.png"
   keywords: "medical image segmentation, U-Net, large-scale pre-training, scalable models"
   links:
@@ -289,6 +376,11 @@
     datasets, and SOTA models. The survey systematically reviews the development history,
     data foundations, model evolution, evaluation frameworks, and agent frontiers of Sci-LLMs,
     and proposes a roadmap for AI-assisted scientific discovery ecosystems.
+  abstract_zh: >
+    本文是一项关于科学大语言模型（Sci-LLMs）的系统性综述，由全球20余家顶尖
+    机构联合完成，覆盖1000余篇文献、600余个核心数据集及当前最优模型。综述
+    系统梳理了Sci-LLMs的发展历程、数据基础、模型演进、评测框架与智能体前沿
+    进展，并面向AI辅助科学发现生态系统提出了未来发展路线图。
   teaser:   "/assets/images/teasers/survey_llm.png"
   keywords: "scientific LLM, survey, AI for science, large language models"
   links:

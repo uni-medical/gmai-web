@@ -48,6 +48,12 @@ layout: default
         {% if member.links.scholar != "" and member.links.scholar %}<a href="{{ member.links.scholar }}" target="_blank">Google Scholar</a>{% endif %}
         {% if member.links.github  != "" and member.links.github  %}<a href="{{ member.links.github  }}" target="_blank">GitHub</a>{% endif %}
         {% if member.links.website != "" and member.links.website %}<a href="{{ member.links.website }}" target="_blank">{% if lang == "zh" %}个人主页{% else %}Website{% endif %}</a>{% endif %}
+        {% if member.links.openreview != "" and member.links.openreview %}<a href="{{ member.links.openreview }}" target="_blank">OpenReview</a>{% endif %}
+        {% if member.links.semantic_scholar != "" and member.links.semantic_scholar %}<a href="{{ member.links.semantic_scholar }}" target="_blank">Semantic Scholar</a>{% endif %}
+        {% if member.links.dblp != "" and member.links.dblp %}<a href="{{ member.links.dblp }}" target="_blank">DBLP</a>{% endif %}
+        {% if member.links.huggingface != "" and member.links.huggingface %}<a href="{{ member.links.huggingface }}" target="_blank">HuggingFace</a>{% endif %}
+        {% if member.links.linkedin != "" and member.links.linkedin %}<a href="{{ member.links.linkedin }}" target="_blank">LinkedIn</a>{% endif %}
+        {% if member.links.researchgate != "" and member.links.researchgate %}<a href="{{ member.links.researchgate }}" target="_blank">ResearchGate</a>{% endif %}
         {% if member.links.email   != "" and member.links.email   %}<a href="mailto:{{ member.links.email }}">{% if lang == "zh" %}邮箱{% else %}Email{% endif %}</a>{% endif %}
         {% if member.links.cv      != "" and member.links.cv      %}<a href="{{ member.links.cv | relative_url }}">CV</a>{% endif %}
         {% if member.links.twitter != "" and member.links.twitter %}<a href="{{ member.links.twitter }}" target="_blank">Twitter</a>{% endif %}

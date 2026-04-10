@@ -40,9 +40,13 @@ members:
     photo:    ""
     initials: "ZH"
     links:
-      scholar: ""
-      github:  "https://github.com/uni-medical"
+      scholar: "https://scholar.google.com/citations?user=BshL3fUAAAAJ"
+      github:  "https://github.com/Ziyan-Huang"
       website: ""
+      openreview: "https://openreview.net/profile?id=~Ziyan_Huang1"
+      semantic_scholar: "https://www.semanticscholar.org/author/Ziyan-Huang/2109595386"
+      dblp: "https://dblp.org/pid/198/5744.html"
+      researchgate: "https://www.researchgate.net/scientific-contributions/Ziyan-Huang-2230167902"
 
   - name:     "Jin Ye (叶锦)"
     slug:     "jin-ye"
@@ -53,9 +57,13 @@ members:
     photo:    ""
     initials: "JY"
     links:
-      scholar: ""
-      github:  "https://github.com/uni-medical"
-      website: ""
+      scholar: "https://scholar.google.com/citations?user=UFBrJOAAAAAJ"
+      github:  "https://github.com/Yejin0111"
+      website: "https://yejin0111.github.io/"
+      openreview: "https://openreview.net/profile?id=~Jin_Ye2"
+      linkedin: "https://www.linkedin.com/in/jin-ye-037a4729b/"
+      dblp: "https://dblp.org/pid/33/2058-6.html"
+      researchgate: "https://www.researchgate.net/scientific-contributions/Jin-Ye-2192843538"
 
   - name:     "Tianbin Li (李添斌)"
     slug:     "tianbin-li"
@@ -66,9 +74,12 @@ members:
     photo:    ""
     initials: "TL"
     links:
-      scholar: ""
-      github:  "https://github.com/uni-medical"
+      scholar: "https://scholar.google.com/citations?user=IKGlzkQAAAAJ"
+      github:  "https://github.com/tianbinli"
       website: ""
+      openreview: "https://openreview.net/profile?id=~Tianbin_Li2"
+      dblp: "https://dblp.org/pid/216/3211.html"
+      huggingface: "https://huggingface.co/tianbin"
 
   - name:     "Ming Hu (胡铭)"
     slug:     "ming-hu"
@@ -79,9 +90,11 @@ members:
     photo:    ""
     initials: "MH"
     links:
-      scholar: ""
-      github:  ""
-      website: "https://openreview.net/profile?id=%7EMing_Hu4"
+      scholar: "https://scholar.google.com/citations?user=a3EydJMAAAAJ"
+      github:  "https://github.com/minghu0830"
+      website: ""
+      openreview: "https://openreview.net/profile?id=~Ming_Hu4"
+      semantic_scholar: "https://www.semanticscholar.org/author/Ming-Hu/2217945968"
 
   # ── Research Interns ─────────────────────────────────────────────
 
@@ -94,9 +107,10 @@ members:
     photo:    "assets/images/team/ying_chen.jpg"
     initials: "YC"
     links:
-      scholar: ""
-      github:  "https://github.com/cying18"
+      scholar: "https://scholar.google.com/citations?user=bYfM8fEAAAAJ"
+      github:  "https://github.com/CYing18"
       website: "https://cying18.github.io/"
+      openreview: "https://openreview.net/profile?id=~Ying_Chen21"
 
   - name:     "Jiyao Liu (刘继垚)"
     slug:     "jiyao-liu"
@@ -110,6 +124,7 @@ members:
       scholar: ""
       github:  "https://github.com/liujiyaoFDU"
       website: "https://liujiyaofdu.github.io/"
+      openreview: "https://openreview.net/profile?id=~jiyao_liu2"
 
   - name:     "Wei Li (李威)"
     slug:     "wei-li"
@@ -120,8 +135,8 @@ members:
     photo:    "assets/images/team/wei_li.jpg"
     initials: "WL"
     links:
-      scholar: "https://scholar.google.com/citations?user=TGIvczYAAAAJ&hl=zh-CN"
-      github:  ""
+      scholar: "https://scholar.google.com/citations?user=TGIvczYAAAAJ"
+      github:  "https://github.com/mar-cry"
       website: ""
 
   - name:     "Chenglong Ma (马成龙)"
@@ -136,6 +151,9 @@ members:
       scholar: "https://scholar.google.com/citations?user=rUhyCvMAAAAJ"
       github:  "https://github.com/Masaaki-75"
       website: ""
+      openreview: "https://openreview.net/profile?id=~Chenglong_Ma2"
+      dblp: "https://dblp.org/pid/164/4606.html"
+      researchgate: "https://www.researchgate.net/scientific-contributions/Chenglong-Ma-2256046202"
 
   - name:     "Ye Du (杜烨)"
     slug:     "ye-du"
@@ -148,7 +166,8 @@ members:
     links:
       scholar: ""
       github:  ""
-      website: "https://openreview.net/profile?id=%7EYe_Du4"
+      website: ""
+      openreview: "https://openreview.net/profile?id=~Ye_Du4"
 
   - name:     "Shujian Gao (高书剑)"
     slug:     "shujian-gao"
@@ -161,7 +180,8 @@ members:
     links:
       scholar: ""
       github:  ""
-      website: "https://openreview.net/profile?id=%7EShujian_Gao1"
+      website: ""
+      openreview: "https://openreview.net/profile?id=~Shujian_Gao1"
 
   - name:     "Wenhao Tang (唐文浩)"
     slug:     "wenhao-tang"
@@ -172,9 +192,10 @@ members:
     photo:    "assets/images/team/wenhao_tang.jpg"
     initials: "WT"
     links:
-      scholar: ""
-      github:  ""
+      scholar: "https://scholar.google.com/citations?user=LexKIRcAAAAJ"
+      github:  "https://github.com/DearCaat"
       website: "https://www.whtang.cn/"
+      huggingface: "https://huggingface.co/Dearcat"
 
   - name:     "Jiashi Lin (林佳仕)"
     slug:     "jiashi-lin"
@@ -187,7 +208,8 @@ members:
     links:
       scholar: ""
       github:  ""
-      website: "https://openreview.net/profile?id=%7EJiashi_Lin1"
+      website: ""
+      openreview: "https://openreview.net/profile?id=~Jiashi_Lin1"
 
   - name:     "Cheng Tang (唐诚)"
     slug:     "cheng-tang"
@@ -200,7 +222,8 @@ members:
     links:
       scholar: ""
       github:  ""
-      website: "https://openreview.net/profile?id=%7ECheng_Tang8"
+      website: ""
+      openreview: "https://openreview.net/profile?id=~Cheng_Tang8"
 
   - name:     "Junzhi Ning (宁俊智)"
     slug:     "junzhi-ning"
@@ -212,7 +235,11 @@ members:
     initials: "RN"
     links:
       scholar: ""
-      github:  "https://github.com/uni-medical"
-      website: "https://openreview.net/profile?id=~Junzhi_Ning1"
+      github:  "https://github.com/junzhin"
+      website: "https://junzhin.github.io/"
+      openreview: "https://openreview.net/profile?id=~Junzhi_Ning1"
+      semantic_scholar: "https://www.semanticscholar.org/author/Junzhi-Ning/2353285720"
+      linkedin: "https://uk.linkedin.com/in/junzhin"
+      researchgate: "https://www.researchgate.net/scientific-contributions/Junzhi-Ning-2295268715"
 
 alumni: []

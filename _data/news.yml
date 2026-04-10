@@ -1,5 +1,67 @@
 # category values: award | paper | grant | join | event
 
+- date:        "October 2025"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "MedQ-Bench: New benchmark for medical image quality assessment in MLLMs"
+  headline_zh: "MedQ-Bench：面向多模态大语言模型的医学图像质量评估新基准"
+  body:        >
+    We release MedQ-Bench, a novel perception-reasoning benchmark for medical image quality
+    assessment covering 5 modalities and 40+ quality attributes (3,308 samples). Zero-shot
+    evaluation of 14 leading MLLMs shows GPT-4 achieves 68.97% accuracy — still 13.5%
+    below expert performance.
+  body_zh:     >
+    我们发布 MedQ-Bench，一个覆盖 5 种模态、40 余种质量属性的医学图像质量评估新基准
+    （3,308 个样本）。对 14 个主流多模态大语言模型的零样本评估显示，GPT-4 准确率为
+    68.97%，仍低于专家水平 13.5 个百分点。
+
+- date:        "September 2025"
+  category:    "join"
+  label:       "Join"
+  label_zh:    "加入"
+  headline:    "Welcoming new visiting researchers to GMAI Lab"
+  headline_zh: "欢迎新科研实习生加入 GMAI 实验室"
+  body:        >
+    We welcome Wenhao Tang (Nankai University), Shujian Gao (Fudan University), and
+    Jiashi Lin (Northwestern Polytechnical University) as new visiting researchers,
+    bringing expertise in computational pathology, multimodal learning, and LLM-based agents.
+  body_zh:     >
+    欢迎唐文浩（南开大学）、高书剑（复旦大学）和林佳仕（西北工业大学）作为新科研实习生加入
+    GMAI 实验室，带来计算病理学、多模态学习和大语言模型智能体方面的专业知识。
+
+- date:        "August 2025"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "Survey of Scientific LLMs released — collaboration with 20+ global institutions"
+  headline_zh: "科学大语言模型综述发布——联合全球 20+ 顶尖机构"
+  body:        >
+    We release a comprehensive survey of Scientific Large Language Models (Sci-LLMs),
+    produced in collaboration with 20+ leading global institutions. The survey covers
+    1,000+ papers and 600+ key datasets, and proposes a roadmap for AI-assisted
+    scientific discovery ecosystems.
+  body_zh:     >
+    我们联合全球 20 余家顶尖机构发布科学大语言模型（Sci-LLMs）系统性综述，
+    覆盖 1000 余篇文献、600 余个核心数据集，并面向 AI 辅助科学发现生态系统
+    提出未来发展路线图。
+
+- date:        "July 2025"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "OphCLIP accepted at ICCV 2025 — hierarchical surgical video-language pre-training"
+  headline_zh: "OphCLIP 被 ICCV 2025 收录——层次化手术视频语言预训练"
+  body:        >
+    OphCLIP, our hierarchical retrieval-augmented framework for ophthalmic surgical
+    video understanding, was accepted at ICCV 2025. Built on OphVL (375K+ video-text pairs),
+    OphCLIP sets new records on 11 benchmarks for phase recognition and multi-instrument
+    detection tasks.
+  body_zh:     >
+    我们面向眼科手术视频理解的层次化检索增强框架 OphCLIP 被 ICCV 2025 收录。基于
+    OphVL（375K+ 视频-文本对），OphCLIP 在 11 个基准数据集上的阶段识别和多器械
+    检测任务中创下新纪录。
+
 - date:        "June 2025"
   category:    "paper"
   label:       "Paper"
@@ -18,7 +80,7 @@
   category:    "paper"
   label:       "Paper"
   label_zh:    "论文"
-  headline:    "RetinaLogos, ProgEmu, and MRI Translation papers accepted at MICCAI 2025"
+  headline:    "RetinaLogos, ProgEmu, and MRI Translation accepted at MICCAI 2025"
   headline_zh: "RetinaLogos、ProgEmu 和 MRI 转换三篇论文被 MICCAI 2025 收录"
   body:        >
     Three papers accepted at MICCAI 2025: RetinaLogos (language-driven high-resolution
@@ -27,6 +89,37 @@
   body_zh:     >
     三篇论文被 MICCAI 2025 收录：RetinaLogos（语言驱动的高分辨率眼底图像生成）、
     ProgEmu（可解释反事实医学图像生成），以及基于证据回归与分布校准的多模态 MRI 转换。
+
+- date:        "May 2025"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "MedITok: First unified visual tokenizer for medical image synthesis and interpretation"
+  headline_zh: "MedITok：首个面向医学图像的统一视觉标记器"
+  body:        >
+    We release MedITok, the first unified visual tokenizer designed for medical images.
+    Pre-trained on 30M+ images, MedITok achieves SOTA across reconstruction, classification,
+    generation, and VQA tasks spanning 9 imaging modalities and 30+ datasets.
+  body_zh:     >
+    我们发布 MedITok，首个面向医学图像的统一视觉标记器。在 30M+ 图像上预训练，
+    MedITok 在涵盖 9 种影像模态、30 余个数据集的重建、分类、生成及视觉问答
+    任务中均达到当前最优水平。
+
+- date:        "May 2025"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "MedSegAgent accepted at IEEE Journal of Biomedical and Health Informatics"
+  headline_zh: "MedSegAgent 被 IEEE 生物医学与健康信息学期刊收录"
+  body:        >
+    MedSegAgent, our multi-agent system for instructive medical image segmentation, was
+    accepted at IEEE Journal of Biomedical and Health Informatics (JBHI). The system
+    supports 343 segmentation targets across CT, MRI, PET/CT, and ultrasound without
+    training a single universal model.
+  body_zh:     >
+    我们的指令驱动医学图像分割多智能体系统 MedSegAgent 被 IEEE 生物医学与健康信息学期刊
+    （JBHI）收录。该系统无需训练单一通用模型，即可支持跨 CT、MRI、PET/CT 及超声的
+    343 个分割目标。
 
 - date:        "February 2025"
   category:    "paper"
@@ -42,45 +135,62 @@
     我们的全切片病理图像理解助手 SlideChat 被 CVPR 2025 收录。SlideChat 在
     SlideBench-VQA 上取得 81.17% 的准确率，在 22 个基准任务中的 18 个上超越最新方法。
 
-- date:        "January 2025"
-  category:    "event"
-  label:       "Event"
-  label_zh:    "动态"
-  headline:    "GMAI-MMBench: Comprehensive evaluation of 50 large vision-language models"
-  headline_zh: "GMAI-MMBench：全面评估 50 个大视觉语言模型"
-  body:        >
-    We released GMAI-MMBench — the most comprehensive medical AI evaluation platform
-    covering 284 datasets, 38 imaging modalities, and 18 clinical tasks. Even GPT-4o
-    achieves only 53.96% accuracy, highlighting challenges in medical multimodal AI.
-  body_zh:     >
-    我们发布了 GMAI-MMBench——迄今最全面的医学 AI 评测平台，覆盖 284 个数据集、
-    38 种影像模态和 18 项临床任务。即使 GPT-4o 也仅能达到 53.96% 的准确率，
-    凸显了医学多模态 AI 面临的挑战。
-
-- date:        "October 2024"
+- date:        "December 2024"
   category:    "paper"
   label:       "Paper"
   label_zh:    "论文"
-  headline:    "OphCLIP accepted at ICCV 2025 — surgical video-language pre-training"
-  headline_zh: "OphCLIP 被 ICCV 2025 收录——手术视频语言预训练"
+  headline:    "GMAI-MMBench presented at NeurIPS 2024 — evaluating 50 large vision-language models"
+  headline_zh: "GMAI-MMBench 在 NeurIPS 2024 发表——全面评估 50 个大视觉语言模型"
   body:        >
-    OphCLIP, our hierarchical retrieval-augmented framework for ophthalmic surgical
-    video understanding, was accepted at ICCV. Built on OphVL (375K+ video-text pairs),
-    OphCLIP sets new records on phase recognition and multi-instrument detection tasks.
+    GMAI-MMBench was presented at NeurIPS 2024 — the most comprehensive general medical AI
+    evaluation platform covering 284 datasets, 38 imaging modalities, and 18 clinical tasks.
+    Even top-performing GPT-4o achieves only 53.96% accuracy.
   body_zh:     >
-    我们面向眼科手术视频理解的层次化检索增强框架 OphCLIP 被 ICCV 收录。基于
-    OphVL（375K+ 视频-文本对），OphCLIP 在阶段识别和多器械检测任务上创下新纪录。
+    GMAI-MMBench 在 NeurIPS 2024 发表——迄今最全面的医学 AI 评测平台，覆盖 284 个数据集、
+    38 种影像模态和 18 项临床任务。即使表现最优的 GPT-4o 也仅达 53.96% 的准确率，
+    凸显了医学多模态 AI 面临的严峻挑战。
 
-- date:        "September 2025"
-  category:    "join"
-  label:       "Join"
-  label_zh:    "加入"
-  headline:    "Welcoming new visiting researchers to GMAI Lab"
-  headline_zh: "欢迎新科研实习生加入 GMAI 实验室"
+- date:        "November 2024"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "GMAI-VL released — general medical VLM trained on 5.5M image-text pairs"
+  headline_zh: "GMAI-VL 发布——在 550 万图文对上训练的通用医学视觉语言模型"
   body:        >
-    We welcome Wenhao Tang (Nankai University), Shujian Gao (Fudan University), and
-    Jiashi Lin (Northwestern Polytechnical University) as new visiting researchers,
-    bringing expertise in computational pathology, multimodal learning, and LLM-based agents.
+    We release GMAI-VL, a general-purpose medical vision-language model trained on
+    GMAI-VL-5.5M — 5.5M high-quality image-text pairs spanning 18 clinical specialties
+    and 10+ imaging modalities. GMAI-VL achieves or surpasses SOTA on multiple medical
+    multimodal VQA and diagnostic reasoning benchmarks.
   body_zh:     >
-    欢迎唐文浩（南开大学）、高书剑（复旦大学）和林佳仕（西北工业大学）作为新科研实习生加入
-    GMAI 实验室，带来计算病理学、多模态学习和大语言模型智能体方面的专业知识。
+    我们发布 GMAI-VL，一个在 GMAI-VL-5.5M（涵盖 18 个临床专科、10 余种影像模态的
+    550 万高质量图文对）上训练的通用医学视觉语言模型。GMAI-VL 在多个医学多模态
+    视觉问答与诊断推理基准测试上达到或超越当前最优水平。
+
+- date:        "October 2024"
+  category:    "award"
+  label:       "Award"
+  label_zh:    "获奖"
+  headline:    "SAM-Med3D selected as Oral at ECCV 2024 Biomedical Image Computing Workshop"
+  headline_zh: "SAM-Med3D 入选 ECCV 2024 生物医学图像计算研讨会口头报告"
+  body:        >
+    SAM-Med3D was selected as an oral presentation at the ECCV 2024 Biomedical Image
+    Computing (BIC) Workshop. SAM-Med3D adapts SAM to 3D volumetric medical images,
+    covering 247 segmentation categories across 21K medical volumes.
+  body_zh:     >
+    SAM-Med3D 入选 ECCV 2024 生物医学图像计算（BIC）研讨会口头报告。SAM-Med3D 将 SAM
+    适配至三维体积医学图像，覆盖 21K 医学体积数据的 247 个分割类别。
+
+- date:        "June 2024"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "OmniMedVQA accepted at CVPR 2024 — large-scale medical VQA benchmark"
+  headline_zh: "OmniMedVQA 被 CVPR 2024 收录——大规模医学视觉问答基准"
+  body:        >
+    OmniMedVQA was accepted at CVPR 2024. The benchmark integrates 73 datasets across
+    12 imaging modalities and 20+ anatomical regions, revealing that many medical-specific
+    models surprisingly underperform general-purpose LVLMs on medical VQA tasks.
+  body_zh:     >
+    OmniMedVQA 被 CVPR 2024 收录。该基准整合 73 个数据集，涵盖 12 种影像模态和 20 余个
+    解剖区域，揭示了许多医学专用模型在医学视觉问答任务上竟落后于通用大视觉语言模型的
+    系统性规律。

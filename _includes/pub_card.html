@@ -29,7 +29,9 @@
       {% endfor %}
     </div>
 
-    {% if pub.abstract and pub.abstract != "" %}
+    {% if page.lang == 'zh' and pub.abstract_zh and pub.abstract_zh != "" %}
+    <div class="pub-abstract">{{ pub.abstract_zh }}</div>
+    {% elsif pub.abstract and pub.abstract != "" %}
     <div class="pub-abstract">{{ pub.abstract }}</div>
     {% endif %}
 
