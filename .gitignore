@@ -6,3 +6,8 @@ Gemfile.lock
 .jekyll-cache/
 .jekyll-metadata
 resources/
+
+# Claude Code — keep skills, ignore personal config
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+.claude/worktrees/
