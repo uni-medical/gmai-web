@@ -6,6 +6,27 @@
 # 5. Add teaser image to assets/images/teasers/ and reference it here
 # ──────────────────────────────────────────────────────────────────
 
+- title:    "Project Imaging-X: A Survey of 1000+ Open-Access Medical Imaging Datasets for Foundation Model Development"
+  authors:  "Zhongying Deng, et al."
+  venue:    "arXiv"
+  year:     2026
+  note:     ""
+  abstract: >
+    A comprehensive survey and open-source platform integrating 1,000+ open-access medical
+    imaging datasets. We propose a Metadata-Driven Fusion Paradigm (MDFP) to consolidate
+    fragmented small datasets into large, coherent data resources, and build an interactive
+    discovery portal for end-to-end automated dataset integration.
+  abstract_zh: >
+    整合1000+开放医学影像数据集的综合调研与开源平台。我们提出元数据驱动融合范式（MDFP），
+    将碎片化小数据集整合为大规模、连贯的数据资源，并构建交互式发现门户实现端到端自动化数据集整合。
+  teaser:   "/assets/images/teasers/imaging_x.png"
+  keywords: "medical imaging, dataset survey, open access, foundation model, data infrastructure"
+  links:
+    paper:       "https://arxiv.org/abs/2603.27460"
+    code:        "https://github.com/uni-medical/Project-Imaging-X"
+    huggingface: "https://huggingface.co/papers/2603.27460"
+    dataset:     "https://huggingface.co/datasets/General-Medical-AI/Project-Imaging-X"
+
 - title:    "SlideChat: A Large Vision-Language Assistant for Whole-Slide Pathology Image Understanding"
   authors:  "Ying Chen, Guoan Wang, Yuanfeng Ji, Yanjun Li, Jin Ye, Tianbin Li, Ming Hu, Rongshan Yu, Yu Qiao, Junjun He"
   venue:    "CVPR"
@@ -121,6 +142,46 @@
   keywords: "MRI synthesis, uncertainty quantification, domain adaptation, cross-modal translation"
   links:
     paper:  "https://arxiv.org/abs/2407.07372"
+
+- title:    "Interactive Medical Image Segmentation: A Benchmark Dataset and Baseline"
+  authors:  "Junlong Cheng, Bin Fu, Jin Ye, Guoan Wang, Tianbin Li, Haoyu Wang, Ruoyu Li, He Yao, Yanzhou Su, Junjun He"
+  venue:    "CVPR"
+  year:     2025
+  note:     ""
+  abstract: >
+    We introduce IMIS-Bench, a comprehensive benchmark for interactive medical image
+    segmentation with over 361 million masks across diverse imaging modalities. We propose
+    a baseline method and evaluation protocol for interactive segmentation in the medical
+    domain, establishing a standard framework for comparing promptable segmentation approaches
+    in clinical applications.
+  abstract_zh: >
+    我们提出IMIS-Bench，一个全面的交互式医学图像分割基准测试，包含超过3.61亿个掩码，
+    涵盖多种影像模态。我们提出了面向医学领域交互式分割的基线方法和评估协议，
+    为临床应用中可提示分割方法的比较建立了标准框架。
+  teaser:   "/assets/images/teasers/imed361m.png"
+  keywords: "interactive segmentation, medical imaging, benchmark, SAM"
+  links:
+    paper:   "https://arxiv.org/abs/2411.12814"
+
+- title:    "GMAI-VL-R1: Harnessing Reinforcement Learning for Multimodal Medical Reasoning"
+  authors:  "Yanzhou Su, Tianbin Li, Wei Li, Bin Fu, Zhe Chen, Ziyan Huang, Guoan Wang, Chenglong Ma, Ying Chen, Ming Hu, Yanjun Li, Pengcheng Chen, Xiaowei Hu, Zhongying Deng, Yuanfeng Ji, Jin Ye, Yu Qiao, Junjun He"
+  venue:    "arXiv"
+  year:     2025
+  note:     ""
+  abstract: >
+    GMAI-VL-R1 introduces reinforcement learning to medical vision-language models,
+    achieving approximately 30% average accuracy improvement across eight imaging modalities.
+    The model demonstrates that RL-based reasoning can surpass models 36× larger on
+    medical multimodal benchmarks, establishing a new paradigm for efficient medical AI.
+  abstract_zh: >
+    GMAI-VL-R1将强化学习引入医学视觉语言模型，在8种影像模态上实现约30%的平均准确率提升。
+    该模型证明基于强化学习的推理能力可以超越参数量大36倍的模型，
+    为高效医学AI建立了新范式。
+  teaser:   "/assets/images/teasers/gmai_vl_r1.png"
+  keywords: "reinforcement learning, medical VLM, multimodal reasoning, GMAI"
+  links:
+    paper:       "https://arxiv.org/abs/2504.01886"
+    code:        "https://github.com/uni-medical/GMAI-VL"
 
 - title:    "MedQ-Bench: Evaluating and Exploring Medical Image Quality Assessment Abilities in MLLMs"
   authors:  "Jiyao Liu, Jinjie Wei, Wanying Qu, Chenglong Ma, Junzhi Ning, Yunheng Li, Ying Chen, Xinzhe Luo, Pengcheng Chen, Xin Gao, Ming Hu, Huihui Xu, Xin Wang, Shujian Gao, Dingkang Yang, Zhongying Deng, Jin Ye, Lihao Liu, Junjun He, Ningsheng Xu"
@@ -267,6 +328,26 @@
     code:    "https://github.com/uni-medical/GMAI-MMBench"
     dataset: "https://huggingface.co/datasets/OpenGVLab/GMAI-MMBench"
 
+- title:    "SAM-Med3D-MoE: Towards a Non-Forgetting Segment Anything Model via Mixture of Experts for 3D Medical Image Segmentation"
+  authors:  "Guoan Wang, Jin Ye, Junlong Cheng, Tianbin Li, Zhaolin Chen, Jianfei Cai, Junjun He, Bohan Zhuang"
+  venue:    "MICCAI"
+  year:     2024
+  note:     ""
+  abstract: >
+    SAM-Med3D-MoE extends SAM-Med3D with a Mixture-of-Experts architecture to address
+    catastrophic forgetting during task-specific finetuning. By routing different medical
+    imaging tasks to specialized expert modules, the model maintains general segmentation
+    capability while achieving strong task-specific performance across multiple 3D medical
+    imaging benchmarks.
+  abstract_zh: >
+    SAM-Med3D-MoE通过混合专家架构扩展SAM-Med3D，以解决任务特定微调过程中的灾难性遗忘问题。
+    通过将不同的医学影像任务路由至专门的专家模块，该模型在保持通用分割能力的同时，
+    在多个3D医学影像基准上实现了强大的任务特定性能。
+  teaser:   "/assets/images/teasers/sam_med3d_moe.png"
+  keywords: "3D medical segmentation, mixture of experts, SAM, catastrophic forgetting"
+  links:
+    paper:   "https://arxiv.org/abs/2407.04938"
+
 - title:    "OmniMedVQA: A New Large-Scale Comprehensive Evaluation Benchmark for Medical LVLM"
   authors:  "Yutao Hu, Tianbin Li, Quanfeng Lu, Wenqi Shao, Junjun He, Yu Qiao, Ping Luo"
   venue:    "CVPR"
@@ -293,9 +374,9 @@
 
 - title:    "SAM-Med3D: Towards General-purpose Segmentation Models for Volumetric Medical Images"
   authors:  "Haoyu Wang, Sizheng Guo, Jin Ye, Zhongying Deng, Junlong Cheng, Tianbin Li, Jianpin Chen, Yanzhou Su, Ziyan Huang, Yiqing Shen, Bin Fu, Shaoting Zhang, Junjun He, Yu Qiao"
-  venue:    "arXiv"
-  year:     2023
-  note:     ""
+  venue:    "IEEE TNNLS"
+  year:     2025
+  note:     "ECCV 2024 Workshop Oral"
   abstract: >
     SAM-Med3D adapts the Segment Anything Model (SAM) to 3D volumetric medical images.
     We construct a large-scale 3D dataset with 21K medical volumes and 131K 3D masks covering

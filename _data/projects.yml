@@ -80,6 +80,30 @@
     github:    "https://github.com/uni-medical/STU-Net"
     paper:     "https://arxiv.org/abs/2304.06716"
 
+- title:      "SAM-Med3D: Segment Anything in 3D Medical Images"
+  title_zh:   "SAM-Med3D：三维医学图像通用分割"
+  area:       "Medical Image Segmentation"
+  area_zh:    "医学图像分割"
+  slug:       "sam-med3d"
+  thumbnail:  "/assets/images/projects/sam-med3d/sam_med3d4.png"
+  desc:       >
+    Adapting the Segment Anything Model to volumetric medical imaging with a fully native 3D
+    architecture. Trained on SA-Med3D-140K (22K volumes, 143K masks across 247 categories),
+    SAM-Med3D achieves 60% Dice improvement over SAM with a single 3D point prompt. The
+    companion dataset SA-Med2D-20M (4.6M images, 19.7M masks) is the largest 2D medical
+    segmentation dataset to date. Published at ECCV 2024 Workshop (Oral) and IEEE TNNLS 2025.
+  desc_zh:    >
+    将 Segment Anything 模型适配至三维医学影像，采用全原生 3D 架构。在 SA-Med3D-140K
+    （22K 体积数据、143K 掩码，涵盖 247 个类别）上训练，SAM-Med3D 仅需单个 3D 点提示即可
+    实现相比 SAM 60% 的 Dice 提升。配套数据集 SA-Med2D-20M（460 万张图像、1970 万个掩码）
+    是迄今最大的 2D 医学分割数据集。发表于 ECCV 2024 Workshop（Oral）及 IEEE TNNLS 2025。
+  links:
+    github:    "https://github.com/uni-medical/SAM-Med3D"
+    paper:     "https://arxiv.org/abs/2310.15161"
+    huggingface: ""
+    dataset:   ""
+    homepage:  ""
+
 - title:      "MedSegAgent: Universal Multi-Agent System for Medical Image Segmentation"
   title_zh:   "MedSegAgent：通用可扩展多智能体医学图像分割系统"
   area:       "Medical Image Segmentation"
