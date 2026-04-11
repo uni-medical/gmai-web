@@ -747,5 +747,147 @@ bundle exec jekyll serve --baseurl "" --port 4001
 - Mobile nav hides all links at <820px — no hamburger menu
 - No dark mode toggle
 - No publication author filter (only year + keyword)
-- Hero background `hero-bg.png` is 4.5MB — consider WebP conversion for production
+
+---
+
+## Session 4 — 2026-04-10
+
+**Focus:** Social media integration, image performance optimization, project data cleanup
+
+---
+
+### Phase 6 — Social Media Links (Hero + Footer)
+
+**Requirement:** Add platform links to landing page hero section and footer for team discoverability.
+
+**Platforms added (6 total):**
+
+| Platform | URL | Icon |
+|----------|-----|------|
+| GitHub | `https://github.com/uni-medical` | Inline SVG |
+| Hugging Face | `https://huggingface.co/General-Medical-AI` | Inline SVG |
+| LinkedIn | `https://www.linkedin.com/company/shhailab-gmai/` | Inline SVG |
+| Xiaohongshu (小红书) | `https://xhslink.com/m/50fKRQolEHI` | Inline SVG |
+| Zhihu (知乎) | `https://www.zhihu.com/people/gmai-38/` | Inline SVG |
+| Google Scholar | (from existing `_config.yml`) | Inline SVG |
+
+**Implementation:**
+- `_config.yml`: Added `huggingface`, `linkedin`, `xiaohongshu`, `zhihu` fields under `lab:`
+- `index.md` + `zh/index.md`: New `.lh-social` div between CTA buttons and affiliation text — glassmorphism pill buttons with inline SVG icons
+- `_sass/_home.scss`: Added `.lh-social` + `.lh-social-link` styles (border-radius 999px, backdrop-filter blur, hover lift)
+- `_includes/footer.html`: Added conditional links for all 6 platforms
+- LinkedIn URL cleaned: removed `?viewAsMember=true` query parameter (personal login artifact)
+
+---
+
+### Phase 7 — Project Data Cleanup
+
+**UniMedVL removal from GMAI-VL project:**
+- `_data/projects.yml`: Title changed from `"GMAI-VL / UniMedVL: ..."` → `"GMAI-VL: General Medical Multimodal Vision-Language Model"`
+- Chinese title similarly updated
+- Removed UniMedVL-specific description sentences from both EN and ZH descriptions
+- Reason: UniMedVL is not part of the GMAI-VL body of work
+
+---
+
+### Phase 8 — Image Performance Optimization
+
+**Problem:** Total image assets were 66MB. Team photos were raw camera resolution (e.g., `ying_chen.jpg` at 4080×3060 = 8MB) but displayed at 96–180px. No WebP versions existed.
+
+**Solution — 3-layer optimization:**
+
+#### Layer 1: Resize + Compress (scripts/optimize-images.sh)
+
+| Category | Display size | Max source dim | Typical reduction |
+|----------|-------------|----------------|-------------------|
+| Team photos | 96–180px | 400×400px | 97–99% (8MB → 56KB) |
+| Teaser images | 260px wide | 520px wide | 68–89% |
+| Project images | ~600px panels | 1200px wide | 20–67% |
+| Hero background | full viewport | 1920px wide | 26% (PNG), 98% (WebP) |
+
+**Result:** 66MB → 27MB (including WebP copies) = **59% total reduction**
+
+#### Layer 2: WebP Generation
+
+- 74 WebP files generated alongside every original image
+- Hero-bg.webp: **82KB** (vs 3.5MB PNG) — aggressive compression safe because of `blur(4px) + opacity: 0.3`
+- Team photo WebP: 28–43KB average
+- Teaser WebP: 28–33KB average
+
+#### Layer 3: Template Updates
+
+**New include — `_includes/picture.html`:**
+- Reusable `<picture>` element with WebP `<source>` + original format `<img>` fallback
+- Parameters: `src`, `alt`, `class`, `loading`, `width`, `height`, `style`
+- Auto-generates WebP path by replacing file extension
+
+**Files updated to use `picture.html`:**
+- `_includes/pub_card.html` — publication teaser images
+- `_layouts/profile.html` — profile photos
+- `pages/team.md` + `pages/zh/team.md` — PI photo + member grid (added `loading="lazy"`)
+- `pages/projects.md` + `pages/zh/projects.md` — project thumbnails
+- `index.md` + `zh/index.md` — all 10 research panel images per language
+
+**Hero background CSS (`_sass/_home.scss`):**
+```scss
+background: url('../images/hero-bg.png') center center / cover no-repeat;
+background: image-set(url('../images/hero-bg.webp') type('image/webp'), url('../images/hero-bg.png') type('image/png')) center center / cover no-repeat;
+```
+First line = universal fallback; second line = modern browsers prefer WebP.
+
+**LCP optimization (`_layouts/default.html`):**
+- Added `<link rel="preload" as="image" href="hero-bg.webp" type="image/webp">` in `<head>`
+
+**Thumbnail centering (`_sass/_home.scss`):**
+- `.rs-thumb` changed from `float: right` → `display: block; margin: 0 auto 1.5rem` for centered layout in research panels
+
+---
+
+### Phase 9 — Documentation Updates
+
+- `CLAUDE.md`: Added "Image Optimization" section with script usage, `picture.html` include docs, target dimension table, and updated "Common Tasks" to include optimization step
+- `README.md`: Added `picture.html` and `scripts/` to project structure; added "Image Optimization" and "Social Links" sections
+- `docs/DEVELOPMENT-LOG.md`: This entry
+
+---
+
+### Architecture Decisions (Session 4)
+
+- **WebP-first delivery**: `<picture>` element serves WebP with original format fallback — no JS required, 100% backward compatible
+- **CSS image-set()**: Hero background uses progressive enhancement — old browsers get PNG, modern get WebP (82KB vs 3.5MB)
+- **Pre-optimize, not build-optimize**: Since GitHub Pages has no image processing plugins, all optimization happens locally via `scripts/optimize-images.sh` before commit
+- **Reusable picture include**: Single `_includes/picture.html` handles all WebP switching logic — templates stay clean
+- **Social links in `_config.yml`**: Conditional `{% if site.lab.xxx %}` rendering means absent links don't create broken UI
+
+### Session 4 — Files Modified
+
+| File | Changes |
+|------|---------|
+| `_config.yml` | Added `huggingface`, `linkedin`, `xiaohongshu`, `zhihu` under `lab:` |
+| `index.md` | Social links in hero; all images → `picture.html` include |
+| `zh/index.md` | Social links in hero; all images → `picture.html` include |
+| `_sass/_home.scss` | `.lh-social` styles; hero-bg `image-set()`; `.rs-thumb` centering |
+| `_includes/footer.html` | Added HuggingFace, LinkedIn, Xiaohongshu, Zhihu links |
+| `_includes/picture.html` | **New** — responsive `<picture>` with WebP + fallback |
+| `_includes/pub_card.html` | Switched to `picture.html` include |
+| `_layouts/profile.html` | Switched to `picture.html` include |
+| `_layouts/default.html` | Added hero-bg.webp preload |
+| `pages/team.md` | Switched to `picture.html` include; alumni table updated |
+| `pages/zh/team.md` | Switched to `picture.html` include; alumni table updated |
+| `pages/projects.md` | Switched to `picture.html` include |
+| `pages/zh/projects.md` | Switched to `picture.html` include |
+| `_data/projects.yml` | Removed UniMedVL from GMAI-VL entry |
+| `scripts/optimize-images.sh` | **New** — batch image optimizer |
+| `CLAUDE.md` | Added Image Optimization section + updated File Map |
+| 74 WebP files | Generated in `assets/images/` subdirectories |
+
+### Remaining TODO (Carry Forward to Session 5)
+
+| Priority | Item | Action needed |
+|----------|------|---------------|
+| **HIGH** | Next Starship projects | GMAI-VL, SAM-Med subpages — copy `imaging-x.md` template |
+| **MEDIUM** | Contact form ID | Replace `YOUR_FORM_ID` with real Formspree ID |
+| **MEDIUM** | Profile page enrichment | Profile pages lack publications/project links |
+| **LOW** | Mobile hamburger nav | No menu at <820px |
+| **LOW** | Dark mode toggle | Not implemented |
 

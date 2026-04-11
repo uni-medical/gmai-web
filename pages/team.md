@@ -69,7 +69,7 @@ lang:      "en"
     </tr>
     {% for a in site.data.team.alumni %}
     <tr style="border-top:1px solid #e2e8f0;">
-      <td style="padding:.6rem .5rem;font-weight:600;color:#1e293b;">{{ a.name }}</td>
+      <td style="padding:.6rem .5rem;font-weight:600;color:#1e293b;white-space:nowrap;">{{ a.name | replace: " (", "<br>(" }}</td>
       <td style="padding:.6rem .5rem;color:#475569;">{{ a.period }}</td>
       <td style="padding:.6rem .5rem;color:#475569;">{{ a.position }}</td>
       <td style="padding:.6rem .5rem;color:#475569;">{{ a.focus }}</td>

@@ -110,7 +110,8 @@ See also [`docs/CONTENT-GUIDE.md`](docs/CONTENT-GUIDE.md) for the original conte
 ├── _includes/
 │   ├── nav.html                ← top navigation + language switcher
 │   ├── footer.html             ← site footer
-│   └── pub_card.html           ← reusable publication card component
+│   ├── pub_card.html           ← reusable publication card component
+│   └── picture.html            ← responsive <picture> with WebP + fallback
 │
 ├── _sass/
 │   ├── _variables.scss         ← design tokens (colours, fonts, spacing)
@@ -118,12 +119,16 @@ See also [`docs/CONTENT-GUIDE.md`](docs/CONTENT-GUIDE.md) for the original conte
 │   ├── _components.scss        ← team, publications, projects, news, contact
 │   └── _home.scss              ← landing page & research section styles
 │
+├── scripts/
+│   └── optimize-images.sh      ← batch image resize + compress + WebP generation
+│
 ├── assets/
 │   ├── css/main.scss           ← SCSS entry point
 │   ├── js/main.js              ← filters, BibTeX modal, scroll animations
 │   └── images/
-│       ├── team/               ← member photos (square, min 400×400px)
-│       └── teasers/            ← paper figures (800×400px recommended)
+│       ├── team/               ← member photos (optimized to max 400×400px)
+│       ├── teasers/            ← paper figures (optimized to max 520px wide)
+│       └── projects/           ← project images (optimized to max 1200px wide)
 │
 ├── .github/workflows/
 │   └── deploy.yml              ← GitHub Actions deployment pipeline
@@ -163,3 +168,23 @@ The site uses a strict token-based design system defined in `_sass/_variables.sc
 | `$max-w` | `1120px` | Maximum content width |
 
 To rebrand: edit only `_variables.scss`. All colours propagate automatically.
+
+---
+
+## Image Optimization
+
+All images are pre-optimized for web delivery (no build-time processing). Each image has a WebP version alongside the original for modern browsers.
+
+**After adding new images, run:**
+```bash
+bash scripts/optimize-images.sh
+```
+
+This resizes images to appropriate max dimensions (team: 400px, teasers: 520px, projects: 1200px), compresses quality, and generates `.webp` alongside every original.
+
+Templates use `_includes/picture.html` to automatically serve WebP with PNG/JPG fallback:
+```liquid
+{% include picture.html src="/assets/images/team/photo.jpg" alt="Name" class="team-photo" loading="lazy" width="180" height="180" %}
+```
+
+**Social Links:** The hero section and footer include links to GitHub, Hugging Face, LinkedIn, Google Scholar, Zhihu, and Xiaohongshu. Configure URLs in `_config.yml` under `lab:`.
