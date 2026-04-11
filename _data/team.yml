@@ -29,6 +29,23 @@ pi:
     github:  ""
     twitter: ""
 
+co_pis:
+  - name:     "Yirong Chen (陈毅荣)"
+    slug:     "yirong-chen"
+    role:     ""
+    role_zh:  ""
+    title:    ""
+    title_zh: ""
+    bio:      ""
+    bio_zh:   ""
+    photo:    ""
+    initials: "YC"
+    links:
+      scholar: ""
+      github:  ""
+      website: ""
+      email:   ""
+
 members:
   # ── Researchers ──────────────────────────────────────────────────
   - name:     "Ziyan Huang (黄子炎)"
@@ -334,7 +351,7 @@ alumni:
     position: "Research Scientist, Alibaba Group"
     focus:    "Medical image segmentation, foundation models"
 
-  - name:     "Junlong Cheng (程俊隆)"
+  - name:     "Junlong Cheng (程俊龙)"
     slug:     "junlong-cheng"
     period:   "2023.12 – 2025.06"
     position: "Postdoc, Sichuan University"

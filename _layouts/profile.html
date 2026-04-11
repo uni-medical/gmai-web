@@ -4,12 +4,17 @@ layout: default
 {% assign lang = page.lang | default: 'en' %}
 {% assign t = site.data.strings[lang] %}
 
-{% if page.member_slug == "junjun-he" %}
+{% assign is_pi = false %}
+{% if page.member_slug == site.data.team.pi.slug %}
   {% assign member = site.data.team.pi %}
   {% assign is_pi = true %}
 {% else %}
-  {% assign member = site.data.team.members | where: "slug", page.member_slug | first %}
-  {% assign is_pi = false %}
+  {% assign member = site.data.team.co_pis | where: "slug", page.member_slug | first %}
+  {% if member %}
+    {% assign is_pi = true %}
+  {% else %}
+    {% assign member = site.data.team.members | where: "slug", page.member_slug | first %}
+  {% endif %}
 {% endif %}
 
 <section class="alt">

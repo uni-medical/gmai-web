@@ -13,6 +13,8 @@
 .metric-l { font-size: .82rem; color: $ink3; }
 
 // TEAM
+.team-pis { display: flex; gap: 2rem; margin-bottom: 2.5rem; }
+.team-pis .team-pi { flex: 1; margin-bottom: 0; }
 .team-pi { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; padding: 2rem; background: $bg2; border: 1px solid $border; margin-bottom: 2.5rem; }
 .team-photo, .team-photo-ph { width: 180px; aspect-ratio: 1; border: 1px solid $border; display: block; }
 .team-photo { object-fit: cover; }
@@ -135,5 +137,6 @@
   .pub-teaser, .pub-no-teaser { width: 100%; max-width: 100%; }
   .proj-entry { grid-template-columns: 1fr; }
   .proj-meta  { text-align: left; }
+  .team-pis   { flex-direction: column; }
   .team-pi    { grid-template-columns: 1fr; }
 }
