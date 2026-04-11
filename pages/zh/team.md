@@ -60,8 +60,33 @@ lang:      "zh"
     {% endfor %}
   </div>
 
+  <div class="team-section-label">研究员</div>
   <div class="team-grid">
     {% for m in site.data.team.members %}
+    {% if m.role contains "Research Intern" %}{% continue %}{% endif %}
+    <div class="member-card">
+      {% if m.photo != "" %}
+        {% include picture.html src=m.photo alt=m.name class="member-photo" loading="lazy" width="96" height="96" %}
+      {% else %}
+        <div class="member-photo">{{ m.initials }}</div>
+      {% endif %}
+      <div class="member-name">{{ m.name }}</div>
+      <div class="member-role">{% if m.role_zh %}{{ m.role_zh }}{% else %}{{ m.role }}{% endif %}</div>
+      <div class="member-focus">{% if m.focus_zh %}{{ m.focus_zh }}{% else %}{{ m.focus }}{% endif %}</div>
+      <div class="member-links">
+        {% if m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
+        {% if m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
+        {% if m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">主页</a>{% endif %}
+        {% if m.slug != "" %}<a href="{{ '/zh/team/' | append: m.slug | append: '/' | relative_url }}" class="profile-link">主页 →</a>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="team-section-label">科研实习生</div>
+  <div class="team-grid">
+    {% for m in site.data.team.members %}
+    {% unless m.role contains "Research Intern" %}{% continue %}{% endunless %}
     <div class="member-card">
       {% if m.photo != "" %}
         {% include picture.html src=m.photo alt=m.name class="member-photo" loading="lazy" width="96" height="96" %}

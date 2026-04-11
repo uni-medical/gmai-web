@@ -333,11 +333,11 @@ alumni:
     position: "PhD Student, Fudan University"
     focus:    "Visual representation learning, multi-modal learning, LLMs"
 
-  - name:     "Huihui Xu (许辉辉)"
-    slug:     "huihui-xu"
-    period:   "2024.10 – 2025.08"
-    position: "PhD Student, HKUST"
-    focus:    "Medical image segmentation, self-supervised learning, reinforcement learning for grounding"
+  # - name:     "Huihui Xu (许辉辉)"
+  #   slug:     "huihui-xu"
+  #   period:   "2024.10 – 2025.08"
+  #   position: "PhD Student, HKUST"
+  #   focus:    "Medical image segmentation, self-supervised learning, reinforcement learning for grounding"
 
   - name:     "Ye Du (杜烨)"
     slug:     "ye-du"

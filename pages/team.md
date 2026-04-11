@@ -61,8 +61,33 @@ lang:      "en"
     {% endfor %}
   </div>
 
+  <div class="team-section-label">Staff</div>
   <div class="team-grid">
     {% for m in site.data.team.members %}
+    {% if m.role contains "Research Intern" %}{% continue %}{% endif %}
+    <div class="member-card">
+      {% if m.photo != "" %}
+        {% include picture.html src=m.photo alt=m.name class="member-photo" loading="lazy" width="96" height="96" %}
+      {% else %}
+        <div class="member-photo">{{ m.initials }}</div>
+      {% endif %}
+      <div class="member-name">{{ m.name }}</div>
+      <div class="member-role">{{ m.role }}</div>
+      <div class="member-focus">{{ m.focus }}</div>
+      <div class="member-links">
+        {% if m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
+        {% if m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
+        {% if m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">Website</a>{% endif %}
+        {% if m.slug != "" %}<a href="{{ '/team/' | append: m.slug | append: '/' | relative_url }}" class="profile-link">Profile →</a>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="team-section-label">Research Interns</div>
+  <div class="team-grid">
+    {% for m in site.data.team.members %}
+    {% unless m.role contains "Research Intern" %}{% continue %}{% endunless %}
     <div class="member-card">
       {% if m.photo != "" %}
         {% include picture.html src=m.photo alt=m.name class="member-photo" loading="lazy" width="96" height="96" %}
