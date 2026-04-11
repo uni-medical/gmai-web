@@ -21,7 +21,35 @@
 
 ---
 
+## Data Structure Overview
+
+```yaml
+# _data/team.yml hierarchy:
+pi:           # Single PI (Junjun He) — large card on left
+co_pis:       # Array — displayed side-by-side with PI in flex container
+members:      # Array — 4-per-row grid (Researchers first, then Interns)
+alumni:       # Array — Past Members table, sorted by end date (newest first)
+```
+
+**Content hierarchy (superset → subset):**
+```
+publications.yml  (ALL papers — the complete record)
+  ⊃  projects.yml  (curated project listing with subpages)
+    ⊃  Landing page sections  (top 5 highlights, hardcoded in index.md)
+```
+
+Every project with a `links.paper` MUST have a matching entry in `publications.yml`.
+
+---
+
 ## 1. Adding a Team Member
+
+### ⚠️ Identity Verification (CRITICAL)
+
+Before adding anyone:
+- **Same-name collision:** Verify Google Scholar / GitHub links belong to the correct person. Multiple researchers often share the same name (e.g. "Yirong Chen" at SCUT vs Stanford).
+- **Chinese character accuracy:** Double-check Chinese characters — similar-sounding characters are easily confused (翊 vs 毅, 隆 vs 龙). Confirm exact characters with the team.
+- **For leadership roles:** Adding someone at the PI/Co-PI level is high-stakes. Triple-check identity and get explicit confirmation.
 
 ### Step 1 — Prepare photo
 - Place photo in `assets/images/team/{firstname}_{lastname}.jpg`
@@ -56,6 +84,29 @@ Add entry under `members:` at the appropriate position:
 - Profile page shows ALL: `scholar`, `github`, `website`, `openreview`, `semantic_scholar`, `dblp`, `huggingface`, `linkedin`, `researchgate`, `email`, `cv`, `twitter`
 - Leave unused links as `""` or omit them entirely
 - Do NOT include empty links for fields that will show as buttons
+
+### Adding a Co-PI (leadership level)
+
+Add to `co_pis:` array in `_data/team.yml` (between `pi:` and `members:`):
+```yaml
+co_pis:
+  - name:     "Name (中文名)"
+    slug:     "firstname-lastname"
+    role:     "Co-Principal Investigator"
+    role_zh:  "联合负责人（Co-PI）"
+    title:    "Affiliation"
+    title_zh: "单位"
+    bio:      ""
+    bio_zh:   ""
+    photo:    ""
+    initials: "XX"
+    links:
+      scholar: ""
+      github:  ""
+      website: ""
+      email:   ""
+```
+Co-PIs display side-by-side with the PI in `.team-pis` flex container. Profile lookup in `_layouts/profile.html` checks `co_pis` after `pi`.
 
 ### Step 3 — Create profile pages
 
@@ -95,22 +146,50 @@ bundle exec jekyll build --baseurl ""
 ## 2. Moving a Member to Past Members
 
 1. **Remove** the member entry from `members:` in `_data/team.yml`
-2. **Add** to `alumni:` section:
+2. **Add** to `alumni:` section with full schema:
 ```yaml
 alumni:
-  - name:    "Name (中文名)"
-    period:  "2024.01 – 2025"
-    now:     "Current affiliation — Research focus"
+  - name:     "Name (中文名)"
+    slug:     "firstname-lastname"
+    period:   "2024.06 – 2025.12"
+    position: "PhD Student, University Name"
+    focus:    "Research focus keywords"
 ```
-3. Profile pages can be kept (they will still render) or removed
+
+**Important rules:**
+- **Sort by end date, newest first** — insert at the correct position
+- **Period format:** Use `YYYY.MM` (e.g. "2024.06"), verify with the team
+- **Slug field:** Required for "Profile →" link in the Past Members table
+- Name display uses `{{ a.name | replace: " (", "<br>(" }}` for EN/CN line break
+- Profile pages are kept (still accessible via direct URL)
 
 ---
 
 ## 3. Adding a Publication
 
+### ⚠️ Venue Verification
+
+Before adding, verify the publication venue:
+- If paper is on arXiv, check if it has been **accepted** at a venue (arXiv comments field, GitHub README, Google Scholar)
+- Common venues: CVPR, ICCV, ECCV, NeurIPS, MICCAI, AAAI, IEEE TNNLS, IEEE JBHI, IEEE TMI
+- **Periodically audit** existing arXiv entries — papers may get accepted months later
+- Example: SAM-Med3D was listed as "arXiv 2023" but was actually accepted at IEEE TNNLS 2025
+
+### ⚠️ Completeness Check
+
+Every project in `projects.yml` with a `links.paper` field MUST have a corresponding entry in `publications.yml`. Run:
+```bash
+# Find projects with papers
+grep -A5 "links:" _data/projects.yml | grep "paper:"
+# Cross-reference with publications
+grep "title:" _data/publications.yml
+```
+
 ### Step 1 — Prepare teaser image
-- Place in `assets/images/teasers/{paper_slug}.png`
-- Recommended: 16:9 or 4:3 aspect ratio, ≤300KB
+- Place in `assets/images/teasers/{paper_slug}.png` (PNG + WebP)
+- Recommended: max 520px wide, 16:9 or 4:3 aspect ratio, ≤300KB
+- If no image available, download from arXiv: `curl -sL "https://arxiv.org/html/{ID}" | grep 'src=".*\.png"'`
+- Generate WebP: `python3 -c "from PIL import Image; img=Image.open('file.png'); img.save('file.webp','WEBP',quality=85)"`
 - This appears as thumbnail in the publications list
 
 ### Step 2 — Prepend to `_data/publications.yml`
@@ -312,6 +391,10 @@ Live at: `https://uni-medical.github.io/gmai-web/`
 _config.yml ──────────────────── Site identity, hero stats
 │
 ├── _data/team.yml ──────────── Team listing + profile pages
+│   ├── pi: ─────────────────── Main PI card (left)
+│   ├── co_pis: ─────────────── Co-PI cards (right, flex container)
+│   ├── members: ────────────── Member grid (4 per row)
+│   ├── alumni: ─────────────── Past Members table (sorted newest-first)
 │   ├── pages/team.md ←──────── EN team grid (Scholar/GitHub/Website only)
 │   ├── pages/zh/team.md ←───── ZH team grid
 │   ├── pages/team/{slug}.md ── EN profiles (ALL links)
