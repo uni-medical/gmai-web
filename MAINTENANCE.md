@@ -143,6 +143,84 @@ bundle exec jekyll build --baseurl ""
 
 ---
 
+## 1b. Filling Profile Subpage Content
+
+Profile pages (`pages/team/{slug}.md` and `pages/zh/team/{slug}.md`) support rich Markdown content rendered via `{{ content }}` in `_layouts/profile.html`. After creating the front-matter-only pages (Step 3 above), fill in the body content following the templates below.
+
+### Content Structure
+
+**Regular Members** — 4 sections:
+
+| Section (EN) | Section (ZH) | Content |
+|---|---|---|
+| `## About` | `## 关于` | 1-2 paragraphs: current position, institution, supervisor, previous roles, GMAI contribution |
+| `## Research Interests` | `## 研究方向` | Bullet list of 3-5 areas with key project names in **bold** |
+| `## Selected Publications` | `## 代表性论文` | Bullet list: **Paper** (Venue Year) — *Role*. One-line description |
+| `## Career Trajectory` | `## 职业轨迹` | Single line with arrows: **Place A** (Role) → **Place B** (Role) → ... |
+
+**PI / Co-PI** — 6 sections:
+
+| Section (EN) | Section (ZH) | Content |
+|---|---|---|
+| `## About Me` | `## 关于我` | Background, education, leadership position |
+| `## Research Interests` | `## 研究方向` | Bullet list of research areas |
+| `## Highlights` | `## 代表性成果` | Detailed paragraphs on group achievements |
+| `## Academic Overview` | `## 学术成果概览` | High-level achievements summary |
+| `## Selected Early Works` | `## 早期代表性工作` | Earlier career publications |
+| `## Professional Service` | `## 学术服务` | Reviewer roles, committee memberships |
+
+### Content Guidelines
+
+- Regular member content **MUST be shorter** than PI's — no Highlights/Academic Overview/Early Works sections
+- **About**: 1-2 paragraphs. Bold institution names. Mention GMAI role.
+- **Research Interests**: 3-5 bullets. Bold area label, key projects in parentheses.
+- **Selected Publications**: 4-8 items. Format: `**Paper** (Venue Year) — *Role*. One-line.` Include GitHub stars if notable.
+- **Career Trajectory**: Single line, bold institutions, arrow `→` separators.
+- Always fill **both EN and ZH** pages.
+- Use `**bold**` for institutions and projects, `*italic*` for author roles.
+
+### Reference Implementations
+
+| Role | EN file | ZH file |
+|---|---|---|
+| PI | `pages/team/junjun-he.md` | `pages/zh/team/junjun-he.md` |
+| Regular member | `pages/team/jin-ye.md` | `pages/zh/team/jin-ye.md` |
+
+### EN Template (Regular Member)
+
+```markdown
+---
+layout:      profile
+title:       "FirstName LastName"
+permalink:   /team/{slug}/
+lang:        "en"
+member_slug: "{slug}"
+---
+
+## About
+
+FirstName LastName is a [position] at **[Institution]**...
+Before that, they worked at **[Previous Institution]**...
+
+## Research Interests
+
+- **Area One**: Project-A, Project-B
+- **Area Two**: Project-C
+- ...
+
+## Selected Publications
+
+- **Paper Title** (Venue Year) — *First Author*. Brief description.
+- **Paper Title** (Venue Year) — Brief description.
+- ...
+
+## Career Trajectory
+
+**Institution A** (Role) → **Institution B** (Role) → **Institution C** (Current Role)
+```
+
+---
+
 ## 2. Moving a Member to Past Members
 
 1. **Remove** the member entry from `members:` in `_data/team.yml`
