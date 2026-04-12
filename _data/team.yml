@@ -363,6 +363,21 @@ alumni:
     position: "Postdoc, University of Cambridge"
     focus:    "Medical AI, semantic segmentation, Alzheimer's diagnosis"
 
+  - name:     "Lihao Liu (刘力豪)"
+    slug:     "lihao-liu"
+    period:   "2024.11 – 2025.05"
+    position: "Applied Scientist, Amazon Web Services (AWS) AI Lab, USA"
+    focus:    "LLM-based agents, medical image analysis, AI for healthcare"
+    role:     "Visiting Researcher"
+    role_zh:  "访问研究员"
+    focus_zh: "基于LLM的智能体、医学图像分析、AI医疗"
+    photo:    "assets/images/team/lihao_liu.jpg"
+    initials: "LL"
+    links:
+      scholar: "https://scholar.google.com/citations?user=Spap8LgAAAAJ"
+      github:  "https://github.com/lihaoliu-cambridge"
+      website: "https://lihaoliu-cambridge.github.io/"
+
   - name:     "Guoan Wang (王国安)"
     slug:     "guoan-wang"
     period:   "2023.12 – 2024.10"

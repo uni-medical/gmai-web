@@ -14,6 +14,9 @@ layout: default
     {% assign is_pi = true %}
   {% else %}
     {% assign member = site.data.team.members | where: "slug", page.member_slug | first %}
+    {% unless member %}
+      {% assign member = site.data.team.alumni | where: "slug", page.member_slug | first %}
+    {% endunless %}
   {% endif %}
 {% endif %}
 
