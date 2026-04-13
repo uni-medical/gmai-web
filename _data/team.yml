@@ -32,12 +32,22 @@ pi:
 co_pis:
   - name:     "Yirong Chen (陈毅荣)"
     slug:     "yirong-chen"
-    role:     ""
-    role_zh:  ""
-    title:    ""
-    title_zh: ""
-    bio:      ""
-    bio_zh:   ""
+    role:     "Co-PI"
+    role_zh:  "联合负责人（Co-PI）"
+    title:    "Shanghai AI Lab"
+    title_zh: "上海人工智能实验室"
+    bio:      >
+      Yirong Chen received his PhD in Civil and Environmental Engineering from Stanford
+      University, advised by Prof. Michael Lepech. He is currently at the Shanghai AI Lab.
+      His research spans intelligent transportation (multi-agent reinforcement learning for
+      traffic signal control, traffic flow prediction, map matching) and large foundation
+      models (multimodal knowledge graphs, AI agents, retrieval-augmented generation, and
+      computational pathology foundation models).
+    bio_zh:   >
+      陈毅荣博士毕业于斯坦福大学土木与环境工程系，导师为Michael Lepech教授，
+      目前就职于上海人工智能实验室。研究方向涵盖智能交通（多智能体强化学习交通信号控制、
+      交通流预测、地图匹配）和大模型相关领域（多模态知识图谱、AI Agent、检索增强生成、
+      计算病理学基础模型等）。
     photo:    ""
     initials: "YC"
     links:
