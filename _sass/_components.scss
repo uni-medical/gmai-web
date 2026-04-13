@@ -45,7 +45,8 @@
     &:hover { border-bottom-color: $accent; } } }
 
 // PROFILE PAGES
-.profile-breadcrumb { margin-bottom: 2rem;
+.profile-breadcrumb { position: static; z-index: auto; width: auto; background: transparent;
+  border-bottom: none; margin-bottom: 2rem;
   a { font-size: .82rem; color: $ink3; text-decoration: none; &:hover { color: $accent; } } }
 .profile-hero { display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 2rem;
   @media (max-width: 640px) { flex-direction: column; gap: 1.5rem; } }
