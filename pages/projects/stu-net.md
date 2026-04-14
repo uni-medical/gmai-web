@@ -7,7 +7,7 @@ lang:      "en"
 
 <div class="section-inner" style="max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem;">
 
-<nav style="margin-bottom:2rem;font-size:.82rem;color:#64748b;">
+<div style="margin-bottom:2rem;font-size:.82rem;color:#64748b;">
   <a href="{{ '/projects/' | relative_url }}" style="color:#64748b;text-decoration:none;">← Projects</a>
 </nav>
 

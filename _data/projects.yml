@@ -144,3 +144,149 @@
     github:    "https://github.com/minghu0830/OphCLIP"
     paper:     "https://arxiv.org/abs/2411.15421"
 
+- title:      "UniMedVL: Unified Medical Multimodal Understanding and Generation"
+  title_zh:   "UniMedVL：统一医学多模态理解与生成"
+  area:       "Medical Multimodal AI"
+  area_zh:    "医学多模态 AI"
+  slug:       "unimedvl"
+  thumbnail:  "/assets/images/projects/unimedvl/overview.jpg"
+  desc:       >
+    The first medical unified multimodal model that unifies image understanding and generation within a single architecture. Built on UniMed-5M (5.6M+ samples) with Progressive Curriculum Learning, UniMedVL achieves superior performance on 5 medical understanding benchmarks while matching specialized models in generation quality.
+  desc_zh:    >
+    首个在单一架构中统一图像理解与生成的医学多模态模型。基于UniMed-5M（560万+样本）和渐进式课程学习策略，UniMedVL在5个医学理解基准上达到领先水平，同时在生成质量上匹配专用模型。
+  links:
+    github:    ""
+    paper:     ""
+
+- title:      "MedITok: Unified Medical Image Tokenizer"
+  title_zh:   "MedITok：统一医学图像标记器"
+  area:       "Medical Multimodal AI"
+  area_zh:    "医学多模态 AI"
+  slug:       "meditok"
+  thumbnail:  "/assets/images/projects/meditok/overview.jpg"
+  desc:       >
+    The first unified visual tokenizer for medical images that simultaneously preserves fine-grained anatomical structures and rich clinical semantics. Pre-trained on 33M+ medical images across 9 modalities, MedITok achieves state-of-the-art on 30+ benchmarks spanning reconstruction, classification, generation, and VQA.
+  desc_zh:    >
+    首个面向医学图像的统一视觉标记器，同时保留细粒度解剖结构和丰富的临床语义。在跨9种模态的3300万+医学图像上预训练，MedITok在涵盖重建、分类、生成和视觉问答的30+基准上达到最优水平。
+  links:
+    github:    "https://github.com/Masaaki-75/meditok"
+    paper:     "https://arxiv.org/abs/2505.19225"
+    huggingface: "https://huggingface.co/massaki75/meditok"
+
+- title:      "MedQ-Deg: Evaluating MLLMs Across Medical Image Quality Degradations"
+  title_zh:   "MedQ-Deg：医学图像质量退化下的多模态大模型评测基准"
+  area:       "Medical AI Evaluation"
+  area_zh:    "医学 AI 评估"
+  slug:       "medq-deg"
+  thumbnail:  "/assets/images/projects/medq-deg/overview.jpg"
+  desc:       >
+    A comprehensive benchmark for evaluating medical multimodal large language models under
+    clinically realistic image quality degradations. MedQ-Deg spans 18 degradation types,
+    30 fine-grained capability dimensions, and 7 imaging modalities with 24,894 QA pairs.
+    Evaluation of 40 mainstream MLLMs reveals the AI Dunning-Kruger Effect, where models
+    maintain inappropriately high confidence despite severe accuracy collapse under degradation.
+  desc_zh:    >
+    针对临床真实图像质量退化场景的医学多模态大语言模型综合评测基准。MedQ-Deg 涵盖 18 种退化类型、
+    30 个细粒度能力维度和 7 种成像模态，共 24,894 个问答对。对 40 个主流多模态大模型的评测揭示了
+    AI 邓宁-克鲁格效应——模型在严重精度下降时仍保持不当的高置信度。
+  links:
+    homepage:  "https://uni-medical.github.io/MedQ-Robust-web"
+
+- title:      "CGR: Comprehensive Generative Replay for Task-Incremental Segmentation"
+  title_zh:   "CGR：面向任务增量分割的综合生成重放框架"
+  area:       "Medical Image Segmentation"
+  area_zh:    "医学图像分割"
+  slug:       "cgr"
+  thumbnail:  "/assets/images/projects/cgr/overview.jpg"
+  desc:       >
+    A comprehensive generative replay framework that addresses concurrent appearance and semantic
+    forgetting in task-incremental medical image segmentation. CGR introduces a Bayesian Joint
+    Diffusion model for high-quality synthesis of image-mask pairs with preserved correspondence,
+    and a Task-Oriented Adapter for scalable data synthesis across diverse tasks including
+    cardiac, fundus, and prostate segmentation.
+  desc_zh:    >
+    面向任务增量医学图像分割的综合生成重放框架，解决外观和语义并发遗忘问题。CGR 提出贝叶斯联合扩散模型，
+    用于高质量合成保持对应关系的图像-掩码对，并设计任务导向适配器实现跨心脏、眼底和前列腺分割等
+    多样化任务的可扩展数据合成。
+  links:
+    github:    "https://github.com/jingyzhang/CGR"
+
+- title:      "Ophora: Text-Guided Ophthalmic Surgical Video Generation"
+  title_zh:   "Ophora：文本引导的眼科手术视频生成模型"
+  area:       "Surgical AI"
+  area_zh:    "手术 AI"
+  slug:       "ophora"
+  thumbnail:  "/assets/images/projects/ophora/overview.jpg"
+  desc:       >
+    A pioneering model for generating realistic ophthalmic surgical videos from natural language
+    instructions. Ophora is built on Ophora-160K, a large-scale dataset of over 160K video-instruction
+    pairs curated from narrative surgical videos, and employs Progressive Video-Instruction Tuning
+    to transfer spatial-temporal knowledge from a pre-trained text-to-video model while preserving
+    patient privacy.
+  desc_zh:    >
+    首个根据自然语言指令生成逼真眼科手术视频的模型。Ophora 基于 Ophora-160K（从叙事手术视频
+    中整理的超 16 万视频-指令对大规模数据集），采用渐进式视频-指令微调策略，从预训练的文本到视频
+    模型中迁移时空知识，同时保护患者隐私。
+  links:
+    paper:     "https://arxiv.org/abs/2505.07449"
+    github:    "https://github.com/uni-medical/Ophora"
+
+- title:      "Survey of Scientific Large Language Models"
+  title_zh:   "科学大语言模型综述：从数据基础到智能体前沿"
+  area:       "AI for Science"
+  area_zh:    "科学 AI"
+  slug:       "survey-scillm"
+  thumbnail:  "/assets/images/projects/survey-scillm/overview.jpg"
+  desc:       >
+    A comprehensive, data-centric survey that reframes the development of Scientific Large Language
+    Models (Sci-LLMs) as a co-evolution between models and their data substrate. Covering 270+
+    pre-/post-training datasets and 190+ benchmarks, the survey formulates a unified taxonomy of
+    scientific data, traces the shift toward process-oriented evaluation, and outlines the paradigm
+    of closed-loop autonomous scientific agents.
+  desc_zh:    >
+    以数据为中心的综合综述，将科学大语言模型（Sci-LLM）的发展重新定义为模型与数据基底的协同演化。
+    涵盖 270+ 预训练/后训练数据集和 190+ 基准测试，提出统一的科学数据分类法，追踪面向过程的
+    评估范式转变，并描绘闭环自主科学智能体的前景。
+  links:
+    github:    "https://github.com/open-sciencelab/Awesome-Scientific-Datasets-and-LLMs"
+
+- title:      "F\u00B2TTA: Free-Form Test-Time Adaptation for Medical Image Classification"
+  title_zh:   "F\u00B2TTA：自由形式测试时适应的医学图像分类"
+  area:       "Domain Adaptation"
+  area_zh:    "域适应"
+  slug:       "f2tta"
+  thumbnail:  "/assets/images/projects/f2tta/overview.jpg"
+  desc:       >
+    A novel Free-Form Test-Time Adaptation framework for cross-domain medical image classification,
+    where data arrives in random domain fragments of arbitrary lengths. The proposed Image-level
+    Disentangled Prompt Tuning (I-DiPT) uses image-invariant and image-specific prompts with
+    Uncertainty-oriented Masking and Parallel Graph Distillation to handle unpredictable domain
+    shifts in breast cancer and glaucoma classification.
+  desc_zh:    >
+    面向跨域医学图像分类的自由形式测试时适应框架，处理以随机域片段到达的数据。提出的图像级解耦
+    提示调优（I-DiPT）利用图像不变和图像特定提示，结合不确定性导向掩码和并行图蒸馏，应对乳腺癌
+    和青光眼分类中的不可预测域偏移。
+  links:
+    github:    "https://github.com/mar-cry/F2TTA"
+
+- title:      "MedQ-Bench: Evaluating Medical Image Quality Assessment in MLLMs"
+  title_zh:   "MedQ-Bench：多模态大模型医学图像质量评估基准"
+  area:       "Medical AI Evaluation"
+  area_zh:    "医学 AI 评估"
+  slug:       "medq-bench"
+  thumbnail:  "/assets/images/projects/medq-bench/overview.jpg"
+  desc:       >
+    The first comprehensive benchmark for evaluating medical image quality assessment capabilities
+    of multimodal large language models. MedQ-Bench establishes a perception-reasoning paradigm
+    spanning 5 imaging modalities and 40+ quality attributes, with 2,600 perceptual queries and
+    708 reasoning assessments. Evaluation of 14 state-of-the-art MLLMs reveals preliminary but
+    unstable perceptual and reasoning skills insufficient for reliable clinical use.
+  desc_zh:    >
+    首个系统评估多模态大语言模型医学图像质量评估能力的综合基准。MedQ-Bench 建立感知-推理范式，
+    涵盖 5 种成像模态和 40+ 质量属性，包含 2,600 个感知查询和 708 个推理评估。对 14 个
+    先进多模态大模型的评测显示，模型具有初步但不稳定的感知和推理能力，尚不足以用于可靠的临床实践。
+  links:
+    paper:     "https://github.com/liujiyaoFDU/MedQ-Bench"
+    github:    "https://github.com/liujiyaoFDU/MedQ-Bench"
+    dataset:   "https://huggingface.co/datasets/jiyaoliufd/MedQ-Bench"
+

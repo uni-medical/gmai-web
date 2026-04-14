@@ -6,6 +6,102 @@
 # 5. Add teaser image to assets/images/teasers/ and reference it here
 # ──────────────────────────────────────────────────────────────────
 
+- title:    "MedQ-Deg: A Multidimensional Benchmark for Evaluating MLLMs Across Medical Image Quality Degradations"
+  authors:  "Jiyao Liu, Junzhi Ning, Chenglong Ma, Wanying Qu, Jianghan Shen, Siqi Luo, Jinjie Wei, Jin Ye, Pengze Li, Tianbin Li, Jiashi Lin, Hongming Shan, Xinzhe Luo, Xiaohong Liu, Lihao Liu, Junjun He, Ningsheng Xu"
+  venue:    "arXiv"
+  year:     2025
+  note:     ""
+  abstract: >
+    We present MedQ-Deg, a comprehensive benchmark for evaluating medical multimodal large
+    language models (MLLMs) under clinically realistic image quality degradations. MedQ-Deg spans
+    18 degradation types, 30 fine-grained capability dimensions, and 7 imaging modalities with
+    24,894 question-answer pairs. We introduce the Calibration Shift metric to quantify the gap
+    between model confidence and actual performance, revealing the AI Dunning-Kruger Effect where
+    models maintain inappropriately high confidence despite severe accuracy collapse. Evaluation of
+    40 mainstream MLLMs shows systematic performance degradation as severity increases.
+  abstract_zh: >
+    我们提出MedQ-Deg，一个用于评估医学多模态大语言模型（MLLM）在临床真实图像质量退化条件下
+    表现的综合性基准。MedQ-Deg涵盖18种退化类型、30个细粒度能力维度和7种影像模态，共24,894个
+    问答对。我们引入校准偏移（Calibration Shift）指标来量化模型置信度与实际性能之间的差距，
+    揭示了"AI邓宁-克鲁格效应"——模型在准确率严重下降的情况下仍维持不恰当的高置信度。对40个
+    主流MLLM的评估表明，模型性能随退化程度的增加而系统性下降。
+  teaser:   "/assets/images/teasers/medq_deg.jpg"
+  keywords: "medical imaging, MLLM robustness, quality degradation, benchmark"
+  links:
+    paper:   "https://uni-medical.github.io/MedQ-Robust-web"
+
+- title:    "Comprehensive Generative Replay for Task-Incremental Segmentation with Concurrent Appearance and Semantic Forgetting"
+  authors:  "Wei Li, Jingyang Zhang, Pheng-Ann Heng, Lixu Gu"
+  venue:    "arXiv"
+  year:     2025
+  note:     ""
+  abstract: >
+    We propose a Comprehensive Generative Replay (CGR) framework for task-incremental medical
+    image segmentation that addresses concurrent appearance and semantic forgetting. CGR synthesizes
+    image-mask pairs to simulate past task data via a novel Bayesian Joint Diffusion (BJD) model
+    that explicitly preserves image-mask correspondence through conditional denoising. A Task-Oriented
+    Adapter (TOA) recalibrates prompt embeddings to enable scalable data synthesis across diverse
+    tasks. Experiments on cardiac, fundus, and prostate segmentation demonstrate clear advantages
+    over existing domain-incremental and class-incremental learning methods.
+  abstract_zh: >
+    我们提出综合生成重放（CGR）框架，用于解决任务增量医学图像分割中外观和语义同时遗忘的问题。
+    CGR通过一种新颖的贝叶斯联合扩散（BJD）模型合成图像-掩码对来模拟过去的任务数据，该模型通过
+    条件去噪显式保持图像-掩码的对应关系。任务导向适配器（TOA）重新校准提示嵌入，使数据合成能够
+    兼容多样化的任务。在心脏、眼底和前列腺分割任务上的实验表明，该方法在缓解外观和语义同时遗忘
+    方面明显优于现有的域增量和类增量学习方法。
+  teaser:   "/assets/images/teasers/cgr.jpg"
+  keywords: "continual learning, medical segmentation, generative replay, diffusion model"
+  links:
+    code:    "https://github.com/jingyzhang/CGR"
+
+- title:    "UniMedVL: Unifying Medical Multimodal Understanding and Generation through Observation-Knowledge-Analysis"
+  authors:  "Junzhi Ning, Wei Li, Cheng Tang, Jiashi Lin, Chenglong Ma, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lihao Liu, Yuandong Pu, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xin, Qi Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yuanfeng Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming Hu, Junjun He"
+  venue:    "arXiv"
+  year:     2025
+  note:     ""
+  abstract: >
+    We propose UniMedVL, the first medical unified multimodal model that combines image understanding
+    and generation within a single architecture without manually reloading model checkpoints. Built on
+    the Observation-Knowledge-Analysis (OKA) framework, we construct UniMed-5M comprising over 5.6M
+    multimodal medical samples and design Progressive Curriculum Learning for systematic capability
+    building. UniMedVL achieves superior performance on 5 medical image understanding benchmarks while
+    matching specialized models in generation quality across 8 imaging modalities, demonstrating that
+    bidirectional knowledge sharing improves both understanding and generation.
+  abstract_zh: >
+    我们提出UniMedVL，这是首个在单一架构内统一图像理解与生成能力的医学多模态模型，无需手动切换
+    模型检查点。基于"观察-知识-分析"（OKA）框架，我们构建了包含560万余条多模态医学样本的
+    UniMed-5M数据集，并设计了渐进式课程学习策略以系统性地构建模型能力。UniMedVL在5个医学图像
+    理解基准上取得了优异表现，同时在8种影像模态的生成质量上与专用模型持平，证明了双向知识共享
+    能够同时提升理解和生成性能。
+  teaser:   "/assets/images/teasers/unimedvl.jpg"
+  keywords: "unified multimodal model, medical image generation, understanding, curriculum learning"
+  links: {}
+
+- title:    "F²TTA: Free-Form Test-Time Adaptation on Cross-Domain Medical Image Classification via Image-Level Disentangled Prompt Tuning"
+  authors:  "Wei Li, Jingyang Zhang, Lihao Liu, Guoan Wang, Junjun He, Yang Chen, Lixu Gu"
+  venue:    "arXiv"
+  year:     2025
+  note:     ""
+  abstract: >
+    We investigate Free-Form Test-Time Adaptation (F²TTA), a practical setting where data arrives
+    in domain fragments of arbitrary lengths and random orders with unpredictable domain shifts. We
+    propose Image-level Disentangled Prompt Tuning (I-DiPT), which uses an image-invariant prompt to
+    learn domain-invariant representations and an image-specific prompt to adapt to each test image.
+    To address insufficient knowledge from single images, we introduce Uncertainty-oriented Masking
+    (UoM) for extracting spatial context and Parallel Graph Distillation (PGD) for reusing historical
+    prompt knowledge. Experiments on breast cancer and glaucoma classification demonstrate superiority
+    over existing TTA approaches.
+  abstract_zh: >
+    我们研究自由形式测试时自适应（F²TTA），这是一种数据以任意长度和随机顺序的域片段到达、
+    域偏移不可预测的实际场景。我们提出图像级解耦提示调优（I-DiPT），使用图像不变提示学习域不变
+    表征，并使用图像特定提示适应每张测试图像。为解决单张图像知识不足的问题，我们引入基于不确定性
+    的掩码（UoM）来提取空间上下文信息，以及并行图蒸馏（PGD）来复用历史提示知识。在乳腺癌和
+    青光眼分类任务上的实验证明了该方法优于现有测试时自适应方法。
+  teaser:   "/assets/images/teasers/f2tta.jpg"
+  keywords: "test-time adaptation, domain adaptation, medical classification, prompt tuning"
+  links:
+    code:    "https://github.com/mar-cry/F2TTA"
+
 - title:    "Project Imaging-X: A Survey of 1000+ Open-Access Medical Imaging Datasets for Foundation Model Development"
   authors:  "Zhongying Deng, et al."
   venue:    "arXiv"
@@ -446,7 +542,7 @@
     huggingface: "https://huggingface.co/papers/2304.06716"
 
 - title:    "A Survey of Scientific Large Language Models: From Data Foundations to Agent Frontiers"
-  authors:  "Ming Hu, Chenglong Ma, Wei Li, Wanghan Xu, Jiamin Wu, Jucheng Hu, Tianbin Li, Guohang Zhuang, Jiaqi Liu, Yingzhou Lu, Junjun He, et al."
+  authors:  "Ming Hu, Chenglong Ma, Wei Li, Wanghan Xu, Jiamin Wu, Jucheng Hu, Tianbin Li, Guohang Zhuang, Jiaqi Liu, Yingzhou Lu, Ying Chen, Chaoyang Zhang, Cheng Tan, Jie Ying, Guocheng Wu, et al., Zongyuan Ge, Shixiang Tang, Junjun He, Chunfeng Song, Lei Bai, Bowen Zhou"
   venue:    "arXiv"
   year:     2025
   note:     ""

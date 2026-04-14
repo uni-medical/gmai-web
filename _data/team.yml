@@ -1,5 +1,6 @@
 pi:
   name:     "Junjun He"
+  name_zh:  "何军军"
   slug:     "junjun-he"
   role:     "Principal Investigator"
   role_zh:  "实验室负责人（PI）"
@@ -30,7 +31,8 @@ pi:
     twitter: ""
 
 co_pis:
-  - name:     "Yirong Chen (陈毅荣)"
+  - name:     "Yirong Chen"
+    name_zh:  "陈毅荣"
     slug:     "yirong-chen"
     role:     "Co-PI"
     role_zh:  "联合负责人（Co-PI）"

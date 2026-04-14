@@ -1,5 +1,65 @@
 # category values: award | paper | grant | join | event
 
+- date:        "November 2025"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "MedQ-Deg released — benchmarking MLLM robustness under medical image degradations"
+  headline_zh: "MedQ-Deg 发布——评测多模态大语言模型在医学图像退化下的鲁棒性"
+  body:        >
+    We release MedQ-Deg, a multidimensional benchmark evaluating 40 mainstream MLLMs across
+    18 degradation types, 30 capability dimensions, and 7 imaging modalities (24,894 QA pairs).
+    We reveal the AI Dunning-Kruger Effect — models maintain high confidence despite severe
+    accuracy collapse under degraded inputs.
+  body_zh:     >
+    我们发布 MedQ-Deg，一个多维度基准，对 40 个主流多模态大语言模型进行评估，涵盖 18 种退化
+    类型、30 个能力维度和 7 种影像模态（共 24,894 个问答对）。我们揭示了"AI 邓宁-克鲁格效应"
+    ——模型在退化输入导致准确率严重下降时仍维持不恰当的高置信度。
+
+- date:        "October 2025"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "CGR: Comprehensive generative replay for task-incremental medical segmentation"
+  headline_zh: "CGR：面向任务增量医学分割的综合生成重放框架"
+  body:        >
+    We propose Comprehensive Generative Replay (CGR), a diffusion-based framework that
+    synthesizes image-mask pairs to combat concurrent appearance and semantic forgetting in
+    task-incremental medical segmentation across cardiac, fundus, and prostate tasks.
+  body_zh:     >
+    我们提出综合生成重放（CGR），一种基于扩散模型的框架，通过合成图像-掩码对来对抗任务增量
+    医学分割中外观和语义的同时遗忘，覆盖心脏、眼底和前列腺分割任务。
+
+- date:        "October 2025"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "F²TTA: Free-form test-time adaptation for cross-domain medical classification"
+  headline_zh: "F²TTA：面向跨域医学分类的自由形式测试时自适应"
+  body:        >
+    We introduce Free-Form Test-Time Adaptation (F²TTA), addressing the practical scenario
+    where medical data arrives in domain fragments of arbitrary lengths and random orders. Our
+    Image-level Disentangled Prompt Tuning framework outperforms existing TTA methods on breast
+    cancer and glaucoma classification.
+  body_zh:     >
+    我们提出自由形式测试时自适应（F²TTA），解决医学数据以任意长度和随机顺序的域片段到达的
+    实际场景。我们的图像级解耦提示调优框架在乳腺癌和青光眼分类任务上优于现有测试时自适应方法。
+
+- date:        "September 2025"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "UniMedVL: First unified model for medical image understanding and generation"
+  headline_zh: "UniMedVL：首个统一医学图像理解与生成模型"
+  body:        >
+    We introduce UniMedVL, the first medical multimodal model that unifies image understanding
+    and generation in a single architecture. Built on 5.6M multimodal samples and Progressive
+    Curriculum Learning, UniMedVL achieves strong results on 5 understanding benchmarks and
+    8 generation modalities.
+  body_zh:     >
+    我们提出 UniMedVL，首个在单一架构内统一图像理解与生成的医学多模态模型。基于 560 万条
+    多模态样本和渐进式课程学习策略，UniMedVL 在 5 个理解基准和 8 种生成模态上均取得优异表现。
+
 - date:        "October 2025"
   category:    "paper"
   label:       "Paper"

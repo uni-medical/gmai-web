@@ -22,7 +22,7 @@ lang:      "zh"
       {% endif %}
       <div>
         <div class="pi-role">{{ t.team.pi_badge }}</div>
-        <div class="pi-name">{{ site.data.team.pi.name }}</div>
+        <div class="pi-name">{{ site.data.team.pi.name }}{% if site.data.team.pi.name_zh %}（{{ site.data.team.pi.name_zh }}）{% endif %}</div>
         <div class="pi-title">{% if site.data.team.pi.title_zh %}{{ site.data.team.pi.title_zh }}{% else %}{{ site.data.team.pi.title }}{% endif %}</div>
         <div class="pi-bio">{% if site.data.team.pi.bio_zh %}{{ site.data.team.pi.bio_zh }}{% else %}{{ site.data.team.pi.bio }}{% endif %}</div>
         <div class="pi-links">
@@ -45,7 +45,7 @@ lang:      "zh"
       {% endif %}
       <div>
         {% if copi.role_zh != "" and copi.role_zh %}<div class="pi-role">{{ copi.role_zh }}</div>{% elsif copi.role != "" and copi.role %}<div class="pi-role">{{ copi.role }}</div>{% endif %}
-        <div class="pi-name">{{ copi.name }}</div>
+        <div class="pi-name">{% if copi.name_zh %}{{ copi.name }}（{{ copi.name_zh }}）{% else %}{{ copi.name }}{% endif %}</div>
         {% if copi.title_zh != "" and copi.title_zh %}<div class="pi-title">{{ copi.title_zh }}</div>{% elsif copi.title != "" and copi.title %}<div class="pi-title">{{ copi.title }}</div>{% endif %}
         {% if copi.bio_zh != "" and copi.bio_zh %}<div class="pi-bio">{{ copi.bio_zh }}</div>{% elsif copi.bio != "" and copi.bio %}<div class="pi-bio">{{ copi.bio }}</div>{% endif %}
         <div class="pi-links">
