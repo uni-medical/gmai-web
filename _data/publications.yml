@@ -77,30 +77,6 @@
   keywords: "unified multimodal model, medical image generation, understanding, curriculum learning"
   links: {}
 
-- title:    "F²TTA: Free-Form Test-Time Adaptation on Cross-Domain Medical Image Classification via Image-Level Disentangled Prompt Tuning"
-  authors:  "Wei Li, Jingyang Zhang, Lihao Liu, Guoan Wang, Junjun He, Yang Chen, Lixu Gu"
-  venue:    "arXiv"
-  year:     2025
-  note:     ""
-  abstract: >
-    We investigate Free-Form Test-Time Adaptation (F²TTA), a practical setting where data arrives
-    in domain fragments of arbitrary lengths and random orders with unpredictable domain shifts. We
-    propose Image-level Disentangled Prompt Tuning (I-DiPT), which uses an image-invariant prompt to
-    learn domain-invariant representations and an image-specific prompt to adapt to each test image.
-    To address insufficient knowledge from single images, we introduce Uncertainty-oriented Masking
-    (UoM) for extracting spatial context and Parallel Graph Distillation (PGD) for reusing historical
-    prompt knowledge. Experiments on breast cancer and glaucoma classification demonstrate superiority
-    over existing TTA approaches.
-  abstract_zh: >
-    我们研究自由形式测试时自适应（F²TTA），这是一种数据以任意长度和随机顺序的域片段到达、
-    域偏移不可预测的实际场景。我们提出图像级解耦提示调优（I-DiPT），使用图像不变提示学习域不变
-    表征，并使用图像特定提示适应每张测试图像。为解决单张图像知识不足的问题，我们引入基于不确定性
-    的掩码（UoM）来提取空间上下文信息，以及并行图蒸馏（PGD）来复用历史提示知识。在乳腺癌和
-    青光眼分类任务上的实验证明了该方法优于现有测试时自适应方法。
-  teaser:   "/assets/images/teasers/f2tta.jpg"
-  keywords: "test-time adaptation, domain adaptation, medical classification, prompt tuning"
-  links:
-    code:    "https://github.com/mar-cry/F2TTA"
 
 - title:    "Project Imaging-X: A Survey of 1000+ Open-Access Medical Imaging Datasets for Foundation Model Development"
   authors:  "Zhongying Deng, et al."

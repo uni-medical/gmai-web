@@ -250,25 +250,6 @@
   links:
     github:    "https://github.com/open-sciencelab/Awesome-Scientific-Datasets-and-LLMs"
 
-- title:      "F\u00B2TTA: Free-Form Test-Time Adaptation for Medical Image Classification"
-  title_zh:   "F\u00B2TTA：自由形式测试时适应的医学图像分类"
-  area:       "Domain Adaptation"
-  area_zh:    "域适应"
-  slug:       "f2tta"
-  thumbnail:  "/assets/images/projects/f2tta/overview.jpg"
-  desc:       >
-    A novel Free-Form Test-Time Adaptation framework for cross-domain medical image classification,
-    where data arrives in random domain fragments of arbitrary lengths. The proposed Image-level
-    Disentangled Prompt Tuning (I-DiPT) uses image-invariant and image-specific prompts with
-    Uncertainty-oriented Masking and Parallel Graph Distillation to handle unpredictable domain
-    shifts in breast cancer and glaucoma classification.
-  desc_zh:    >
-    面向跨域医学图像分类的自由形式测试时适应框架，处理以随机域片段到达的数据。提出的图像级解耦
-    提示调优（I-DiPT）利用图像不变和图像特定提示，结合不确定性导向掩码和并行图蒸馏，应对乳腺癌
-    和青光眼分类中的不可预测域偏移。
-  links:
-    github:    "https://github.com/mar-cry/F2TTA"
-
 - title:      "MedQ-Bench: Evaluating Medical Image Quality Assessment in MLLMs"
   title_zh:   "MedQ-Bench：多模态大模型医学图像质量评估基准"
   area:       "Medical AI Evaluation"

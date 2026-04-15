@@ -30,21 +30,6 @@
     我们提出综合生成重放（CGR），一种基于扩散模型的框架，通过合成图像-掩码对来对抗任务增量
     医学分割中外观和语义的同时遗忘，覆盖心脏、眼底和前列腺分割任务。
 
-- date:        "October 2025"
-  category:    "paper"
-  label:       "Paper"
-  label_zh:    "论文"
-  headline:    "F²TTA: Free-form test-time adaptation for cross-domain medical classification"
-  headline_zh: "F²TTA：面向跨域医学分类的自由形式测试时自适应"
-  body:        >
-    We introduce Free-Form Test-Time Adaptation (F²TTA), addressing the practical scenario
-    where medical data arrives in domain fragments of arbitrary lengths and random orders. Our
-    Image-level Disentangled Prompt Tuning framework outperforms existing TTA methods on breast
-    cancer and glaucoma classification.
-  body_zh:     >
-    我们提出自由形式测试时自适应（F²TTA），解决医学数据以任意长度和随机顺序的域片段到达的
-    实际场景。我们的图像级解耦提示调优框架在乳腺癌和青光眼分类任务上优于现有测试时自适应方法。
-
 - date:        "September 2025"
   category:    "paper"
   label:       "Paper"
