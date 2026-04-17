@@ -338,6 +338,17 @@ members:
       website: ""
       openreview: "https://openreview.net/profile?id=~Xinyi_Zeng1"
 
+  - name:     "Xiaohan Ren (任萧涵)"
+    slug:     "xiaohan-ren"
+    role:     "Research Intern, University of Science and Technology of China"
+    role_zh:  "科研实习生，中国科学技术大学"
+    focus:    "AI for science, medical agents"
+    focus_zh: "科学AI、医学智能体"
+    photo:    "assets/images/team/xiaohan_ren.jpeg"
+    initials: "XR"
+    links:
+      github:  "https://github.com/RXH04-USTC"
+
 alumni:
   - name:     "Shujian Gao (高书剑)"
     slug:     "shujian-gao"

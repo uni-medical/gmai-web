@@ -75,9 +75,9 @@ lang:      "en"
       <div class="member-role">{{ m.role }}</div>
       <div class="member-focus">{{ m.focus }}</div>
       <div class="member-links">
-        {% if m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
-        {% if m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
-        {% if m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">Website</a>{% endif %}
+        {% if m.links.scholar and m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
+        {% if m.links.github  and m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
+        {% if m.links.website and m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">Website</a>{% endif %}
         {% if m.slug != "" %}<a href="{{ '/team/' | append: m.slug | append: '/' | relative_url }}" class="profile-link">Profile →</a>{% endif %}
       </div>
     </div>
@@ -98,9 +98,9 @@ lang:      "en"
       <div class="member-role">{{ m.role }}</div>
       <div class="member-focus">{{ m.focus }}</div>
       <div class="member-links">
-        {% if m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
-        {% if m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
-        {% if m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">Website</a>{% endif %}
+        {% if m.links.scholar and m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
+        {% if m.links.github  and m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
+        {% if m.links.website and m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">Website</a>{% endif %}
         {% if m.slug != "" %}<a href="{{ '/team/' | append: m.slug | append: '/' | relative_url }}" class="profile-link">Profile →</a>{% endif %}
       </div>
     </div>

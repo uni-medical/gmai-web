@@ -74,9 +74,9 @@ lang:      "zh"
       <div class="member-role">{% if m.role_zh %}{{ m.role_zh }}{% else %}{{ m.role }}{% endif %}</div>
       <div class="member-focus">{% if m.focus_zh %}{{ m.focus_zh }}{% else %}{{ m.focus }}{% endif %}</div>
       <div class="member-links">
-        {% if m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
-        {% if m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
-        {% if m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">主页</a>{% endif %}
+        {% if m.links.scholar and m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
+        {% if m.links.github  and m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
+        {% if m.links.website and m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">主页</a>{% endif %}
         {% if m.slug != "" %}<a href="{{ '/zh/team/' | append: m.slug | append: '/' | relative_url }}" class="profile-link">主页 →</a>{% endif %}
       </div>
     </div>
@@ -97,9 +97,9 @@ lang:      "zh"
       <div class="member-role">{% if m.role_zh %}{{ m.role_zh }}{% else %}{{ m.role }}{% endif %}</div>
       <div class="member-focus">{% if m.focus_zh %}{{ m.focus_zh }}{% else %}{{ m.focus }}{% endif %}</div>
       <div class="member-links">
-        {% if m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
-        {% if m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
-        {% if m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">主页</a>{% endif %}
+        {% if m.links.scholar and m.links.scholar != "" %}<a href="{{ m.links.scholar }}" target="_blank">Scholar</a>{% endif %}
+        {% if m.links.github  and m.links.github  != "" %}<a href="{{ m.links.github  }}" target="_blank">GitHub</a>{% endif %}
+        {% if m.links.website and m.links.website != "" %}<a href="{{ m.links.website }}" target="_blank">主页</a>{% endif %}
         {% if m.slug != "" %}<a href="{{ '/zh/team/' | append: m.slug | append: '/' | relative_url }}" class="profile-link">主页 →</a>{% endif %}
       </div>
     </div>
