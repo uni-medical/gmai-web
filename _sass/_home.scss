@@ -254,6 +254,48 @@
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// VISION + MISSION — aspirational bridge between hero and research
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+.home-vision {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: clamp(4rem, 8vw, 8rem) 1.5rem;
+  text-align: center;
+}
+
+.home-vision-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  color: $accent;
+  margin: 0 0 1.25rem;
+}
+
+.home-vision-big {
+  font-family: $serif;
+  font-size: clamp(1.6rem, 3.2vw, 2.8rem);
+  line-height: 1.28;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: $ink;
+  margin: 0 0 1.75rem;
+}
+
+.home-vision-small {
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  line-height: 1.65;
+  color: $ink2;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.home-vision-small strong {
+  color: $ink;
+  font-weight: 600;
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // ALTERNATING RESEARCH SECTIONS
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

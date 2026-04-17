@@ -192,25 +192,6 @@
   links:
     homepage:  "https://uni-medical.github.io/MedQ-Robust-web"
 
-- title:      "CGR: Comprehensive Generative Replay for Task-Incremental Segmentation"
-  title_zh:   "CGR：面向任务增量分割的综合生成重放框架"
-  area:       "Medical Image Segmentation"
-  area_zh:    "医学图像分割"
-  slug:       "cgr"
-  thumbnail:  "/assets/images/projects/cgr/overview.jpg"
-  desc:       >
-    A comprehensive generative replay framework that addresses concurrent appearance and semantic
-    forgetting in task-incremental medical image segmentation. CGR introduces a Bayesian Joint
-    Diffusion model for high-quality synthesis of image-mask pairs with preserved correspondence,
-    and a Task-Oriented Adapter for scalable data synthesis across diverse tasks including
-    cardiac, fundus, and prostate segmentation.
-  desc_zh:    >
-    面向任务增量医学图像分割的综合生成重放框架，解决外观和语义并发遗忘问题。CGR 提出贝叶斯联合扩散模型，
-    用于高质量合成保持对应关系的图像-掩码对，并设计任务导向适配器实现跨心脏、眼底和前列腺分割等
-    多样化任务的可扩展数据合成。
-  links:
-    github:    "https://github.com/jingyzhang/CGR"
-
 - title:      "Ophora: Text-Guided Ophthalmic Surgical Video Generation"
   title_zh:   "Ophora：文本引导的眼科手术视频生成模型"
   area:       "Surgical AI"

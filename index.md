@@ -15,8 +15,8 @@ lang:   "en"
     <div class="lh-eyebrow">{{ site.lab.institution }} &middot; Est. {{ site.lab.founded }}</div>
 
     <h1 class="lh-title">
-      AI at the<br>
-      <strong>Frontier</strong> of <em>Medicine</em>
+      AI at the Frontier of<br>
+      <strong>Medicine</strong> &amp; <em>Healthcare</em>
     </h1>
 
     <p class="lh-tagline">{{ site.description }}</p>
@@ -81,6 +81,24 @@ lang:   "en"
     </div>
   </div>
 </div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     VISION & MISSION — aspirational bridge between hero and research
+     ══════════════════════════════════════════════════════════════ -->
+<section class="home-vision" aria-labelledby="vision-heading">
+  <p class="home-vision-eyebrow">Our North Star</p>
+  <h2 id="vision-heading" class="home-vision-big">
+    A world where the best of medicine and healthcare
+    is no longer bound by geography, institution, or privilege —
+    where AI extends the hand of every great doctor to every person on Earth.
+  </h2>
+  <p class="home-vision-small">
+    <strong>Our mission.</strong> Within this decade, ship general-purpose medical AI —
+    foundation models, multi-agent systems, and open tooling — that measurably improves
+    outcomes in real hospitals, real clinics, and the everyday health of real communities.
+  </p>
+</section>
 
 
 <!-- ══════════════════════════════════════════════════════════════

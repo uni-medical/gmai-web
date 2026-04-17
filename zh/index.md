@@ -16,10 +16,10 @@ lang:   "zh"
 
     <h1 class="lh-title">
       以<strong>人工智能</strong><br>
-      赋能<em>精准医学</em>
+      赋能<em>医学与健康</em>
     </h1>
 
-    <p class="lh-tagline">打造世界领先的医学 AI 模型、工具与多智能体系统，实现高水平、普惠的精准诊断、治疗与基础研究。</p>
+    <p class="lh-tagline">打造世界领先的 AI 模型、智能体与工具，推动精准医学与大健康的普惠落地，让高水平的诊断、治疗与科学发现惠及每一位医生、每一位患者、每一个社区。</p>
 
     <div class="lh-cta">
       <a class="lh-btn primary" href="{{ '/zh/publications/' | relative_url }}">查看论文</a>
@@ -81,6 +81,22 @@ lang:   "zh"
     </div>
   </div>
 </div>
+
+
+<!-- 愿景与使命 -->
+<section class="home-vision" aria-labelledby="vision-heading">
+  <p class="home-vision-eyebrow">我们的北极星</p>
+  <h2 id="vision-heading" class="home-vision-big">
+    让最好的医学与健康不再被地域、机构或身份所分割——
+    让 AI 把每一位优秀医生的那双手，
+    伸向地球上的每一个人。
+  </h2>
+  <p class="home-vision-small">
+    <strong>我们的使命。</strong>在本十年内，交付真正通用的医学 AI——
+    基础模型、多智能体系统与开放工具链——
+    让它们在真实医院、真实诊所与真实社区的日常健康中，带来可衡量的改变。
+  </p>
+</section>
 
 
 <!-- 研究方向 1 -->

@@ -30,30 +30,6 @@
   links:
     paper:   "https://uni-medical.github.io/MedQ-Robust-web"
 
-- title:    "Comprehensive Generative Replay for Task-Incremental Segmentation with Concurrent Appearance and Semantic Forgetting"
-  authors:  "Wei Li, Jingyang Zhang, Pheng-Ann Heng, Lixu Gu"
-  venue:    "arXiv"
-  year:     2025
-  note:     ""
-  abstract: >
-    We propose a Comprehensive Generative Replay (CGR) framework for task-incremental medical
-    image segmentation that addresses concurrent appearance and semantic forgetting. CGR synthesizes
-    image-mask pairs to simulate past task data via a novel Bayesian Joint Diffusion (BJD) model
-    that explicitly preserves image-mask correspondence through conditional denoising. A Task-Oriented
-    Adapter (TOA) recalibrates prompt embeddings to enable scalable data synthesis across diverse
-    tasks. Experiments on cardiac, fundus, and prostate segmentation demonstrate clear advantages
-    over existing domain-incremental and class-incremental learning methods.
-  abstract_zh: >
-    我们提出综合生成重放（CGR）框架，用于解决任务增量医学图像分割中外观和语义同时遗忘的问题。
-    CGR通过一种新颖的贝叶斯联合扩散（BJD）模型合成图像-掩码对来模拟过去的任务数据，该模型通过
-    条件去噪显式保持图像-掩码的对应关系。任务导向适配器（TOA）重新校准提示嵌入，使数据合成能够
-    兼容多样化的任务。在心脏、眼底和前列腺分割任务上的实验表明，该方法在缓解外观和语义同时遗忘
-    方面明显优于现有的域增量和类增量学习方法。
-  teaser:   "/assets/images/teasers/cgr.jpg"
-  keywords: "continual learning, medical segmentation, generative replay, diffusion model"
-  links:
-    code:    "https://github.com/jingyzhang/CGR"
-
 - title:    "UniMedVL: Unifying Medical Multimodal Understanding and Generation through Observation-Knowledge-Analysis"
   authors:  "Junzhi Ning, Wei Li, Cheng Tang, Jiashi Lin, Chenglong Ma, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lihao Liu, Yuandong Pu, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xin, Qi Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yuanfeng Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming Hu, Junjun He"
   venue:    "arXiv"

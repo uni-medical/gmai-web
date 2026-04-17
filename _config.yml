@@ -1,9 +1,9 @@
 # ── Site identity ─────────────────────────────────────────────────
 title:       "GMAI — General Medical AI"
-tagline:     "AI-Empowered Precision Medicine: Diagnosis, Treatment, and Discovery"
-description: "We develop world-leading medical AI models, tools, and multi-agent systems
-              to enable precision diagnosis, optimal treatment, and accelerated biomedical
-              research — making high-quality healthcare universally accessible."
+tagline:     "AI at the Frontier of Medicine and Healthcare"
+description: "We build world-leading AI models, agents, and tools that advance precision
+              medicine and everyday healthcare — expanding access to high-quality diagnosis,
+              treatment, and discovery for every clinician, patient, and community."
 url:         "https://uni-medical.github.io"
 baseurl:     "/gmai-web"
 

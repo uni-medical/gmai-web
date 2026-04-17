@@ -16,20 +16,6 @@
     类型、30 个能力维度和 7 种影像模态（共 24,894 个问答对）。我们揭示了"AI 邓宁-克鲁格效应"
     ——模型在退化输入导致准确率严重下降时仍维持不恰当的高置信度。
 
-- date:        "October 2025"
-  category:    "paper"
-  label:       "Paper"
-  label_zh:    "论文"
-  headline:    "CGR: Comprehensive generative replay for task-incremental medical segmentation"
-  headline_zh: "CGR：面向任务增量医学分割的综合生成重放框架"
-  body:        >
-    We propose Comprehensive Generative Replay (CGR), a diffusion-based framework that
-    synthesizes image-mask pairs to combat concurrent appearance and semantic forgetting in
-    task-incremental medical segmentation across cardiac, fundus, and prostate tasks.
-  body_zh:     >
-    我们提出综合生成重放（CGR），一种基于扩散模型的框架，通过合成图像-掩码对来对抗任务增量
-    医学分割中外观和语义的同时遗忘，覆盖心脏、眼底和前列腺分割任务。
-
 - date:        "September 2025"
   category:    "paper"
   label:       "Paper"
