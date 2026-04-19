@@ -9,7 +9,7 @@ lang:      "zh"
 
 <nav style="margin-bottom:2rem;font-size:.82rem;color:#64748b;">
   <a href="{{ '/zh/projects/' | relative_url }}" style="color:#64748b;text-decoration:none;">← 项目</a>
-</nav>
+</div>
 
 <div style="font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#1d4ed8;margin-bottom:.75rem;">医学多模态大模型</div>
 <h1 style="font-family:'IBM Plex Serif',serif;font-size:2.2rem;font-weight:300;color:#0f172a;line-height:1.25;margin-bottom:.75rem;">

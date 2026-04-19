@@ -9,7 +9,7 @@ lang:      "en"
 
 <div style="margin-bottom:2rem;font-size:.82rem;color:#64748b;">
   <a href="{{ '/projects/' | relative_url }}" style="color:#64748b;text-decoration:none;">&larr; Projects</a>
-</nav>
+</div>
 
 <div style="font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#1d4ed8;margin-bottom:.75rem;">Medical Benchmarks &amp; Evaluation</div>
 <h1 style="font-family:'IBM Plex Serif',serif;font-size:2.2rem;font-weight:300;color:#0f172a;line-height:1.25;margin-bottom:.75rem;">

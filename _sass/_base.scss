@@ -51,6 +51,12 @@ footer { background: $ink; color: rgba(255,255,255,.45); padding: 3rem 2rem; }
 .fade { opacity: 0; transform: translateY(16px); transition: opacity .5s, transform .5s; &.in { opacity: 1; transform: none; } }
 section { padding: 5rem 2rem; &.alt { background: $bg2; } }
 .section-inner { max-width: $max-w; margin: auto; }
+
+// Detail sub-pages (project/*, news archive) render a bare <div class="section-inner">
+// at the top of #main-content with inline top padding of ~2rem. Fixed nav is $nav-h (60px),
+// so the breadcrumb back-link hides underneath. Force enough clearance here — !important
+// is required to beat the inline style shorthand.
+#main-content > .section-inner:first-child { padding-top: calc(#{$nav-h} + 1.5rem) !important; }
 .section-head { margin-bottom: 2.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid $border;
   display: flex; justify-content: space-between; align-items: flex-end; }
 .section-label { font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: $accent; margin-bottom: .5rem; }
