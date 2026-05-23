@@ -8,7 +8,7 @@ member_slug: "junjun-he"
 
 ## 关于我
 
-何军军博士现任上海人工智能实验室研究员，领导 **GMAI（General Medical AI）研究组**，致力于构建通用医学人工智能系统。他于上海交通大学获博士学位（导师：顾力栩教授），博士期间在中国科学院深圳先进技术研究院多媒体实验室（MMLAB）师从乔宇教授开展研究。
+何军军，上海人工智能实验室青年科学家、上海创智学院全时导师、复旦大学兼职博导。目前主要研究方向为多模态理解、多模态生成、多模态生成理解一体化，以及多智能体及其在医学领域的应用。谷歌学术引用 1.1 万余次，H 指数 46，入选斯坦福大学全球前 2% 顶尖科学家榜单，荣获 2025 MICCAI Best Paper and Young Scientist Awards Shortlist 和 MICCAI 2025 Best Workshop Paper Award。在国际挑战赛中获得 10 余项奖项，其中 6 项冠军。担任上海人工智能实验室通用医疗 GMAI 团队负责人，带领团队在医疗 AI 领域构建并开源了多个大规模基准数据集和高性能模型。代表性成果包括：3D 医学影像预训练模型 STU-Net，医学影像分割基础模型 SAM-Med2D 和 SAM-Med3D，大规模系统化医学多模态评测基准 OmniMedVQA 与 GMAI-MMBench，通用医疗多模态大模型 GMAI-VL，超大分辨率病理 WSI 多模态大模型 SlideChat，以及大规模眼底彩照生成模型 RetinaLogos 和眼科手术视频生成模型 Ophora 等。近期，团队开源项目 Project Imaging-X（大规模医学影像数据综述与开源开放共享平台）在国内外引起广泛关注。此外，还参与了通用多模态大模型 InternVL、科学多模态大模型 Intern-S1，以及生成理解一体化模型 Lumina-DiMOO 等重要项目的研发工作。
 
 ## 研究方向
 
