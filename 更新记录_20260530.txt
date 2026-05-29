@@ -1,0 +1,1944 @@
+ ▐▛███▜▌   Claude Code v2.1.150
+▝▜█████▛▘  Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    /mnt/d/coding_files/Linux_D_Projects/20260406_gmai_group_webpage
+
+● Remote Control failed to connect: /login
+
+❯ /login                                                                        
+  ⎿  Login successful
+
+❯ /effort max                                                                   
+  ⎿  Set effort level to max (this session only): Maximum capability with
+     deepest reasoning
+
+❯ /init                                                                         
+
+● 读取当前 CLAUDE.md 和项目结构，评估改进点。
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+● 需要检查新增的 profile.html 布局和成员页面结构。
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+● 查看成员页面 front matter 和项目页面结构。
+
+  Read 2 files (ctrl+o to expand)
+
+● ★ Insight ─────────────────────────────────────
+  现有 CLAUDE.md 有三处关键遗漏：_layouts/profile.html（成员个人页布局）、按
+  member_slug 联动 team.yml
+  的数据流、以及项目详情页系统。这些都是后续添加成员/项目时必须知道的模式。另外
+  "awaiting first push" 状态已过时。
+  ─────────────────────────────────────────────────
+
+  更新 CLAUDE.md，加入这些新增系统。
+
+● Update(CLAUDE.md)
+  ⎿  Error: ENOENT: no such file or directory, statx '/mnt/d/coding_files/Linux_
+     D_Projects/20260406_gmai_group_webpage/CLAUDE.md'
+
+  Listed 1 directory (ctrl+o to expand)
+
+● 文件存在，改用 Write 完整重写。
+
+● Write(CLAUDE.md)
+  ⎿  Error writing file
+
+  Read 1 file (ctrl+o to expand)
+
+● 文件已部分更新。现在用 Edit 添加缺失的三个部分。
+
+● Update(CLAUDE.md)
+  ⎿  Added 25 lines
+      66  
+      67  Called via `{% include pub_card.html pub=entry %}`. Receives on
+          e publication object. PI surname (from `site.lab.pi_last`) is a
+          uto-bolded in the author list. BibTeX is passed to the modal vi
+          a `{{ pub.bibtex | jsonify }}`.
+      68  
+      69 +### Member profile pages (`_layouts/profile.html`)             
+      70 +                                                               
+      71 +Each team member has a dedicated EN + ZH profile page. The layo
+         +ut reads member data from `_data/team.yml` via the `member_slug
+         +` front matter field — no data is duplicated in the page file i
+         +tself.                                                         
+      72 +                                                               
+      73 +Front matter for a profile page:                               
+      74 +```yaml                                                        
+      75 +---                                                            
+      76 +layout:      profile                                           
+      77 +title:       "First Last"                                      
+      78 +permalink:   /team/first-last/                                 
+      79 +lang:        "en"                                              
+      80 +member_slug: "first-last"                                      
+      81 +---                                                            
+      82 +```                                                            
+      83 +                                                               
+      84 +The layout resolves `member_slug` by checking `team.pi`, then `
+         +team.co_pis`, then `team.members`, then `team.alumni` in that o
+         +rder. It renders: photo (or initials placeholder), role, resear
+         +ch focus, all configured links, and the `bio` / `bio_zh` fields
+         + from the YAML. Any Markdown content in the page file appears b
+         +elow the bio in `.profile-content`.                            
+      85 +                                                               
+      86 +Supported link keys in `team.yml` under `links:`: `scholar`, `g
+         +ithub`, `website`, `openreview`, `semantic_scholar`, `dblp`, `h
+         +uggingface`, `linkedin`, `researchgate`, `email`, `cv`, `twitte
+         +r`. Set unused keys to `""`.                                   
+      87 +                                                               
+      88 +Always create both `pages/team/<slug>.md` (EN) and `pages/zh/te
+         +am/<slug>.md` (ZH) with identical front matter except `lang` an
+         +d `permalink`.                                                 
+      89 +                                                               
+      90 +### Project detail pages                                       
+      91 +                                                               
+      92 +Per-project detail pages live at `pages/projects/<slug>.md` and
+         + `pages/zh/projects/<slug>.md`. They use `layout: page` (not `p
+         +rofile`) and are fully custom HTML within the page body — no sh
+         +ared data-driven template exists. The slug must match the proje
+         +ct's `slug:` field in `_data/projects.yml` for nav consistency.
+      93 +                                                               
+      94  ## Key Design Constraints
+      95  
+      96  - No custom Jekyll plugins (GitHub Pages whitelist only)
+
+● 现在更新 File Map 加入新布局和页面类型。
+
+● Update(CLAUDE.md)
+  ⎿  Added 5 lines
+      106  zh/index.md                 ZH homepage (identical structure, 
+           Chinese text)
+      107  pages/{team,publications,projects,news,contact}.md    EN secti
+           on pages
+      108  pages/zh/{team,publications,projects,news,contact}.md ZH secti
+           on pages
+      109 +pages/team/<slug>.md        EN individual member profile (layo
+          +ut: profile)                                                  
+      110 +pages/zh/team/<slug>.md     ZH individual member profile (layo
+          +ut: profile)                                                  
+      111 +pages/projects/<slug>.md    EN project detail page (layout: pa
+          +ge, custom HTML)                                              
+      112 +pages/zh/projects/<slug>.md ZH project detail page (layout: pa
+          +ge, custom HTML)                                              
+      113  _layouts/default.html       shared shell (fonts, nav, footer, 
+           BibTeX modal, JS)
+      114  _layouts/page.html          two-line wrapper extending default
+      115 +_layouts/profile.html       member profile: reads team.yml via
+          + member_slug front matter                                     
+      116  _includes/nav.html          top nav + language switcher (EN ↔ 
+           中文)
+      117  _includes/footer.html       footer with lab links
+      118  _includes/pub_card.html     publication card component
+
+● 最后更新 Common Tasks，加入成员个人页和项目详情页的操作指引。
+
+● Update(CLAUDE.md)
+  ⎿  Error: ENOENT: no such file or directory, statx '/mnt/d/coding_files/Linux_
+     D_Projects/20260406_gmai_group_webpage/CLAUDE.md'
+
+● 文件被外部 hook 修改后截断了部分内容。需要重新读取再完成最后一个 Edit。
+
+  Read 1 file (ctrl+o to expand)
+● CLAUDE.md 已完整更新，所有改动都已到位。
+
+  ★ Insight ─────────────────────────────────────
+  三处关键改进：
+
+  1. profile.html 的数据流 — member_slug 是连接页面文件与 team.yml
+  的唯一键。布局查找顺序 pi → co_pis → members → alumni 意味着同一 slug 在 PI
+  和成员列表都存在时，PI 优先被渲染为 PI badge。
+  2. 成员页双语强制配对 — EN 和 ZH 页面 front matter 几乎完全相同，只有 lang 和
+  permalink 两个字段不同。这是 Jekyll
+  无插件双语路由的核心约束，遗漏任何一个语言版本会导致语言切换跳 404。
+  3. 项目详情页与成员页的区别 — 项目页用 layout: page（无数据绑定，纯
+  HTML），成员页用 layout: profile（数据驱动）。新增项目页时不能误用 profile
+  布局。
+  ─────────────────────────────────────────────────
+
+  CLAUDE.md 更新完成。主要改动：
+  - 移除过时的 "awaiting first push" 状态说明
+  - 新增 _layouts/profile.html 完整说明（member_slug
+  数据流、链接字段列表、双语配对要求）
+  - 新增项目详情页系统说明
+  - File Map 加入 4 种新页面类型和 profile.html 布局
+  - Common Tasks 补充成员个人页和项目详情页的操作步骤
+
+✻ Brewed for 6m 54s
+
+※ recap: Updated CLAUDE.md with missing documentation for the profile layout and project/member page systems. No next action needed unless you want to commit the change. (disable recaps in /config)
+
+❯ /status 
+  ⎿  Stats dialog dismissed
+
+❯ okk, '/mnt/d/coding_files/Linux_D_Projects/20260406_gmai_group_webpage/pages/ 
+  projects/unimedvl.md' '/mnt/d/coding_files/Linux_D_Projects/20260406_gmai_gro 
+  up_webpage/pages/zh/projects/unimedvl.md'                                     
+  你看看这里怎么添加新的 project 或者完善当前的 project。我主要要完善这个       
+  project，用我现在给你提供的新的 Markdown                                      
+  内容把它替换进去，要遵循目前版本的语法，确保一切编译没有任何问题。            
+                                                                                
+  同时也要更改中文版本，两个同步一起。除了这两个内容之外，还要在 news           
+  上更新，这是 ICML 最新更新的。论文也要放到 highlight publication              
+  和单独介绍里，完善一下目前这个单独 project 的子页面介绍内容，你懂我意思吧？   
+                                                                                
+  我现在把那两个路径发过来。                                                    
+  /mnt/c/Users/ningj/Downloads/unimedvl_project_page_zh.md                      
+  /mnt/c/Users/ningj/Downloads/unimedvl_project_page_en.md n你看看怎么搞搞?     
+  ultrathink                                                                    
+  ⎿  Interrupted · What should Claude do instead?
+
+❯ /model                                                                        
+  ⎿  Set model to Opus 4.7 for this session with medium effort
+
+❯ 继续                                                                          
+
+● Read all source + target files in parallel first.
+
+  Read 5 files (ctrl+o to expand)
+
+● Read publications.yml + projects.yml + check assets dir.
+
+  Searched for 2 patterns, listed 1 directory (ctrl+o to expand)
+
+❯ /usage 
+  ⎿  Settings dialog dismissed
+
+● Read full publications.yml entry + projects.yml + check homepage publication
+  highlight.
+
+  Searched for 2 patterns, read 1 file (ctrl+o to expand)
+
+❯ 最好直接复制过去. 如果有需要的话. 
+
+● Check homepage highlight publication logic.
+
+  Searched for 2 patterns (ctrl+o to expand)
+
+● Plan clear. Will:
+  1. Overwrite EN/ZH project pages with new markdown content (fix TODO links to
+  real arxiv/github, map figures to existing assets)
+  2. Prepend new ICML 2026 news entry
+  3. Move UniMedVL to top of publications.yml, update venue → ICML, year → 2026,
+   add links
+  4. Add github/paper links to projects.yml entry
+
+  ★ Insight ─────────────────────────────────────
+  关键映射决策： 新 Markdown 引用 6 张图（unimedvl-overview/motivation/oka-frame
+  work/capabilities/generation-radar/transfer-ablation.png），但
+  assets/images/projects/unimedvl/ 只有 3 张实际文件（overview.jpg,
+  benchmarks.jpg, results.jpg）。直接复制会出现 6 张 broken
+  image。映射策略：hero + 框架/motivation → overview.jpg；capabilities/ablation
+  → results.jpg；radar → benchmarks.jpg。Jekyll 编译不会报错，但渲染体验更好。
+  ─────────────────────────────────────────────────
+
+  Write EN project page first.
+
+● Write(pages/projects/unimedvl.md)
+  ⎿  Added 99 lines, removed 27 lines
+       8  <div class="section-inner" style="max-width:900px;margin:0 auto
+          ;padding:2rem 1.5rem 4rem;">
+       9  
+      10  <div style="margin-bottom:2rem;font-size:.82rem;color:#64748b;"
+          >
+      11 -  <a href="{{ '/projects/' | relative_url }}" style="color:#647
+         -48b;text-decoration:none;">&larr; Projects</a>                 
+      11 +  <a href="{{ '/projects/' | relative_url }}" style="color:#647
+         +48b;text-decoration:none;">← Projects</a>                      
+      12  </div>
+      13  
+      14 -<div style="font-size:.7rem;font-weight:600;letter-spacing:.12e
+         -m;text-transform:uppercase;color:#1d4ed8;margin-bottom:.75rem;"
+         ->Medical Multimodal Large Models</div>                         
+      14 +<div style="font-size:.7rem;font-weight:600;letter-spacing:.12e
+         +m;text-transform:uppercase;color:#1d4ed8;margin-bottom:.75rem;"
+         +>Medical AI · Unified Multimodal Modeling · ICML 2026</div>    
+      15  <h1 style="font-family:'IBM Plex Serif',serif;font-size:2.2rem;
+          font-weight:300;color:#0f172a;line-height:1.25;margin-bottom:.7
+          5rem;">
+      16 -  UniMedVL: Unifying Medical Multimodal Understanding and Gener
+         -ation                                                          
+      16 +  UniMedVL                                                     
+      17  </h1>
+      18  <p style="font-size:1.05rem;color:#475569;font-family:'IBM Plex
+           Serif',serif;font-style:italic;margin-bottom:1.5rem;line-heigh
+          t:1.6;">
+      19 -  The First Unified Medical Model That Couples Image Understand
+         -ing and Generation within a Single Architecture via Observation
+         --Knowledge-Analysis                                            
+      19 +  Unifying Medical Multimodal Understanding and Generation thro
+         +ugh Observation–Knowledge–Analysis                             
+      20  </p>
+      21  
+      22  <!-- Institution strip -->
+      23  <div style="font-size:.78rem;color:#64748b;padding:.75rem 1rem;
+          background:#f8fafc;border:1px solid #e2e8f0;border-left:3px sol
+          id #1d4ed8;margin-bottom:1.5rem;line-height:1.7;">
+      24 -  <strong style="color:#1e293b;">Led by Shanghai Artificial Int
+         -elligence Laboratory</strong> in collaboration with            
+      25 -  Fudan University, Shanghai Innovation Institute, Stanford Uni
+         -versity, and ByteDance Seed.                                   
+      24 +  <strong style="color:#1e293b;">A unified medical multimodal A
+         +I project</strong> for jointly learning image understanding, me
+         +dical image generation, and interleaved visual-textual reasonin
+         +g within a single model. Led by Shanghai Artificial Intelligenc
+         +e Laboratory in collaboration with Fudan University, Shanghai I
+         +nnovation Institute, Stanford University, and ByteDance Seed.  
+      25  </div>
+      26  
+      27  <!-- Resource links -->
+      28  <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom
+          :2.5rem;">
+      30 -  <a href="https://arxiv.org/abs/2505.21899" target="_blank" re
+         -l="noopener"                                                   
+      31 -     style="display:inline-flex;align-items:center;gap:.3rem;pa
+         -dding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1px 
+         -solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoration:n
+         -one;background:#f8fafc;">arXiv Paper</a>                       
+      29    <a href="https://github.com/uni-medical/UniMedVL" target="_bl
+          ank" rel="noopener"
+      30       style="display:inline-flex;align-items:center;gap:.3rem;pa
+          dding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1px 
+          solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoration:n
+          one;background:#f8fafc;">GitHub</a>
+      31 +  <a href="https://arxiv.org/abs/2505.21899" target="_blank" re
+         +l="noopener"                                                   
+      32 +     style="display:inline-flex;align-items:center;gap:.3rem;pa
+         +dding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1px 
+         +solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoration:n
+         +one;background:#f8fafc;">arXiv Paper</a>                       
+      33 +  <a href="https://huggingface.co/datasets/General-Medical-AI/U
+         +niMedVL-5M" target="_blank" rel="noopener"                     
+      34 +     style="display:inline-flex;align-items:center;gap:.3rem;pa
+         +dding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1px 
+         +solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoration:n
+         +one;background:#f8fafc;">🤗 Dataset</a>                        
+      35  </div>
+      36  
+      37  <!-- Hero image -->
+      38  <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflo
+          w:hidden;">
+      38 -  {% include picture.html src="/assets/images/projects/unimedvl
+         -/overview.jpg" alt="UniMedVL: Observation-Knowledge-Analysis fr
+         -amework unifying medical image understanding and generation" cl
+         -ass="" loading="eager" %}                                      
+      39 +  <img src="{{ '/assets/images/projects/unimedvl/overview.jpg' 
+         +| relative_url }}"                                             
+      40 +       alt="UniMedVL capability overview and benchmark coverage
+         +"                                                              
+      41 +       style="width:100%;display:block;" loading="eager" />    
+      42    <figcaption style="padding:.75rem 1rem;font-size:.78rem;color
+          :#64748b;font-style:italic;background:#f8fafc;border-top:1px so
+          lid #e2e8f0;">
+      40 -    Figure 1. Overview of UniMedVL and the Observation-Knowledg
+         -e-Analysis (OKA) framework. Unlike single-capability models tha
+         -t either generate images without diagnostic explanations or pro
+         -vide text interpretations without visual outputs, UniMedVL coup
+         -les understanding and generation for mutual enhancement.       
+      43 +    UniMedVL overview: a single medical multimodal model is tra
+         +ined to support medical image understanding, text-to-image gene
+         +ration, and interleaved visual-textual outputs across diverse c
+         +linical imaging scenarios.                                     
+      44    </figcaption>
+      45  </figure>
+      46  
+      47  <!-- Introduction -->
+      48  <p style="font-size:.92rem;color:#334155;line-height:1.85;margi
+          n-bottom:1.5rem;">
+      46 -  Medical diagnosis fundamentally requires models that can proc
+         -ess multimodal medical inputs &mdash; images, patient histories
+         -, symptom descriptions &mdash; and produce diverse outputs incl
+         -uding textual reports and visual content such as annotations or
+         - segmentation masks. However, existing medical AI models fragme
+         -nt this unified process: image understanding models interpret i
+         -mages without producing visual outputs, while image generation 
+         -models produce visual outputs but cannot provide textual explan
+         -ations.                                                        
+      49 +  Medical AI systems increasingly need to do more than classify
+         + an image or answer a single question. A realistic diagnostic w
+         +orkflow often requires a model to read medical images, integrat
+         +e domain knowledge, explain findings in text, localize abnormal
+         +ities, compare modalities, and sometimes generate clinically me
+         +aningful visual outputs. Existing medical multimodal systems us
+         +ually divide these capabilities across separate models: one mod
+         +el for visual question answering, another for report generation
+         +, another for segmentation, and another for image synthesis. Th
+         +is fragmentation creates a mismatch with clinical workflows, wh
+         +ere reasoning and output generation are tightly coupled.       
+      50  </p>
+      51  <p style="font-size:.92rem;color:#334155;line-height:1.85;margi
+          n-bottom:2.5rem;">
+      49 -  UniMedVL addresses this gap through a multi-level framework c
+         -alled <strong>Observation-Knowledge-Analysis (OKA)</strong>. At
+         - the observation level, we construct <strong>UniMed-5M</strong>
+         -, a dataset comprising over 5.6 million samples that reformat d
+         -iverse unimodal data into multimodal pairs across 8 imaging mod
+         -alities. At the knowledge level, we propose <strong>Progressive
+         - Curriculum Learning</strong>, where models simultaneously lear
+         -n medical multimodal understanding and generation knowledge. At
+         - the analysis level, we introduce <strong>UniMedVL</strong> &md
+         -ash; the first medical unified model that handles both image un
+         -derstanding and generation within a single architecture without
+         - manually reloading model checkpoints.                         
+      52 +  <strong>UniMedVL</strong> (accepted at <strong>ICML 2026</str
+         +ong>) addresses this gap by treating medical understanding and 
+         +generation as mutually reinforcing capabilities rather than iso
+         +lated tasks. The project introduces a unified medical vision-la
+         +nguage model trained with one set of parameters, together with 
+         +<strong>UniMedVL-5M</strong>, a large-scale multimodal medical 
+         +corpus containing more than <strong>5.6 million</strong> instan
+         +ces across <strong>8 medical imaging modalities</strong>. Throu
+         +gh an <strong>Observation–Knowledge–Analysis</strong> framework
+         + and a three-stage progressive curriculum, UniMedVL learns to p
+         +rocess multimodal medical inputs and produce textual, visual, a
+         +nd interleaved multimodal outputs in a single inference framewo
+         +rk.                                                            
+      53  </p>
+      54  
+      55  <!-- Core Highlights -->
+     ...
+       58  <!-- Highlight 01 -->
+       59  <div style="margin-bottom:2.5rem;">
+       60    <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15
+           rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
+       58 -    01 &mdash; UniMed-5M: Large-Scale Multimodal Medical Datas
+          -et                                                            
+       61 +    01 — UniMedVL-5M: A Large-Scale Medical Multimodal Corpus 
+       62    </h3>
+       63    <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+           in-bottom:1rem;">
+       61 -    UniMed-5M contains over <strong>5.6 million</strong> multi
+          -modal medical samples spanning <strong>8 primary imaging modal
+          -ities</strong>, constructed through a rigorous quality control
+          - pipeline. Raw datasets undergo coarse filtering for resolutio
+          -n and text quality, followed by medical alignment scoring usin
+          -g MedGemma-27b and MedSigLIP to ensure clinical relevance. Exp
+          -ert validation by five medical professionals confirms data qua
+          -lity with strong inter-rater agreement (&kappa; > 0.80). The d
+          -ataset reformats diverse unimodal data into unified multimodal
+          - input-output pairs, including 5 interleaved tasks: medical im
+          -age prompt segmentation, super-resolution, counterfactual gene
+          -ration, virtual immunohistochemistry staining, and cross-modal
+          - synthesis.                                                   
+       64 +    UniMedVL-5M reformulates fragmented medical resources into
+          + standardized multimodal input-output pairs. Instead of treati
+          +ng image-caption data, medical VQA data, image generation data
+          +, and image translation data as separate silos, the dataset or
+          +ganizes them into a unified training substrate for understandi
+          +ng, generation, and interleaved multimodal tasks. It covers ei
+          +ght major medical imaging modalities, including color fundus p
+          +hotography, chest X-ray, CT, histopathology, MRI, OCT, ultraso
+          +und, and endoscopy, allowing the model to learn broad cross-mo
+          +dal medical correspondences rather than overfitting to a singl
+          +e modality.                                                   
+       65    </p>
+       66 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+       67 +    The curation pipeline combines coarse modality-specific fi
+          +ltering, text-length and image-resolution checks, medical imag
+          +e-text alignment scoring, and expert audit. For alignment, can
+          +didate captions are generated for each image and compared with
+          + original text through semantic embeddings and medical-specifi
+          +c MedSigLIP similarity. The retained high-quality subset is th
+          +en further enriched with interleaved task supervision, includi
+          +ng medical prompt segmentation, super-resolution, counterfactu
+          +al generation, virtual immunohistochemistry staining, and cros
+          +s-modal synthesis.                                            
+       68 +  </p>                                                        
+       69  </div>
+       70 +<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overfl
+          +ow:hidden;">                                                  
+       71 +  <img src="{{ '/assets/images/projects/unimedvl/overview.jpg'
+          + | relative_url }}"                                           
+       72 +       alt="Observation-Knowledge framework: data curation and
+          + progressive curriculum learning"                             
+       73 +       style="width:100%;display:block;" loading="lazy" />    
+       74 +  <figcaption style="padding:.75rem 1rem;font-size:.78rem;colo
+          +r:#64748b;font-style:italic;background:#f8fafc;border-top:1px 
+          +solid #e2e8f0;">                                              
+       75 +    Observation and Knowledge levels. UniMedVL-5M is built fro
+          +m heterogeneous medical data through quality filtering, alignm
+          +ent scoring, and interleaved-task construction; training then 
+          +proceeds through foundation training, instruction tuning, and 
+          +unified multimodal training.                                  
+       76 +  </figcaption>                                               
+       77 +</figure>                                                     
+       78  
+       79  <!-- Highlight 02 -->
+       80  <div style="margin-bottom:2.5rem;">
+       81    <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15
+           rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
+       68 -    02 &mdash; Progressive Curriculum Learning                
+       82 +    02 — Observation–Knowledge–Analysis: A Framework for Medic
+          +al Unification                                                
+       83    </h3>
+       84    <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+           in-bottom:1rem;">
+       71 -    UniMedVL is trained through a principled three-stage curri
+          -culum that progressively builds from basic medical pattern rec
+          -ognition to sophisticated multimodal capabilities. <strong>Sta
+          -ge 1 &mdash; Foundation Training</strong> establishes basic me
+          -dical image understanding and generation capabilities on the e
+          -ntire UniMed-5M dataset. <strong>Stage 2 &mdash; Instruction T
+          -uning</strong> improves instruction-following via Distilled Ch
+          -ain of Thought (DCOT) for understanding tasks and Caption Augm
+          -ented Generation (CAG) for generation tasks. <strong>Stage 3 &
+          -mdash; Unified Multimodal Training</strong> fine-tunes on comp
+          -lex interleaved tasks that combine understanding and generatio
+          -n within unified sequences, enabling bidirectional knowledge s
+          -haring between the two pathways.                              
+       85 +    The central design of UniMedVL is the Observation–Knowledg
+          +e–Analysis framework. At the <strong>Observation</strong> leve
+          +l, diverse medical datasets are converted into aligned multimo
+          +dal samples. At the <strong>Knowledge</strong> level, the mode
+          +l is trained through progressive curriculum learning: foundati
+          +on training establishes basic medical vision-language alignmen
+          +t; instruction tuning improves task following with high-qualit
+          +y medical instructions; and unified multimodal training couple
+          +s understanding and generation through interleaved inputs and 
+          +outputs. At the <strong>Analysis</strong> level, the resulting
+          + model performs both comprehension and generation with a singl
+          +e parameter set.                                              
+       86    </p>
+       87 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+       88 +    This design is important because naive multitask training 
+          +can easily cause task interference. UniMedVL instead stages th
+          +e learning process so that low-level cross-modal alignment is 
+          +learned before more complex instruction following and interlea
+          +ved reasoning. The final stage exposes the model to tasks wher
+          +e textual and visual outputs must be produced together, encour
+          +aging the model to learn shared representations useful for bot
+          +h diagnostic reasoning and visual synthesis.                  
+       89 +  </p>                                                        
+       90  </div>
+       91  
+       92  <!-- Highlight 03 -->
+       93  <div style="margin-bottom:2.5rem;">
+       94    <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15
+           rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
+       78 -    03 &mdash; State-of-the-Art Unified Performance           
+       95 +    03 — One Model for Understanding, Generation, and Interlea
+          +ved Outputs                                                   
+       96    </h3>
+       97    <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+           in-bottom:1rem;">
+       81 -    With 14B total parameters (7B activated during inference),
+          - UniMedVL achieves <strong>superior performance on 5 medical i
+          -mage understanding benchmarks</strong> among unified models &m
+          -dash; scoring 85.8% on OmniMedVQA (vs. 74.4% for HealthGPT-L14
+          -) and 60.75% on GMAI-MMBench &mdash; while simultaneously matc
+          -hing specialised models in generation quality across <strong>8
+          - medical imaging modalities</strong> with an average gFID of 9
+          -6.29 and a BioMedCLIP score of 0.706. Crucially, ablation stud
+          -ies confirm that joint training consistently outperforms singl
+          -e-task variants, validating that understanding and generation 
+          -capabilities reinforce each other through the unified architec
+          -ture.                                                         
+       98 +    UniMedVL adopts a unified architecture with dual visual en
+          +coders and a Transformer backbone. A semantic vision encoder e
+          +xtracts tokens for medical image understanding, while a VAE-ba
+          +sed visual pathway supports image generation. These visual tok
+          +ens are integrated with text tokens inside a shared sequence m
+          +odeling framework. Specialized feed-forward layers handle unde
+          +rstanding and generation-specific representations, while share
+          +d self-attention layers allow cross-task information exchange.
+          + Text outputs are optimized with next-token prediction, and vi
+          +sual outputs are optimized with rectified flow matching in the
+          + VAE latent space.                                            
+       99    </p>
+      100 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+      101 +    The resulting system supports three families of tasks: <st
+          +rong>understanding</strong> tasks such as medical VQA, image c
+          +aptioning, diagnostic reasoning, and report generation; <stron
+          +g>generation</strong> tasks such as text-guided medical image 
+          +synthesis; and <strong>interleaved</strong> tasks such as virt
+          +ual staining, super-resolution, counterfactual generation, and
+          + cross-modal image synthesis where the model must jointly prod
+          +uce visual and textual outputs.                               
+      102 +  </p>                                                        
+      103  </div>
+      104 +<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overfl
+          +ow:hidden;">                                                  
+      105 +  <img src="{{ '/assets/images/projects/unimedvl/results.jpg' 
+          +| relative_url }}"                                            
+      106 +       alt="Visualization of UniMedVL multimodal capabilities"
+      107 +       style="width:100%;display:block;" loading="lazy" />    
+      108 +  <figcaption style="padding:.75rem 1rem;font-size:.78rem;colo
+          +r:#64748b;font-style:italic;background:#f8fafc;border-top:1px 
+          +solid #e2e8f0;">                                              
+      109 +    Qualitative capability overview. UniMedVL supports text-to
+          +-image generation, virtual staining, super-resolution, counter
+          +factual generation, and cross-modal synthesis under one unifie
+          +d medical multimodal framework.                               
+      110 +  </figcaption>                                               
+      111 +</figure>                                                     
+      112  
+      113 +<!-- Highlight 04 -->                                         
+      114 +<div style="margin-bottom:2.5rem;">                           
+      115 +  <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15
+          +rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">        
+      116 +    04 — Competitive Understanding and Strong Multi-Modality G
+          +eneration                                                     
+      117 +  </h3>                                                       
+      118 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+      119 +    UniMedVL is evaluated on five medical visual understanding
+          + benchmarks: VQA-RAD, SLAKE, PathVQA, OmniMedVQA, and GMAI-MMB
+          +ench. Despite being a unified understanding-and-generation mod
+          +el rather than an understanding-only specialist, UniMedVL reac
+          +hes a <strong>67.47 average score</strong> across these benchm
+          +arks and achieves strong results on challenging settings such 
+          +as OmniMedVQA and GMAI-MMBench. Compared with prior unified me
+          +dical models that rely on task-specific checkpoints, UniMedVL 
+          +keeps inference unified under a single model.                 
+      120 +  </p>                                                        
+      121 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+      122 +    On generation, UniMedVL reports an average <strong>FID of 
+          +96.29</strong> across eight medical imaging modalities, improv
+          +ing over the generation-only variant and general unified basel
+          +ines. The model also achieves an average <strong>BioMedCLIP Sc
+          +ore of 0.706</strong>, indicating stronger semantic alignment 
+          +between medical prompts and generated images. External held-ou
+          +t generation evaluation further suggests that the gains are no
+          +t limited to the training distribution.                       
+      123 +  </p>                                                        
+      124 +</div>                                                        
+      125 +<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overfl
+          +ow:hidden;">                                                  
+      126 +  <img src="{{ '/assets/images/projects/unimedvl/benchmarks.jp
+          +g' | relative_url }}"                                         
+      127 +       alt="BioMedCLIP score radar chart across eight medical 
+          +imaging modalities"                                           
+      128 +       style="width:100%;display:block;" loading="lazy" />    
+      129 +  <figcaption style="padding:.75rem 1rem;font-size:.78rem;colo
+          +r:#64748b;font-style:italic;background:#f8fafc;border-top:1px 
+          +solid #e2e8f0;">                                              
+      130 +    Multi-modality generation performance. UniMedVL achieves s
+          +trong BioMedCLIP alignment across eight medical imaging modali
+          +ties, showing that unified training can improve generation fid
+          +elity rather than degrade it.                                 
+      131 +  </figcaption>                                               
+      132 +</figure>                                                     
+      133 +                                                              
+      134 +<!-- Highlight 05 -->                                         
+      135 +<div style="margin-bottom:2.5rem;">                           
+      136 +  <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15
+          +rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">        
+      137 +    05 — Evidence of Bidirectional Transfer between Understand
+          +ing and Generation                                            
+      138 +  </h3>                                                       
+      139 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+      140 +    A key empirical finding is that medical understanding and 
+          +medical generation do not necessarily compete. Ablation studie
+          +s show that adding generation training improves understanding 
+          +performance, while adding understanding supervision improves g
+          +eneration fidelity. In the foundation stage, joint training li
+          +fts GMAI-MMBench accuracy from 0.505 to 0.593 compared with th
+          +e understanding-only variant. Across generation experiments, i
+          +ncorporating understanding supervision reduces average FID com
+          +pared with generation-only training.                          
+      141 +  </p>                                                        
+      142 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+      143 +    The interleaved task results further support this conclusi
+          +on. UniMedVL achieves <strong>20.27 PSNR</strong> for H&amp;E-
+          +to-IHC virtual staining, <strong>27.29 PSNR / 0.890 SSIM</stro
+          +ng> for MRI super-resolution, and <strong>25.07 PSNR / 0.882 S
+          +SIM</strong> on average for bidirectional T2-FLAIR MRI transla
+          +tion. These results suggest that unified multimodal training c
+          +an preserve task-specific utility while enabling broader medic
+          +al workflow coverage.                                         
+      144 +  </p>                                                        
+      145 +</div>                                                        
+      146 +<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overfl
+          +ow:hidden;">                                                  
+      147 +  <img src="{{ '/assets/images/projects/unimedvl/results.jpg' 
+          +| relative_url }}"                                            
+      148 +       alt="Bidirectional transfer and progressive curriculum 
+          +ablation"                                                     
+      149 +       style="width:100%;display:block;" loading="lazy" />    
+      150 +  <figcaption style="padding:.75rem 1rem;font-size:.78rem;colo
+          +r:#64748b;font-style:italic;background:#f8fafc;border-top:1px 
+          +solid #e2e8f0;">                                              
+      151 +    Bidirectional transfer. Ablations show that generation sup
+          +ervision can improve understanding, while understanding superv
+          +ision can improve generation quality; progressive curriculum l
+          +earning further strengthens this cross-task synergy.          
+      152 +  </figcaption>                                               
+      153 +</figure>                                                     
+      154 +                                                              
+      155  <!-- Conclusion -->
+      156  <div style="border-left:3px solid #1d4ed8;padding:1.25rem 1.5r
+           em;background:#f8fafc;margin-bottom:3rem;">
+      157    <div style="font-size:.7rem;font-weight:700;letter-spacing:.
+           1em;text-transform:uppercase;color:#1d4ed8;margin-bottom:.6rem
+           ;">Conclusion</div>
+      158    <p style="font-size:.88rem;color:#475569;line-height:1.8;mar
+           gin:0;font-family:'IBM Plex Serif',serif;">
+       89 -    UniMedVL establishes a new paradigm for unified medical AI
+          - by simultaneously performing image understanding and generati
+          -on within a single model. Validated through extensive experime
+          -nts on over 5 million medical samples, UniMedVL demonstrates t
+          -hat the OKA framework &mdash; combining large-scale multimodal
+          - data construction, progressive curriculum learning, and a uni
+          -fied architecture &mdash; enables bidirectional knowledge shar
+          -ing that improves both comprehension and generation quality. T
+          -his work represents a critical step toward truly integrated me
+          -dical AI systems where understanding and generation capabiliti
+          -es synergistically enhance clinical workflows.                
+      159 +    UniMedVL is a step toward unified medical multimodal model
+          +ing: a single model that can understand medical images, genera
+          +te medical images, and handle interleaved visual-textual workf
+          +lows. Its main message is not merely that one model can cover 
+          +many tasks, but that carefully aligned data, progressive curri
+          +culum design, and joint objectives can make understanding and 
+          +generation reinforce each other. The current system remains a 
+          +research model rather than a deployable clinical solution: it 
+          +focuses on 2D medical imaging, relies on automatic evaluation 
+          +metrics, and still requires further clinical validation before
+          + real-world use. Nevertheless, UniMedVL provides a reusable da
+          +taset, training recipe, and model design for future work on ge
+          +neral-purpose medical multimodal AI.                          
+      160    </p>
+      161  </div>
+      162  
+      163  <!-- Key Contributions -->
+      164  <h2 style="font-family:'IBM Plex Serif',serif;font-size:1.35re
+           m;font-weight:400;color:#0f172a;margin:0 0 1rem;">Key Contribu
+           tions</h2>
+      165  <ul style="font-size:.88rem;color:#334155;line-height:1.9;padd
+           ing-left:1.4rem;margin-bottom:3rem;">
+       96 -  <li>Constructed <strong>UniMed-5M</strong> &mdash; a large-s
+          -cale dataset with over 5.6M multimodal medical samples spannin
+          -g 8 imaging modalities, reformatting diverse unimodal datasets
+          - into unified multimodal input-output pairs with rigorous qual
+          -ity control.</li>                                             
+       97 -  <li>Devised <strong>Progressive Curriculum Learning</strong>
+          -, a three-stage training paradigm (foundation training &rarr; 
+          -instruction tuning &rarr; unified multimodal training) that sy
+          -stematically builds cross-modal understanding-generation capab
+          -ilities with bidirectional knowledge transfer.</li>           
+       98 -  <li>Introduced <strong>UniMedVL</strong>, the first medical 
+          -unified multimodal model that processes multimodal inputs and 
+          -generates both textual and visual outputs within a single arch
+          -itecture &mdash; without requiring separate model checkpoints 
+          -for different task types.</li>                                
+       99 -  <li>Achieved <strong>state-of-the-art performance</strong> o
+          -n medical VQA benchmarks among unified models while matching s
+          -pecialised generation models across 8 imaging modalities, demo
+          -nstrating that joint training yields mutual enhancement rather
+          - than compromise.</li>                                        
+      166 +  <li><strong>UniMedVL-5M</strong>: A 5.6M-sample multimodal m
+          +edical corpus covering eight imaging modalities and supporting
+          + understanding, generation, and interleaved multimodal tasks.<
+          +/li>                                                          
+      167 +  <li><strong>Observation–Knowledge–Analysis framework</strong
+          +>: A three-level formulation that maps medical multimodal unif
+          +ication to data alignment, curriculum learning, and unified mo
+          +del analysis.</li>                                            
+      168 +  <li><strong>Progressive Curriculum Learning</strong>: A thre
+          +e-stage training pipeline combining foundation training, instr
+          +uction tuning with enhanced medical supervision, and unified m
+          +ultimodal training.</li>                                      
+      169 +  <li><strong>Unified medical vision-language model</strong>: 
+          +A single-parameter model that performs medical image understan
+          +ding and generation without switching checkpoints.</li>       
+      170 +  <li><strong>Empirical evidence of task synergy</strong>: Ben
+          +chmark and ablation results show bidirectional transfer betwee
+          +n understanding and generation across medical tasks.</li>     
+      171  </ul>
+      172  
+      173  <!-- Authors -->
+      174  <h2 style="font-family:'IBM Plex Serif',serif;font-size:1.35re
+           m;font-weight:400;color:#0f172a;margin:0 0 .75rem;">Authors</h
+           2>
+      175  <p style="font-size:.8rem;color:#64748b;line-height:1.8;margin
+           -bottom:3rem;">
+      105 -  Junzhi Ning*, Wei Li*, Cheng Tang*, Jiashi Lin, Chenglong Ma
+          -, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lihao Liu
+          -, Yuandong Pu, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xin, Qi
+          - Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yuanfen
+          -g Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming Hu, 
+          -<strong>Junjun He</strong>                                    
+      106 -  <br><span style="font-size:.75rem;color:#94a3b8;">* Equal co
+          -ntribution (co-first authors)</span>                          
+      176 +  Junzhi Ning*, Wei Li*, Cheng Tang*, Jiashi Lin, Chenglong Ma
+          +, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Yuandong 
+          +Pu, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xin, Qi Qin, Dipin
+          +g Song, Bin Fu, Guang Yang, Yuanfeng Ji, Tianbin Li, Yanzhou S
+          +u†, Jin Ye, Shixiang Tang, Zhongying Deng, Lihao Liu, Ming Hu,
+          + <strong>Junjun He</strong>†<br>                              
+      177 +  <em>* Equal contribution &nbsp;· &nbsp;† Corresponding autho
+          +rs</em>                                                       
+      178  </p>
+      179  
+      180  <!-- Footer links -->
+      181  <div style="border-top:1px solid #e2e8f0;padding-top:2rem;disp
+           lay:flex;gap:1rem;flex-wrap:wrap;">
+      111 -  <a href="https://arxiv.org/abs/2505.21899" target="_blank" r
+          -el="noopener" class="pub-btn">arXiv Paper</a>                 
+      182    <a href="https://github.com/uni-medical/UniMedVL" target="_b
+           lank" rel="noopener" class="pub-btn">GitHub Repository</a>
+      113 -  <a href="{{ '/projects/' | relative_url }}" class="pub-btn">
+          -&larr; Back to Projects</a>                                   
+      183 +  <a href="https://arxiv.org/abs/2505.21899" target="_blank" r
+          +el="noopener" class="pub-btn">arXiv Paper</a>                 
+      184 +  <a href="https://huggingface.co/datasets/General-Medical-AI/
+          +UniMedVL-5M" target="_blank" rel="noopener" class="pub-btn">🤗
+          + Dataset</a>                                                  
+      185 +  <a href="{{ '/projects/' | relative_url }}" class="pub-btn">
+          +← Back to Projects</a>                                        
+      186  </div>
+      187  
+      188  </div>
+
+● ZH page next.
+
+● Write(pages/zh/projects/unimedvl.md)
+  ⎿  Added 103 lines, removed 27 lines
+        7  
+        8  <div class="section-inner" style="max-width:900px;margin:0 aut
+           o;padding:2rem 1.5rem 4rem;">
+        9  
+       10 -<nav style="margin-bottom:2rem;font-size:.82rem;color:#64748b;
+          -">                                                            
+       11 -  <a href="{{ '/zh/projects/' | relative_url }}" style="color:
+          -#64748b;text-decoration:none;">&larr; 项目</a>                
+       10 +<div style="margin-bottom:2rem;font-size:.82rem;color:#64748b;
+          +">                                                            
+       11 +  <a href="{{ '/zh/projects/' | relative_url }}" style="color:
+          +#64748b;text-decoration:none;">← 项目</a>                     
+       12  </div>
+       13  
+       14 -<div style="font-size:.7rem;font-weight:600;letter-spacing:.12
+          -em;text-transform:uppercase;color:#1d4ed8;margin-bottom:.75rem
+          -;">医学多模态大模型</div>                                     
+       14 +<div style="font-size:.7rem;font-weight:600;letter-spacing:.12
+          +em;text-transform:uppercase;color:#1d4ed8;margin-bottom:.75rem
+          +;">医学 AI · 统一多模态建模 · ICML 2026</div>                 
+       15  <h1 style="font-family:'IBM Plex Serif',serif;font-size:2.2rem
+           ;font-weight:300;color:#0f172a;line-height:1.25;margin-bottom:
+           .75rem;">
+       16 -  UniMedVL：统一医学多模态理解与生成                          
+       16 +  UniMedVL                                                    
+       17  </h1>
+       18  <p style="font-size:1.05rem;color:#475569;font-family:'IBM Ple
+           x Serif',serif;font-style:italic;margin-bottom:1.5rem;line-hei
+           ght:1.6;">
+       19 -  首个通过"观察-知识-分析"框架在单一架构内耦合图像理解与生成的
+          -统一医学模型                                                  
+       19 +  基于 Observation–Knowledge–Analysis 的统一医学多模态理解与生
+          +成模型                                                        
+       20  </p>
+       21  
+       22  <!-- Institution strip -->
+       23  <div style="font-size:.78rem;color:#64748b;padding:.75rem 1rem
+           ;background:#f8fafc;border:1px solid #e2e8f0;border-left:3px s
+           olid #1d4ed8;margin-bottom:1.5rem;line-height:1.7;">
+       24 -  <strong style="color:#1e293b;">由上海人工智能实验室主导</str
+          -ong>，联合复旦大学、上海创新研究院、斯坦福大学和字节跳动 Seed 
+          -共同研究。                                                    
+       24 +  <strong style="color:#1e293b;">面向统一医学多模态 AI 的研究 
+          +项目</strong>，目标是在单一模型中联合学习医学图像理解、医学图 
+          +像生成，以及视觉-文本交错推理能力。由上海人工智能实验室主导， 
+          +联合复旦大学、上海创新研究院、斯坦福大学和字节跳动 Seed 共同研
+          +究。                                                          
+       25  </div>
+       26  
+       27  <!-- Resource links -->
+       28  <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-botto
+           m:2.5rem;">
+       29 -  <a href="https://arxiv.org/abs/2505.21899" target="_blank" r
+          -el="noopener"                                                 
+       30 -     style="display:inline-flex;align-items:center;gap:.3rem;p
+          -adding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1p
+          -x solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoratio
+          -n:none;background:#f8fafc;">arXiv 论文</a>                    
+       29    <a href="https://github.com/uni-medical/UniMedVL" target="_b
+           lank" rel="noopener"
+       30       style="display:inline-flex;align-items:center;gap:.3rem;p
+           adding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1p
+           x solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoratio
+           n:none;background:#f8fafc;">GitHub</a>
+       31 +  <a href="https://arxiv.org/abs/2505.21899" target="_blank" r
+          +el="noopener"                                                 
+       32 +     style="display:inline-flex;align-items:center;gap:.3rem;p
+          +adding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1p
+          +x solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoratio
+          +n:none;background:#f8fafc;">arXiv 论文</a>                    
+       33 +  <a href="https://huggingface.co/datasets/General-Medical-AI/
+          +UniMedVL-5M" target="_blank" rel="noopener"                   
+       34 +     style="display:inline-flex;align-items:center;gap:.3rem;p
+          +adding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1p
+          +x solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoratio
+          +n:none;background:#f8fafc;">🤗 数据集</a>                     
+       35  </div>
+       36  
+       37  <!-- Hero image -->
+       38  <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overfl
+           ow:hidden;">
+       37 -  {% include picture.html src="/assets/images/projects/unimedv
+          -l/overview.jpg" alt="UniMedVL：观察-知识-分析框架统一医学图像 
+          -理解与生成" class="" loading="eager" %}                       
+       39 +  <img src="{{ '/assets/images/projects/unimedvl/overview.jpg'
+          + | relative_url }}"                                           
+       40 +       alt="UniMedVL 能力总览与 benchmark 覆盖"               
+       41 +       style="width:100%;display:block;" loading="eager" />   
+       42    <figcaption style="padding:.75rem 1rem;font-size:.78rem;colo
+           r:#64748b;font-style:italic;background:#f8fafc;border-top:1px 
+           solid #e2e8f0;">
+       39 -    图1. UniMedVL 与观察-知识-分析（OKA）框架总览。与仅能生成 
+          -图像而无法提供诊断解释的模型或仅能提供文本解读而无法输出视觉内
+          -容的单一能力模型不同，UniMedVL 将理解与生成耦合，实现相互增强 
+          -。                                                            
+       43 +    UniMedVL 总览：一个统一的医学多模态模型，在同一框架内支持 
+          +医学图像理解、文本到医学图像生成，以及视觉-文本交错输出，覆盖 
+          +多种临床影像场景。                                            
+       44    </figcaption>
+       45  </figure>
+       46  
+       47  <!-- Introduction -->
+       48  <p style="font-size:.92rem;color:#334155;line-height:1.85;marg
+           in-bottom:1.5rem;">
+       45 -  医学诊断从根本上要求模型能够处理多模态医学输入——影像、病史、
+          -症状描述——并产生包括文本报告和标注或分割掩码等视觉内容在内的多
+          -样化输出。然而，现有的医学AI模型将这一本应统一的流程割裂开来：
+          -图像理解模型能解读影像却无法产生视觉输出，而图像生成模型能产生
+          -视觉输出却无法提供文本解释。                                  
+       49 +  医学 AI 系统需要处理的不只是单张图像分类或单轮问题回答。真实
+          +诊疗流程通常要求模型读取医学影像、整合医学知识、用文本解释发现
+          +、定位异常区域、进行跨模态比较，并在某些场景下生成具有医学语义
+          +的视觉输出。现有医学多模态系统往往把这些能力拆分到不同模型中：
+          +一个模型负责视觉问答，一个模型负责报告生成，一个模型负责分割，
+          +另一个模型负责图像生成。这种碎片化设计与临床工作流并不匹配，因
+          +为医学推理与输出生成本身通常是紧密耦合的。                    
+       50  </p>
+       51  <p style="font-size:.92rem;color:#334155;line-height:1.85;marg
+           in-bottom:2.5rem;">
+       48 -  UniMedVL 通过名为<strong>观察-知识-分析（OKA）</strong>的多 
+          -层级框架解决了这一问题。在观察层面，我们构建了 <strong>UniMed-
+          -5M</strong>，一个包含超过560万样本的数据集，将多样化的单模态数
+          -据重新组织为跨8种影像模态的多模态配对。在知识层面，我们提出了<
+          -strong>渐进式课程学习</strong>策略，使模型同步学习医学多模态理
+          -解与生成知识。在分析层面，我们推出了 <strong>UniMedVL</strong>
+          -——首个在单一架构内同时处理图像理解与生成任务的医学统一模型，无
+          -需手动重载模型检查点。                                        
+       52 +  <strong>UniMedVL</strong>（<strong>ICML 2026</strong> 接收）
+          +将医学理解与医学生成视为可以相互增强的能力，而不是彼此割裂的任
+          +务。该项目提出了一个使用单一参数集合进行推理的统一医学视觉语言
+          +模型，并构建了 <strong>UniMedVL-5M</strong>：一个包含超过 <str
+          +ong>560 万</strong> 样本、覆盖 <strong>8 种医学影像模态</stron
+          +g> 的大规模医学多模态数据集。通过 <strong>Observation–Knowledg
+          +e–Analysis</strong> 框架和三阶段 progressive curriculum，UniMe
+          +dVL 学习从多模态医学输入中生成文本、图像以及视觉-文本交错输出 
+          +。                                                            
+       53  </p>
+       54  
+       55  <!-- Core Highlights -->
+       56  <h2 style="font-family:'IBM Plex Serif',serif;font-size:1.5rem
+           ;font-weight:400;color:#0f172a;border-bottom:1px solid #e2e8f0
+           ;padding-bottom:.75rem;margin:0 0 1.5rem;">核心亮点</h2>
+       57  
+       58 +<!-- Highlight 01 -->                                         
+       59  <div style="margin-bottom:2.5rem;">
+       60    <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15
+           rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
+       56 -    01 &mdash; UniMed-5M：大规模多模态医学数据集              
+       61 +    01 — UniMedVL-5M：大规模医学多模态训练语料                
+       62    </h3>
+       63    <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+           in-bottom:1rem;">
+       59 -    UniMed-5M 包含超过 <strong>560万</strong> 个多模态医学样本
+          -，覆盖 <strong>8种主要影像模态</strong>，通过严格的质量控制流 
+          -程构建。原始数据集经过分辨率和文本质量的粗筛，随后利用 MedGemm
+          -a-27b 和 MedSigLIP 进行医学对齐评分以确保临床相关性。由五位医 
+          -学专家进行验证，评分者间一致性良好（&kappa; > 0.80）。该数据集
+          -将多样化的单模态数据重新组织为统一的多模态输入-输出配对，包含5
+          -种交错任务：医学图像提示分割、超分辨率、反事实生成、虚拟免疫组
+          -化染色和跨模态合成。                                          
+       64 +    UniMedVL-5M 将原本分散的医学数据资源重新组织为标准化的 mul
+          +timodal input-output pairs。它不是把 image-caption、medical VQ
+          +A、image generation 和 image translation 数据分别作为独立孤岛 
+          +处理，而是将它们统一为服务于理解、生成和交错多模态任务的训练基
+          +底。该数据集覆盖 8 类主要医学影像模态，包括 color fundus photo
+          +graphy、chest X-ray、CT、histopathology、MRI、OCT、ultrasound 
+          +和 endoscopy，使模型能够学习跨模态医学对应关系，而不是只适配单
+          +一模态。                                                      
+       65    </p>
+       66 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+       67 +    数据构建流程包括模态相关的 coarse filtering、文本长度与图 
+          +像分辨率检查、医学图文对齐打分，以及专家抽样审查。对齐阶段会为
+          +每张图像生成候选 caption，并通过 semantic embedding 与 MedSigL
+          +IP 的医学相似度评估原始图文对的质量。最终保留的高质量子集进一 
+          +步加入交错任务监督，包括 medical prompt segmentation、super-re
+          +solution、counterfactual generation、virtual immunohistochemis
+          +try staining 和 cross-modal synthesis。                       
+       68 +  </p>                                                        
+       69  </div>
+       70 +<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overfl
+          +ow:hidden;">                                                  
+       71 +  <img src="{{ '/assets/images/projects/unimedvl/overview.jpg'
+          + | relative_url }}"                                           
+       72 +       alt="Observation-Knowledge 框架：数据构建与渐进式课程学
+          +习"                                                           
+       73 +       style="width:100%;display:block;" loading="lazy" />    
+       74 +  <figcaption style="padding:.75rem 1rem;font-size:.78rem;colo
+          +r:#64748b;font-style:italic;background:#f8fafc;border-top:1px 
+          +solid #e2e8f0;">                                              
+       75 +    Observation 与 Knowledge 层设计。UniMedVL-5M 通过质量过滤 
+          +、对齐评分和交错任务构建整合异构医学数据；模型训练随后经过 fou
+          +ndation training、instruction tuning 和 unified multimodal tra
+          +ining 三个阶段。                                              
+       76 +  </figcaption>                                               
+       77 +</figure>                                                     
+       78  
+       79 +<!-- Highlight 02 -->                                         
+       80  <div style="margin-bottom:2.5rem;">
+       81    <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15
+           rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
+       65 -    02 &mdash; 渐进式课程学习                                 
+       82 +    02 — Observation–Knowledge–Analysis：面向医学统一建模的框 
+          +架                                                            
+       83    </h3>
+       84    <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+           in-bottom:1rem;">
+       68 -    UniMedVL 通过精心设计的三阶段课程进行训练，逐步从基础医学 
+          -模式识别提升至复杂的多模态能力。<strong>第一阶段——基础训练</st
+          -rong>在完整的 UniMed-5M 数据集上建立基本的医学图像理解与生成能
+          -力。<strong>第二阶段——指令微调</strong>通过蒸馏思维链（DCOT） 
+          -改善理解任务的指令遵循能力，并通过描述增强生成（CAG）提升生成 
+          -任务的表现。<strong>第三阶段——统一多模态训练</strong>在结合理 
+          -解与生成的复杂交错任务上进行微调，使两条通路之间实现双向知识共
+          -享。                                                          
+       85 +    UniMedVL 的核心设计是 Observation–Knowledge–Analysis 框架 
+          +。在 <strong>Observation</strong> 层，不同来源的医学数据被转换
+          +为对齐的多模态样本；在 <strong>Knowledge</strong> 层，模型通过
+          + progressive curriculum learning 逐步训练：foundation training
+          + 建立基础医学视觉-语言对齐，instruction tuning 增强高质量医学 
+          +指令跟随能力，unified multimodal training 则通过交错输入输出将
+          +理解与生成能力耦合起来；在 <strong>Analysis</strong> 层，最终 
+          +模型使用同一套参数同时执行医学图像理解与医学图像生成。        
+       86    </p>
+       87 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+       88 +    这个设计的关键在于避免简单 multitask training 造成的 task 
+          +interference。UniMedVL 不是直接把所有任务混在一起训练，而是先 
+          +学习底层 cross-modal alignment，再进入更复杂的 instruction fol
+          +lowing 和 interleaved reasoning。最后阶段让模型接触需要同时生 
+          +成文本与图像的任务，从而鼓励模型学习对诊断推理和视觉合成都有用
+          +的共享表征。                                                  
+       89 +  </p>                                                        
+       90  </div>
+       91  
+       92 +<!-- Highlight 03 -->                                         
+       93  <div style="margin-bottom:2.5rem;">
+       94    <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15
+           rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">
+       74 -    03 &mdash; 最先进的统一性能                               
+       95 +    03 — 一个模型同时支持理解、生成与交错输出                 
+       96    </h3>
+       97    <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+           in-bottom:1rem;">
+       77 -    UniMedVL 总参数量为14B（推理时激活7B），在统一模型中取得了
+          - <strong>5项医学图像理解基准上的最优性能</strong>——在 OmniMedV
+          -QA 上得分85.8%（对比 HealthGPT-L14 的74.4%），在 GMAI-MMBench 
+          -上达到60.75%——同时在 <strong>8种医学影像模态</strong>的生成质 
+          -量上匹配专用模型，平均 gFID 为96.29，BioMedCLIP 得分为0.706。 
+          -关键的消融实验证实，联合训练始终优于单任务变体，验证了理解与生
+          -成能力在统一架构中相互增强。                                  
+       98 +    UniMedVL 采用包含 dual visual encoders 与 Transformer back
+          +bone 的统一架构。语义视觉编码器负责提取用于医学图像理解的 toke
+          +n，VAE 视觉路径负责支持图像生成。视觉 token 与文本 token 被整 
+          +合进共享的序列建模框架中。专门的 feed-forward layers 处理理解 
+          +与生成相关表征，共享 self-attention layers 则促进跨任务信息交 
+          +换。文本输出通过 next-token prediction 优化，视觉输出则在 VAE 
+          +latent space 中通过 rectified flow matching 优化。            
+       99    </p>
+      100 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+      101 +    因此，系统可以覆盖三类任务：<strong>understanding</strong>
+          + 任务，例如 medical VQA、image captioning、diagnostic reasonin
+          +g 和 report generation；<strong>generation</strong> 任务，例如
+          + text-guided medical image synthesis；以及 <strong>interleaved
+          +</strong> 任务，例如 virtual staining、super-resolution、count
+          +erfactual generation 和 cross-modal image synthesis，这些任务 
+          +要求模型联合产生视觉与文本输出。                              
+      102 +  </p>                                                        
+      103  </div>
+      104 +<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overfl
+          +ow:hidden;">                                                  
+      105 +  <img src="{{ '/assets/images/projects/unimedvl/results.jpg' 
+          +| relative_url }}"                                            
+      106 +       alt="UniMedVL 多模态能力可视化"                        
+      107 +       style="width:100%;display:block;" loading="lazy" />    
+      108 +  <figcaption style="padding:.75rem 1rem;font-size:.78rem;colo
+          +r:#64748b;font-style:italic;background:#f8fafc;border-top:1px 
+          +solid #e2e8f0;">                                              
+      109 +    定性能力展示。UniMedVL 在统一医学多模态框架下支持 text-to-
+          +image generation、virtual staining、super-resolution、counterf
+          +actual generation 和 cross-modal synthesis。                  
+      110 +  </figcaption>                                               
+      111 +</figure>                                                     
+      112  
+      113 +<!-- Highlight 04 -->                                         
+      114 +<div style="margin-bottom:2.5rem;">                           
+      115 +  <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15
+          +rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">        
+      116 +    04 — 兼顾医学图像理解与多模态生成质量                     
+      117 +  </h3>                                                       
+      118 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+      119 +    UniMedVL 在五个医学视觉理解基准上进行评估：VQA-RAD、SLAKE 
+          +、PathVQA、OmniMedVQA 和 GMAI-MMBench。尽管它不是一个只针对理 
+          +解任务优化的 specialist model，而是同时支持理解与生成的统一模 
+          +型，UniMedVL 仍然在这些 benchmark 上达到 <strong>67.47 average
+          + score</strong>，并在 OmniMedVQA 和 GMAI-MMBench 等更复杂设置 
+          +中取得较强结果。相比需要根据任务切换 checkpoint 的统一医学模型
+          +，UniMedVL 的推理过程始终保持在单一模型内完成。               
+      120 +  </p>                                                        
+      121 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+      122 +    在生成任务上，UniMedVL 在 8 种医学影像模态上的平均 <strong
+          +>FID 为 96.29</strong>，优于 generation-only variant 和通用统 
+          +一多模态 baseline。模型还达到平均 <strong>BioMedCLIP Score 0.7
+          +06</strong>，表明医学文本 prompt 与生成图像之间具有更强语义一 
+          +致性。外部 held-out generation evaluation 进一步说明，这种提升
+          +并不局限于训练分布内部。                                      
+      123 +  </p>                                                        
+      124 +</div>                                                        
+      125 +<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overfl
+          +ow:hidden;">                                                  
+      126 +  <img src="{{ '/assets/images/projects/unimedvl/benchmarks.jp
+          +g' | relative_url }}"                                         
+      127 +       alt="八种医学影像模态下的 BioMedCLIP 雷达图"           
+      128 +       style="width:100%;display:block;" loading="lazy" />    
+      129 +  <figcaption style="padding:.75rem 1rem;font-size:.78rem;colo
+          +r:#64748b;font-style:italic;background:#f8fafc;border-top:1px 
+          +solid #e2e8f0;">                                              
+      130 +    多模态生成性能。UniMedVL 在 8 种医学影像模态上获得较强 Bio
+          +MedCLIP alignment，说明统一训练并不必然损害生成质量，反而可以 
+          +提升医学语义一致性。                                          
+      131 +  </figcaption>                                               
+      132 +</figure>                                                     
+      133 +                                                              
+      134 +<!-- Highlight 05 -->                                         
+      135 +<div style="margin-bottom:2.5rem;">                           
+      136 +  <h3 style="font-family:'IBM Plex Serif',serif;font-size:1.15
+          +rem;font-weight:500;color:#1d4ed8;margin:0 0 .75rem;">        
+      137 +    05 — 理解与生成之间的双向迁移证据                         
+      138 +  </h3>                                                       
+      139 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+      140 +    UniMedVL 的一个关键经验发现是：医学理解和医学生成并不必然 
+          +相互竞争。消融实验显示，加入 generation training 可以提升 unde
+          +rstanding performance，而加入 understanding supervision 也可以
+          +改善 generation fidelity。在 foundation stage 中，相比 underst
+          +anding-only variant，joint training 将 GMAI-MMBench accuracy  
+          +从 0.505 提升到 0.593；在生成实验中，引入理解监督后，平均 FID 
+          +相比 generation-only training 进一步下降。                    
+      141 +  </p>                                                        
+      142 +  <p style="font-size:.9rem;color:#334155;line-height:1.8;marg
+          +in-bottom:1rem;">                                             
+      143 +    交错任务结果也支持这一结论。UniMedVL 在 H&amp;E-to-IHC vir
+          +tual staining 中达到 <strong>20.27 PSNR</strong>，在 MRI super
+          +-resolution 中达到 <strong>27.29 PSNR / 0.890 SSIM</strong>， 
+          +并在双向 T2-FLAIR MRI translation 中达到平均 <strong>25.07 PSN
+          +R / 0.882 SSIM</strong>。这些结果说明，统一医学多模态训练可以 
+          +在保留具体任务能力的同时，扩展模型对复杂医学工作流的覆盖范围。
+      144 +  </p>                                                        
+      145 +</div>                                                        
+      146 +<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overfl
+          +ow:hidden;">                                                  
+      147 +  <img src="{{ '/assets/images/projects/unimedvl/results.jpg' 
+          +| relative_url }}"                                            
+      148 +       alt="双向迁移与渐进式课程消融实验"                     
+      149 +       style="width:100%;display:block;" loading="lazy" />    
+      150 +  <figcaption style="padding:.75rem 1rem;font-size:.78rem;colo
+          +r:#64748b;font-style:italic;background:#f8fafc;border-top:1px 
+          +solid #e2e8f0;">                                              
+      151 +    双向迁移证据。消融实验显示，生成监督能够提升理解能力，理解
+          +监督也能改善生成质量；progressive curriculum learning 进一步增
+          +强这种跨任务协同。                                            
+      152 +  </figcaption>                                               
+      153 +</figure>                                                     
+      154 +                                                              
+      155  <!-- Conclusion -->
+      156  <div style="border-left:3px solid #1d4ed8;padding:1.25rem 1.5r
+           em;background:#f8fafc;margin-bottom:3rem;">
+      157    <div style="font-size:.7rem;font-weight:700;letter-spacing:.
+           1em;text-transform:uppercase;color:#1d4ed8;margin-bottom:.6rem
+           ;">结论</div>
+      158    <p style="font-size:.88rem;color:#475569;line-height:1.8;mar
+           gin:0;font-family:'IBM Plex Serif',serif;">
+       85 -    UniMedVL 为统一医学AI建立了新范式，在单一模型中同时执行图 
+          -像理解与生成。通过在超过500万医学样本上的广泛实验验证，UniMedV
+          -L 证明了 OKA 框架——结合大规模多模态数据构建、渐进式课程学习和 
+          -统一架构——能够实现双向知识共享，同时提升理解和生成质量。这项工
+          -作代表着迈向真正集成化医学AI系统的关键一步，其中理解与生成能力
+          -协同增强临床工作流程。                                        
+      159 +    UniMedVL 是面向统一医学多模态建模的一步：它尝试用一个模型 
+          +同时完成医学图像理解、医学图像生成和视觉-文本交错工作流。它的 
+          +核心意义不只是"一个模型覆盖多个任务"，而是说明经过对齐的数据构
+          +建、渐进式课程训练和联合目标设计后，理解与生成可以互相增强。当
+          +前系统仍然是研究模型而不是可直接部署的临床方案：它主要关注 2D 
+          +医学影像，评估仍依赖自动指标，真实临床使用前还需要进一步临床验
+          +证。尽管如此，UniMedVL 提供了可复用的数据集、训练范式和模型设 
+          +计，为 general-purpose medical multimodal AI 的后续研究提供了 
+          +基础。                                                        
+      160    </p>
+      161  </div>
+      162  
+      163  <!-- Key Contributions -->
+      164  <h2 style="font-family:'IBM Plex Serif',serif;font-size:1.35re
+           m;font-weight:400;color:#0f172a;margin:0 0 1rem;">核心贡献</h2
+           >
+      165  <ul style="font-size:.88rem;color:#334155;line-height:1.9;padd
+           ing-left:1.4rem;margin-bottom:3rem;">
+       92 -  <li>构建了 <strong>UniMed-5M</strong>——一个包含超过560万多模
+          -态医学样本、覆盖8种影像模态的大规模数据集，通过严格的质量控制 
+          -将多样化的单模态数据集重新组织为统一的多模态输入-输出配对。</l
+          -i>                                                            
+       93 -  <li>设计了<strong>渐进式课程学习</strong>，一种三阶段训练范 
+          -式（基础训练 &rarr; 指令微调 &rarr; 统一多模态训练），系统性地
+          -构建跨模态理解-生成能力，并实现双向知识迁移。</li>            
+       94 -  <li>提出了 <strong>UniMedVL</strong>，首个在单一架构内处理多
+          -模态输入并同时生成文本和视觉输出的医学统一多模态模型——无需为不
+          -同任务类型加载独立的模型检查点。</li>                         
+       95 -  <li>在统一模型中取得了医学 VQA 基准上的<strong>最先进性能</s
+          -trong>，同时在8种影像模态的生成质量上匹配专用模型，证明联合训 
+          -练带来的是相互增强而非性能折衷。</li>                         
+      166 +  <li><strong>UniMedVL-5M</strong>：包含 560 万样本的大规模医 
+          +学多模态语料，覆盖 8 种影像模态，并支持理解、生成和交错多模态 
+          +任务。</li>                                                   
+      167 +  <li><strong>Observation–Knowledge–Analysis framework</strong
+          +>：将医学多模态统一建模拆解为数据对齐、课程学习和统一模型分析 
+          +三个层面。</li>                                               
+      168 +  <li><strong>Progressive Curriculum Learning</strong>：包含 f
+          +oundation training、带医学增强监督的 instruction tuning，以及 
+          +unified multimodal training 的三阶段训练流程。</li>           
+      169 +  <li><strong>Unified medical vision-language model</strong>：
+          +一个无需切换 checkpoint、使用单一参数集合同时执行医学图像理解 
+          +与生成的模型。</li>                                           
+      170 +  <li><strong>Empirical evidence of task synergy</strong>：ben
+          +chmark 与消融实验显示，医学理解与医学生成之间存在双向迁移和协 
+          +同增益。</li>                                                 
+      171  </ul>
+      172  
+      173  <!-- Authors -->
+      174  <h2 style="font-family:'IBM Plex Serif',serif;font-size:1.35re
+           m;font-weight:400;color:#0f172a;margin:0 0 .75rem;">作者</h2>
+      175  <p style="font-size:.8rem;color:#64748b;line-height:1.8;margin
+           -bottom:3rem;">
+      101 -  Junzhi Ning*, Wei Li*, Cheng Tang*, Jiashi Lin, Chenglong Ma
+          -, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lihao Liu
+          -, Yuandong Pu, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xin, Qi
+          - Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yuanfen
+          -g Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming Hu, 
+          -<strong>Junjun He</strong>                                    
+      102 -  <br><span style="font-size:.75rem;color:#94a3b8;">* 同等贡献
+          -（共同第一作者）</span>                                       
+      176 +  Junzhi Ning*, Wei Li*, Cheng Tang*, Jiashi Lin, Chenglong Ma
+          +, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Yuandong 
+          +Pu, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xin, Qi Qin, Dipin
+          +g Song, Bin Fu, Guang Yang, Yuanfeng Ji, Tianbin Li, Yanzhou S
+          +u†, Jin Ye, Shixiang Tang, Zhongying Deng, Lihao Liu, Ming Hu,
+          + <strong>Junjun He</strong>†<br>                              
+      177 +  <em>* 同等贡献 &nbsp;· &nbsp;† 通讯作者</em>                
+      178  </p>
+      179  
+      180  <!-- Footer links -->
+      181  <div style="border-top:1px solid #e2e8f0;padding-top:2rem;disp
+           lay:flex;gap:1rem;flex-wrap:wrap;">
+      107 -  <a href="https://arxiv.org/abs/2505.21899" target="_blank" r
+          -el="noopener" class="pub-btn">arXiv 论文</a>                  
+      182    <a href="https://github.com/uni-medical/UniMedVL" target="_b
+           lank" rel="noopener" class="pub-btn">GitHub 仓库</a>
+      109 -  <a href="{{ '/zh/projects/' | relative_url }}" class="pub-bt
+          -n">&larr; 返回项目列表</a>                                    
+      183 +  <a href="https://arxiv.org/abs/2505.21899" target="_blank" r
+          +el="noopener" class="pub-btn">arXiv 论文</a>                  
+      184 +  <a href="https://huggingface.co/datasets/General-Medical-AI/
+          +UniMedVL-5M" target="_blank" rel="noopener" class="pub-btn">🤗
+          + 数据集</a>                                                   
+      185 +  <a href="{{ '/zh/projects/' | relative_url }}" class="pub-bt
+          +n">← 返回项目列表</a>                                         
+      186  </div>
+      187  
+      188  </div>
+
+● Now news.yml — prepend ICML 2026 entry, and publications.yml — update UniMedVL
+   venue → ICML 2026 + add links, and projects.yml — add github/paper links.
+
+● Update(_data/news.yml)
+  ⎿  Added 19 lines
+       1  # category values: award | paper | grant | join | event
+       2  
+       3 +- date:        "May 2026"                                      
+       4 +  category:    "paper"                                         
+       5 +  label:       "Paper"                                         
+       6 +  label_zh:    "论文"                                          
+       7 +  headline:    "UniMedVL accepted at ICML 2026 — first unified 
+         +medical multimodal understanding and generation model"         
+       8 +  headline_zh: "UniMedVL 被 ICML 2026 收录——首个统一医学多模态 
+         +理解与生成模型"                                                
+       9 +  body:        >                                               
+      10 +    Our unified medical multimodal model UniMedVL was accepted 
+         +at ICML 2026. UniMedVL is the                                  
+      11 +    first medical model that couples image understanding and ge
+         +neration within a single architecture                          
+      12 +    via the Observation-Knowledge-Analysis framework, built on 
+         +the 5.6M-sample UniMed-5M corpus and                           
+      13 +    trained with Progressive Curriculum Learning. It reaches a 
+         +67.47 average score across five medical                        
+      14 +    understanding benchmarks while matching specialised models 
+         +on generation across eight imaging                             
+      15 +    modalities.                                                
+      16 +  body_zh:     >                                               
+      17 +    我们的统一医学多模态模型 UniMedVL 被 ICML 2026 收录。UniMed
+         +VL 是首个通过观察-知识-分析（OKA）                             
+      18 +    框架在单一架构内耦合医学图像理解与生成的医学模型，基于 560 
+         +万样本的 UniMed-5M 语料和渐进式                                
+      19 +    课程学习策略训练而成。模型在五个医学理解基准上达到平均 67.4
+         +7 分，同时在八种医学影像模态                                   
+      20 +    的生成质量上匹配专用模型。                                 
+      21 +                                                               
+      22  - date:        "November 2025"
+      23    category:    "paper"
+      24    label:       "Paper"
+
+● Update publications.yml: move UniMedVL to top, change venue to ICML, year to
+  2026, add links.
+
+● Update(_data/publications.yml)
+  ⎿  Added 27 lines
+       6  # 5. Add teaser image to assets/images/teasers/ and reference i
+          t here
+       7  # ─────────────────────────────────────────────────────────────
+          ─────
+       8  
+       9 +- title:    "UniMedVL: Unifying Medical Multimodal Understandin
+         +g and Generation through Observation-Knowledge-Analysis"       
+      10 +  authors:  "Junzhi Ning, Wei Li, Cheng Tang, Jiashi Lin, Cheng
+         +long Ma, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lih
+         +ao Liu, Yuandong Pu, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xi
+         +n, Qi Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yua
+         +nfeng Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming H
+         +u, Junjun He"                                                  
+      11 +  venue:    "ICML"                                             
+      12 +  year:     2026                                               
+      13 +  note:     "Accepted"                                         
+      14 +  abstract: >                                                  
+      15 +    We propose UniMedVL, the first medical unified multimodal m
+         +odel that combines image understanding                         
+      16 +    and generation within a single architecture without manuall
+         +y reloading model checkpoints. Built on                        
+      17 +    the Observation-Knowledge-Analysis (OKA) framework, we cons
+         +truct UniMed-5M comprising over 5.6M                           
+      18 +    multimodal medical samples and design Progressive Curriculu
+         +m Learning for systematic capability                           
+      19 +    building. UniMedVL achieves superior performance on 5 medic
+         +al image understanding benchmarks while                        
+      20 +    matching specialized models in generation quality across 8 
+         +imaging modalities, demonstrating that                         
+      21 +    bidirectional knowledge sharing improves both understanding
+         + and generation.                                               
+      22 +  abstract_zh: >                                               
+      23 +    我们提出UniMedVL，这是首个在单一架构内统一图像理解与生成能 
+         +力的医学多模态模型，无需手动切换                               
+      24 +    模型检查点。基于"观察-知识-分析"（OKA）框架，我们构建了包含
+         +560万余条多模态医学样本的                                      
+      25 +    UniMed-5M数据集，并设计了渐进式课程学习策略以系统性地构建模
+         +型能力。UniMedVL在5个医学图像                                  
+      26 +    理解基准上取得了优异表现，同时在8种影像模态的生成质量上与专
+         +用模型持平，证明了双向知识共享                                 
+      27 +    能够同时提升理解和生成性能。                               
+      28 +  teaser:   "/assets/images/teasers/unimedvl.jpg"              
+      29 +  keywords: "unified multimodal model, medical image generation
+         +, understanding, curriculum learning"                          
+      30 +  links:                                                       
+      31 +    paper:   "https://arxiv.org/abs/2505.21899"                
+      32 +    code:    "https://github.com/uni-medical/UniMedVL"         
+      33 +    dataset: "https://huggingface.co/datasets/General-Medical-A
+         +I/UniMedVL-5M"                                                 
+      34 +    project: "/projects/unimedvl/"                             
+      35 +                                                               
+      36  - title:    "MedQ-Deg: A Multidimensional Benchmark for Evaluat
+          ing MLLMs Across Medical Image Quality Degradations"
+      37    authors:  "Jiyao Liu, Junzhi Ning, Chenglong Ma, Wanying Qu, 
+          Jianghan Shen, Siqi Luo, Jinjie Wei, Jin Ye, Pengze Li, Tianbin
+           Li, Jiashi Lin, Hongming Shan, Xinzhe Luo, Xiaohong Liu, Lihao
+           Liu, Junjun He, Ningsheng Xu"
+      38    venue:    "arXiv"
+● Remove duplicate old UniMedVL entry.
+
+● Update(_data/publications.yml)
+  ⎿  Removed 24 lines
+      57    links:
+      58      paper:   "https://uni-medical.github.io/MedQ-Robust-web"
+      59  
+      60 -- title:    "UniMedVL: Unifying Medical Multimodal Understandin
+         -g and Generation through Observation-Knowledge-Analysis"       
+      61 -  authors:  "Junzhi Ning, Wei Li, Cheng Tang, Jiashi Lin, Cheng
+         -long Ma, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lih
+         -ao Liu, Yuandong Pu, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xi
+         -n, Qi Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yua
+         -nfeng Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming H
+         -u, Junjun He"                                                  
+      62 -  venue:    "arXiv"                                            
+      63 -  year:     2025                                               
+      64 -  note:     ""                                                 
+      65 -  abstract: >                                                  
+      66 -    We propose UniMedVL, the first medical unified multimodal m
+         -odel that combines image understanding                         
+      67 -    and generation within a single architecture without manuall
+         -y reloading model checkpoints. Built on                        
+      68 -    the Observation-Knowledge-Analysis (OKA) framework, we cons
+         -truct UniMed-5M comprising over 5.6M                           
+      69 -    multimodal medical samples and design Progressive Curriculu
+         -m Learning for systematic capability                           
+      70 -    building. UniMedVL achieves superior performance on 5 medic
+         -al image understanding benchmarks while                        
+      71 -    matching specialized models in generation quality across 8 
+         -imaging modalities, demonstrating that                         
+      72 -    bidirectional knowledge sharing improves both understanding
+         - and generation.                                               
+      73 -  abstract_zh: >                                               
+      74 -    我们提出UniMedVL，这是首个在单一架构内统一图像理解与生成能 
+         -力的医学多模态模型，无需手动切换                               
+      75 -    模型检查点。基于"观察-知识-分析"（OKA）框架，我们构建了包含
+         -560万余条多模态医学样本的                                      
+      76 -    UniMed-5M数据集，并设计了渐进式课程学习策略以系统性地构建模
+         -型能力。UniMedVL在5个医学图像                                  
+      77 -    理解基准上取得了优异表现，同时在8种影像模态的生成质量上与专
+         -用模型持平，证明了双向知识共享                                 
+      78 -    能够同时提升理解和生成性能。                               
+      79 -  teaser:   "/assets/images/teasers/unimedvl.jpg"              
+      80 -  keywords: "unified multimodal model, medical image generation
+         -, understanding, curriculum learning"                          
+      81 -  links: {}                                                    
+      82 -                                                               
+      83 -                                                               
+      60  - title:    "Project Imaging-X: A Survey of 1000+ Open-Access M
+          edical Imaging Datasets for Foundation Model Development"
+      61    authors:  "Zhongying Deng, et al."
+      62    venue:    "arXiv"
+
+● Update projects.yml with real links.
+
+  Read 1 file (ctrl+o to expand)
+
+● Update(_data/projects.yml)
+  ⎿  Added 7 lines, removed 6 lines
+      146  
+      147  - title:      "UniMedVL: Unified Medical Multimodal Understand
+           ing and Generation"
+      148    title_zh:   "UniMedVL：统一医学多模态理解与生成"
+      149 -  area:       "Medical Multimodal AI"                         
+      150 -  area_zh:    "医学多模态 AI"                                 
+      149 +  area:       "Medical Multimodal AI · ICML 2026"             
+      150 +  area_zh:    "医学多模态 AI · ICML 2026"                     
+      151    slug:       "unimedvl"
+      152    thumbnail:  "/assets/images/projects/unimedvl/overview.jpg"
+      153    desc:       >
+      154 -    The first medical unified multimodal model that unifies im
+          -age understanding and generation within a single architecture.
+          - Built on UniMed-5M (5.6M+ samples) with Progressive Curriculu
+          -m Learning, UniMedVL achieves superior performance on 5 medica
+          -l understanding benchmarks while matching specialized models i
+          -n generation quality.                                         
+      154 +    The first medical unified multimodal model that unifies im
+          +age understanding and generation within a single architecture 
+          +(ICML 2026). Built on UniMed-5M (5.6M+ samples) with Progressi
+          +ve Curriculum Learning, UniMedVL achieves superior performance
+          + on 5 medical understanding benchmarks while matching speciali
+          +zed models in generation quality.                             
+      155    desc_zh:    >
+      156 -    首个在单一架构中统一图像理解与生成的医学多模态模型。基于Un
+          -iMed-5M（560万+样本）和渐进式课程学习策略，UniMedVL在5个医学理
+          -解基准上达到领先水平，同时在生成质量上匹配专用模型。          
+      156 +    首个在单一架构中统一图像理解与生成的医学多模态模型（ICML 2
+          +026）。基于UniMed-5M（560万+样本）和渐进式课程学习策略，UniMed
+          +VL在5个医学理解基准上达到领先水平，同时在生成质量上匹配专用模 
+          +型。                                                          
+      157    links:
+      158 -    github:    ""                                             
+      159 -    paper:     ""                                             
+      158 +    github:    "https://github.com/uni-medical/UniMedVL"      
+      159 +    paper:     "https://arxiv.org/abs/2505.21899"             
+      160 +    dataset:   "https://huggingface.co/datasets/General-Medica
+          +l-AI/UniMedVL-5M"                                             
+      161  
+      162  - title:      "MedITok: Unified Medical Image Tokenizer"
+      163    title_zh:   "MedITok：统一医学图像标记器"
+
+● Verify YAML syntax of edited files + check whether dataset: link is supported
+  by projects page render.
+
+● Bash(ruby -ryaml -e "YAML.load_file('_data/news.yml'); puts 'news.yml OK'"
+      2>&1 && ruby -ryaml -e "YAML.load_file('_data/publications.yml'); puts
+      'publications.yml O…)
+  ⎿  news.yml OK
+     publications.yml OK
+     projects.yml OK
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● ★ Insight ─────────────────────────────────────
+  YAML 验证通过 + 链接键兼容性确认： projects.md 模板已支持
+  p.links.dataset（line 26 渲染 🤗 Dataset 按钮）和
+  p.links.github/huggingface，无需新增模板逻辑。三个数据文件全部 parse 通过。
+  ─────────────────────────────────────────────────
+
+  完成所有更改。汇总：
+
+  项目页面（替换为新内容）
+  - pages/projects/unimedvl.md — 5 个 Core Highlights + 顶部加 ICML 2026 标签
+  - pages/zh/projects/unimedvl.md — 中文版同步
+  - TODO 链接替换为真实链接（arxiv 2505.21899 + github uni-medical/UniMedVL + HF
+   dataset）
+  - 6 个图片引用映射到现有 3 个 assets（overview.jpg 用于
+  hero+框架图，results.jpg 用于 capabilities/ablation，benchmarks.jpg 用于
+  radar）
+  - 删除新源文件中的 "Image Placeholder Map" meta-section（非内容、TODO 备注）
+
+  _data/news.yml — 顶部插入新条目：
+  May 2026 / paper / "UniMedVL accepted at ICML 2026 — first unified medical
+  multimodal..."
+
+  _data/publications.yml — UniMedVL 上移至首位：
+  - venue: arXiv → ICML
+  - year: 2025 → 2026
+  - note: "" → "Accepted"
+  - links: {} → 补 paper/code/dataset/project 四链接
+  - 删除下方重复旧条目
+
+  _data/projects.yml — UniMedVL 卡片：
+  - area 加 · ICML 2026 后缀
+  - links.github/paper/dataset 三个真实链接补入
+
+  验证： 三个 YAML 文件 ruby -ryaml parse OK；项目模板 pages/projects.md 支持
+  dataset 链接键无需改模板。Jekyll 编译应无错误。
+
+  已知遗留： 新源 markdown 提到 6 个独立图（unimedvl-overview/motivation/oka-fra
+  mework/capabilities/generation-radar/transfer-ablation.png），目前 assets 只有
+   3 张实际文件，已映射到现有图。如果后续要补图，放到
+  /assets/images/projects/unimedvl/ 然后跑 bash scripts/optimize-images.sh。
+
+✻ Cooked for 8m 1s
+
+❯ 1. https://uni-medical.github.io/gmai-web/projects/  2.                       
+  https://uni-medical.github.io/gmai-web/news/  3.                              
+  https://uni-medical.github.io/gmai-web/publications/                          
+  你三个页面都改一下吧，就是同步一下                                            
+
+● Check three list-page templates for hardcoded refs needing sync.
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Verify list pages are fully data-driven (no hardcoded entries).
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● ★ Insight ─────────────────────────────────────
+  已自动同步： 三个 list 页面（projects.md / news.md / publications.md）EN + ZH
+  共 6 个文件，全部用 {% for ... in site.data.* %} 渲染。前一步改的
+  _data/projects.yml、_data/news.yml、_data/publications.yml 已是单一数据源 → 6
+  页面自动同步，无需再改模板。
+  ─────────────────────────────────────────────────
+
+  三页已自动同步。各页面变化：
+
+  ┌───────────────────────┬─────────────────────────────────────────────────┐
+  │         页面          │                UniMedVL 当前呈现                │
+  ├───────────────────────┼─────────────────────────────────────────────────┤
+  │ /projects/ +          │ 卡片 area 标签 Medical Multimodal AI · ICML     │
+  │ /zh/projects/         │ 2026，GitHub + Paper + 🤗 Dataset 三按钮        │
+  ├───────────────────────┼─────────────────────────────────────────────────┤
+  │ /news/ + /zh/news/    │ 顶部 May 2026 条目：UniMedVL accepted at ICML   │
+  │                       │ 2026                                            │
+  ├───────────────────────┼─────────────────────────────────────────────────┤
+  │ /publications/ +      │ 列表第一条：venue ICML 2026，note               │
+  │ /zh/publications/     │ Accepted，paper/code/dataset/project 四链接     │
+  └───────────────────────┴─────────────────────────────────────────────────┘
+
+  无需改模板。push 即生效。
+
+✻ Cooked for 1m 0s
+
+❯ /review                                                                       
+
+● Bash(gh pr list 2>&1)
+  ⎿  Error: Exit code 127
+     /bin/bash: line 1: gh: command not found
+
+● gh not installed. Fall back: review local uncommitted changes (this session's
+  edits).
+
+● Bash(git status --short && echo "---" && git diff --stat)
+  ⎿   M .claude/settings.local.json
+      M CLAUDE.md
+      M _data/news.yml
+     … +15 lines (ctrl+o to expand)
+
+❯ 然后你本地部署一下, 我看看生成的效果. 
+
+● Review then start local Jekyll. Quick diff scan first.
+
+● Bash(git diff _data/publications.yml _data/news.yml _data/projects.yml | head
+      -180)
+  ⎿  diff --git a/_data/news.yml b/_data/news.yml
+     index 49fbdc6..1f9a76f 100755
+     --- a/_data/news.yml
+     … +124 lines (ctrl+o to expand)
+● Check pub_card supports links.project key (newly added).
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Code Review — UniMedVL ICML 2026 Sync (7 files)
+
+  Overview
+
+  Local diff (no PR yet). Promotes UniMedVL from arXiv preprint to ICML 2026
+  acceptance across 4 surfaces: project detail pages (EN+ZH), news feed,
+  publications list, projects list. Adds CLAUDE.md docs for profile layout +
+  project page conventions.
+
+  Correctness ✓
+
+  - YAML valid — ruby -ryaml passes on news/projects/publications
+  - Link keys supported — pub_card.html:38 renders links.project; projects.md:26
+   renders links.dataset
+  - No duplicate pub entry — old UniMedVL block removed cleanly
+  - Front matter conforms — both project pages use layout: page, permalink, lang
+   per existing convention
+  - Liquid syntax intact — {{ ... | relative_url }} consistently used for assets
+
+  Issues
+
+  MEDIUM — target="_blank" on internal project link (pub_card.html:38)
+  - UniMedVL links.project: /projects/unimedvl/ opens in new tab. Not a
+  regression (template behavior), but UX inconsistency: internal navigation
+  should stay in same tab. Not in this PR's scope to fix — left as-is.
+
+  LOW — figure asset reuse (pages/projects/unimedvl.md,
+  pages/zh/projects/unimedvl.md)
+  - 5 figures all map to 3 existing assets (overview.jpg × 2, results.jpg × 2,
+  benchmarks.jpg × 1). Pages render fine, but visual repetition. Documented 
+  limitation — source markdown referenced 6 unique filenames not in repo.
+
+  LOW — <img> tag bypasses WebP delivery (both project pages)
+  - Per CLAUDE.md line 113-114, templates should prefer {% include picture.html 
+  %} for WebP fallback. New pages use raw <img>. Consistent with slide-chat.md 
+  convention, so acceptable, but loses ~30% bandwidth savings.
+
+  LOW — verbose abstract wrapping in pub (publications.yml)
+  - New UniMedVL abstract is 7 lines vs MedQ-Deg 7 lines — matches existing
+  pattern, fine.
+
+  Style / Conventions
+
+  - News entry placement ✓ chronological (May 2026 → top, before Nov 2025)
+  - area field with venue suffix (projects.yml:149 Medical Multimodal AI · ICML 
+  2026) — novel pattern in this file; other projects don't include venue in
+  area. Acceptable since UniMedVL is highlight project, but consider if other
+  ICML/CVPR projects later should follow same pattern.
+  - Mixed CN/EN technical terms in ZH page body — Observation, Knowledge,
+  Analysis, progressive curriculum learning kept in English within Chinese text.
+   Consistent with source markdown style.
+
+  Security ✓
+
+  - All external URLs use https:// + rel="noopener" on target="_blank"
+  - No injected raw HTML from data files (all data flows through Liquid
+  escaping)
+  - No secrets / API keys
+
+  Performance
+
+  - Hero img has loading="eager", body figs loading="lazy" ✓
+  - Pages ~280 lines each — within 800 line budget
+  - 5 figures × repeated assets = browser cache hit on repeated
+  overview.jpg/results.jpg (accidental optimization)
+
+  Test Coverage
+
+  - No automated tests in repo (static site, expected)
+  - Manual verification needed: bundle exec jekyll serve to confirm render —
+  starting next.
+
+  ---
+  Now boot local Jekyll.
+
+● Bash(bundle exec jekyll serve --baseurl "" --host 0.0.0.0 --port 4000
+      --livereload 2>&1 | head -50)
+  ⎿  Running in the background (↓ to manage)
+
+● Background command "Start Jekyll dev server" completed (exit code 0)
+
+  Read 1 file (ctrl+o to expand)
+
+● bundle missing. Check Ruby env.
+
+  Listed 1 directory (ctrl+o to expand)
+
+● Install bundler then serve.
+
+● Bash(gem list jekyll 2>&1 | head -5; ls vendor/bundle 2>&1 | head -5)
+  ⎿  jekyll (4.4.1)
+     jekyll-sass-converter (3.1.0)
+     jekyll-watch (2.2.1)
+     ruby
+
+● Jekyll gem present. Run directly without bundler.
+
+● Bash(jekyll serve --baseurl "" --host 0.0.0.0 --port 4000 2>&1)
+  ⎿  Running in the background (↓ to manage)
+
+● Background command "Start Jekyll server directly" failed with exit code 127
+
+● Bash(cat /tmp/claude-1000/-mnt-d-coding-files-Linux-D-Projects-20260406-gmai-g
+      roup-webpage/beacf177-de39-43b7-8647-e77948b0606b/tasks/bwdbv2jvg.output;
+      gem env home;…)
+  ⎿  /bin/bash: line 1: jekyll: command not found
+     /var/lib/gems/3.2.0
+     /home/junzhin/.local/share/gem/ruby/3.2.0/gems/jekyll-4.4.1/lib/jekyll
+     .rb
+
+  Listed 1 directory (ctrl+o to expand)
+
+● Use full path. Run bundle install + serve.
+
+● Bash(export PATH="/home/junzhin/.local/share/gem/ruby/3.2.0/bin:$PATH" &&
+      bundle install --quiet 2>&1 | tail -10)
+  ⎿  (No output)
+
+● Bash(export PATH="/home/junzhin/.local/share/gem/ruby/3.2.0/bin:$PATH" &&
+      bundle exec jekyll serve --baseurl "" --host 0.0.0.0 --port 4000 2>&1)
+  ⎿  Running in the background (↓ to manage)
+
+● Bash(sleep 20 && cat
+      /tmp/claude-1000/-mnt-d-coding-files-Linux-D-Projects-20260406-gmai-group-
+      webpage/beacf177-de39-43b7-8647-e77948b0606b/tasks/bfwo8j7et.output 2>…)
+  ⎿  (No output)
+  ⎿  (timeout 30s)
+
+  Read 1 file (ctrl+o to expand)
+
+● Bash(cat /tmp/claude-1000/-mnt-d-coding-files-Linux-D-Projects-20260406-gmai-g
+      roup-webpage/beacf177-de39-43b7-8647-e77948b0606b/tasks/bfwo8j7et.output;
+      echo "---"; c…)
+  ⎿  Error: Exit code 7
+     ---
+     HTTP 000
+     HTTP 000 /projects/unimedvl/
+
+● Bash(ps aux | grep -i jekyll | grep -v grep; ls -la
+      /tmp/claude-1000/-mnt-d-coding-files-Linux-D-Projects-20260406-gmai-group-
+      webpage/beacf177-de39-43b7-8647-e77948b…)
+  ⎿  junzhin  2903521  0.0  0.0   4888  3592 ?        Ss   09:26   0:00 /bi
+     n/bash -c source /home/junzhin/.claude/shell-snapshots/snapshot-bash-1
+     780066316484-311n3a.sh 2>/dev/null || true && shopt -u extglob 2>/dev/
+     … +10 lines (ctrl+o to expand)
+  Read 1 file (ctrl+o to expand)
+
+● Jekyll still building (WSL+NTFS slow). Wait longer.
+
+● Bash(sleep 60 && cat
+      /tmp/claude-1000/-mnt-d-coding-files-Linux-D-Projects-20260406-gmai-group-
+      webpage/beacf177-de39-43b7-8647-e77948b0606b/tasks/bfwo8j7et.output |…)
+  ⎿  Error: Blocked: sleep 60 followed by: cat 
+     /tmp/claude-1000/-mnt-d-coding-files-Linux-D-Projects-20260406-gmai-group-w
+     ebpage/beacf177-de39-43b7-8647-e77948b0606b/tasks/bfwo8j7et.output tail 
+     -30. To wait for a condition, use Monitor with an until-loop (e.g. `until 
+     <check>; do sleep 2; done`). To wait for a command you started, use 
+     run_in_background: true. Do not chain shorter sleeps to work around this 
+     block.
+
+● Wait for Jekyll to finish building, then probe.
+
+● Bash(until curl -s -o /dev/null -w "%{http_code}" http://localhost:4000/
+      2>/dev/null | grep -q "200"; do sleep 3; done && echo "READY" && curl -s
+      -o /dev/null -w "/…)
+  ⎿  Running in the background (↓ to manage)
+
+● Probe running in background. Will notify when Jekyll ready + URLs return
+  status codes.
+
+✻ Worked for 6m 5s
+
+● Background command "Wait Jekyll ready + probe key URLs" completed (exit code
+0)
+
+  Read 1 file (ctrl+o to expand)
+
+● All 200. Server up.
+
+  ★ Insight ─────────────────────────────────────
+  Jekyll on WSL+NTFS pain point: Build took ~90s for ~70 pages. Jekyll re-stat's
+   every file on /mnt/d (Windows filesystem mounted in WSL2). For faster dev
+  iteration: copy project to native ~/projects/ (ext4) — typical 5-10× speedup.
+  Not blocking, just noted.
+  ─────────────────────────────────────────────────
+
+  本地预览就绪。在浏览器打开：
+
+  ┌─────────────────────────────────────────────┬────────────────────────────┐
+  │                     URL                     │            状态            │
+  ├─────────────────────────────────────────────┼────────────────────────────┤
+  │ http://localhost:4000/                      │ 主页                       │
+  ├─────────────────────────────────────────────┼────────────────────────────┤
+  │ http://localhost:4000/projects/unimedvl/    │ EN UniMedVL 详情           │
+  ├─────────────────────────────────────────────┼────────────────────────────┤
+  │ http://localhost:4000/zh/projects/unimedvl/ │ ZH UniMedVL 详情           │
+  ├─────────────────────────────────────────────┼────────────────────────────┤
+  │ http://localhost:4000/projects/             │ 项目列表（UniMedVL 现带    │
+  │                                             │ ICML 2026 标签）           │
+  ├─────────────────────────────────────────────┼────────────────────────────┤
+  │ http://localhost:4000/news/                 │ 新闻（顶部 May 2026 ICML   │
+  │                                             │ 条目）                     │
+  ├─────────────────────────────────────────────┼────────────────────────────┤
+  │ http://localhost:4000/publications/         │ 论文列表（UniMedVL         │
+  │                                             │ 列首位，venue ICML 2026）  │
+  ├─────────────────────────────────────────────┼────────────────────────────┤
+  │ http://localhost:4000/zh/news/              │ ZH 新闻                    │
+  ├─────────────────────────────────────────────┼────────────────────────────┤
+  │ http://localhost:4000/zh/publications/      │ ZH 论文                    │
+  └─────────────────────────────────────────────┴────────────────────────────┘
+
+  Server 后台运行中。看完告诉我要不要 commit + push，或要不要先调整内容。
+
+✻ Cooked for 30s
+
+❯ ICML · 2026  · Accepted  --> ICML · 2026  ·不要加入这个accpeted 的内容的回复. 
+   其他看起来没有问题.                                                          
+
+● Update(_data/publications.yml)
+  ⎿  Added 1 line, removed 1 line
+      10    authors:  "Junzhi Ning, Wei Li, Cheng Tang, Jiashi Lin, Cheng
+          long Ma, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lih
+          ao Liu, Yuandong Pu, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xi
+          n, Qi Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yua
+          nfeng Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming H
+          u, Junjun He"
+      11    venue:    "ICML"
+      12    year:     2026
+      13 -  note:     "Accepted"                                         
+      13 +  note:     ""                                                 
+      14    abstract: >
+      15      We propose UniMedVL, the first medical unified multimodal m
+          odel that combines image understanding
+      16      and generation within a single architecture without manuall
+          y reloading model checkpoints. Built on
+
+● 改完。Jekyll watch 应该自动重建（若 livereload 启用），刷新页面即可。现在显示
+  ICML · 2026 不带 Accepted。
+
+  ★ Insight ─────────────────────────────────────
+  为何 note: "" 而非删字段： pub_card.html 模板用 {% if pub.note and pub.note !=
+   "" %} 双重判断（既测 nil
+  也测空串）。删字段或留空串都生效，但保留键便于将来填回（如
+  "Oral"、"Spotlight"）。
+  ─────────────────────────────────────────────────
+
+✻ Worked for 30s
+
+※ recap: Syncing UniMedVL ICML 2026 update across the Jekyll site; just removed the "Accepted" tag from publications display per your request. Next: refresh localhost:4000 to confirm the venue now shows "ICML · 2026" without "Accepted", then commit if good. (disable recaps in /config)
+
+❯ http://localhost:4000/publications/ 中对应的文章还是有accpeted 的字眼,        
+  可以说icml , 但是不要说accpeted 吧?                                           
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● No "accepted" in source. Likely Jekyll didn't rebuild YAML change. Verify
+  served HTML.
+
+● Bash(curl -s http://localhost:4000/publications/ | grep -i -B1 -A1
+      "accepted\|UniMedVL" | head -40)
+  ⎿  <picture>
+       <source srcset="/assets/images/teasers/unimedvl.webp" type="image/we
+     bp" />
+     … +25 lines (ctrl+o to expand)
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Source clean. Jekyll watch broken on WSL+NTFS (no inotify). Restart server.
+
+● Bash(pkill -f "jekyll serve" 2>&1; sleep 2; ps aux | grep -i "jekyll serve" |
+      grep -v grep | wc -l)
+  ⎿  Error: Exit code 144
+● Background command "Start Jekyll server" failed with exit code 144
+
+● Bash(export PATH="/home/junzhin/.local/share/gem/ruby/3.2.0/bin:$PATH" &&
+      bundle exec jekyll serve --baseurl "" --host 0.0.0.0 --port 4000 2>&1)
+  ⎿  Running in the background (↓ to manage)
+
+● Bash(until curl -s -o /dev/null -w "%{http_code}"
+      http://localhost:4000/publications/ 2>/dev/null | grep -q "200"; do sleep
+      3; done && curl -s http://localhost:4000/…)
+  ⎿  Running in the background (↓ to manage)
+
+● Wait notification.
+
+✻ Cogitated for 1m 38s
+
+● Background command "Wait ready + verify "Accepted" gone" completed (exit code
+0)
+
+  Read 1 file (ctrl+o to expand)
+
+● "Accepted" 不在 grep 输出 → HTML 已清除。刷新
+  http://localhost:4000/publications/ 看下。现在只显示 ICML · 2026。
+
+  ★ Insight ─────────────────────────────────────
+  WSL+NTFS 上 Jekyll watch 失效根因： WSL2 把 /mnt/d (Windows NTFS) 通过 9P
+  协议挂载，inotify 事件不跨边界传递。Jekyll 的 listen gem 无 fsnotify
+  信号→watch 静默失败。下次 YAML 改完必须重启 server。原生 ext4 (e.g.
+  ~/projects/) 没此问题。
+  ─────────────────────────────────────────────────
+
+✻ Crunched for 30s
+
+※ recap: Updated UniMedVL site content for ICML 2026 across project pages, news, and publications data files. Local Jekyll server running at localhost:4000 with "Accepted" tag removed. Next: review pages in browser then commit and push. (disable recaps in /config)
+
+❯  可以，那你把它推上去吧，然后commit上去.                                      
+
+● Bash(git status --short && echo "---branch---" && git branch --show-current &&
+       echo "---remote---" && git remote -v)
+  ⎿   M .claude/settings.local.json
+      M CLAUDE.md
+      M _data/news.yml
+     … +9 lines (ctrl+o to expand)
+
+● Stage 6 content files (skip .claude/settings.local.json), commit, push.
+
+● Bash(git add CLAUDE.md _data/news.yml _data/projects.yml
+      _data/publications.yml pages/projects/unimedvl.md
+      pages/zh/projects/unimedvl.md && git commit -m "$(cat <<'E…)
+  ⎿  [main f70ff1e] content: promote UniMedVL to ICML 2026 across pages and
+      data
+      6 files changed, 289 insertions(+), 86 deletions(-)
+      M .claude/settings.local.json
+
+● Bash(git push origin main 2>&1)
+  ⎿  To github.com:uni-medical/gmai-web.git
+        7695af5..f70ff1e  main -> main
+  ⎿  (timeout 1m)
+
+● 推送完成。7695af5..f70ff1e。
+
+  ★ Insight ─────────────────────────────────────
+  部署链路自动触发： push 到 main → .github/workflows/deploy.yml 触发 → GitHub
+  Actions 跑 Jekyll build → 部署到 GitHub Pages。1-3
+  分钟后线上更新。.claude/settings.local.json 故意未提交（local-only
+  配置不该入库）。
+  ─────────────────────────────────────────────────
+
+  可在 https://github.com/uni-medical/gmai-web/actions 看构建进度。完成后线上
+  https://uni-medical.github.io/gmai-web/ 即同步。
+
+✻ Cooked for 1m 6s

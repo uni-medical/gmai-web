@@ -22,7 +22,7 @@ lang:      "en"
 <!-- Institution strip -->
 <div style="font-size:.78rem;color:#64748b;padding:.75rem 1rem;background:#f8fafc;border:1px solid #e2e8f0;border-left:3px solid #1d4ed8;margin-bottom:1.5rem;line-height:1.7;">
   <strong style="color:#1e293b;">Led by Fudan University and Shanghai AI Laboratory</strong> in collaboration with
-  Shanghai Innovation Institute, Stanford University, and ByteDance Seed.
+  Shanghai Innovation Institute and Stanford University.
 </div>
 
 <!-- Resource links -->

@@ -21,7 +21,7 @@ lang:      "zh"
 
 <!-- Institution strip -->
 <div style="font-size:.78rem;color:#64748b;padding:.75rem 1rem;background:#f8fafc;border:1px solid #e2e8f0;border-left:3px solid #1d4ed8;margin-bottom:1.5rem;line-height:1.7;">
-  <strong style="color:#1e293b;">面向统一医学多模态 AI 的研究项目</strong>，目标是在单一模型中联合学习医学图像理解、医学图像生成，以及视觉-文本交错推理能力。由上海人工智能实验室主导，联合复旦大学、上海创新研究院、斯坦福大学和字节跳动 Seed 共同研究。
+  <strong style="color:#1e293b;">面向统一医学多模态 AI 的研究项目</strong>，目标是在单一模型中联合学习医学图像理解、医学图像生成，以及视觉-文本交错推理能力。该项目由 UniMedVL 作者团队及其合作科研与高校机构共同完成。
 </div>
 
 <!-- Resource links -->
@@ -36,11 +36,9 @@ lang:      "zh"
 
 <!-- Hero image -->
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/unimedvl/overview.jpg' | relative_url }}"
-       alt="UniMedVL 能力总览与 benchmark 覆盖"
-       style="width:100%;display:block;" loading="eager" />
+  {% include picture.html src="/assets/images/projects/unimedvl/overview-tasks.png" alt="UniMedVL 在理解、生成、交错任务和传统医学影像任务上的能力总览" class="" loading="eager" style="width:100%;display:block;" %}
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
-    UniMedVL 总览：一个统一的医学多模态模型，在同一框架内支持医学图像理解、文本到医学图像生成，以及视觉-文本交错输出，覆盖多种临床影像场景。
+    UniMedVL 总览：模型覆盖医学图像理解、图像生成、传统任务与交错医学工作流，涉及 560 万样本、8 种影像模态、5 个理解基准和 8 类医学生成模态。
   </figcaption>
 </figure>
 
@@ -51,6 +49,12 @@ lang:      "zh"
 <p style="font-size:.92rem;color:#334155;line-height:1.85;margin-bottom:2.5rem;">
   <strong>UniMedVL</strong>（<strong>ICML 2026</strong> 接收）将医学理解与医学生成视为可以相互增强的能力，而不是彼此割裂的任务。该项目提出了一个使用单一参数集合进行推理的统一医学视觉语言模型，并构建了 <strong>UniMedVL-5M</strong>：一个包含超过 <strong>560 万</strong> 样本、覆盖 <strong>8 种医学影像模态</strong> 的大规模医学多模态数据集。通过 <strong>Observation–Knowledge–Analysis</strong> 框架和三阶段 progressive curriculum，UniMedVL 学习从多模态医学输入中生成文本、图像以及视觉-文本交错输出。
 </p>
+<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/unified-representation.png" alt="任务专用医学 AI 系统与 UniMedVL 共享多模态表征的对比" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    研究动机：传统医学 AI 流程通常将 VQA、报告生成、分割和图像生成拆分为不同模型，而 UniMedVL 通过共享多模态表征统一医学理解与生成。
+  </figcaption>
+</figure>
 
 <!-- Core Highlights -->
 <h2 style="font-family:'IBM Plex Serif',serif;font-size:1.5rem;font-weight:400;color:#0f172a;border-bottom:1px solid #e2e8f0;padding-bottom:.75rem;margin:0 0 1.5rem;">核心亮点</h2>
@@ -68,9 +72,7 @@ lang:      "zh"
   </p>
 </div>
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/unimedvl/overview.jpg' | relative_url }}"
-       alt="Observation-Knowledge 框架：数据构建与渐进式课程学习"
-       style="width:100%;display:block;" loading="lazy" />
+  {% include picture.html src="/assets/images/projects/unimedvl/oka-framework.png" alt="UniMedVL 的 Observation-Knowledge-Analysis 框架、数据构建和渐进式课程训练流程" class="" loading="lazy" style="width:100%;display:block;" %}
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
     Observation 与 Knowledge 层设计。UniMedVL-5M 通过质量过滤、对齐评分和交错任务构建整合异构医学数据；模型训练随后经过 foundation training、instruction tuning 和 unified multimodal training 三个阶段。
   </figcaption>
@@ -102,9 +104,7 @@ lang:      "zh"
   </p>
 </div>
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/unimedvl/results.jpg' | relative_url }}"
-       alt="UniMedVL 多模态能力可视化"
-       style="width:100%;display:block;" loading="lazy" />
+  {% include picture.html src="/assets/images/projects/unimedvl/qualitative-capabilities.png" alt="UniMedVL 在文本驱动生成、虚拟染色、超分辨率、反事实生成和跨模态合成上的定性示例" class="" loading="lazy" style="width:100%;display:block;" %}
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
     定性能力展示。UniMedVL 在统一医学多模态框架下支持 text-to-image generation、virtual staining、super-resolution、counterfactual generation 和 cross-modal synthesis。
   </figcaption>
@@ -123,9 +123,13 @@ lang:      "zh"
   </p>
 </div>
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/unimedvl/benchmarks.jpg' | relative_url }}"
-       alt="八种医学影像模态下的 BioMedCLIP 雷达图"
-       style="width:100%;display:block;" loading="lazy" />
+  {% include picture.html src="/assets/images/projects/unimedvl/understanding-benchmarks.png" alt="UniMedVL 与 LVLM 和统一多模态模型在医学视觉理解任务上的 benchmark 对比表" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    医学视觉理解 benchmark。UniMedVL 在 VQA-RAD、SLAKE、PathVQA、OmniMedVQA 和 GMAI-MMBench 上达到 67.47 平均分，同时保持统一的理解-生成架构。
+  </figcaption>
+</figure>
+<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/biomedclip-radar.png" alt="八种医学影像模态下的 BioMedCLIP 雷达图" class="" loading="lazy" style="width:100%;display:block;" %}
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
     多模态生成性能。UniMedVL 在 8 种医学影像模态上获得较强 BioMedCLIP alignment，说明统一训练并不必然损害生成质量，反而可以提升医学语义一致性。
   </figcaption>
@@ -144,11 +148,42 @@ lang:      "zh"
   </p>
 </div>
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/unimedvl/results.jpg' | relative_url }}"
-       alt="双向迁移与渐进式课程消融实验"
-       style="width:100%;display:block;" loading="lazy" />
+  {% include picture.html src="/assets/images/projects/unimedvl/bidirectional-transfer.png" alt="UniMedVL 中理解与生成双向迁移以及渐进式课程学习轨迹" class="" loading="lazy" style="width:100%;display:block;" %}
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
     双向迁移证据。消融实验显示，生成监督能够提升理解能力，理解监督也能改善生成质量；progressive curriculum learning 进一步增强这种跨任务协同。
+  </figcaption>
+</figure>
+
+<!-- Additional Results -->
+<h2 style="font-family:'IBM Plex Serif',serif;font-size:1.35rem;font-weight:400;color:#0f172a;margin:0 0 1rem;">更多结果与消融实验</h2>
+<figure style="margin:0 0 2rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/training-stage-ablation.png" alt="理解-生成协同和渐进式训练阶段的消融实验表" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    训练阶段消融。联合训练优于单任务变体，渐进式训练阶段在理解与生成指标上带来累积提升。
+  </figcaption>
+</figure>
+<figure style="margin:0 0 2rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/understanding-augmentation-ablation.png" alt="医学理解任务数据增强消融实验表" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    理解任务增强。交错监督进一步提升多个医学视觉理解 benchmark 的表现。
+  </figcaption>
+</figure>
+<figure style="margin:0 0 2rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/generation-augmentation-ablation.png" alt="生成质量数据增强消融实验表" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    生成任务增强。Caption-augmented 与 interleaved 数据降低 gFID，并提升 BioMedCLIP Score。
+  </figcaption>
+</figure>
+<figure style="margin:0 0 2rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/interleaved-performance-tables.png" alt="外部生成、模态专用生成器、虚拟染色和超分辨率结果表" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    交错任务与生成结果。UniMedVL 在 held-out 生成数据、模态专用生成、虚拟染色和 MRI 超分辨率任务上进行评估。
+  </figcaption>
+</figure>
+<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/translation-counterfactual-results.png" alt="医学图像翻译与反事实生成结果表" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    医学图像翻译与反事实生成结果。UniMedVL 在双向 MRI 翻译和反事实生成任务上取得有竞争力的性能。
   </figcaption>
 </figure>
 

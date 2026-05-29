@@ -21,7 +21,7 @@ lang:      "zh"
 
 <!-- 机构条 -->
 <div style="font-size:.78rem;color:#64748b;padding:.75rem 1rem;background:#f8fafc;border:1px solid #e2e8f0;border-left:3px solid #1d4ed8;margin-bottom:1.5rem;line-height:1.7;">
-  <strong style="color:#1e293b;">由复旦大学与上海人工智能实验室主导</strong>，联合上海创新研究院、斯坦福大学和字节跳动 Seed 共同研发。
+  <strong style="color:#1e293b;">由复旦大学与上海人工智能实验室主导</strong>，联合上海创新研究院和斯坦福大学共同研发。
 </div>
 
 <!-- 资源链接 -->

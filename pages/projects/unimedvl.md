@@ -21,7 +21,7 @@ lang:      "en"
 
 <!-- Institution strip -->
 <div style="font-size:.78rem;color:#64748b;padding:.75rem 1rem;background:#f8fafc;border:1px solid #e2e8f0;border-left:3px solid #1d4ed8;margin-bottom:1.5rem;line-height:1.7;">
-  <strong style="color:#1e293b;">A unified medical multimodal AI project</strong> for jointly learning image understanding, medical image generation, and interleaved visual-textual reasoning within a single model. Led by Shanghai Artificial Intelligence Laboratory in collaboration with Fudan University, Shanghai Innovation Institute, Stanford University, and ByteDance Seed.
+  <strong style="color:#1e293b;">A unified medical multimodal AI project</strong> for jointly learning image understanding, medical image generation, and interleaved visual-textual reasoning within a single model. Developed by the UniMedVL authors across collaborating research and academic institutions.
 </div>
 
 <!-- Resource links -->
@@ -36,11 +36,9 @@ lang:      "en"
 
 <!-- Hero image -->
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/unimedvl/overview.jpg' | relative_url }}"
-       alt="UniMedVL capability overview and benchmark coverage"
-       style="width:100%;display:block;" loading="eager" />
+  {% include picture.html src="/assets/images/projects/unimedvl/overview-tasks.png" alt="UniMedVL task overview across understanding, generation, interleaved, and traditional medical imaging tasks" class="" loading="eager" style="width:100%;display:block;" %}
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
-    UniMedVL overview: a single medical multimodal model is trained to support medical image understanding, text-to-image generation, and interleaved visual-textual outputs across diverse clinical imaging scenarios.
+    UniMedVL overview. The model covers understanding tasks, image generation tasks, and interleaved medical workflows across 5.6M samples, 8 imaging modalities, 5 understanding benchmarks, and 8 medical imaging modalities.
   </figcaption>
 </figure>
 
@@ -51,6 +49,12 @@ lang:      "en"
 <p style="font-size:.92rem;color:#334155;line-height:1.85;margin-bottom:2.5rem;">
   <strong>UniMedVL</strong> (accepted at <strong>ICML 2026</strong>) addresses this gap by treating medical understanding and generation as mutually reinforcing capabilities rather than isolated tasks. The project introduces a unified medical vision-language model trained with one set of parameters, together with <strong>UniMedVL-5M</strong>, a large-scale multimodal medical corpus containing more than <strong>5.6 million</strong> instances across <strong>8 medical imaging modalities</strong>. Through an <strong>Observation–Knowledge–Analysis</strong> framework and a three-stage progressive curriculum, UniMedVL learns to process multimodal medical inputs and produce textual, visual, and interleaved multimodal outputs in a single inference framework.
 </p>
+<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/unified-representation.png" alt="Comparison between task-specific medical AI systems and UniMedVL shared multimodal representation" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    Motivation. Conventional medical AI pipelines decouple VQA, reporting, segmentation, and generation, while UniMedVL uses a shared multimodal representation for unified medical understanding and generation.
+  </figcaption>
+</figure>
 
 <!-- Core Highlights -->
 <h2 style="font-family:'IBM Plex Serif',serif;font-size:1.5rem;font-weight:400;color:#0f172a;border-bottom:1px solid #e2e8f0;padding-bottom:.75rem;margin:0 0 1.5rem;">Core Highlights</h2>
@@ -68,9 +72,7 @@ lang:      "en"
   </p>
 </div>
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/unimedvl/overview.jpg' | relative_url }}"
-       alt="Observation-Knowledge framework: data curation and progressive curriculum learning"
-       style="width:100%;display:block;" loading="lazy" />
+  {% include picture.html src="/assets/images/projects/unimedvl/oka-framework.png" alt="Observation-Knowledge-Analysis framework for UniMedVL data curation and progressive curriculum training" class="" loading="lazy" style="width:100%;display:block;" %}
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
     Observation and Knowledge levels. UniMedVL-5M is built from heterogeneous medical data through quality filtering, alignment scoring, and interleaved-task construction; training then proceeds through foundation training, instruction tuning, and unified multimodal training.
   </figcaption>
@@ -102,9 +104,7 @@ lang:      "en"
   </p>
 </div>
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/unimedvl/results.jpg' | relative_url }}"
-       alt="Visualization of UniMedVL multimodal capabilities"
-       style="width:100%;display:block;" loading="lazy" />
+  {% include picture.html src="/assets/images/projects/unimedvl/qualitative-capabilities.png" alt="Qualitative UniMedVL examples for text-driven generation, virtual staining, super-resolution, counterfactual generation, and cross-modal synthesis" class="" loading="lazy" style="width:100%;display:block;" %}
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
     Qualitative capability overview. UniMedVL supports text-to-image generation, virtual staining, super-resolution, counterfactual generation, and cross-modal synthesis under one unified medical multimodal framework.
   </figcaption>
@@ -123,9 +123,13 @@ lang:      "en"
   </p>
 </div>
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/unimedvl/benchmarks.jpg' | relative_url }}"
-       alt="BioMedCLIP score radar chart across eight medical imaging modalities"
-       style="width:100%;display:block;" loading="lazy" />
+  {% include picture.html src="/assets/images/projects/unimedvl/understanding-benchmarks.png" alt="Comparison table of UniMedVL against LVLMs and unified multimodal models on medical visual understanding tasks" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    Medical visual understanding benchmarks. UniMedVL reaches a 67.47 average score across VQA-RAD, SLAKE, PathVQA, OmniMedVQA, and GMAI-MMBench while preserving a unified understanding-and-generation architecture.
+  </figcaption>
+</figure>
+<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/biomedclip-radar.png" alt="BioMedCLIP score radar chart across eight medical imaging modalities" class="" loading="lazy" style="width:100%;display:block;" %}
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
     Multi-modality generation performance. UniMedVL achieves strong BioMedCLIP alignment across eight medical imaging modalities, showing that unified training can improve generation fidelity rather than degrade it.
   </figcaption>
@@ -144,11 +148,42 @@ lang:      "en"
   </p>
 </div>
 <figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
-  <img src="{{ '/assets/images/projects/unimedvl/results.jpg' | relative_url }}"
-       alt="Bidirectional transfer and progressive curriculum ablation"
-       style="width:100%;display:block;" loading="lazy" />
+  {% include picture.html src="/assets/images/projects/unimedvl/bidirectional-transfer.png" alt="Bidirectional transfer and progressive curriculum trajectory in UniMedVL" class="" loading="lazy" style="width:100%;display:block;" %}
   <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
     Bidirectional transfer. Ablations show that generation supervision can improve understanding, while understanding supervision can improve generation quality; progressive curriculum learning further strengthens this cross-task synergy.
+  </figcaption>
+</figure>
+
+<!-- Additional Results -->
+<h2 style="font-family:'IBM Plex Serif',serif;font-size:1.35rem;font-weight:400;color:#0f172a;margin:0 0 1rem;">Additional Results and Ablations</h2>
+<figure style="margin:0 0 2rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/training-stage-ablation.png" alt="Ablation tables for understanding-generation synergy and progressive training stages" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    Training-stage ablations. Joint training outperforms single-task variants, and the progressive stages bring cumulative gains across understanding and generation metrics.
+  </figcaption>
+</figure>
+<figure style="margin:0 0 2rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/understanding-augmentation-ablation.png" alt="Ablation table on data augmentation for medical understanding tasks" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    Understanding-task augmentation. Interleaved supervision improves medical visual understanding scores across the reported benchmarks.
+  </figcaption>
+</figure>
+<figure style="margin:0 0 2rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/generation-augmentation-ablation.png" alt="Ablation table on data augmentation for generation quality" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    Generation augmentation. Caption-augmented and interleaved data improve generation quality, reducing gFID while increasing BioMedCLIP score.
+  </figcaption>
+</figure>
+<figure style="margin:0 0 2rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/interleaved-performance-tables.png" alt="External generation, modality-specialized generator, virtual staining, and super-resolution result tables" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    Interleaved and generation results. UniMedVL is evaluated on held-out generation datasets, modality-specialized generation, virtual staining, and MRI super-resolution.
+  </figcaption>
+</figure>
+<figure style="margin:0 0 3rem;border:1px solid #e2e8f0;overflow:hidden;">
+  {% include picture.html src="/assets/images/projects/unimedvl/translation-counterfactual-results.png" alt="Medical image translation and counterfactual generation result tables" class="" loading="lazy" style="width:100%;display:block;" %}
+  <figcaption style="padding:.75rem 1rem;font-size:.78rem;color:#64748b;font-style:italic;background:#f8fafc;border-top:1px solid #e2e8f0;">
+    Medical image translation and counterfactual generation results. UniMedVL reports competitive bidirectional MRI translation and counterfactual generation performance.
   </figcaption>
 </figure>
 

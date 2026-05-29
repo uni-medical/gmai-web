@@ -3,7 +3,8 @@
     "allow": [
       "mcp__plugin_ecc_playwright__browser_navigate",
       "mcp__plugin_ecc_exa__web_fetch_exa",
-      "Bash(curl -s http://localhost:4000/)"
+      "Bash(curl -s http://localhost:4000/)",
+      "mcp__plugin_ecc_playwright__browser_resize"
     ]
   },
   "outputStyle": "Explanatory"
