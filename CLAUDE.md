@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Jekyll 4 static site for a computational research group. Designed to deploy on GitHub Pages with zero custom plugins. The original specification lives in `plans/plan_ver1.md`. Full documentation is in `docs/`.
 
-**Current state (as of 2026-04-06):** fully implemented and locally verified. All 37 files created from spec. Awaiting first GitHub push for deployment.
+Live at GitHub Pages; auto-deploys on push to `main`.
 
 ## Local Development
 
@@ -66,6 +66,31 @@ To add a 5th panel: copy a panel block in `index.md`, change watermark number, a
 
 Called via `{% include pub_card.html pub=entry %}`. Receives one publication object. PI surname (from `site.lab.pi_last`) is auto-bolded in the author list. BibTeX is passed to the modal via `{{ pub.bibtex | jsonify }}`.
 
+### Member profile pages (`_layouts/profile.html`)
+
+Each team member has a dedicated EN + ZH profile page. The layout reads member data from `_data/team.yml` via the `member_slug` front matter field — no data is duplicated in the page file itself.
+
+Front matter for a profile page:
+```yaml
+---
+layout:      profile
+title:       "First Last"
+permalink:   /team/first-last/
+lang:        "en"
+member_slug: "first-last"
+---
+```
+
+The layout resolves `member_slug` by checking `team.pi`, then `team.co_pis`, then `team.members`, then `team.alumni` in that order. It renders: photo (or initials placeholder), role, research focus, all configured links, and the `bio` / `bio_zh` fields from the YAML. Any Markdown content in the page file appears below the bio in `.profile-content`.
+
+Supported link keys in `team.yml` under `links:`: `scholar`, `github`, `website`, `openreview`, `semantic_scholar`, `dblp`, `huggingface`, `linkedin`, `researchgate`, `email`, `cv`, `twitter`. Set unused keys to `""`.
+
+Always create both `pages/team/<slug>.md` (EN) and `pages/zh/team/<slug>.md` (ZH) with identical front matter except `lang` and `permalink`.
+
+### Project detail pages
+
+Per-project detail pages live at `pages/projects/<slug>.md` and `pages/zh/projects/<slug>.md`. They use `layout: page` (not `profile`) and are fully custom HTML within the page body — no shared data-driven template exists. The slug must match the project's `slug:` field in `_data/projects.yml` for nav consistency.
+
 ## Key Design Constraints
 
 - No custom Jekyll plugins (GitHub Pages whitelist only)
@@ -81,8 +106,13 @@ index.md                    EN homepage (hero + 4 research panels + pubs + news/
 zh/index.md                 ZH homepage (identical structure, Chinese text)
 pages/{team,publications,projects,news,contact}.md    EN section pages
 pages/zh/{team,publications,projects,news,contact}.md ZH section pages
+pages/team/<slug>.md        EN individual member profile (layout: profile)
+pages/zh/team/<slug>.md     ZH individual member profile (layout: profile)
+pages/projects/<slug>.md    EN project detail page (layout: page, custom HTML)
+pages/zh/projects/<slug>.md ZH project detail page (layout: page, custom HTML)
 _layouts/default.html       shared shell (fonts, nav, footer, BibTeX modal, JS)
 _layouts/page.html          two-line wrapper extending default
+_layouts/profile.html       member profile: reads team.yml via member_slug front matter
 _includes/nav.html          top nav + language switcher (EN ↔ 中文)
 _includes/footer.html       footer with lab links
 _includes/pub_card.html     publication card component
@@ -139,7 +169,9 @@ The hero background uses CSS `image-set()` in `_sass/_home.scss` for WebP priori
 
 **Add a publication:** edit `_data/publications.yml`, prepend new entry, add teaser image to `assets/images/teasers/`, then run `bash scripts/optimize-images.sh`
 
-**Add a team member:** edit `_data/team.yml`, add photo to `assets/images/team/`, then run `bash scripts/optimize-images.sh`
+**Add a team member:** edit `_data/team.yml` (include a `slug:` field), add photo to `assets/images/team/`, run `bash scripts/optimize-images.sh`, then create both `pages/team/<slug>.md` and `pages/zh/team/<slug>.md` using `layout: profile` and `member_slug: <slug>`
+
+**Add a project detail page:** create `pages/projects/<slug>.md` and `pages/zh/projects/<slug>.md` with `layout: page`; write custom HTML in the body following the pattern in existing project pages
 
 **Update hero stats:** edit `stats:` block in `_config.yml`
 

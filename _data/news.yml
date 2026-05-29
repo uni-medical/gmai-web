@@ -1,5 +1,24 @@
 # category values: award | paper | grant | join | event
 
+- date:        "May 2026"
+  category:    "paper"
+  label:       "Paper"
+  label_zh:    "论文"
+  headline:    "UniMedVL accepted at ICML 2026 — first unified medical multimodal understanding and generation model"
+  headline_zh: "UniMedVL 被 ICML 2026 收录——首个统一医学多模态理解与生成模型"
+  body:        >
+    Our unified medical multimodal model UniMedVL was accepted at ICML 2026. UniMedVL is the
+    first medical model that couples image understanding and generation within a single architecture
+    via the Observation-Knowledge-Analysis framework, built on the 5.6M-sample UniMed-5M corpus and
+    trained with Progressive Curriculum Learning. It reaches a 67.47 average score across five medical
+    understanding benchmarks while matching specialised models on generation across eight imaging
+    modalities.
+  body_zh:     >
+    我们的统一医学多模态模型 UniMedVL 被 ICML 2026 收录。UniMedVL 是首个通过观察-知识-分析（OKA）
+    框架在单一架构内耦合医学图像理解与生成的医学模型，基于 560 万样本的 UniMed-5M 语料和渐进式
+    课程学习策略训练而成。模型在五个医学理解基准上达到平均 67.47 分，同时在八种医学影像模态
+    的生成质量上匹配专用模型。
+
 - date:        "November 2025"
   category:    "paper"
   label:       "Paper"

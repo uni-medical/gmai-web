@@ -6,6 +6,33 @@
 # 5. Add teaser image to assets/images/teasers/ and reference it here
 # ──────────────────────────────────────────────────────────────────
 
+- title:    "UniMedVL: Unifying Medical Multimodal Understanding and Generation through Observation-Knowledge-Analysis"
+  authors:  "Junzhi Ning, Wei Li, Cheng Tang, Jiashi Lin, Chenglong Ma, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lihao Liu, Yuandong Pu, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xin, Qi Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yuanfeng Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming Hu, Junjun He"
+  venue:    "ICML"
+  year:     2026
+  note:     ""
+  abstract: >
+    We propose UniMedVL, the first medical unified multimodal model that combines image understanding
+    and generation within a single architecture without manually reloading model checkpoints. Built on
+    the Observation-Knowledge-Analysis (OKA) framework, we construct UniMed-5M comprising over 5.6M
+    multimodal medical samples and design Progressive Curriculum Learning for systematic capability
+    building. UniMedVL achieves superior performance on 5 medical image understanding benchmarks while
+    matching specialized models in generation quality across 8 imaging modalities, demonstrating that
+    bidirectional knowledge sharing improves both understanding and generation.
+  abstract_zh: >
+    我们提出UniMedVL，这是首个在单一架构内统一图像理解与生成能力的医学多模态模型，无需手动切换
+    模型检查点。基于"观察-知识-分析"（OKA）框架，我们构建了包含560万余条多模态医学样本的
+    UniMed-5M数据集，并设计了渐进式课程学习策略以系统性地构建模型能力。UniMedVL在5个医学图像
+    理解基准上取得了优异表现，同时在8种影像模态的生成质量上与专用模型持平，证明了双向知识共享
+    能够同时提升理解和生成性能。
+  teaser:   "/assets/images/teasers/unimedvl.jpg"
+  keywords: "unified multimodal model, medical image generation, understanding, curriculum learning"
+  links:
+    paper:   "https://arxiv.org/abs/2505.21899"
+    code:    "https://github.com/uni-medical/UniMedVL"
+    dataset: "https://huggingface.co/datasets/General-Medical-AI/UniMedVL-5M"
+    project: "/projects/unimedvl/"
+
 - title:    "MedQ-Deg: A Multidimensional Benchmark for Evaluating MLLMs Across Medical Image Quality Degradations"
   authors:  "Jiyao Liu, Junzhi Ning, Chenglong Ma, Wanying Qu, Jianghan Shen, Siqi Luo, Jinjie Wei, Jin Ye, Pengze Li, Tianbin Li, Jiashi Lin, Hongming Shan, Xinzhe Luo, Xiaohong Liu, Lihao Liu, Junjun He, Ningsheng Xu"
   venue:    "arXiv"
@@ -29,30 +56,6 @@
   keywords: "medical imaging, MLLM robustness, quality degradation, benchmark"
   links:
     paper:   "https://uni-medical.github.io/MedQ-Robust-web"
-
-- title:    "UniMedVL: Unifying Medical Multimodal Understanding and Generation through Observation-Knowledge-Analysis"
-  authors:  "Junzhi Ning, Wei Li, Cheng Tang, Jiashi Lin, Chenglong Ma, Chaoyang Zhang, Jiyao Liu, Ying Chen, Shujian Gao, Lihao Liu, Yuandong Pu, Huihui Xu, Chenhui Gou, Ziyan Huang, Yi Xin, Qi Qin, Zhongying Deng, Diping Song, Bin Fu, Guang Yang, Yuanfeng Ji, Tianbin Li, Yanzhou Su, Jin Ye, Shixiang Tang, Ming Hu, Junjun He"
-  venue:    "arXiv"
-  year:     2025
-  note:     ""
-  abstract: >
-    We propose UniMedVL, the first medical unified multimodal model that combines image understanding
-    and generation within a single architecture without manually reloading model checkpoints. Built on
-    the Observation-Knowledge-Analysis (OKA) framework, we construct UniMed-5M comprising over 5.6M
-    multimodal medical samples and design Progressive Curriculum Learning for systematic capability
-    building. UniMedVL achieves superior performance on 5 medical image understanding benchmarks while
-    matching specialized models in generation quality across 8 imaging modalities, demonstrating that
-    bidirectional knowledge sharing improves both understanding and generation.
-  abstract_zh: >
-    我们提出UniMedVL，这是首个在单一架构内统一图像理解与生成能力的医学多模态模型，无需手动切换
-    模型检查点。基于"观察-知识-分析"（OKA）框架，我们构建了包含560万余条多模态医学样本的
-    UniMed-5M数据集，并设计了渐进式课程学习策略以系统性地构建模型能力。UniMedVL在5个医学图像
-    理解基准上取得了优异表现，同时在8种影像模态的生成质量上与专用模型持平，证明了双向知识共享
-    能够同时提升理解和生成性能。
-  teaser:   "/assets/images/teasers/unimedvl.jpg"
-  keywords: "unified multimodal model, medical image generation, understanding, curriculum learning"
-  links: {}
-
 
 - title:    "Project Imaging-X: A Survey of 1000+ Open-Access Medical Imaging Datasets for Foundation Model Development"
   authors:  "Zhongying Deng, et al."

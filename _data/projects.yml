@@ -146,17 +146,18 @@
 
 - title:      "UniMedVL: Unified Medical Multimodal Understanding and Generation"
   title_zh:   "UniMedVL：统一医学多模态理解与生成"
-  area:       "Medical Multimodal AI"
-  area_zh:    "医学多模态 AI"
+  area:       "Medical Multimodal AI · ICML 2026"
+  area_zh:    "医学多模态 AI · ICML 2026"
   slug:       "unimedvl"
   thumbnail:  "/assets/images/projects/unimedvl/overview.jpg"
   desc:       >
-    The first medical unified multimodal model that unifies image understanding and generation within a single architecture. Built on UniMed-5M (5.6M+ samples) with Progressive Curriculum Learning, UniMedVL achieves superior performance on 5 medical understanding benchmarks while matching specialized models in generation quality.
+    The first medical unified multimodal model that unifies image understanding and generation within a single architecture (ICML 2026). Built on UniMed-5M (5.6M+ samples) with Progressive Curriculum Learning, UniMedVL achieves superior performance on 5 medical understanding benchmarks while matching specialized models in generation quality.
   desc_zh:    >
-    首个在单一架构中统一图像理解与生成的医学多模态模型。基于UniMed-5M（560万+样本）和渐进式课程学习策略，UniMedVL在5个医学理解基准上达到领先水平，同时在生成质量上匹配专用模型。
+    首个在单一架构中统一图像理解与生成的医学多模态模型（ICML 2026）。基于UniMed-5M（560万+样本）和渐进式课程学习策略，UniMedVL在5个医学理解基准上达到领先水平，同时在生成质量上匹配专用模型。
   links:
-    github:    ""
-    paper:     ""
+    github:    "https://github.com/uni-medical/UniMedVL"
+    paper:     "https://arxiv.org/abs/2505.21899"
+    dataset:   "https://huggingface.co/datasets/General-Medical-AI/UniMedVL-5M"
 
 - title:      "MedITok: Unified Medical Image Tokenizer"
   title_zh:   "MedITok：统一医学图像标记器"
