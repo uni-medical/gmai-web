@@ -29,7 +29,7 @@ lang:      "en"
 <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2.5rem;">
   <a href="https://github.com/Masaaki-75/meditok" target="_blank" rel="noopener"
      style="display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1px solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoration:none;background:#f8fafc;">GitHub</a>
-  <a href="https://arxiv.org/abs/2502.04397" target="_blank" rel="noopener"
+  <a href="https://arxiv.org/abs/2505.19225" target="_blank" rel="noopener"
      style="display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1px solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoration:none;background:#f8fafc;">arXiv Paper</a>
 </div>
 
@@ -108,7 +108,7 @@ lang:      "en"
 <!-- Footer links -->
 <div style="border-top:1px solid #e2e8f0;padding-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
   <a href="https://github.com/Masaaki-75/meditok" target="_blank" rel="noopener" class="pub-btn">GitHub Repository</a>
-  <a href="https://arxiv.org/abs/2502.04397" target="_blank" rel="noopener" class="pub-btn">arXiv Paper</a>
+  <a href="https://arxiv.org/abs/2505.19225" target="_blank" rel="noopener" class="pub-btn">arXiv Paper</a>
   <a href="{{ '/projects/' | relative_url }}" class="pub-btn">&larr; Back to Projects</a>
 </div>
 

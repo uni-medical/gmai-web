@@ -104,6 +104,9 @@ lang:      "en"
 
 <!-- Footer links -->
 <div style="border-top:1px solid #e2e8f0;padding-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+  <a href="https://arxiv.org/abs/2603.07769" target="_blank" rel="noopener" class="pub-btn">arXiv Paper</a>
+  <a href="https://github.com/liujiyaoFDU/MedQ-DEG" target="_blank" rel="noopener" class="pub-btn">GitHub</a>
+  <a href="https://huggingface.co/datasets/jiyaoliufd/MedQ-DEG-Bench" target="_blank" rel="noopener" class="pub-btn">🤗 Dataset</a>
   <a href="https://uni-medical.github.io/MedQ-Robust-web" target="_blank" rel="noopener" class="pub-btn">Project Page</a>
   <a href="{{ '/projects/' | relative_url }}" class="pub-btn">&larr; Back to Projects</a>
 </div>

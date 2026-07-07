@@ -28,10 +28,10 @@
   teaser:   "/assets/images/teasers/unimedvl.jpg"
   keywords: "unified multimodal model, medical image generation, understanding, curriculum learning"
   links:
-    paper:   "https://arxiv.org/abs/2505.21899"
+    paper:   "https://arxiv.org/abs/2510.15710"
     code:    "https://github.com/uni-medical/UniMedVL"
     dataset: "https://huggingface.co/datasets/General-Medical-AI/UniMedVL-5M"
-    project: "/projects/unimedvl/"
+    project: "https://uni-medical.github.io/UniMedVL_Web/"
 
 - title:    "MedQ-Deg: A Multidimensional Benchmark for Evaluating MLLMs Across Medical Image Quality Degradations"
   authors:  "Jiyao Liu, Junzhi Ning, Chenglong Ma, Wanying Qu, Jianghan Shen, Siqi Luo, Jinjie Wei, Jin Ye, Pengze Li, Tianbin Li, Jiashi Lin, Hongming Shan, Xinzhe Luo, Xiaohong Liu, Lihao Liu, Junjun He, Ningsheng Xu"
@@ -55,7 +55,10 @@
   teaser:   "/assets/images/teasers/medq_deg.jpg"
   keywords: "medical imaging, MLLM robustness, quality degradation, benchmark"
   links:
-    paper:   "https://uni-medical.github.io/MedQ-Robust-web"
+    paper:   "https://arxiv.org/abs/2603.07769"
+    code:    "https://github.com/liujiyaoFDU/MedQ-DEG"
+    dataset: "https://huggingface.co/datasets/jiyaoliufd/MedQ-DEG-Bench"
+    project: "https://uni-medical.github.io/MedQ-Robust-web"
 
 - title:    "Project Imaging-X: A Survey of 1000+ Open-Access Medical Imaging Datasets for Foundation Model Development"
   authors:  "Zhongying Deng, et al."
@@ -169,8 +172,9 @@
   teaser:   "/assets/images/teasers/progemu.png"
   keywords: "counterfactual generation, explainable AI, medical imaging, multimodal autoregression"
   links:
-    paper:  "https://arxiv.org/abs/2503.23149"
-    code:   "https://progemu.github.io/"
+    paper:   "https://arxiv.org/abs/2503.23149"
+    code:    "https://github.com/Masaaki-75/progemu"
+    project: "https://progemu.github.io/"
 
 - title:    "Multi-modal MRI Translation via Evidential Regression and Distribution Calibration"
   authors:  "Jiyao Liu, Shangqi Gao, Yuxin Li, Lihao Liu, Xin Gao, Zhaohu Xing, Junzhi Ning, Yanzhou Su, Xiao-Yong Zhang, Junjun He, Ningsheng Xu, Xiahai Zhuang"

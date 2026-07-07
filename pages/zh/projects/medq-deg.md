@@ -100,6 +100,9 @@ lang:      "zh"
 
 <!-- 页脚链接 -->
 <div style="border-top:1px solid #e2e8f0;padding-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+  <a href="https://arxiv.org/abs/2603.07769" target="_blank" rel="noopener" class="pub-btn">arXiv 论文</a>
+  <a href="https://github.com/liujiyaoFDU/MedQ-DEG" target="_blank" rel="noopener" class="pub-btn">GitHub</a>
+  <a href="https://huggingface.co/datasets/jiyaoliufd/MedQ-DEG-Bench" target="_blank" rel="noopener" class="pub-btn">🤗 数据集</a>
   <a href="https://uni-medical.github.io/MedQ-Robust-web" target="_blank" rel="noopener" class="pub-btn">项目主页</a>
   <a href="{{ '/zh/projects/' | relative_url }}" class="pub-btn">&larr; 返回项目列表</a>
 </div>

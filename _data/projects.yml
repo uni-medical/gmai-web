@@ -16,7 +16,7 @@
     已获斯坦福大学等顶级机构的合作意向。
   links:
     github:    "https://github.com/uni-medical/Project-Imaging-X"
-    paper:     "http://arxiv.org/abs/2603.27460"
+    paper:     "https://arxiv.org/abs/2603.27460"
     huggingface: "https://huggingface.co/papers/2603.27460"
     dataset:   "https://huggingface.co/datasets/General-Medical-AI/Project-Imaging-X"
 
@@ -100,9 +100,6 @@
   links:
     github:    "https://github.com/uni-medical/SAM-Med3D"
     paper:     "https://arxiv.org/abs/2310.15161"
-    huggingface: ""
-    dataset:   ""
-    homepage:  ""
 
 - title:      "MedSegAgent: Universal Multi-Agent System for Medical Image Segmentation"
   title_zh:   "MedSegAgent：通用可扩展多智能体医学图像分割系统"
@@ -156,8 +153,9 @@
     首个在单一架构中统一图像理解与生成的医学多模态模型（ICML 2026）。基于UniMed-5M（560万+样本）和渐进式课程学习策略，UniMedVL在5个医学理解基准上达到领先水平，同时在生成质量上匹配专用模型。
   links:
     github:    "https://github.com/uni-medical/UniMedVL"
-    paper:     "https://arxiv.org/abs/2505.21899"
+    paper:     "https://arxiv.org/abs/2510.15710"
     dataset:   "https://huggingface.co/datasets/General-Medical-AI/UniMedVL-5M"
+    homepage:  "https://uni-medical.github.io/UniMedVL_Web/"
 
 - title:      "MedITok: Unified Medical Image Tokenizer"
   title_zh:   "MedITok：统一医学图像标记器"
@@ -191,6 +189,9 @@
     30 个细粒度能力维度和 7 种成像模态，共 24,894 个问答对。对 40 个主流多模态大模型的评测揭示了
     AI 邓宁-克鲁格效应——模型在严重精度下降时仍保持不当的高置信度。
   links:
+    github:    "https://github.com/liujiyaoFDU/MedQ-DEG"
+    paper:     "https://arxiv.org/abs/2603.07769"
+    dataset:   "https://huggingface.co/datasets/jiyaoliufd/MedQ-DEG-Bench"
     homepage:  "https://uni-medical.github.io/MedQ-Robust-web"
 
 - title:      "Ophora: Text-Guided Ophthalmic Surgical Video Generation"
@@ -249,7 +250,7 @@
     涵盖 5 种成像模态和 40+ 质量属性，包含 2,600 个感知查询和 708 个推理评估。对 14 个
     先进多模态大模型的评测显示，模型具有初步但不稳定的感知和推理能力，尚不足以用于可靠的临床实践。
   links:
-    paper:     "https://github.com/liujiyaoFDU/MedQ-Bench"
+    paper:     "https://arxiv.org/abs/2510.01691"
     github:    "https://github.com/liujiyaoFDU/MedQ-Bench"
     dataset:   "https://huggingface.co/datasets/jiyaoliufd/MedQ-Bench"
 

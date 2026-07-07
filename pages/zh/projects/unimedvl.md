@@ -28,7 +28,7 @@ lang:      "zh"
 <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2.5rem;">
   <a href="https://github.com/uni-medical/UniMedVL" target="_blank" rel="noopener"
      style="display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1px solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoration:none;background:#f8fafc;">GitHub</a>
-  <a href="https://arxiv.org/abs/2505.21899" target="_blank" rel="noopener"
+  <a href="https://arxiv.org/abs/2510.15710" target="_blank" rel="noopener"
      style="display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1px solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoration:none;background:#f8fafc;">arXiv 论文</a>
   <a href="https://huggingface.co/datasets/General-Medical-AI/UniMedVL-5M" target="_blank" rel="noopener"
      style="display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .85rem;font-size:.75rem;font-weight:500;border:1px solid #cbd5e1;border-radius:4px;color:#1e293b;text-decoration:none;background:#f8fafc;">🤗 数据集</a>
@@ -215,7 +215,7 @@ lang:      "zh"
 <!-- Footer links -->
 <div style="border-top:1px solid #e2e8f0;padding-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
   <a href="https://github.com/uni-medical/UniMedVL" target="_blank" rel="noopener" class="pub-btn">GitHub 仓库</a>
-  <a href="https://arxiv.org/abs/2505.21899" target="_blank" rel="noopener" class="pub-btn">arXiv 论文</a>
+  <a href="https://arxiv.org/abs/2510.15710" target="_blank" rel="noopener" class="pub-btn">arXiv 论文</a>
   <a href="https://huggingface.co/datasets/General-Medical-AI/UniMedVL-5M" target="_blank" rel="noopener" class="pub-btn">🤗 数据集</a>
   <a href="{{ '/zh/projects/' | relative_url }}" class="pub-btn">← 返回项目列表</a>
 </div>
