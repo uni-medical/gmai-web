@@ -240,19 +240,6 @@ members:
       website: ""
       openreview: "https://openreview.net/profile?id=~Cheng_Tang8"
 
-  - name:     "Junzhi (Raymond) Ning (宁俊智)"
-    slug:     "junzhi-ning"
-    role:     "Research Intern, Imperial College London"
-    role_zh:  "科研实习生，伦敦帝国理工学院"
-    focus:    "Medical Image Analysis, Clinical Decision Support, Medical Image Translation"
-    focus_zh: "医学图像分析、临床决策支持、医学图像转换"
-    photo:    "assets/images/team/junzhi_ning.jpg"
-    initials: "RN"
-    links:
-      github:   "https://github.com/junzhin"
-      website:  "https://junzhin.github.io/"
-      linkedin: "https://uk.linkedin.com/in/junzhin"
-
   - name:     "Yuxing Chen (陈昱行)"
     slug:     "yuxing-chen"
     role:     "Research Intern, The University of Sydney"
@@ -346,6 +333,19 @@ members:
       github:  "https://github.com/RXH04-USTC"
 
 alumni:
+  - name:     "Junzhi (Raymond) Ning (宁俊智)"
+    slug:     "junzhi-ning"
+    role:     "Research Intern, Imperial College London"
+    role_zh:  "科研实习生，伦敦帝国理工学院"
+    focus:    "Medical Image Analysis, Clinical Decision Support, Medical Image Translation"
+    focus_zh: "医学图像分析、临床决策支持、医学图像转换"
+    photo:    "assets/images/team/junzhi_ning.jpg"
+    initials: "RN"
+    links:
+      github:   "https://github.com/junzhin"
+      website:  "https://junzhin.github.io/"
+      linkedin: "https://uk.linkedin.com/in/junzhin"
+
   - name:     "Shujian Gao (高书剑)"
     slug:     "shujian-gao"
     period:   "2025.06 – 2026.02"
