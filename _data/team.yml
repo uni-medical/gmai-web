@@ -335,6 +335,8 @@ members:
 alumni:
   - name:     "Junzhi (Raymond) Ning (宁俊智)"
     slug:     "junzhi-ning"
+    period:   "2024.11 – 2026.10"
+    position: "PhD Student"
     role:     "Research Intern, Imperial College London"
     role_zh:  "科研实习生，伦敦帝国理工学院"
     focus:    "Medical Image Analysis, Clinical Decision Support, Medical Image Translation"
